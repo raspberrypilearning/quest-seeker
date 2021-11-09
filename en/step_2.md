@@ -109,14 +109,25 @@ Customise your character by dragging 'Materials' onto the GameObjects in the Sce
 
 Add a Box Collider to the Quest Giver so that the player can't walk through them.
 
+![The box collider comonet in the Inspector window.](images/box-collider.png)
 --- /task ---
 
 The Quest Giver will offer the player a quest when they get close enough.
 
 --- task ---
-Add a UI TextMeshPro to the Quest Seeker GameObject for the message offereing the quest. 
 
-You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
+Add a UI TextMeshPro to the Quest Seeker GameObject to contain the message offering the quest: 
+
+![desc](images/add-text-object.png)
+
+Change the settings and position of the text object until you are happy with the look:
+
+![desc](images/text-object-settings.png)
+![desc](images/text-object-position.png)
+
+You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like: 
+
+![desc](images/quest-giver-text.png)
 
 --- /task ---
 
@@ -210,7 +221,7 @@ public class QuestGiver : MonoBehaviour
         }
     }
 
-    void QuestAccepted()
+    public void QuestAccepted()
     {
         item.SetActive(true);
     }
