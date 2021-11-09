@@ -60,7 +60,9 @@ Bring your shapes to life by dragging Materials from the Project window to the s
 
 This helmet has a sphere with child GameObjects that are spheres, a capsule and a cylinder. The shapes have been renamed to the part of the helmet they represent and coloured with Materials. 
 
-![A 3D shape item in Scene view and the Hierarchy window showing the 3D shape child objects that make up the whole item.](images/3d-shape-item.png)
+![The Hierarchy window showing the 3D shape child objects that make up the whole item.](images/helmet-objects.png)
+
+![A 3D shape item in Scene view.](images/helmet.png)
 
 --- /collapse ---
 
@@ -85,11 +87,15 @@ Add a non-player character to be a Quest Giver.
 You could:
 + use one of the animal characters 
 
-![The scene view with Raccoon character wearing constructuon gear and the Hierarchy window showing the Raccoon GameObject and child GameObjects.](images/3d-shape-character.png)
+![The Hierarchy window showing the Raccoon GameObject and child GameObjects.](images/model-character-objects.png)
+
+![The scene view with Raccoon character wearing constructuon gear.](images/model-character.png)
 
 + create your own character from 3D objects. 
 
-![A 3D character in Scene view created out of shapes and the Hierarchy window breakdown showing GameObject and child GameObjects for the character.](images/model-character.png)
+![The Hierarchy window breakdown showing GameObject and child GameObjects for the character.](images/quest-giver-shapes.png)
+
+![A 3D character in Scene view created out of shapes and the Hierarchy window breakdown showing GameObject and child GameObjects for the character.](images/quest-giver.png)
 
 Position your NPC so that it will be easy for the player to find them.
 
@@ -111,11 +117,6 @@ The Quest Giver will offer the player a quest when they get close enough.
 Add a UI TextMeshPro to the Quest Seeker GameObject for the message offereing the quest. 
 
 You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
-
---- /task ---
-
---- task ---
-Add a UI TextMesh Pro Button to the same canvas and give it the text 'Accept'.
 
 --- /task ---
 
@@ -164,6 +165,57 @@ public class QuestGiver : MonoBehaviour
 Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script component and drag the Canvas for the NPC to the Canvas property of the script. 
 
 <mark>Or we could use GetComponent?</mark>
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+Add a UI TextMesh Pro Button to the same canvas and give it the text 'Accept'.
+
+Add code to the QuestGiver script to control when the object appears so that it only appear when then quest has been accepted. 
+
+--- collapse ---
+
+---
+title: Make a GameObject appear when a button is clicked
+---
+
+```
+public class QuestGiver : MonoBehaviour
+{
+    public Canvas canvas;
+    public GameObject item;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        canvas.enabled = false;
+        item.SetActive(false);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.enabled = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.enabled = false;
+        }
+    }
+
+    void QuestAccepted()
+    {
+        item.SetActive(true);
+    }
+}
+```
 
 --- /collapse ---
 
