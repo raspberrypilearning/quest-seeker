@@ -120,8 +120,7 @@ Add a UI TextMesh Pro Button to the same canvas and give it the text 'Accept'.
 --- /task ---
 
 --- task ---
-Add a Box Collider with a
-
+Use a Box Collider with a Trigger to make the quest message appear when the Player is nearby. 
 
 --- collapse ---
 
@@ -171,7 +170,7 @@ Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script c
 --- /task ---
 
 --- task ---
-ALlow the player to collect the item.
+Allow the player to collect the item.
 --- /task ---
 
 --- task ---
