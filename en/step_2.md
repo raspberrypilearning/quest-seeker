@@ -4,7 +4,7 @@
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 The first quest will be a **fetch quest** where an NPC asks the player to find an item and bring it back to them. When the player returns to the quest giver they will be rewarded with experience points (XP) or a reward in the currency of your game.
 <div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
+Image, gif or video showing what they will achieve by the end of the step. ![](images/quest-complete.png){:width="300px"}
 </div>
 </div>
 
@@ -17,6 +17,7 @@ Open your project to use as the world, or map, where quests will take place.
 --- /task ---
 
 --- task ---
+
 Think of a quest that makes sense in the world you have built. 
 
 You will need to choose:
@@ -110,6 +111,7 @@ Customise your character by dragging 'Materials' onto the GameObjects in the Sce
 Add a Box Collider to the Quest Giver so that the player can't walk through them.
 
 ![The box collider component in the Inspector window.](images/box-collider.png)
+
 --- /task ---
 
 The Quest Giver will offer the player a quest when they get close enough.
@@ -134,6 +136,7 @@ You can add another UI TextMeshPro to the same canvas with the name of the Quest
 --- /task ---
 
 --- task ---
+
 Use a Box Collider with a Trigger to make the quest message appear when the Player is nearby. 
 
 --- collapse ---
@@ -273,6 +276,7 @@ Click on the circle for the field underneath ‘Runtime’, click on ‘Scene’
 --- /task ---
 
 --- task ---
+
 **Test:** Check that your item does not appear when you Play your scene. Go and talk to the QuestGiver and Accept the quest. Make sure that the item appears. 
 
 --- /task ---
@@ -318,6 +322,7 @@ Drag the Coins TextMeshPro object to the Coin Text property in the Inspector.
 --- /task ---
 
 --- task ---
+
 Select the QuestItem and add a Box Collider with a Trigger. 
 
 Add a script to the QuestItem and name it 'QuestItemController'.
@@ -387,11 +392,13 @@ In the Inspector, Drag the player to the Player property and the TextMeshPro obj
 --- /task ---
 
 --- task ---
+
 **Test:** Play your scene and make sure you get a different message after collecting the QuestItem. Check that the number of coins also increases. Make sure the player can't get the reward more than once.
 
 --- /task ---
 
 --- task ---
+
 You can also display the number of coins the player has on the screen.
 
 Add a UI - TextMeshPro GameObject and call it Coins. Anchor the text to the top-left of the Screen.
@@ -405,7 +412,7 @@ Add a UI - TextMeshPro GameObject and call it Coins. Anchor the text to the top-
 --- collapse ---
 
 ---
-title: I can't drag a GameObject into the variable in the Inspector
+title: I can't drag a GameObject into my variable in the Inspector
 ---
 
 Look through the steps above and make sure that you have added all the scripts to the correct GameObjects. 
@@ -415,20 +422,10 @@ Look through the steps above and make sure that you have added all the scripts t
 --- collapse ---
 
 ---
-title: I can't find the right material to use
+title: 
 ---
 
-You can select the materials folder in the Project window to see all the Materials you have created  
 
---- /collapse ---
-
---- collapse ---
-
----
-title: I can't drag a GameObject into the variable in the Inspector
----
-
-Look through the steps above and make sure that you have added all the scripts to the correct GameObjects. 
 
 --- /collapse ---
 

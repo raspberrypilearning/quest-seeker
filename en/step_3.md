@@ -25,7 +25,7 @@ For each quest you will need to:
 title: Recipe or craft quest
 ---
 
-Collect multiple items of different kinds to make a recipe or craft a new item. 
+Collect multiple items of different to make a recipe or craft a new item. 
 
 --- /collapse ---
 
@@ -58,6 +58,63 @@ title: Escort quest
 Find another NPC and escort them. This could be back to the Quest Giver NPC or to another NPC or GameObject. 
 
 --- /collapse ---
+
+--- collapse ---
+
+---
+title: Storytelling quest
+---
+
+Find out information from another NPC.
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Puzzle or task quest
+---
+
+Solve a puzzle. 
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+Choose a reward type. 
+
+--- collapse ---
+
+---
+title: Coins or experience
+---
+
+
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: An accessory or follower
+---
+
+
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Unlock
+---
+
+Remove a barrier or get access to an area or items that were not available previously. 
+
+--- /collapse ---
+
 
 --- /task ---
 
