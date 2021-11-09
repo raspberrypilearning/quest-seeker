@@ -281,15 +281,22 @@ When the player collects the item the item needs to disappear and optionally pla
 
 --- task ---
 
-Add a new 'QuestSeeker' script component to the **Player** to keep track of the quest state.
+Right-click in the Hierarchy window and go to ‘UI’ then select ‘Text - TextMeshPro’. Name the new Object 'Coins'. 
 
-Add a `bool` variable called `hasQuestItem` to store whether the quest item has been collected. And a `coins` variable to store the reward.
+Add a new 'QuestSeeker' script component to the **Player** to keep track of the quest state including the number of coins.
+
+Add a `bool` variable called `hasQuestItem` to store whether the quest item has been collected. 
+
+Add a `coins` variable to store the reward and a coinText variable to store the TextMeshPro object to display the number of coins. Update the display of the coins in the `Update` method.
 
 ```
+using TMPro;
+
 public class QuestSeeker : MonoBehaviour
 {
     public bool hasQuestItem = false;
     public int coins = 0;
+    public TMP_Text coinText;
     
     // Start is called before the first frame update
     void Start()
@@ -297,8 +304,16 @@ public class QuestSeeker : MonoBehaviour
         
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+       coinText.SetText("Coins: " + coins); 
+    }
 }
+
 ```
+
+Drag the Coins TextMeshPro object to the Coin Text property in the Inspector.
 
 --- /task ---
 
@@ -343,13 +358,43 @@ Optionally, also play a sound when the item is collected.
 
 --- task ---
 
-Have the QuestGiver NPC display a different message if the quest is complete. 
+Have the QuestGiver NPC display a different message if the quest is complete and give the player a reward for completing the quest.
+
+Add variables to store the Player and the message.
+
+```
+public TMP_Text message;
+public QuestSeeker player;
+
+void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (player.hasQuestItem)
+            {
+                message.SetText("Thankyou so much for finding me a lucky clover!");
+                player.coins+= 10; // give the reward
+                player.hasQuestItem = false; // make sure the player can't get the reward again
+            }
+
+            canvas.SetActive(true);
+        }
+    }
+ ```
+
+In the Inspector, Drag the player to the Player property and the TextMeshPro object with the message to the Message property.
 
 --- /task ---
 
 --- task ---
+**Test:** Play your scene and make sure you get a different message after collecting the QuestItem. Check that the number of coins also increases. Make sure the player can't get the reward more than once.
 
-Give the player a reward for completing the quest. 
+--- /task ---
+
+--- task ---
+You can also display the number of coins the player has on the screen.
+
+Add a UI - TextMeshPro GameObject and call it Coins. Anchor the text to the top-left of the Screen.
 
 --- /task ---
 
@@ -360,10 +405,30 @@ Give the player a reward for completing the quest.
 --- collapse ---
 
 ---
-title: Each debug in a collapse or ingredient
+title: I can't drag a GameObject into the variable in the Inspector
 ---
 
-Each debug in a collapse or ingredient
+Look through the steps above and make sure that you have added all the scripts to the correct GameObjects. 
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: I can't find the right material to use
+---
+
+You can select the materials folder in the Project window to see all the Materials you have created  
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: I can't drag a GameObject into the variable in the Inspector
+---
+
+Look through the steps above and make sure that you have added all the scripts to the correct GameObjects. 
 
 --- /collapse ---
 
