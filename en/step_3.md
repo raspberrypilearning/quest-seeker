@@ -25,7 +25,107 @@ For each quest you will need to:
 title: Recipe or craft quest
 ---
 
-Collect multiple items of different to make a recipe or craft a new item. 
+In a recipe or craft quest, the player will need to collect multiple items of different kinds to make a recipe or craft a new item. 
+
+Update the QuestSeeker script used by the player with variables to keep track of the items that have been collected:
+
+```
+// Add a variable for each item to be collected
+public bool hasIceBlock = false;
+public bool hasIceTool = false;
+```
+
+Add a script to each collectible item, so that it disappears and updates the QuestSeeker 
+You will need to drag the Player GameObject in the inspector. 
+
+Here's an example for an IceBlock, the same project also has a IceTool collectible GameObject with a similar script. 
+
+```
+public class IceBlockController : MonoBehaviour
+{
+    public QuestSeeker player;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            player.hasIceBlock = true;
+            Destroy(gameObject);
+        }
+    }
+}
+
+```
+
+Add a script to the QuestGiver NPC, the script will need a unique name, to handle the quest:
+
+```
+using TMPro;
+
+public class QuestGiver2 : MonoBehaviour
+{
+    public GameObject canvas;
+    public GameObject button;
+    public GameObject iceBlock;
+    public GameObject iceTool;
+    public GameObject iceDome;
+    public TMP_Text message;
+    public QuestSeeker player;
+
+    void Start()
+    {
+        // Don't show the quest message at the start
+        canvas.SetActive(false);
+
+        // Hide the quest items and reward or result objects
+        iceBlock.SetActive(false);
+        iceTool.SetActive(false);
+        iceDome.SetActive(false);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            // And && condition to check whether 
+            if (player.hasIceBlock && player.hasIceTool)
+            {
+                // Change to a successful completion message
+                message.SetText("Thankyou for helping me finish my ice dome. You can climb it if you like.");
+
+                // Reward and story actions
+                iceDome.SetActive(true);
+                player.coins+= 20;
+
+                // Make sure the reward can't be given again
+                player.hasIceBlock = false;
+                player.hasIceTool = false;
+            }
+
+            canvas.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            // Hide the message
+            canvas.SetActive(false);
+        }
+    }
+
+    public void QuestAccepted()
+    {
+        // Items to collect should appear. 
+        iceBlock.SetActive(true);
+        iceTool.SetActive(true);
+        canvas.SetActive(false);
+        button.SetActive(false);
+    }
+}
+
+```
 
 --- /collapse ---
 
@@ -35,7 +135,131 @@ Collect multiple items of different to make a recipe or craft a new item.
 title: Gather quest
 ---
 
-Collect multiple items of the same type. 
+In a 'Gather quest' the player will collect multiple items of the same type. 
+
+Choose a model or create a Collectable GameObject out of 3D shapes. Create and apply a 'Collectable' tag to your GameObject.
+
+Transform your Collectable so that it is the right size, position, and rotation for your hiding space.
+
+Upgrade the looks of the Collectable by adding a particle system and creating a 'CollectableController' script to code visual effects like spinning:
+
+```
+    public float spinSpeed = 5.0f; /
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Rotate(Vector3.forward * spinSpeed); //you can also spin backward, up, down, left and right
+    }
+
+```
+
+Add the 'CollectableController' script and a 'Box Collider' component to your Collectable GameObject and check the 'Is Trigger' Box Collider property.
+
+Update your 'QuestSeeker' script to keep track of the number of collectables:
+
+```
+public int collectables = 0;
+```
+
+Add code to your 'CollectableController' script to destroy the Collectable GameObject and add one to the 'collectables' variable. 
+
+You might also want to:
++ add to the total you displayed in quest one 
++ add a sound effect  
+
+```
+public QuestSeeker player;
+public AudioClip collectSound;
+
+void OnTriggerEnter(Collider other)
+    {
+    // Check the tag of the colliding object
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+            player.collectables += 1;
+            player.coins += 1; // overall score
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+
+        }
+    }
+```
+
+Drag the Player GameObject into the 'Player' property of the Collectable's 'CollectableController' script the Inspector window. 
+
+Duplicate your Collectable GameObject as many times as you like and reposition it in other places. 
+
+Choose a model or create a 'CollectableNPC' GameObject out of 3D shapes. 
+
+Add a Box Collider so that the Player cannot walk through the CollectableNPC and a second Box Collider, that is bigger than the first, with 'Is Trigger' checked. 
+
+Add text and a button as child objects of your 'CollectableNPC'.
+
+Create a new 'CollectableGiver' script to control the initial state of collectables, the canvas messages and button, and the accepting of the task: 
+
+```
+using TMPro;
+
+public class CollectableGiver : MonoBehaviour
+{
+    public GameObject canvas;
+    public TMP_Text message;
+    public GameObject button;
+    public QuestSeeker player;
+    GameObject[] collectables;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        canvas.SetActive(false);
+
+        collectables = GameObject.FindGameObjectsWithTag("Collectable");
+        foreach (var Collectable in collectables)
+        {
+            Collectable.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+
+    }
+
+    public void CoinsAccepted()
+    {
+        foreach (var Collectable in collectables)
+        {
+            Collectable.SetActive(true);
+        }
+
+        canvas.SetActive(false);
+        button.SetActive(false); // Don't show the Accept button again
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.SetActive(true);
+
+            if (player.coins > 2) // if all the coins have been collected
+            {
+                message.SetText("Well done you collected the coins!");
+              
+            }
+
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.SetActive(false);
+        }
+    }
+```
 
 --- /collapse ---
 
