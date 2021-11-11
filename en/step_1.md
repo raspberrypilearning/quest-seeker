@@ -2,8 +2,6 @@
 
 Add NPCs and quests to the world that you created in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder) project. 
 
-<mark>Boxout (wherever wanted/needed) </mark>
-
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 A <span style="color: #0faeb0">**quest**</span> is a task or mission in a computer game that the player can complete to gain a reward or move the story forward. Quests can require a player to fetch or deliver an item, gather items, escort a character to a location, find out information or solve a puzzle. On completion a player could be rewarded with experience, coins, access to new areas or new abilities.
 </p>
@@ -13,8 +11,7 @@ You will:
 + Manage the state of a quest using one or more variables
 + Give behaviour to Player and NPCs to complete one or more quests (gather, escort, deliver).
 
-
-<mark>Image of many different examples in a strip</mark>
+![desc](images/example-strip.png)
 
 --- no-print ---
 
@@ -30,9 +27,8 @@ Play the quests in the example project. Think about the type of quest and the ou
 + How do the NPCs interact with the player?
 + How are items used in the quest? 
 
-<mark>Update link and image</mark>
-
 [Snow Quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest/){:target=blank}
+![](images/snow-raccoon.png)
 
 --- /task ---
 
@@ -44,12 +40,12 @@ You are going to make some design decisions to create your quests.
 
 Explore these example projects to get more ideas:
 
-<mark>Update link and image</mark>
-
 [Maze World](https://raspberrypilearning.github.io/unity-webgl/maze_game_web/){:target=blank}
-![](images/maze-world.png)
+![](images/quest-canvas.png)
 
 [Hill Quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest/){:target=blank}
+![](images/new-quest-accept.png)
+
 
 --- /task ---
 --- /no-print ---
@@ -62,12 +58,9 @@ You are going to make some design decisions to create your quests.
 
 Use these example images to get more ideas:
 
-<mark>Update images</mark>
-
-![](images/snow-world.png)
-![](images/maze-world.png)
-![](images/found-telescope.png)
-<mark> ![](images/minigame.png) </mark>
+![](images/snow-raccoon.png)
+![](images/quest-canvas.png)
+![](images/new-quest-accept.png)
 
 --- /print-only ---
 

@@ -422,10 +422,34 @@ Look through the steps above and make sure that you have added all the scripts t
 --- collapse ---
 
 ---
-title: 
+title: Nothing happens when I click the Accept button
 ---
 
+Select your QuestGiver NPC and make sure they have a script that has an `AcceptQuest` method.
 
+Check that all the variables are set on the script in the Inspector. 
+
+Click on the Button object and check that you have attached the correct Method such as `AcceptQuest` to an 'OnClick' Event. 
+
+Add a `Debug.Log("Quest accepted");` line to the method and check the console to see that the method is being called.
+
+If you are sure the method is being called, check that the code in the method is correct. 
+
+If the method is not being called (no Debug output) then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this then button-clicks won't be handled. If it's missing, right-click in the Hierarch and choose 'UI' then 'Event System'.
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: My collectible doesn't disappear
+---
+
+Check that the collectible has a script with an `OnTriggerEnter` method that destroys the collectible if the player collides with it. 
+
+Make sure you have added a Box Collider with a Trigger and that the collider is bigger than non-trigger colliders so that the Player is able to trigger it. 
+
+Check that the Player GameObject has the 'Player' tag.
 
 --- /collapse ---
 
