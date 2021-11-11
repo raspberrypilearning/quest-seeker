@@ -13,7 +13,7 @@ Image, gif or video showing what they will achieve by the end of the step. ![](i
 Design your second quest. 
 
 It could be:
-+ A **gather** quest with multiple items of the 
++ A **gather** quest with multiple items of the same 
 
 --- /task ---
 
@@ -139,11 +139,65 @@ In the Inspector, making sure you are updating the child objects and components 
 --- /task ---
 
 --- task ---
-**Test:** Play your scene and make sure you see the new quest message and that you can Accept the quest with the button and see the debug message in the console.
+
+**Test:** Play your scene and make sure you see the new quest message and that you can Accept the quest with the button. Check that you can see the debug message in the Console.
+
 --- /task ---
 
 --- task ---
-Depending on the type of quest you have chosen, add the GameObjects that you will use as collectibles, followers or rewards and position them in your scene. 
+
+Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectibles, followers or rewards and position them in your scene. 
+
+Create a tag for your new GameObjects and apply the tag to them.
+
+Add a Box Collider component to your item GameObject and check the 'Is Trigger' Box Collider property.
+
+**Choose:** Add visual effects to your collectibles, followers or rewards.
+
+--- collapse ---
+
+---
+title: Add a particle system to attract attention
+---
+
+
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Add a ItemController script to spin your items
+---
+
+Upgrade the looks of the Item by creating an 'ItemController' script to code visual effects like spinning:
+
+```
+    public float spinSpeed = 5.0f; /
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Rotate(Vector3.forward * spinSpeed); //you can also spin backward, up, down, left and right
+    }
+
+```
+
+Remember to drag the 'ItemController' script to the Item GameObject
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Use animation to bring your items to life
+---
+
+
+
+--- /collapse ---
+
+**Tip:** If all of your collectibles, followers or rewards are to look and act in the same way, make sure you add all your effects before duplicating the first GameObject. 
 
 --- /task ---
 
@@ -269,24 +323,7 @@ title: Gather quest
 
 In a 'Gather quest' the player will collect multiple items of the same type. 
 
-Choose a model or create a Collectable GameObject out of 3D shapes. Create and apply a 'Collectable' tag to your GameObject.
 
-Transform your Collectable so that it is the right size, position, and rotation for your hiding space.
-
-Upgrade the looks of the Collectable by adding a particle system and creating a 'CollectableController' script to code visual effects like spinning:
-
-```
-    public float spinSpeed = 5.0f; /
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(Vector3.forward * spinSpeed); //you can also spin backward, up, down, left and right
-    }
-
-```
-
-Add the 'CollectableController' script and a 'Box Collider' component to your Collectable GameObject and check the 'Is Trigger' Box Collider property.
 
 Update your 'QuestSeeker' script to keep track of the number of collectables:
 
@@ -320,15 +357,9 @@ void OnTriggerEnter(Collider other)
 
 Drag the Player GameObject into the 'Player' property of the Collectable's 'CollectableController' script the Inspector window. 
 
-Duplicate your Collectable GameObject as many times as you like and reposition it in other places. 
 
-// Choose a model or create a 'CollectableNPC' GameObject out of 3D shapes. 
 
-// Add a Box Collider so that the Player cannot walk through the CollectableNPC and a second Box Collider, that is bigger than the first, with 'Is Trigger' checked. 
 
-// Add text and a button as child objects of your 'CollectableNPC'.
-
-// Create a new 'CollectableGiver' script to control the initial state of collectables, the canvas messages and button, and the accepting of the task: 
 
 ```
 using TMPro;
