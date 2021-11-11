@@ -1,23 +1,25 @@
-## Share
+## Upgrade your project
 
-If you are in a club, why not share your project with friends?
+If you have time you can upgrade to your project. 
 
-You could also show your family how your project works.
+Here are some ideas you could try:
 
-If you have a Scratch account, you can share your project through Scratch. You can send a link to people you know, and the whole Scratch community will be able to find your project and try it out.
++ Improve the appearance of the UI Text using font colours and coloured UI Panels. 
++ Add multiple quests to the same NPC so that they offer you a new quest when you complete a quest.
++ Allow some quests to reset so they can be completed multiple times to earn more XP or coins. 
++ Allow the player to choose between different questions by using multiple buttons.
 
-[[[share-scratch]]]
+You could also add different kinds of quest:
++ A **story** question where you have to find and talk to another NPC to find out information.
++ A **puzzle** or **task** quest where you have to solve a puzzle or complete a task.
 
-Why not invite your friends to create a project? Let them know how you had fun.
+<mark> Optional </mark>Each example project in the [Introduction](.) has a ‘See Inside’ link for you to open the project in Scratch and look at the code to get ideas and see how they work.
 
-If you have a Scratch account, and have shared your 'Don't fall in' project, keep an eye out for comments that others may make about your creation. Feedback is a great way to reflect on your work. Ignore any comments that are unhelpful or irrelevant.
+**Sporg**: [See inside](https://scratch.mit.edu/projects/495865892/editor){:target="_blank"}
+<div class="scratch-preview" style="margin-left: 15px;">
+  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495865892/?autostart=false" frameborder="0"></iframe>
+</div>
 
-[[[comments-feedback-scratch]]]
+Take a look at our [Googly eye character Scratch studio](https://scratch.mit.edu/studios/29120534){:target="_blank"} to see projects created by community members.
 
---- task ---
-
-Inspire the Raspberry Pi Foundation community with your project!
-
-To submit your project to our ['Don't fall in - Community'](https://scratch.mit.edu/studios/29601182){:target="_blank"} Scratch studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
-
---- /task ---
+--- save ---

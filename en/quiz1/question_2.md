@@ -5,40 +5,56 @@
 legend: Question 2 of 3
 ---
 
-You made Pico say hello in a speech bubble.
+A script on an Quest Giver NPC has the following method:
 
-```blocks3
-say [Hello!] for [2] secs
+<mark>Highlight the blank line.</mark>
+
+```
+void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (player.hasQuestItem)
+            {
+                message.SetText("Thankyou so much for fetching my telescope!");
+                player.coins += 15; // give the reward
+
+            }
+
+            canvas.SetActive(true);
+        }
+    }
 ```
 
-Where would you go to find this block?
+The game has a bug that allows the player to keep collecting more coins by repeatedly colliding with the NPC after completing the quest. Which line of code could you add after giving the reward to fix this?
 
 --- choices ---
 
-- (x) 
+- ( ) `player.coins -= 15;`
 
   --- feedback ---
+
+  No, that would remove the reward every time it was given, including the first time. The player would never get the reward.
 
   --- /feedback ---
 
-- ( ) 
+- (x) `player.hasQuestItem = false;`
 
   --- feedback ---
+
+Yes that's correct. The Quest Giver NPC checks whether the player has the quest item before giving the reward. Setting the `player.hasQuestItem` variable to false will mean that the reward code doesn't run next time the Player collides with the Quest Giver NPC. 
 
   --- /feedback ---
 
-- ( ) 
+- ( ) `message.SetText("Hey, I already gave you a reward");`
 
   --- feedback ---
 
-  --- /feedback ---
-
-- ( ) 
-
-  --- feedback ---
+No. This would just change the message the player sees. It wouldn't change the reward they are given. 
 
   --- /feedback ---
 
 --- /choices ---
 
 --- /question ---
+

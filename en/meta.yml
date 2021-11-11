@@ -1,13 +1,14 @@
-title: design-project-template
+title: Quest seeker
 hero_image: images/banner.png
-description: design-project-template description
+description: Add NPCs and quests to the world that you created in the World Builder project. 
 version: 4
 listed: false
 copyedit: false
 last_tested: "2021-03-26"
 steps:
   - title: Introduction
-  - title: Step title
+  - title: First quest
+  - title: More quests
   - title: Reflection
     knowledge_quiz:
       path: quiz1

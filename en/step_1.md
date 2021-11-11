@@ -1,19 +1,18 @@
 ## Introduction
 
-In this project, <mark> short project description </mark>
+Add NPCs and quests to the world that you created in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder) project. 
 
 <mark>Boxout (wherever wanted/needed) </mark>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Term**</span> description of term or interesting phrase.
+A <span style="color: #0faeb0">**quest**</span> is a task or mission in a computer game that the player can complete to gain a reward or move the story forward. Quests can require a player to fetch or deliver an item, gather items, escort a character to a location, find out information or solve a puzzle. On completion a player could be rewarded with experience, coins, access to new areas or new abilities.
 </p>
 
-<mark>Objectives in language that learners will understand</mark>
-
 You will:
-+ 
-+ 
-+
++ Add an NPC with dialogue that changes based on game state
++ Manage the state of a quest using one or more variables
++ Give behaviour to Player and NPCs to complete one or more quests (gather, escort, deliver).
+
 
 <mark>Image of many different examples in a strip</mark>
 
@@ -26,41 +25,32 @@ You will:
 
 ### Try it 
 
-Description of what to do or think about when looking at the example.
+Play the quests in the example project. Think about the type of quest and the outcome.  
++ What is the reward for completing the quest? 
++ How do the NPCs interact with the player?
++ How are items used in the quest? 
 
-</div>
-<div>
-**Gobo watching**: [See inside](https://scratch.mit.edu/projects/495141114/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495141114/?autostart=false" frameborder="0"></iframe>
-</div>
+<mark>Update link and image</mark>
 
-</div>
+[Snow Quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest/){:target=blank}
 
 --- /task ---
 
 ### Get inspiration 
 
-You are going to make some design decisions to ...
+You are going to make some design decisions to create your quests.
 
 --- task ---
 
 Explore these example projects to get more ideas:
 
-**Don't eat donut**: [See inside](https://scratch.mit.edu/projects/495865093/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495865093/?autostart=false" frameborder="0"></iframe>
-</div>
+<mark>Update link and image</mark>
 
-**Under the sea**: [See inside](https://scratch.mit.edu/projects/495866460/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495866460/?autostart=false" frameborder="0"></iframe>
-</div>
+[Maze World](https://raspberrypilearning.github.io/unity-webgl/maze_game_web/){:target=blank}
+![](images/maze-world.png)
 
-**Sporg**: [See inside](https://scratch.mit.edu/projects/495865892/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495865892/?autostart=false" frameborder="0"></iframe>
-</div>
+[Hill Quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest/){:target=blank}
+
 --- /task ---
 --- /no-print ---
 
@@ -68,9 +58,18 @@ Explore these example projects to get more ideas:
 
 ### Get inspiration 
 
-You are going to make some design decisions to create your character. See inside example projects in [Scratch 1: Googly eye character - Examples](https://scratch.mit.edu/studios/29029028/){:target="_blank"} Scratch studio.
+You are going to make some design decisions to create your quests.
 
-<mark>one image file per example</mark>
+Use these example images to get more ideas:
+
+<mark>Update images</mark>
+
+![](images/snow-world.png)
+![](images/maze-world.png)
+![](images/found-telescope.png)
+<mark> ![](images/minigame.png) </mark>
 
 --- /print-only ---
+
+
 
