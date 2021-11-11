@@ -16,6 +16,100 @@ For each quest you will need to:
 + Add a script to to the quest giver NPC and give it a name such as 'QuestGiver2'. Add a UI TextMeshPro message a UI TextMeshPro Button to the new quest giver. Add code to the script to control the conversation and reward based on the state of the quest.
 + Add scripts to items and other NPCs according to the quest type.
 
+--- task ---
+Add a new GameObject to be the second QuestGiver NPC. 
+
+**Choose:**
+
+--- collapse ---
+
+---
+title: Duplicate your first NPC and make changes to it
+---
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Add a new Quest Giver NPC GameObject
+---
+
+Right-click on the Canvas for your first NPC and choose copy. Then, right-click on your new QuestGiver NPC and choose 'Paste as Child'. 
+
+In the Inspector:
++ Edit the text in the Message of this copied Canvas to describe your new quest. Change the text style to suit your new character. 
++ Edit the text in the Name object to match your new NPC.
+
+Add a script to the new Quest Giver NPC. The script will need a unique name such as QuestGiver2 or KeyQuestGiver. 
+
+```
+using TMPro;
+
+public class QuestGiver : MonoBehaviour
+{
+    public GameObject canvas;
+    public GameObject button;
+    public TMP_Text message
+    public QuestSeeker player;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("Quest giver start");
+        canvas.SetActive(false);
+
+        // Set up the quest
+       
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            // Check quest condition and take action
+            if (false) // Check the condition for your quest
+            {
+                message.SetText("Thankyou for completing the quest"); // add your message
+                
+                // Reward and result actions
+                // Make sure reward can't be claimed again
+            }
+
+            canvas.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.SetActive(false);
+        }
+    }
+
+    public void QuestAccepted()
+    {
+        Debug.Log("Quest accepted"); // Update with the name of your quest
+        // Activate the quest
+
+        canvas.SetActive(false);
+        button.SetActive(false);
+    }
+}
+```
+
+In the Inspector, making sure you are updating the child objects and components for your new Quest Giver NPC:
++ Drag the Canvas, Message and Button objects to your new Script
++ Select the Button and add an 'OnClick' set to the `QuestAccepted` Method of your new script.
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+**Test:** Play your scene and make sure you see the new quest message and that you can Accept the quest with the button and see the debug message in the console.
+--- /task ---
 
 --- task ---
 
