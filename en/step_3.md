@@ -9,14 +9,24 @@ Image, gif or video showing what they will achieve by the end of the step. ![](i
 </div>
 </div>
 
+--- task ---
+Design your second quest. 
+
+It could be:
++ A **gather** quest with multiple items of the 
+
+--- /task ---
+
 For each quest you will need to:
 + Add a new NPC to be the quest giver. 
-+ Update the QuestSeeker script on the Player with variables to store the state of the new quest.
++ Update the QuestSeeker script on the Player with variables to store the state of the new quest. 
 + Add items and other NPCs depending on the quest type. 
 + Add a script to to the quest giver NPC and give it a name such as 'QuestGiver2'. Add a UI TextMeshPro message a UI TextMeshPro Button to the new quest giver. Add code to the script to control the conversation and reward based on the state of the quest.
+
 + Add scripts to items and other NPCs according to the quest type.
 
 --- task ---
+
 Add a new GameObject to be the second QuestGiver NPC. 
 
 **Choose:**
@@ -27,21 +37,42 @@ Add a new GameObject to be the second QuestGiver NPC.
 title: Duplicate your first NPC and make changes to it
 ---
 
+Right-click on the QuestGiver GameObject you created for the first quest and select 'Duplicate'. This creates a copy of your QuestGiver GameObject with all the child GameObjects. 
+
+The QuestGiver GameObject will be created in the same position, use the Scene view or Inspector to position it somewhere else. 
+
+Remove the existing 'QuestGiver' script component from the Inspector by clicking on the three dots and selecting 'Remove Component'.
+
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Add a new Quest Giver NPC GameObject
+title: Add a new QuestGiver NPC GameObject
 ---
+
+Choose a model or create a new QuestGiver NPC GameObject out of 3D shapes.  
+
+Add a Box Collider so that the Player cannot walk through the new QuestGiver NPC and a second Box Collider, that is bigger than the first, with 'Is Trigger' checked. 
 
 Right-click on the Canvas for your first NPC and choose copy. Then, right-click on your new QuestGiver NPC and choose 'Paste as Child'. 
 
+--- /collapse ---
+
 In the Inspector:
-+ Edit the text in the Message of this copied Canvas to describe your new quest. Change the text style to suit your new character. 
++ Edit the text in the Message on your new QuestGiver NPC Canvas to describe your new quest. Change the text style to suit your new character. 
 + Edit the text in the Name object to match your new NPC.
 
-Add a script to the new Quest Giver NPC. The script will need a unique name such as QuestGiver2 or KeyQuestGiver. 
+
+--- collapse ---
+
+---
+title: Create a new script for the QuestGiver NPC.
+---
+
+Create a new script for the QuestGiver NPC. The script will need a unique name such as QuestGiver2 or KeyQuestGiver. 
+
+This script will control the initial state of collectables, the canvas messages and button, and the accepting of the task: 
 
 ```
 using TMPro;
@@ -99,17 +130,23 @@ public class QuestGiver : MonoBehaviour
 }
 ```
 
-In the Inspector, making sure you are updating the child objects and components for your new Quest Giver NPC:
-+ Drag the Canvas, Message and Button objects to your new Script
-+ Select the Button and add an 'OnClick' set to the `QuestAccepted` Method of your new script.
-
 --- /collapse ---
+
+In the Inspector, making sure you are updating the child objects and components for your new QuestGiver NPC:
++ Drag the Canvas, Message and Button objects to your new Script,
++ Select the Button and add an 'OnClick' set to the `QuestAccepted` Method of your new script.
 
 --- /task ---
 
 --- task ---
 **Test:** Play your scene and make sure you see the new quest message and that you can Accept the quest with the button and see the debug message in the console.
 --- /task ---
+
+--- task ---
+Depending on the type of quest you have chosen, add the GameObjects that you will use as collectibles, followers or rewards and position them in your scene. 
+
+--- /task ---
+
 
 --- task ---
 
@@ -121,7 +158,7 @@ title: Recipe or craft quest
 
 In a recipe or craft quest, the player will need to collect multiple items of different kinds to make a recipe or craft a new item. 
 
-Update the QuestSeeker script used by the player with variables to keep track of the items that have been collected:
+Update the **QuestSeeker** script used by the player with variables to keep track of the items that have been collected:
 
 ```
 // Add a variable for each item to be collected
@@ -151,8 +188,9 @@ public class IceBlockController : MonoBehaviour
 
 ```
 
-Add a script to the QuestGiver NPC, the script will need a unique name, to handle the quest:
+Update the new  QuestGiver NPC, the script will need a unique name, to handle the quest:
 
+<mark>Highlight code to clearly show new elements</mark>
 ```
 using TMPro;
 
@@ -284,13 +322,13 @@ Drag the Player GameObject into the 'Player' property of the Collectable's 'Coll
 
 Duplicate your Collectable GameObject as many times as you like and reposition it in other places. 
 
-Choose a model or create a 'CollectableNPC' GameObject out of 3D shapes. 
+// Choose a model or create a 'CollectableNPC' GameObject out of 3D shapes. 
 
-Add a Box Collider so that the Player cannot walk through the CollectableNPC and a second Box Collider, that is bigger than the first, with 'Is Trigger' checked. 
+// Add a Box Collider so that the Player cannot walk through the CollectableNPC and a second Box Collider, that is bigger than the first, with 'Is Trigger' checked. 
 
-Add text and a button as child objects of your 'CollectableNPC'.
+// Add text and a button as child objects of your 'CollectableNPC'.
 
-Create a new 'CollectableGiver' script to control the initial state of collectables, the canvas messages and button, and the accepting of the task: 
+// Create a new 'CollectableGiver' script to control the initial state of collectables, the canvas messages and button, and the accepting of the task: 
 
 ```
 using TMPro;
