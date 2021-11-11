@@ -32,8 +32,7 @@ Play the quests in the example project. Think about the type of quest and the ou
 
 <mark>Update link and image</mark>
 
-[Snow Scene](https://raspberrypilearning.github.io/unity-webgl/SnowSceneWeb/){:target=blank}.
-![](images/snow-world.png)
+[Snow Quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest/){:target=blank}
 
 --- /task ---
 
@@ -47,8 +46,10 @@ Explore these example projects to get more ideas:
 
 <mark>Update link and image</mark>
 
-[Maze World](https://raspberrypilearning.github.io/unity-webgl/maze_web/){:target=blank}.
+[Maze World](https://raspberrypilearning.github.io/unity-webgl/maze_game_web/){:target=blank}
 ![](images/maze-world.png)
+
+[Hill Quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest/){:target=blank}
 
 --- /task ---
 --- /no-print ---
@@ -65,7 +66,7 @@ Use these example images to get more ideas:
 
 ![](images/snow-world.png)
 ![](images/maze-world.png)
-<mark> ![](images/car-circuit.png) </mark>
+![](images/found-telescope.png)
 <mark> ![](images/minigame.png) </mark>
 
 --- /print-only ---
