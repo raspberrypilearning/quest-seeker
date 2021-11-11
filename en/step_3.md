@@ -188,7 +188,7 @@ title: Add a ItemController script to spin your items
 Upgrade the looks of the Item by creating an 'ItemController' script to code visual effects like spinning:
 
 ```
-    public float spinSpeed = 5.0f; /
+    public float spinSpeed = 5.0f; 
 
     // Update is called once per frame
     void Update()
@@ -250,6 +250,21 @@ A type of reward could be to remove a barrier or get access to an area or items 
 
 Think about the GameOjbects you want to remove. Create and apply a new 'Unlock' tag to them.
 
+Open your QuestGiver script and create  variable to store the Unlock GameObjects:
+
+```
+    public GameObject[] unlock;
+
+```
+
+Add code to the Start() method to turn the items on at the start.
+
+        unlock = GameObject.FindGameObjectsWithTag("Unlock");
+        foreach (var Unlock in unlock)
+        {
+            Unlock.SetActive(true);
+        }
+
 Create an unlock script and attach it to a new NPC quest ally or to a collectable item. 
 
 ```
@@ -257,7 +272,7 @@ public class Unlock : MonoBehaviour
 {
     public GameObject canvas;
     public AudioClip collectSound;
-    public CoinQuest walls;
+    public QuestGiver NPC walls;
 
     // Start is called before the first frame update
     void Start()
@@ -666,7 +681,21 @@ public class EscortQuestGiver : MonoBehaviour
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** You might find some bugs in your project that you need to fix. 
+
+--- collapse ---
+
+---
+title: Nothing happens when I click the Accept button
+---
+
+Click on the Button object and check that you have attached the correct Method such as `AcceptQuest` to an 'OnClick' Event. 
+
+Add a `Debug.Log("Quest accepted");` line to the method and check the console to see that the method is being called.
+
+Check that you have correctly 
+
+--- /collapse ---
 
 --- collapse ---
 
