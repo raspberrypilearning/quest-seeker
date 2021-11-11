@@ -256,7 +256,7 @@ public int gems; // Keep track of gems.
 player.gems += 2; // Give a reward to the player
 ```
 
-![desc](images/coin-reward.png)
+![desc](images/coin-reward.gif)
 
 --- /collapse ---
 
@@ -284,7 +284,7 @@ You could also make an NPC character become a follower or a pet by changing the 
 player.dogFollowing = true;
 ```
 
-![desc](images/friend-found.png)
+![desc](images/friend-found.gif)
 
 --- /collapse ---
 
