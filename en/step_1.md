@@ -11,7 +11,7 @@ You will:
 + Manage the state of a quest using one or more variables
 + Give behaviour to Player and NPCs to complete one or more quests (gather, escort, deliver).
 
-![desc](images/example-strip.png)
+![A strip of multiple images showing a maze world with gather quest, a snow world with recipe quest, a tree world with follower quest and a mouth world with gather quest.](images/example-strip.png)
 
 --- no-print ---
 
@@ -27,8 +27,8 @@ Play the quests in the example project. Think about the type of quest and the ou
 + How do the NPCs interact with the player?
 + How are items used in the quest? 
 
-[Snow Quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest/){:target=blank}
-![](images/snow-raccoon.png)
+[Snow Quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest){:target=blank}
+![A snow scene with a raccoon that has a white snow material so it looks like a snowman raccoon. The player has approached and the quest to gather items needed to make an ice tool is shown. There is a button for the player to accept.](images/snow-raccoon.png){:width="400px"}
 
 --- /task ---
 
@@ -40,14 +40,15 @@ You are going to make some design decisions to create your quests.
 
 Explore these example projects to get more ideas:
 
-[Maze World](https://raspberrypilearning.github.io/unity-webgl/maze_game_web/){:target=blank}
-![](images/quest-canvas.png)
+[Maze Quest](https://raspberrypilearning.github.io/unity-webgl/maze_game_web){:target=blank}
+![A maze scene with a capsule character from 3D shapes. The player has approached and the quest to gather an item for coin reward is shown. There is a button for the player to accept.](images/quest-canvas.png){:width="400px"}
 
-[Hill Quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest/){:target=blank}
-![](images/new-quest-accept.png)
+[Hill Quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target=blank}
+![A hill and tree scene with a cat that the player has approached and the quest to find and escort a friend is shown. There is a button for the player to accept.](images/new-quest-accept.png){:width="400px"}
 
 
 --- /task ---
+
 --- /no-print ---
 
 --- print-only ---
@@ -58,9 +59,14 @@ You are going to make some design decisions to create your quests.
 
 Use these example images to get more ideas:
 
-![](images/snow-raccoon.png)
-![](images/quest-canvas.png)
-![](images/new-quest-accept.png)
+Snow quest: https://raspberrypilearning.github.io/unity-webgl/SnowQuest
+![](images/snow-raccoon.png){:width="400px"}
+
+Maze quest: https://raspberrypilearning.github.io/unity-webgl/maze_game_web
+![](images/quest-canvas.png){:width="400px"}
+
+Hill Quest: https://raspberrypilearning.github.io/unity-webgl/HillQuest
+![](images/new-quest-accept.png){:width="400px"}
 
 --- /print-only ---
 
