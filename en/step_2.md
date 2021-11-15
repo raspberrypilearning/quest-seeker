@@ -2,9 +2,11 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The first quest will be a **fetch quest** where an NPC asks the player to find an item and bring it back to them. When the player returns to the quest giver they will be rewarded with experience points (XP) or a reward in the currency of your game.
+The first quest will be a **fetch quest** where an NPC asks the player to find an item and bring it back to them. 
+
+When the player returns to the quest giver they will be rewarded with experience points (XP) or a reward in the currency of your game.
 <div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/quest-complete.png){:width="300px"}
+Image, gif or video showing what they will achieve by the end of the step. ![](images/first-quest.png){:width="300px"}
 </div>
 </div>
 
