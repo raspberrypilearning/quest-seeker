@@ -6,7 +6,7 @@ The first quest will be a **fetch quest** where an NPC asks the player to find a
 
 When the player returns to the quest giver they will be rewarded with experience points (XP) or a reward in the currency of your game.
 <div>
-![An animated gif of the player approaching the quest giver and accepting a quest to find the space helmet. The player finds and collects the space helmet and returns it to the quest giver to get points.](images/first-quest.png){:width="300px"}
+![An animated gif of the player approaching the quest giver and accepting a quest to find the space helmet. The player finds and collects the space helmet and returns it to the quest giver to get points.](images/first-quest.gif){:width="300px"}
 </div>
 </div>
 
