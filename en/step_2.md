@@ -24,7 +24,7 @@ Open your project to use as the world, or map, where quests will take place.
 
 You will need to decide on:
 + An item to be fetched,
-+ A non-player character (NPC),
++ A non-player character (NPC) to give the quest to the player,
 + The messages for the NPC to display before and after the quest is completed.
 + A reward of experience points or currency (coins or gems) in your game.
 
@@ -32,7 +32,9 @@ You will need to decide on:
 
 --- task ---
 
-Add a GameObject for the item that the player will need to fetch. Position the item in your world so the player will need to move from their starting position to find it. 
+Add a GameObject for the item that the player will need to fetch. 
+
+Position the item in your world so the player will need to move from their starting position to find it. 
 
 ![A strip of multiple images showing items created from models or 3D shapes including a helmet, telescope, ice tool, picture, heart, clover and magnet.](images/item-strip.png)
 
@@ -50,9 +52,7 @@ Add a NPC to be a Quest Giver and position it so that it will be easy for the pl
 
 ![A strip of multiple images showing NPCs created from models or 3D shapes.](images/NPC-strip.png)
 
-You could:
-+ use one of the animal characters 
-+ create your own character from 3D objects. 
+**Choose:**
 
 [[[unity-npc-model]]]
 
@@ -72,13 +72,10 @@ The Quest Giver will offer the player a quest when they get close enough.
 
 --- task ---
 
-Add a UI TextMeshPro as a **child of the Quest Giver** to contain the message offering the quest: 
+Add a UI TextMeshPro named 'Quest Text' as a **child of the Quest Giver** and add your quest message to it. 
 
 ![desc](images/quest-giver-text.png)
 
-You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
-
-Name the GameObject to match the NPC that it belongs to, for example 'Snow Cat Quest Text'. 
 
 --- collapse ---
 
@@ -95,16 +92,20 @@ Change the message text, settings and position of the text object until you are 
 
 --- /collapse ---
 
+You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
+
 --- /task ---
 
 --- task ---
 
-Use a Box Collider with a Trigger and a **QuestGiver** script on the Quest Giver NPC to make the quest message appear when the Player is nearby. 
+Add a Box Collider with a Trigger and a **QuestGiver** script on the Quest Giver NPC to make the quest message appear when the Player is nearby. 
+
+![An animated gif showing the Player approaching an NPC. When the player gets near the NPC a canvas with text message is enabled on the scene.](images/quest-text.gif)
 
 --- collapse ---
 
 ---
-title: Make a text message appear when the player is close enough
+title: Make a message appear when the player is close enough
 ---
 
 Add another Box Collider with the Trigger property checked. This Box Collider needs to be bigger than the first Box Collider so that the player can trigger the Quest Giver to display a text box.
@@ -146,14 +147,16 @@ Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script c
 
 --- /task ---
 
+For this quest, the item to be collected should only appear once the quest has been accepted. 
+
 --- task ---
 
-For this quest, the item to be collected should only appear once the quest has been accepted. 
+Add an 'Accept' Button to the Canvas on your Quest Giver NPC and connect it to a `QuestAccepted` method on your **QuestGiver** script. Update the **Quest Giver** script so the item only appears when the quest has been accepted.
 
 --- collapse ---
 
 ---
-title: Make a GameObject appear when a button is clicked
+title: Make an Item GameObject appear when a button is clicked
 ---
 
 Add a UI TextMesh Pro Button to the same canvas and click on the Text (TMP) child object of the Button then give it the text 'Accept': 
@@ -164,7 +167,7 @@ Adjust the Button & Text size, position and colours until you are happy with the
 
 ![desc](images/quest-canvas.png)
 
-Add code to the QuestGiver script to control when the object appears so that it only appears when then quest has been accepted.  
+Add code to the QuestGiver script to control when the object appears so that it only appears when then quest has been accepted. 
 
 ```
 public class QuestGiver : MonoBehaviour
@@ -177,7 +180,7 @@ public class QuestGiver : MonoBehaviour
     void Start()
     {
         canvas.SetActive(false);
-        item.SetActive(false);
+        item.SetActive(false); // hide the quest item
     }
 
     void OnTriggerEnter(Collider other)
@@ -198,9 +201,9 @@ public class QuestGiver : MonoBehaviour
 
     public void QuestAccepted()
     {
-        item.SetActive(true);
-        canvas.SetActive(false);
-        button.SetActive(false);
+        item.SetActive(true); // make the quest item appear
+        canvas.SetActive(false); // hide the message when the quest has been accepted
+        button.SetActive(false); // don't show the button after the quest has been accepted
     }
 }
 ```
@@ -225,7 +228,7 @@ Click on the circle for the field underneath ‘Runtime’, click on ‘Scene’
 
 --- task ---
 
-**Test:** Check that your item does not appear when you Play your scene. Go and talk to the QuestGiver and Accept the quest. Make sure that the item appears. 
+**Test:** Check that your item does not appear when you Play your scene. Go and talk to the QuestGiver and Accept the quest. Make sure that the item appears. Also check that the 'Accept' button disappears and isn't shown again if you return to the Quest Giver. 
 
 --- /task ---
 
@@ -233,7 +236,16 @@ When the player collects the item the item needs to disappear and optionally pla
 
 --- task ---
 
-Right-click in the Hierarchy window and go to ‘UI’ then select ‘Text - TextMeshPro’. Name the new Object 'Coins', or a suitable name for your reward. 
+Add a **QuestSeeker** script to the Player with a variable such as `coins` to store the reward. Add a 'UI' 'TextMeshPro' to the scene to display the reward.
+
+
+--- collapse ---
+
+---
+title: 
+---
+
+Right-click in the Hierarchy window and add a 'UI' 'TextMeshPro' to your scene to show the reward. Name the new Object 'Coins Text', or a suitable name for your reward. 
 
 Add a new 'QuestSeeker' script component to the **Player** to keep track of the quest state and the reward.
 
@@ -254,6 +266,8 @@ public class QuestSeeker : MonoBehaviour
 }
 
 ```
+
+--- /collapse ---
 
 Drag the Coins TextMeshPro object to the Coin Text property in the Inspector.
 
