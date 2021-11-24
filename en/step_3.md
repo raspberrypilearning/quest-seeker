@@ -285,6 +285,7 @@ Add a script to each quest item or other NPC involved in the quest so that they 
 
 --- collapse ---
 
+---
 title: Collect recipe or crafting quest items
 ---
 
