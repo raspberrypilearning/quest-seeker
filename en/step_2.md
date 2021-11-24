@@ -62,6 +62,11 @@ Add a NPC to be a Quest Giver and position it so that it will be easy for the pl
 --- /task ---
 
 --- task ---
+If you choose the Cat, Rat or Raccoon then you can set the Animator 'Controller' to the 'IdleWalk' animation. 
+
+--- /task ---
+
+--- task ---
 
 Add a Box Collider to the Quest Giver so that the player can't walk through them.
 
@@ -75,7 +80,7 @@ The Quest Giver will offer the player a quest when they get close enough.
 
 Add a UI TextMeshPro named 'Quest Text' as a **child of the Quest Giver** and add your quest message to it. 
 
-![desc](images/quest-giver-text.png)
+![The Game view showing canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the Quest message.](images/quest-giver-text.png)
 
 
 --- collapse ---
@@ -84,16 +89,14 @@ Add a UI TextMeshPro named 'Quest Text' as a **child of the Quest Giver** and ad
 title: Add and position TextMeshPro text
 ---
 
-
-
 Change the message text, settings and position of the text object until you are happy:
 
-![desc](images/text-object-settings.png)
-![desc](images/text-object-position.png)
+![The TextMeshPro component in the Inspector window with quest text added to the Text Input and Auto size ticked.](images/text-object-settings.png)
+![The Rect transform component of the Text Mesh Pro with Ancor to the bottom left and Pos X, Pos Y, Poz Z, Width and Height tailored for the scene.](images/text-object-position.png)
 
 You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
 
-![desc](images/quest-giver-text.png)
+![The Game view showing canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the Quest message.](images/quest-giver-text.png)
 
 --- /collapse ---
 
@@ -113,7 +116,7 @@ title: Make a message appear when the player is close enough
 
 Add another Box Collider with the Trigger property checked. This Box Collider needs to be bigger than the first Box Collider so that the player can trigger the Quest Giver to display a text box.
 
-![desc](images/box-trigger.png)
+![The Box Collider component with X = 3, and Z = 3 to give a large range. Is Trigger is selected.](images/box-trigger.png)
 
 Add a script called 'QuestGiver' to the QuestGiver GameObject. Add `OnTriggerEnter` and `OnTriggerExit` methods to show and hide the message canvas when the Player gets close and moves away. 
 
@@ -144,9 +147,23 @@ public class QuestGiver : MonoBehaviour
 
 Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script component and drag the Canvas for the NPC to the Canvas property of the script, and the Button to the Button property. 
 
-![desc](images/quest-script.png)
+![The Script component showing the Canvas GameObject in the Canvas variable.](images/quest-script.png)
 
 --- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Play your scene:
++ Check that the Player can't walk through the Quest Giver.
++ Make sure the quest message appears when the Player is near the Quest Giver 
+
+**Debug:**
+
+[[[unity-collider-error]]]
+
+[[[unity-trigger-error]]]
 
 --- /task ---
 
@@ -166,11 +183,11 @@ title: Make an Item GameObject appear when a button is clicked
 
 Add a UI TextMesh Pro Button to the same canvas and click on the Text (TMP) child object of the Button then give it the text 'Accept': 
 
-![desc](images/text-button.png)
+![The TextMeshPro component with Text Input 'Accept](images/text-button.png)
 
 Adjust the Button & Text size, position and colours until you are happy with them:
 
-![desc](images/quest-canvas-snow.png)
+![A snow quest with quest message and accept button at the bottom of the scene.](images/quest-canvas-snow.png)
 
 Add code to the QuestGiver script to control when the object appears so that it only appears when then quest has been accepted. 
 
@@ -215,19 +232,19 @@ public class QuestGiver : MonoBehaviour
 
 Select the QuestGiver then in the QuestGiver script component in the Inspector window, drag your item GameObject to the 'Item' property:
 
-![desc](images/item-script.png)
+![The QuestGiver script component with 'QuestItem' in the Item variable.](images/item-script.png)
 
 From the Hierarchy window, select the Button GameObject then go to the Inspector window ‘On Click ()’ property and click on the ‘+’.
 
 Click on the circle for the field underneath ‘Runtime’, click on ‘Scene’ and choose your QuestGiver. In the ‘Function’ dropdown select ‘QuestGiver.QuestAccepted’ to join your new method to the Button’s click event:
 
-![desc](images/button-click.png)
+![The 'OnClick()' function of the button with 'QuestGiver' populated to the left and 'QuestGiver.QuestAccepted to the right.](images/button-click.png)
 
 --- /collapse ---
 
 **Tip:** When you have a Canvas as a child object you will need to disable it in the Inspector, by unchecking the box next to the name, so you can focus on the GameObject using 'F' or 'Shift-F'. If you need to see it again to edit it you can check the box. 
 
-![desc](images/canvas-unchecked.png)
+![The Inspector window for the Canvas showing that the Canvas is unselected with an empty check box to the left of the name.](images/canvas-unchecked.png)
 
 --- /task ---
 
@@ -238,6 +255,28 @@ Click on the circle for the field underneath ‘Runtime’, click on ‘Scene’
 + Go and talk to the QuestGiver and Accept the quest. 
 + Make sure that the item appears when the quest is accepted. 
 + Also check that the 'Accept' button disappears and isn't shown again if you return to the Quest Giver. 
+
+**Debug:**
+
+--- collapse ---
+
+---
+title: Nothing happens when I click the Accept button
+---
+
+Select your QuestGiver NPC and make sure they have a script that has an `AcceptQuest` method.
+
+Check that all the variables are set on the script in the Inspector. 
+
+Click on the Button object and check that you have attached the correct Method such as `AcceptQuest` to an 'OnClick' Event. 
+
+Add a `Debug.Log("Quest accepted");` line to the method and check the console to see that the method is being called.
+
+If you are sure the method is being called, check that the code in the method is correct. 
+
+If the method is not being called (no Debug output) then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this then button-clicks won't be handled. If it's missing, right-click in the Hierarch and choose 'UI' then 'Event System'.
+
+--- /collapse ---
 
 --- /task ---
 
@@ -352,7 +391,7 @@ public class QuestItemController : MonoBehaviour
 
 Drag the Player GameObject to the player property of the QuestItemController script in the Inspector for the QuestItem.
 
-![desc](images/player-property.png)
+![The QuestItemController script component with Player variable populated with 'layer (Quest Seeker).](images/player-property.png)
 
 --- /collapse ---
 
@@ -364,9 +403,26 @@ Optionally, also play a sound when the item is collected.
 
 --- task ---
 
-**Test:** Play the scene. Talk to the QuestGiver NPC and accept the quest. Check that you can collect the QuestItem. While you are still in Playmode, click on the Player and check that the `hasQuestItem` property in the Inspector window is checked to show that the quest item has been collected. 
+**Test:** Play your scene:
++ Talk to the QuestGiver NPC and accept the quest. 
++ Check that you can collect the QuestItem. 
++ While you are still in Playmode, click on the Player and check that the `hasQuestItem` property in the Inspector window is checked to show that the quest item has been collected. 
 
-![desc](images/playmode-item-collect.png)
+![The Inspector window in run time with the Quest Seeker script component and 'Has Quest Item' selected.](images/playmode-item-collect.png)
+
+--- collapse ---
+
+---
+title: My Quest Item doesn't disappear
+---
+
+Check that the Quest Item has a script with an `OnTriggerEnter` method that deactivates the Quest Item when the player collides with it. 
+
+Make sure you have added a Box Collider with a Trigger and that the collider is bigger than any non-trigger colliders so that the Player is able to trigger it. 
+
+Check that the Player GameObject has the 'Player' tag.
+
+--- /collapse ---
 
 --- /task ---
 
@@ -410,13 +466,24 @@ void OnTriggerEnter(Collider other)
 
 --- task ---
 
-**Test:** Play your scene and make sure you get a different message after collecting the QuestItem. Check that the number of coins also increases. Make sure the player can't get the reward more than once.
+**Test:** Play your scene:
++  Make sure you get a different message after collecting the QuestItem. 
++ Check that the number of coins also increases.
++ Make sure the player can't get the reward more than once.
 
 --- /task ---
 
 --- task ---
 
 **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+
+[[[unity-console-error]]]
+
+[[[unity-changes-gone]]]
+
+[[[unity-method-absent]]]
+
+[[[unity-show-variables]]]
 
 --- collapse ---
 
@@ -426,39 +493,7 @@ title: I can't drag a GameObject into my variable in the Inspector
 
 Look through the steps above and make sure that you have added all the scripts to the correct GameObjects. 
 
---- /collapse ---
-
---- collapse ---
-
----
-title: Nothing happens when I click the Accept button
----
-
-Select your QuestGiver NPC and make sure they have a script that has an `AcceptQuest` method.
-
-Check that all the variables are set on the script in the Inspector. 
-
-Click on the Button object and check that you have attached the correct Method such as `AcceptQuest` to an 'OnClick' Event. 
-
-Add a `Debug.Log("Quest accepted");` line to the method and check the console to see that the method is being called.
-
-If you are sure the method is being called, check that the code in the method is correct. 
-
-If the method is not being called (no Debug output) then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this then button-clicks won't be handled. If it's missing, right-click in the Hierarch and choose 'UI' then 'Event System'.
-
---- /collapse ---
-
---- collapse ---
-
----
-title: My collectible doesn't disappear
----
-
-Check that the collectible has a script with an `OnTriggerEnter` method that destroys the collectible if the player collides with it. 
-
-Make sure you have added a Box Collider with a Trigger and that the collider is bigger than non-trigger colliders so that the Player is able to trigger it. 
-
-Check that the Player GameObject has the 'Player' tag.
+Check that the variable is `public`.
 
 --- /collapse ---
 

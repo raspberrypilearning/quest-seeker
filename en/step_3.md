@@ -1,8 +1,8 @@
-## More quests
+## Second quest
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add more NPCs with different quests and rewards. You can choose from different quest types.  
+Add another NPC with a different quests and reward. You can choose from different quest types.  
 </div>
 <div>
 ![](images/found-telescope.png){:width="300px"}
@@ -13,21 +13,9 @@ Add more NPCs with different quests and rewards. You can choose from different q
 If quests are revealed and then completed in a specific sequence this is called <span style="color: #0faeb0">**linear**</span> gameplay or storytelling. If the player can choose the order in which they complete quests then this is <span style="color: #0faeb0">**non-linear**</span> gameplay. Some games mix linear and non-linear gameplay or storytelling. Quests that must be completed are called **main quests** and optional extra quests are called **side quests**. 
 </p>
 
---- collapse ---
-
----
-title: Tag your item
----
-
-**Create a new tag.** Go to the ‘Tag’ property at the top of the Inspector window and ‘Add Tag’. Click on the ‘+’ and call the new tag ‘Item’. GameObjects with an ‘Item’ tag will be things to be fetched as part of this quest.
-
-**Apply your new tag.** Click on your GameObject in the Hierarchy window and use the Tag dropdown box to select ‘Item’ from the list.
-
---- /collapse ---
-
-
 --- task ---
-Design your second quest. The quests will be **non-linear** so they can be started in any order. 
+
+**Plan:** Design your second quest. The quests will be **non-linear** so they can be started in any order. 
 
 You quest could be:
 + A **gather** quest with multiple items of the same kind.
@@ -35,18 +23,19 @@ You quest could be:
 + An **escort** quest where you have to find another NPC and have them follow the player back to the Quest Giver (or to another location)
 + A **deliver** quest where you are given an object to take to another NPC. 
 
+![desc](images/quest-strip.png)
+
 The reward could be:
-+ Experience points (XP), coins, gems or another in-game currency.
++ Experience points (XP), reputation, coins, gems or another in-game currency.
 + An accessory for the player. 
 + Unlocking an new area or item in the game. 
 
 Or, a combination of these. 
 
-Decide how you can avoid the Player completing the quest before they have completed it. You could:
+If you want to prevent the Player accepting the quest before they have completed it, you could:
+
 + Use `SetActive` to make the quest items appear when the quest is accepted.
 + Use a `questAccepted` variable to ignore the player if the quest has not been accepted. 
-
-Or, if you prefer, you could allow the player to complete the request and get their reward immediately after accepting it. 
 
 --- /task ---
 
@@ -101,56 +90,43 @@ In the Inspector:
 
 ![desc](images/new-message.png)
 
+--- /collapse ---
+
 --- collapse ---
 
 ---
-title: Create a new script for the QuestGiver NPC.
+title: Create a new script for the QuestGiver NPC
 ---
 
-Create a new script for the QuestGiver NPC. The script will need a unique name such as QuestGiver2 or KeyQuestGiver. 
 
-This script will control the initial state of collectables, the canvas messages and button, and accepting the task: 
-
+**QuestGiver2** script:
 ```
 using TMPro;
 
-public class QuestGiver : MonoBehaviour
+public class QuestGiver2 : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject button;
-    public TMP_Text message
     public QuestSeeker player;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Quest giver start");
+        Debug.Log("Quest giver 2 start"); // Update with the name of your quest
         canvas.SetActive(false);
-
-        // Set up the quest
-       
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            // Check quest condition and take action
-            if (false) // Check the condition for your quest
-            {
-                message.SetText("Thankyou for completing the quest"); // add your message
-                
-                // Reward and result actions
-                // Make sure reward can't be claimed again
-            }
-
             canvas.SetActive(true);
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(false);
         }
@@ -158,8 +134,7 @@ public class QuestGiver : MonoBehaviour
 
     public void QuestAccepted()
     {
-        Debug.Log("Quest accepted"); // Update with the name of your quest
-        // Activate the quest
+        Debug.Log("Quest 2 accepted"); // Update with the name of your quest
 
         canvas.SetActive(false);
         button.SetActive(false);
@@ -191,222 +166,127 @@ Create a tag for the new GameObjects in your new quest, such as 'CakeQuest' and 
 
 Add a Box Collider component to your item GameObject and check the 'Is Trigger' Box Collider property.
 
+![A strip of animated gifs showing a flame effect particle system, a spinning star and an animated rat.](images/animation-effects.gif)
+
 **Choose:** Add visual effects to your collectibles, followers or rewards.
 
---- collapse ---
+[[[unity-particle-system]]]
 
----
-title: Add a particle system to attract attention
----
-
-<mark>Include from Invent project.</mark>
+[[[unity-gameobject-spin]]]
 
 
+You could also add the `IdleWalk` animation or create a new Animator. 
 
---- /collapse ---
+[[[unity-animation]]]
 
---- collapse ---
-
----
-title: Add a ItemController script to spin your items
----
-
-![desc](images/trapped-coin.gif)
-
-Upgrade the looks of the Item by creating an 'ItemController' script to code visual effects like spinning:
-
-```
-    public float spinSpeed = 5.0f; 
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(Vector3.forward * spinSpeed); //you can also spin backward, up, down, left and right
-    }
-
-```
-
-Remember to drag the 'ItemController' script to the Item GameObject
-
---- /collapse ---
+If your quest has multiple items then add the same tag to each of them. 
 
 --- collapse ---
 
 ---
-title: Use animation to bring your characters to life
+title: Tag your items
 ---
 
-<mark>Ingredient to be created for Invent project and included here.</mark>
+**Create a new tag.** Go to the ‘Tag’ property at the top of the Inspector window and ‘Add Tag’. Click on the ‘+’ and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
 
-![desc](images/animate-model.png)
+**Apply your new tag.** Select the GameObjects that are items in this quest in the Hierarchy window and use the Tag dropdown box to select your new tag from the list.
 
 --- /collapse ---
 
 **Tip:** If all of your collectibles, followers or rewards are to look and act in the same way, make sure you add all your effects before duplicating the first GameObject. 
 
+
 --- /task ---
 
 --- task ---
+If it makes sense for your quest, update the new  QuestGiver NPC script to set up items at the start and show them when the quest begins.
 
-**Choose:** What happens when your Player gets a collectible, follower or reward? This will depend upon which type of quest you are creating:
+You may need to hide quest items and reward items.
 
---- collapse ---
-
----
-title: Currency or experience
----
-
-Instead of using coins you could use a different currency for your game. Or you could reward the player with XP (experience points).
-
-Keep track of currency or points rewards using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed. 
-
-
-```
-public int gems; // Keep track of gems. 
-``` 
-
-```
-player.gems += 2; // Give a reward to the player
-```
-
-![desc](images/coin-reward.gif)
-
---- /collapse ---
+**Choose:**
 
 --- collapse ---
 
 ---
-title: An accessory or follower
+title: Hide items with the same tag
 ---
 
-You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it in the Inspector.
-
-```
-public GameObject hat;
-```
-
-Then use `SetActive` when the quest has been completed. 
-
-```
-hat.SetActive(true)
-```
-
-You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player. 
-
-```
-player.dogFollowing = true;
-```
-
-![desc](images/friend-found.gif)
-
---- /collapse ---
-
---- collapse ---
-
----
-title: Unlock
----
-
-A type of reward could be to remove a barrier or get access to an area or items that were not available previously.
-
-![desc](images/unlock-areas.png)
-
-Think about the GameOjbects you want to remove. Create and apply a new 'Unlock' tag to them.
-
-Open your QuestGiver script and create  variable to store the Unlock GameObjects:
-
-```
-    public GameObject[] unlock;
-
-```
-
-Add code to the Start() method to turn the items on at the start.
-
-        unlock = GameObject.FindGameObjectsWithTag("Unlock");
-        foreach (var Unlock in unlock)
-        {
-            Unlock.SetActive(true);
-        }
-
-Create an unlock script and attach it to a new NPC quest ally or to a new unlock item. 
-
-```
-public class Unlock : MonoBehaviour
-{
-    public GameObject canvas;
-    public AudioClip collectSound;
-    public QuestGiver unlock;
+GameObject[] collectables;
 
     // Start is called before the first frame update
     void Start()
     {
-       
         canvas.SetActive(false);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
+        collectables = GameObject.FindGameObjectsWithTag("Collectable");
+        foreach (var Collectable in collectables)
         {
-        
-            canvas.SetActive(true);
-            AudioSource.PlayClipAtPoint(collectSound, transform.position);
-
-            foreach (var Unlock in unlock.unlock)
-            {
-                Unlock.SetActive(false);
-            }
+            Collectable.SetActive(false);
         }
     }
 
-    void OnTriggerExit(Collider other)
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Hide individual items
+---
+
+**QuestGiver2** script
+
+```
+    public GameObject iceDome;
+
+    void Start()
     {
-        if (other.gameObject.tag == "Player")
-        {
-            canvas.SetActive(false);
-        }
+        // Don't show the quest message at the start
+        canvas.SetActive(false);
+
+        iceDome.SetActive(false);
     }
-}
 ```
 
-![](images/railing-down.gif)
-
-You could also introduce a a new NPC quest enemy or a new lock item to turn replace the barriers.
-
-![](images/walls-back.gif)
+Assign GameObjects to variables in Unity editor.  
 
 --- /collapse ---
 
 --- /task ---
 
 --- task ---
+Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered or NPC following. 
+
+
+**Choose:**
 
 --- collapse ---
 
 ---
-title: Recipe or craft quest
+title: Add variables for multiple different items in a craft or recipe quest
 ---
 
 In a recipe or craft quest, the player will need to collect multiple items of different kinds to make a recipe or craft a new item. 
 
 ![desc](images/snow-raccoon.png)
 
-Update the **QuestSeeker** script used by the player with variables to keep track of the items that have been collected:
-
+**QuestSeeker** script:
 ```
 // Add a variable for each item to be collected
 public bool hasIceBlock = false;
 public bool hasIceTool = false;
 ```
 
-Add a script to each collectible item, so that it disappears and updates the QuestSeeker 
-You will need to drag the Player GameObject in the inspector. 
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+Add a script to each quest item or other NPC involved in the quest so that they react when the player collides with them:
+
+--- collapse ---
+
+title: Collect recipe or crafting quest items
+---
 
 Here's an example for an IceTool, the same project also has a IceBlock collectible GameObject with a similar script. 
 
@@ -419,19 +299,102 @@ public class IceToolController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             player.hasIceTool = true;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
 
 ```
 
-Update the new  QuestGiver NPC script:
+--- /collapse ---
 
-<mark>Highlight code to clearly show new elements</mark>
+--- /task ---
+
+--- task ---
+Add a `QuestAccepted` method to your new Quest Giver NPC to set up the quest when it has been accepted. Connect the method to the 'Accept' button for the quest. 
+
+--- collapse ---
+
+---
+title: Make an individual item appear
+---
+
+**QuestAccepted** method of **QuestGiver2** script:
+
+```
+        key.SetActive(true);
+```
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Make multiple items with the same tag appear
+---
+
+**QuestAccepted** method of **QuestGiver2** script:
+```
+    foreach (var Collectable in collectables)
+    {
+        Collectable.SetActive(true);
+    }
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+The Quest Giver NPC needs to check for completion of the quest and give the player a reward, but only once.
+
+--- collapse ---
+
+---
+title: 
+---
+
+```
+
+// And && condition to check whether 
+            if (player.hasIceBlock && player.hasIceTool)
+            {
+                // Change to a successful completion message
+                message.SetText("Thankyou for helping me finish my ice dome. You can climb it if you like.");
+
+                // Reward and story actions
+                iceDome.SetActive(true);
+
+                // Make sure the reward can't be given again
+                player.hasIceBlock = false;
+                player.hasIceTool = false;
+            }
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+The QuestGiver should also give the player a reward.
+
+--- /task ---
+
+--- task ---
+
+--- collapse ---
+
+---
+title: Recipe or craft quest
+---
+
+Add a script to each collectible item, so that it disappears and updates the QuestSeeker 
+You will need to drag the Player GameObject in the inspector. 
+
+
+Update the new  QuestGiver NPC script to show and hide quest items:
+
 ```
 using TMPro;
 
@@ -488,14 +451,7 @@ public class QuestGiver2 : MonoBehaviour
         }
     }
 
-    public void QuestAccepted()
-    {
-        // Items to collect should appear. 
-        iceBlock.SetActive(true);
-        iceTool.SetActive(true);
-        canvas.SetActive(false);
-        button.SetActive(false);
-    }
+    
 }
 
 ```
@@ -749,6 +705,155 @@ public class EscortQuestGiver : MonoBehaviour
 }
 
 --- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+**Choose:** What happens when your Player gets a collectible, follower or reward? This will depend upon which type of quest you are creating:
+
+--- collapse ---
+
+---
+title: Currency or experience
+---
+
+Instead of using coins you could use a different currency for your game. Or you could reward the player with XP (experience points).
+
+Keep track of currency or points rewards using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed. 
+
+
+```
+public int gems; // Keep track of gems. 
+``` 
+
+```
+player.gems += 2; // Give a reward to the player
+```
+
+![desc](images/coin-reward.gif)
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: An accessory or follower
+---
+
+You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it in the Inspector.
+
+```
+public GameObject hat;
+```
+
+Then use `SetActive` when the quest has been completed. 
+
+```
+hat.SetActive(true)
+```
+
+You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player. 
+
+```
+player.dogFollowing = true;
+```
+
+![desc](images/friend-found.gif)
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Unlock
+---
+
+A type of reward could be to remove a barrier or get access to an area or items that were not available previously.
+
+![desc](images/unlock-areas.png)
+
+Think about the GameOjbects you want to remove. Create and apply a new 'Unlock' tag to them.
+
+Open your QuestGiver script and create  variable to store the Unlock GameObjects:
+
+```
+    public GameObject[] unlock;
+
+```
+
+Add code to the Start() method to turn the items on at the start.
+
+        unlock = GameObject.FindGameObjectsWithTag("Unlock");
+
+        foreach (var Unlock in unlock)
+        {
+            Unlock.SetActive(true);
+        }
+
+Create an unlock script and attach it to a new NPC quest ally or to a new unlock item. 
+
+```
+public class Unlock : MonoBehaviour
+{
+    public GameObject canvas;
+    public AudioClip collectSound;
+    public QuestGiver unlock;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+       
+        canvas.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+        
+            canvas.SetActive(true);
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+
+            foreach (var Unlock in unlock.unlock)
+            {
+                Unlock.SetActive(false);
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.SetActive(false);
+        }
+    }
+}
+```
+
+![](images/railing-down.gif)
+
+You could also introduce a a new NPC quest enemy or a new lock item to turn replace the barriers.
+
+![](images/walls-back.gif)
+
+--- /collapse ---
+
+--- /task ---
+
+
+--- task ---
+The second Quest Giver NPC needs to check whether the player has completed the quest and give the reward.
+
+
+
 
 --- /task ---
 
