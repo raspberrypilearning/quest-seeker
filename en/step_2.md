@@ -46,26 +46,17 @@ Add a GameObject for the item that the player will need to fetch. Position the i
 
 --- task ---
 
-Add a NPC to be a Quest Giver. 
+Add a NPC to be a Quest Giver and position it so that it will be easy for the player to find them.
+
+![A strip of multiple images showing NPCs created from models or 3D shapes.](images/NPC-strip.png)
 
 You could:
 + use one of the animal characters 
-
-![The Hierarchy window showing the Raccoon GameObject and child GameObjects.](images/model-character-objects.png)
-
-![The scene view with Raccoon character wearing constructuon gear.](images/model-character.png)
-
 + create your own character from 3D objects. 
 
-![The Hierarchy window breakdown showing GameObject and child GameObjects for the character.](images/quest-giver-shapes.png)
+[[[unity-npc-model]]]
 
-![A 3D character in Scene view created out of shapes and the Hierarchy window breakdown showing GameObject and child GameObjects for the character.](images/quest-giver.png)
-
-Position your NPC so that it will be easy for the player to find them.
-
-Customise your character by dragging 'Materials' onto the GameObjects in the Scene view. This example uses the Cat model with a white 'Snow' material instead of its usual material:
-
-![The Game view showing the Cat model with a white 'Snow' material added.](images/snow-cat.png)
+[[[unity-npc-3d-shapes]]]
 
 --- /task ---
 
@@ -108,7 +99,7 @@ Change the message text, settings and position of the text object until you are 
 
 --- task ---
 
-Use a Box Collider with a Trigger to make the quest message appear when the Player is nearby. 
+Use a Box Collider with a Trigger and a **QuestGiver** script on the Quest Giver NPC to make the quest message appear when the Player is nearby. 
 
 --- collapse ---
 
@@ -122,18 +113,12 @@ Add another Box Collider with the Trigger property checked. This Box Collider ne
 
 Add a script called 'QuestGiver' to the QuestGiver GameObject. Add `OnTriggerEnter` and `OnTriggerExit` methods to show and hide the message canvas when the Player gets close and moves away. 
 
+Add code to a script on the NPC GameObject. 
+
 ```
 public class QuestGiver : MonoBehaviour
 {
     public GameObject canvas;
-    public GameObject button;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        canvas.SetActive(false);
-        item.SetActive(false);
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -145,16 +130,10 @@ public class QuestGiver : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player")
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(false);
         }
-    }
-
-    public void QuestAccepted()
-    {
-        canvas.SetActive(false);
-        button.SetActive(false); // Don't show the Accept button again
     }
 }
 ```
@@ -162,8 +141,6 @@ public class QuestGiver : MonoBehaviour
 Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script component and drag the Canvas for the NPC to the Canvas property of the script, and the Button to the Button property. 
 
 ![desc](images/quest-script.png)
-
-<mark>Or we could use GetComponent?</mark>
 
 --- /collapse ---
 
@@ -205,7 +182,7 @@ public class QuestGiver : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(true);
         }
@@ -213,7 +190,7 @@ public class QuestGiver : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(false);
         }
@@ -256,13 +233,9 @@ When the player collects the item the item needs to disappear and optionally pla
 
 --- task ---
 
-Right-click in the Hierarchy window and go to ‘UI’ then select ‘Text - TextMeshPro’. Name the new Object 'Coins'. 
+Right-click in the Hierarchy window and go to ‘UI’ then select ‘Text - TextMeshPro’. Name the new Object 'Coins', or a suitable name for your reward. 
 
-Add a new 'QuestSeeker' script component to the **Player** to keep track of the quest state including the number of coins.
-
-Add a `bool` variable called `hasQuestItem` to store whether the quest item has been collected. 
-
-Add a `coins` variable to store the reward and a coinText variable to store the TextMeshPro object to display the number of coins. Update the display of the coins in the `Update` method.
+Add a new 'QuestSeeker' script component to the **Player** to keep track of the quest state and the reward.
 
 ```
 using TMPro;
@@ -270,14 +243,8 @@ using TMPro;
 public class QuestSeeker : MonoBehaviour
 {
     public bool hasQuestItem = false;
-    public int coins = 0;
+    public int coins = 0; // or the reward for your quest
     public TMP_Text coinText;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -294,6 +261,14 @@ Drag the Coins TextMeshPro object to the Coin Text property in the Inspector.
 
 --- task ---
 
+The Item needs to disappear when the Player collides with it and also update `hasQuestItem` on the Player's `QuestSeeker` script to true.
+
+--- collapse ---
+
+---
+title: Make the Item disappear and set hasQuestItem to true
+---
+
 Select the QuestItem and add a Box Collider with a Trigger. 
 
 Add a script to the QuestItem and name it 'QuestItemController'.
@@ -307,10 +282,10 @@ public class QuestItemController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             player.hasQuestItem = true;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
@@ -320,7 +295,11 @@ Drag the Player GameObject to the player property of the QuestItemController scr
 
 ![desc](images/player-property.png)
 
+--- /collapse ---
+
 Optionally, also play a sound when the item is collected. 
+
+[[[unity-play-sound]]]
 
 --- /task ---
 
