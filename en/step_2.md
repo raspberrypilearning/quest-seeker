@@ -7,7 +7,7 @@ The first quest will be a **fetch quest** where a non player character (NPC) ask
 When the player returns to the quest giver they will be rewarded with experience points (XP) or a reward in the currency of your game.
 </div>
 <div>
-![An animated gif of the player approaching the quest giver and accepting a quest to find the space helmet. The player finds and collects the space helmet and returns it to the quest giver to get points.](images/first-quest.gif)
+![An animated gif of the player approaching the quest giver and accepting a quest to find the space helmet. The player finds and collects the space helmet and returns it to the quest giver to get points.](images/first-quest.gif){:width="300px"}
 </div>
 </div>
 
@@ -152,11 +152,11 @@ Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script c
 
 For this quest, the item to be collected should only appear once the quest has been accepted. 
 
-![An animated gif showing the Player approaching an NPC. When the player gets near the NPC a canvas with text message and button is enabled on the scene. On clicking the button an item appears.](images/quest-button.gif){:width="400px"}
-
 --- task ---
 
 Add an 'Accept' Button to the Canvas on your Quest Giver NPC and connect it to a `QuestAccepted` method on your **QuestGiver** script. Update the **Quest Giver** script so the item only appears when the quest has been accepted.
+
+![An animated gif showing the Player approaching an NPC. When the player gets near the NPC a canvas with text message and button is enabled on the scene. On clicking the button an item appears.](images/quest-button.gif){:width="400px"}
 
 --- collapse ---
 
