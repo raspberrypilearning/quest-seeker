@@ -32,11 +32,6 @@ The reward could be:
 
 Or, a combination of these. 
 
-If you want to prevent the Player accepting the quest before they have completed it, you could:
-
-+ Use `SetActive` to make the quest items appear when the quest is accepted.
-+ Use a `questAccepted` variable to ignore the player if the quest has not been accepted. 
-
 --- /task ---
 
 For each quest you will need to:
@@ -196,9 +191,8 @@ title: Tag your items
 --- /task ---
 
 --- task ---
-If it makes sense for your quest, update the new  QuestGiver NPC script to set up items at the start and show them when the quest begins.
 
-You may need to hide quest items and reward items.
+Set up your quest by hiding any GameObjects that should be hidden until the quest is accepted. 
 
 **Choose:**
 
@@ -281,8 +275,12 @@ public bool hasIceTool = false;
 --- /task ---
 
 --- task ---
-Add a script to each quest item or other NPC involved in the quest so that they react when the player collides with them:
+Add a script to each quest item or other NPC involved in the quest so that they react when the player collides with them.
 
+You could also check a `bool` variable to only react to the Player if the quest has been accepted. 
+
+
+**Choose:**
 --- collapse ---
 
 ---
@@ -312,11 +310,23 @@ public class IceToolController : MonoBehaviour
 
 --- /collapse ---
 
+--- collapse ---
+
+---
+title: Follow the player
+---
+
+
+
+--- /collapse ---
+
 --- /task ---
 
 --- task ---
 
 Add a `QuestAccepted` method to your new Quest Giver NPC to set up the quest when it has been accepted. Connect the method to the 'Accept' button for the quest. 
+
+**Choose:**
 
 --- collapse ---
 
@@ -359,6 +369,7 @@ The Quest Giver NPC needs to check for completion of the quest and thank the pla
 ---
 title: Check whether player has mutiple different items
 ---
+
 
 ```
 
