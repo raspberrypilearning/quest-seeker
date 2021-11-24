@@ -5,6 +5,7 @@
 The first quest will be a **fetch quest** where a non player character (NPC) asks the player to find an item and bring it back to them. 
 
 When the player returns to the quest giver they will be rewarded with experience points (XP) or a reward in the currency of your game.
+</div>
 <div>
 ![An animated gif of the player approaching the quest giver and accepting a quest to find the space helmet. The player finds and collects the space helmet and returns it to the quest giver to get points.](images/first-quest.gif){:width="300px"}
 </div>
@@ -83,12 +84,14 @@ Add a UI TextMeshPro named 'Quest Text' as a **child of the Quest Giver** and ad
 title: Add and position TextMeshPro text
 ---
 
-![desc](images/quest-giver-text.png)
+
 
 Change the message text, settings and position of the text object until you are happy:
 
 ![desc](images/text-object-settings.png)
 ![desc](images/text-object-position.png)
+
+![desc](images/quest-giver-text.png)
 
 --- /collapse ---
 
@@ -149,6 +152,8 @@ Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script c
 
 For this quest, the item to be collected should only appear once the quest has been accepted. 
 
+![An animated gif showing the Player approaching an NPC. When the player gets near the NPC a canvas with text message and button is enabled on the scene. On clicking the button an item appears.](images/quest-button.gif)
+
 --- task ---
 
 Add an 'Accept' Button to the Canvas on your Quest Giver NPC and connect it to a `QuestAccepted` method on your **QuestGiver** script. Update the **Quest Giver** script so the item only appears when the quest has been accepted.
@@ -165,7 +170,7 @@ Add a UI TextMesh Pro Button to the same canvas and click on the Text (TMP) chil
 
 Adjust the Button & Text size, position and colours until you are happy with them:
 
-![desc](images/quest-canvas.png)
+![desc](images/quest-canvas-snow.png)
 
 Add code to the QuestGiver script to control when the object appears so that it only appears when then quest has been accepted. 
 
@@ -242,19 +247,20 @@ Add a **QuestSeeker** script to the Player with a variable such as `coins` to st
 --- collapse ---
 
 ---
-title: 
+title: Add a QuestSeeker script to the Player to manage the reward
 ---
 
 Right-click in the Hierarchy window and add a 'UI' 'TextMeshPro' to your scene to show the reward. Name the new Object 'Coins Text', or a suitable name for your reward. 
 
-Add a new 'QuestSeeker' script component to the **Player** to keep track of the quest state and the reward.
+Add a new 'QuestSeeker' script component to the **Player** to store and display the reward. 
+
+The `coins` variable needs to be `public` so that a script on the Quest Item can update it. 
 
 ```
 using TMPro;
 
 public class QuestSeeker : MonoBehaviour
 {
-    public bool hasQuestItem = false;
     public int coins = 0; // or the reward for your quest
     public TMP_Text coinText;
 
@@ -275,7 +281,40 @@ Drag the Coins TextMeshPro object to the Coin Text property in the Inspector.
 
 --- task ---
 
-The Item needs to disappear when the Player collides with it and also update `hasQuestItem` on the Player's `QuestSeeker` script to true.
+Add a `public bool hasQuestItem = false;` variable to the **QuestSeeker** script. The variable needs to be `public` so that a script on the item set it to `true` when the item is collected.
+
+
+--- collapse ---
+
+---
+title: Add a hasQuestItem variable to the QuestSeeker script
+---
+
+```
+using TMPro;
+
+public class QuestSeeker : MonoBehaviour
+{
+    public bool hasQuestItem = false; 
+    public int coins = 0; 
+    public TMP_Text coinText;
+
+    // Update is called once per frame
+    void Update()
+    {
+       coinText.SetText("Coins: " + coins); 
+    }
+}
+
+```
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+Add a Box Collider with a Trigger and **QuestItemController** script to your Quest Item. Add code to hide the Quest Item and set `hasQuestItem` to true on the Player's QuestSeeker script when the Player collides with the Quest Item.
 
 --- collapse ---
 
@@ -292,7 +331,7 @@ Add code to make the item hide and update the `hasQuestItem` status on the Playe
 ```
 public class QuestItemController : MonoBehaviour
 {
-    public QuestSeeker player;
+    public QuestSeeker player; 
 
     void OnTriggerEnter(Collider other)
     {
@@ -329,7 +368,13 @@ Optionally, also play a sound when the item is collected.
 
 Have the QuestGiver NPC display a different message if the quest is complete and give the player a reward for completing the quest.
 
-Add variables to store the Player and the message.
+![An animated gif showing the Player approaching an NPC to complete the quest. When the player gets near the NPC a canvas with completion message is enabled on the scene and the coins variable increases.](images/quest-button.gif)
+
+--- collapse ---
+
+---
+title: Update the QuestGiver script to thank and reward the player
+---
 
 ```
 public TMP_Text message;
@@ -337,7 +382,7 @@ public QuestSeeker player;
 
 void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             if (player.hasQuestItem)
             {
@@ -351,21 +396,15 @@ void OnTriggerEnter(Collider other)
     }
  ```
 
-In the Inspector, Drag the player to the Player property and the TextMeshPro object with the message to the Message property.
+ In the Inspector, Drag the player to the Player property and the TextMeshPro object with the message to the Message property.
+
+--- /collapse ---
 
 --- /task ---
 
 --- task ---
 
 **Test:** Play your scene and make sure you get a different message after collecting the QuestItem. Check that the number of coins also increases. Make sure the player can't get the reward more than once.
-
---- /task ---
-
---- task ---
-
-You can also display the number of coins the player has on the screen.
-
-Add a UI - TextMeshPro GameObject and call it Coins. Anchor the text to the top-left of the Screen.
 
 --- /task ---
 
