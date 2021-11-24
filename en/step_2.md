@@ -7,7 +7,7 @@ The first quest will be a **fetch quest** where a non player character (NPC) ask
 When the player returns to the quest giver they will be rewarded with experience points (XP) or a reward in the currency of your game.
 </div>
 <div>
-![An animated gif of the player approaching the quest giver and accepting a quest to find the space helmet. The player finds and collects the space helmet and returns it to the quest giver to get points.](images/first-quest.gif){:width="300px"}
+![An animated gif of the player approaching the quest giver and accepting a quest to find the space helmet. The player finds and collects the space helmet and returns it to the quest giver to get points.](images/first-quest.gif)
 </div>
 </div>
 
@@ -103,7 +103,7 @@ You can add another UI TextMeshPro to the same canvas with the name of the Quest
 
 Add a Box Collider with a Trigger and a **QuestGiver** script on the Quest Giver NPC to make the quest message appear when the Player is nearby. 
 
-![An animated gif showing the Player approaching an NPC. When the player gets near the NPC a canvas with text message is enabled on the scene.](images/quest-text.gif)
+![An animated gif showing the Player approaching an NPC. When the player gets near the NPC a canvas with text message is enabled on the scene.](images/quest-text.gif){:width="400px"}
 
 --- collapse ---
 
@@ -152,7 +152,7 @@ Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script c
 
 For this quest, the item to be collected should only appear once the quest has been accepted. 
 
-![An animated gif showing the Player approaching an NPC. When the player gets near the NPC a canvas with text message and button is enabled on the scene. On clicking the button an item appears.](images/quest-button.gif)
+![An animated gif showing the Player approaching an NPC. When the player gets near the NPC a canvas with text message and button is enabled on the scene. On clicking the button an item appears.](images/quest-button.gif){:width="400px"}
 
 --- task ---
 
@@ -368,7 +368,7 @@ Optionally, also play a sound when the item is collected.
 
 Have the QuestGiver NPC display a different message if the quest is complete and give the player a reward for completing the quest.
 
-![An animated gif showing the Player approaching an NPC to complete the quest. When the player gets near the NPC a canvas with completion message is enabled on the scene and the coins variable increases.](images/snow-coins.gif)
+![An animated gif showing the Player approaching an NPC to complete the quest. When the player gets near the NPC a canvas with completion message is enabled on the scene and the coins variable increases.](images/snow-coins.gif){:width="400px"}
 
 --- collapse ---
 
