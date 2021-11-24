@@ -193,7 +193,6 @@ title: Tag your items
 
 **Tip:** If all of your collectibles, followers or rewards are to look and act in the same way, make sure you add all your effects before duplicating the first GameObject. 
 
-
 --- /task ---
 
 --- task ---
@@ -315,6 +314,7 @@ public class IceToolController : MonoBehaviour
 --- /task ---
 
 --- task ---
+
 Add a `QuestAccepted` method to your new Quest Giver NPC to set up the quest when it has been accepted. Connect the method to the 'Accept' button for the quest. 
 
 --- collapse ---
@@ -381,7 +381,13 @@ title: Check whether player has mutiple different items
 title: Check whether the player has a number of the same item
 ---
 
-
+```
+    if (player.coins > 2) // if all the coins have been collected
+    {
+        message.SetText("Well done you collected the coins!");
+              
+    }
+```
 
 --- /collapse ---
 
@@ -397,43 +403,153 @@ title: Check whether a character is following
 
 --- /task ---
 
+
 --- task ---
-The QuestGiver should also give the player a reward or move the story on.
 
+**Choose:** What happens when your Player completes a quest? 
 
 --- collapse ---
 
 ---
-title: Update a variable
+title: Currency or experience
 ---
 
+Instead of using coins you could use a different currency for your game. Or you could reward the player with XP (experience points).
+
+Keep track of currency or points rewards using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed. 
+
+
 ```
- player.coins+= 20;
+public int gems; // Keep track of gems. 
+``` 
+
 ```
+player.gems += 2; // Give a reward to the player
+```
+
+![desc](images/coin-reward.gif)
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Make an object appear
+title: An accessory or follower
 ---
 
+You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it in the Inspector.
+
 ```
-    iceDome.SetActive(true);           
+public GameObject hat;
 ```
+
+Then use `SetActive` when the quest has been completed. 
+
+```
+hat.SetActive(true)
+```
+
+You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player. 
+
+```
+player.dogFollowing = true;
+```
+
+![desc](images/friend-found.gif)
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Make an object disappear
+title: Unlock
 ---
 
+A type of reward could be to remove a barrier or get access to an area or items that were not available previously.
 
+![desc](images/unlock-areas.png)
+
+Think about the GameOjbects you want to remove. Create and apply a new 'Unlock' tag to them.
+
+Open your QuestGiver script and create  variable to store the Unlock GameObjects:
+
+```
+    public GameObject[] unlock;
+
+```
+
+Add code to the Start() method to turn the items on at the start.
+
+```
+        unlock = GameObject.FindGameObjectsWithTag("Unlock");
+
+        foreach (var Unlock in unlock)
+        {
+            Unlock.SetActive(true);
+        }
+```
+
+Create an unlock script and attach it to a new NPC quest ally or to a new unlock item. 
+
+```
+public class Unlock : MonoBehaviour
+{
+    public GameObject canvas;
+    public AudioClip collectSound;
+    public QuestGiver unlock;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+       
+        canvas.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+        
+            canvas.SetActive(true);
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+
+            foreach (var Unlock in unlock.unlock)
+            {
+                Unlock.SetActive(false);
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.SetActive(false);
+        }
+    }
+}
+```
+
+![](images/railing-down.gif)
+
+You could also introduce a a new NPC quest enemy or a new lock item to turn replace the barriers.
+
+![](images/walls-back.gif)
 
 --- /collapse ---
+
+--- /task ---
+
+
+--- task ---
+
+The second Quest Giver NPC needs to check whether the player has completed the quest and give the reward.
 
 --- /task ---
 
@@ -706,155 +822,6 @@ public class EscortQuestGiver : MonoBehaviour
 ```
 
 --- /collapse ---
-
---- /task ---
-
---- task ---
-
-**Choose:** What happens when your Player gets a collectible, follower or reward? This will depend upon which type of quest you are creating:
-
---- collapse ---
-
----
-title: Currency or experience
----
-
-Instead of using coins you could use a different currency for your game. Or you could reward the player with XP (experience points).
-
-Keep track of currency or points rewards using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed. 
-
-
-```
-public int gems; // Keep track of gems. 
-``` 
-
-```
-player.gems += 2; // Give a reward to the player
-```
-
-![desc](images/coin-reward.gif)
-
---- /collapse ---
-
---- collapse ---
-
----
-title: An accessory or follower
----
-
-You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it in the Inspector.
-
-```
-public GameObject hat;
-```
-
-Then use `SetActive` when the quest has been completed. 
-
-```
-hat.SetActive(true)
-```
-
-You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player. 
-
-```
-player.dogFollowing = true;
-```
-
-![desc](images/friend-found.gif)
-
---- /collapse ---
-
---- collapse ---
-
----
-title: Unlock
----
-
-A type of reward could be to remove a barrier or get access to an area or items that were not available previously.
-
-![desc](images/unlock-areas.png)
-
-Think about the GameOjbects you want to remove. Create and apply a new 'Unlock' tag to them.
-
-Open your QuestGiver script and create  variable to store the Unlock GameObjects:
-
-```
-    public GameObject[] unlock;
-
-```
-
-Add code to the Start() method to turn the items on at the start.
-
-        unlock = GameObject.FindGameObjectsWithTag("Unlock");
-
-        foreach (var Unlock in unlock)
-        {
-            Unlock.SetActive(true);
-        }
-
-Create an unlock script and attach it to a new NPC quest ally or to a new unlock item. 
-
-```
-public class Unlock : MonoBehaviour
-{
-    public GameObject canvas;
-    public AudioClip collectSound;
-    public QuestGiver unlock;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-        canvas.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-        
-            canvas.SetActive(true);
-            AudioSource.PlayClipAtPoint(collectSound, transform.position);
-
-            foreach (var Unlock in unlock.unlock)
-            {
-                Unlock.SetActive(false);
-            }
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            canvas.SetActive(false);
-        }
-    }
-}
-```
-
-![](images/railing-down.gif)
-
-You could also introduce a a new NPC quest enemy or a new lock item to turn replace the barriers.
-
-![](images/walls-back.gif)
-
---- /collapse ---
-
---- /task ---
-
-
---- task ---
-The second Quest Giver NPC needs to check whether the player has completed the quest and give the reward.
-
-
-
 
 --- /task ---
 
