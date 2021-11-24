@@ -264,6 +264,7 @@ In a recipe or craft quest, the player will need to collect multiple items of di
 ![desc](images/snow-raccoon.png)
 
 **QuestSeeker** script:
+
 ```
 // Add a variable for each item to be collected
 public bool hasIceBlock = false;
@@ -277,10 +278,10 @@ public bool hasIceTool = false;
 --- task ---
 Add a script to each quest item or other NPC involved in the quest so that they react when the player collides with them.
 
-You could also check a `bool` variable to only react to the Player if the quest has been accepted. 
-
+You could also check a `bool` variable and only react to the Player if the quest has been accepted. 
 
 **Choose:**
+
 --- collapse ---
 
 ---
@@ -307,16 +308,6 @@ public class IceToolController : MonoBehaviour
 }
 
 ```
-
---- /collapse ---
-
---- collapse ---
-
----
-title: Follow the player
----
-
-
 
 --- /collapse ---
 
@@ -349,6 +340,7 @@ title: Make multiple items with the same tag appear
 ---
 
 **QuestAccepted** method of **QuestGiver2** script:
+
 ```
     foreach (var Collectable in collectables)
     {
@@ -362,12 +354,13 @@ title: Make multiple items with the same tag appear
 --- /task ---
 
 --- task ---
+
 The Quest Giver NPC needs to check for completion of the quest and thank the player.
 
 --- collapse ---
 
 ---
-title: Check whether player has mutiple different items
+title: Check whether player has multiple different items
 ---
 
 
@@ -403,15 +396,6 @@ title: Check whether the player has a number of the same item
 
 --- /collapse ---
 
---- collapse ---
-
----
-title: Check whether a character is following
----
-
-
-
---- /collapse ---
 
 --- /task ---
 
@@ -566,6 +550,7 @@ The second Quest Giver NPC needs to check whether the player has completed the q
 --- /task ---
 
 --- task ---
+
 Make sure the reward can't be given more than once.
 
 --- collapse ---
