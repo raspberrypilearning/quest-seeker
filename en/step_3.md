@@ -96,7 +96,6 @@ In the Inspector:
 title: Create a new script for the QuestGiver NPC
 ---
 
-
 **QuestGiver2** script:
 ```
 using TMPro;
@@ -341,6 +340,8 @@ title: Make multiple items with the same tag appear
         Collectable.SetActive(true);
     }
 
+```
+
 --- /collapse ---
 
 --- /task ---
@@ -369,6 +370,8 @@ title: Check condition
                 player.hasIceBlock = false;
                 player.hasIceTool = false;
             }
+
+```
 
 --- /collapse ---
 
