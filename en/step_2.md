@@ -91,11 +91,11 @@ Change the message text, settings and position of the text object until you are 
 ![desc](images/text-object-settings.png)
 ![desc](images/text-object-position.png)
 
+You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
+
 ![desc](images/quest-giver-text.png)
 
 --- /collapse ---
-
-You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
 
 --- /task ---
 
@@ -233,7 +233,11 @@ Click on the circle for the field underneath ‘Runtime’, click on ‘Scene’
 
 --- task ---
 
-**Test:** Check that your item does not appear when you Play your scene. Go and talk to the QuestGiver and Accept the quest. Make sure that the item appears. Also check that the 'Accept' button disappears and isn't shown again if you return to the Quest Giver. 
+**Test:** Play your scene:
++ Check that your item does not appear at the start. 
++ Go and talk to the QuestGiver and Accept the quest. 
++ Make sure that the item appears when the quest is accepted. 
++ Also check that the 'Accept' button disappears and isn't shown again if you return to the Quest Giver. 
 
 --- /task ---
 
@@ -315,6 +319,8 @@ public class QuestSeeker : MonoBehaviour
 --- task ---
 
 Add a Box Collider with a Trigger and **QuestItemController** script to your Quest Item. Add code to hide the Quest Item and set `hasQuestItem` to true on the Player's QuestSeeker script when the Player collides with the Quest Item.
+
+![An animated gif showing a raccoon player colliding with a star item and the item disappears.](images/collect-star.gif)
 
 --- collapse ---
 
