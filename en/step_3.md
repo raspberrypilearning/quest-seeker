@@ -703,6 +703,7 @@ public class EscortQuestGiver : MonoBehaviour
         canvas.SetActive(false);     
     }
 }
+```
 
 --- /collapse ---
 
