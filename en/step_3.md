@@ -97,6 +97,7 @@ title: Create a new script for the QuestGiver NPC
 ---
 
 **QuestGiver2** script:
+
 ```
 using TMPro;
 
@@ -208,6 +209,9 @@ You may need to hide quest items and reward items.
 title: Hide items with the same tag
 ---
 
+**QuestGiver2** script
+
+```
 GameObject[] collectables;
 
     // Start is called before the first frame update
@@ -221,6 +225,7 @@ GameObject[] collectables;
             Collectable.SetActive(false);
         }
     }
+```
 
 --- /collapse ---
 
@@ -239,7 +244,6 @@ title: Hide individual items
     {
         // Don't show the quest message at the start
         canvas.SetActive(false);
-
         iceDome.SetActive(false);
     }
 ```
@@ -347,12 +351,12 @@ title: Make multiple items with the same tag appear
 --- /task ---
 
 --- task ---
-The Quest Giver NPC needs to check for completion of the quest and give the player a reward, but only once.
+The Quest Giver NPC needs to check for completion of the quest and thank the player.
 
 --- collapse ---
 
 ---
-title: Check condition
+title: Check whether player has mutiple different items
 ---
 
 ```
@@ -365,99 +369,94 @@ title: Check condition
 
                 // Reward and story actions
                 iceDome.SetActive(true);
-
-                // Make sure the reward can't be given again
-                player.hasIceBlock = false;
-                player.hasIceTool = false;
             }
 
 ```
 
 --- /collapse ---
-
---- /task ---
-
---- task ---
-The QuestGiver should also give the player a reward.
-
---- /task ---
-
---- task ---
 
 --- collapse ---
 
 ---
-title: Recipe or craft quest
+title: Check whether the player has a number of the same item
 ---
 
-Add a script to each collectible item, so that it disappears and updates the QuestSeeker 
-You will need to drag the Player GameObject in the inspector. 
 
 
-Update the new  QuestGiver NPC script to show and hide quest items:
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Check whether a character is following
+---
+
+
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+The QuestGiver should also give the player a reward or move the story on.
+
+
+--- collapse ---
+
+---
+title: Update a variable
+---
 
 ```
-using TMPro;
-
-public class QuestGiver2 : MonoBehaviour
-{
-    public GameObject canvas;
-    public GameObject button;
-    public GameObject iceBlock;
-    public GameObject iceTool;
-    public GameObject iceDome;
-    public TMP_Text message;
-    public QuestSeeker player;
-
-    void Start()
-    {
-        // Don't show the quest message at the start
-        canvas.SetActive(false);
-
-        // Hide the quest items and reward or result objects
-        iceBlock.SetActive(false);
-        iceTool.SetActive(false);
-        iceDome.SetActive(false);
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            // And && condition to check whether 
-            if (player.hasIceBlock && player.hasIceTool)
-            {
-                // Change to a successful completion message
-                message.SetText("Thankyou for helping me finish my ice dome. You can climb it if you like.");
-
-                // Reward and story actions
-                iceDome.SetActive(true);
-                player.coins+= 20;
-
-                // Make sure the reward can't be given again
-                player.hasIceBlock = false;
-                player.hasIceTool = false;
-            }
-
-            canvas.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            // Hide the message
-            canvas.SetActive(false);
-        }
-    }
-
-    
-}
-
+ player.coins+= 20;
 ```
 
 --- /collapse ---
+
+--- collapse ---
+
+---
+title: Make an object appear
+---
+
+```
+    iceDome.SetActive(true);           
+```
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Make an object disappear
+---
+
+
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+Make sure the reward can't be given more than once.
+
+--- collapse ---
+
+---
+title: Remove items from the player
+---
+
+```
+    // Make sure the reward can't be given again
+    player.hasIceBlock = false;
+    player.hasIceTool = false;
+```
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
 
 --- collapse ---
 
