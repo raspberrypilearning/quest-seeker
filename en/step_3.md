@@ -353,7 +353,7 @@ The Quest Giver NPC needs to check for completion of the quest and give the play
 --- collapse ---
 
 ---
-title: 
+title: Check condition
 ---
 
 ```
