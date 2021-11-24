@@ -320,7 +320,7 @@ public class QuestSeeker : MonoBehaviour
 
 Add a Box Collider with a Trigger and **QuestItemController** script to your Quest Item. Add code to hide the Quest Item and set `hasQuestItem` to true on the Player's QuestSeeker script when the Player collides with the Quest Item.
 
-![An animated gif showing a raccoon player colliding with a star item and the item disappears.](images/collect-star.gif)
+![An animated gif showing a raccoon player colliding with a star item and the item disappears.](images/collect-star.gif){:width="400px"}
 
 --- collapse ---
 
