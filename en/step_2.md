@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The first quest will be a **fetch quest** where an NPC asks the player to find an item and bring it back to them. 
+The first quest will be a **fetch quest** where a non player character (NPC) asks the player to find an item and bring it back to them. 
 
 When the player returns to the quest giver they will be rewarded with experience points (XP) or a reward in the currency of your game.
 <div>
@@ -12,7 +12,7 @@ When the player returns to the quest giver they will be rewarded with experience
 
 --- task ---
 
-This project builds on the project you made in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder) project. 
+This project builds on the project you made in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder){:target=blank} project. 
 
 Open your project to use as the world, or map, where quests will take place. 
 
@@ -20,11 +20,12 @@ Open your project to use as the world, or map, where quests will take place.
 
 --- task ---
 
-Think of a quest that makes sense in the world you have built. 
+**Plan:** Think of a quest that makes sense in the world you have built. 
 
-You will need to choose:
+You will need to decide on:
 + An item to be fetched,
-+ A non-player character,
++ A non-player character (NPC),
++ The messages for the NPC to display before and after the quest is completed.
 + A reward of experience points or currency (coins or gems) in your game.
 
 --- /task ---
@@ -33,59 +34,19 @@ You will need to choose:
 
 Add a GameObject for the item that the player will need to fetch. Position the item in your world so the player will need to move from their starting position to find it. 
 
+![A strip of multiple images showing items created from models or 3D shapes including a helmet, telescope, ice tool, picture, heart, clover and magnet.](images/item-strip.png)
+
 **Choose:**
 
---- collapse ---
+[[[unity-item-model]]]
 
----
-title: Create an item from a model
----
-
-Navigate to the Model you want to use in the Project window. 
-
-Drag the model to your scene and position it: 
-
-![The Scene view with the clover model added.](images/clover-scene.png)
-
---- /collapse ---
-
---- collapse ---
-
----
-title: Create an item from 3D shapes
----
-
-Add a '3D Object' to your scene to represent the item and give the new GameObject a sensible name.  
-
-Right-click your new 3D shape and add other 3D shapes from 'Create' -> '3D Object' as child game objects. The child objects will move with the first 3D shape GameObject. 
-
-Bring your shapes to life by dragging Materials from the Project window to the shape in the Scene view. 
-
-This helmet has a sphere with child GameObjects that are spheres, a capsule and a cylinder. The shapes have been renamed to the part of the helmet they represent and coloured with Materials. 
-
-![The Hierarchy window showing the 3D shape child objects that make up the whole item.](images/helmet-objects.png)
-
-![A 3D shape item in Scene view.](images/helmet.png)
-
---- /collapse ---
-
---- collapse ---
-
----
-title: Tag your item
----
-
-**Create a new tag.** Go to the ‘Tag’ property at the top of the Inspector window and ‘Add Tag’. Click on the ‘+’ and call the new tag ‘Item’. GameObjects with an ‘Item’ tag will be things to be fetched as part of this quest.
-
-**Apply your new tag.** Click on your GameObject in the Hierarchy window and use the Tag dropdown box to select ‘Item’ from the list.
-
---- /collapse ---
+[[[unity-item-3d-shapes]]]
 
 --- /task ---
 
 --- task ---
 
-Add a non-player character to be a Quest Giver. 
+Add a NPC to be a Quest Giver. 
 
 You could:
 + use one of the animal characters 
@@ -120,20 +81,28 @@ The Quest Giver will offer the player a quest when they get close enough.
 
 --- task ---
 
-Add a UI TextMeshPro to the Quest Giver to contain the message offering the quest: 
+Add a UI TextMeshPro as a **child of the Quest Giver** to contain the message offering the quest: 
 
-![desc](images/add-text-object.png)
+![desc](images/quest-giver-text.png)
 
-Name the GameObject to match the NPC that it belongs to, for example 'Snow Cat Quest'. 
+You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
 
-Change the settings and position of the text object until you are happy with the look:
+Name the GameObject to match the NPC that it belongs to, for example 'Snow Cat Quest Text'. 
+
+--- collapse ---
+
+---
+title: Add and position TextMeshPro text
+---
+
+![desc](images/quest-giver-text.png)
+
+Change the message text, settings and position of the text object until you are happy:
 
 ![desc](images/text-object-settings.png)
 ![desc](images/text-object-position.png)
 
-You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like: 
-
-![desc](images/quest-giver-text.png)
+--- /collapse ---
 
 --- /task ---
 
@@ -168,7 +137,7 @@ public class QuestGiver : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             canvas.SetActive(true);
         }
@@ -176,7 +145,7 @@ public class QuestGiver : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player")
         {
             canvas.SetActive(false);
         }

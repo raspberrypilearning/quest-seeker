@@ -13,6 +13,19 @@ Add more NPCs with different quests and rewards. You can choose from different q
 If quests are revealed and then completed in a specific sequence this is called <span style="color: #0faeb0">**linear**</span> gameplay or storytelling. If the player can choose the order in which they complete quests then this is <span style="color: #0faeb0">**non-linear**</span> gameplay. Some games mix linear and non-linear gameplay or storytelling. Quests that must be completed are called **main quests** and optional extra quests are called **side quests**. 
 </p>
 
+--- collapse ---
+
+---
+title: Tag your item
+---
+
+**Create a new tag.** Go to the ‘Tag’ property at the top of the Inspector window and ‘Add Tag’. Click on the ‘+’ and call the new tag ‘Item’. GameObjects with an ‘Item’ tag will be things to be fetched as part of this quest.
+
+**Apply your new tag.** Click on your GameObject in the Hierarchy window and use the Tag dropdown box to select ‘Item’ from the list.
+
+--- /collapse ---
+
+
 --- task ---
 Design your second quest. The quests will be **non-linear** so they can be started in any order. 
 

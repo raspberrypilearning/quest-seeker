@@ -1,6 +1,6 @@
 ## Introduction
 
-Add NPCs and quests to the world that you created in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder) project. 
+In this project, you will add NPCs and quests to the world that you created in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder) project. 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 A <span style="color: #0faeb0">**quest**</span> is a task or mission in a computer game that the player can complete to gain a reward or move the story forward. Quests can require a player to fetch or deliver an item, gather items, escort a character to a location, find out information or solve a puzzle. On completion a player could be rewarded with experience, coins, access to new areas or new abilities.
@@ -28,6 +28,9 @@ Play the quests in the example project. Think about the type of quest and the ou
 + How are items used in the quest? 
 
 [Snow Quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest){:target=blank}
+
+<iframe allowtransparency="true" width="710" height="450" src="https://raspberrypilearning.github.io/unity-webgl/SnowQuest" frameborder="0"></iframe>
+
 ![A snow scene with a raccoon that has a white snow material so it looks like a snowman raccoon. The player has approached and the quest to gather items needed to make an ice tool is shown. There is a button for the player to accept.](images/snow-raccoon.png){:width="400px"}
 
 --- /task ---
