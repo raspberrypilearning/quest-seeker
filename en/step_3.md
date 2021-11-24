@@ -90,8 +90,6 @@ In the Inspector:
 
 ![desc](images/new-message.png)
 
---- /collapse ---
-
 --- collapse ---
 
 ---
