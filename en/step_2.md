@@ -368,7 +368,7 @@ Optionally, also play a sound when the item is collected.
 
 Have the QuestGiver NPC display a different message if the quest is complete and give the player a reward for completing the quest.
 
-![An animated gif showing the Player approaching an NPC to complete the quest. When the player gets near the NPC a canvas with completion message is enabled on the scene and the coins variable increases.](images/quest-button.gif)
+![An animated gif showing the Player approaching an NPC to complete the quest. When the player gets near the NPC a canvas with completion message is enabled on the scene and the coins variable increases.](images/snow-coins.gif)
 
 --- collapse ---
 
