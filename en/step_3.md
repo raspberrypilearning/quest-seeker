@@ -322,6 +322,25 @@ Update the **QuestSeeker** script used by the player with variables to keep trac
 --- collapse ---
 
 ---
+title: Add variables for multiple items of the same type in a gather quest
+---
+
+In a gather quest, the player will need to collect multiple items of the same kind to collect the items. 
+
+![desc](images/collectable-player.png)
+
+**QuestSeeker** script:
+
+```
+// Add a variable to store the amount collected
+public int collectables = 0;
+```
+
+--- /collapse ---
+
+--- collapse ---
+
+---
 title: Add variables for multiple different items in a craft or recipe quest
 ---
 
@@ -339,6 +358,25 @@ public bool hasIceTool = false;
 
 --- /collapse ---
 
+--- collapse ---
+
+---
+title: Add variables for a follower
+---
+
+In an escort quest, the player will need to take a follower with them. 
+
+![desc](images/follower-player.png)
+
+**QuestSeeker** script:
+
+```
+// To control when the follower is following the player
+public bool friendFollower = false;
+```
+
+--- /collapse ---
+
 --- /task ---
 
 --- task ---
@@ -348,6 +386,35 @@ Add a script to each quest item or other NPC involved in the quest so that they 
 You could also check a `bool` variable and only react to the Player if the quest has been accepted. 
 
 **Choose:**
+
+--- collapse ---
+
+---
+title: Gather quest items
+---
+
+Here's an example for a coin collection quest, each coin will need this script. 
+
+![desc](images/coin-item.png)
+
+```
+public class CoinController : MonoBehaviour
+{
+    public QuestSeeker player;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            player.collectables += 1;
+            gameObject.SetActive(false);
+        }
+    }
+}
+
+```
+
+--- /collapse ---
 
 --- collapse ---
 
@@ -378,6 +445,48 @@ public class IceToolController : MonoBehaviour
 
 --- /collapse ---
 
+--- collapse ---
+
+---
+title: Escort quest followers
+---
+
+Here's an example for a follower, if the same project has other follower GameObject they will need the script too. 
+
+![desc](images/follower-item.png)
+
+```
+public class FollowerController : MonoBehaviour
+{
+    public QuestSeeker player;
+    float followSpeed = 3f;
+    float followDistance = 1.6f;
+
+    void Update()
+    {
+        transform.LookAt(Player.transform);
+
+        if(Player.friendFollower == true && Vector3.Distance(Player.transform.position, transform.position) > followDistance)
+        {
+                CharacterController controller = GetComponent<CharacterController>();
+                var moveDirection = Vector3.Normalize(Player.transform.position - transform.position);
+                controller.SimpleMove(moveDirection * followSpeed);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            player.friendFollower = true;
+        }
+    }
+}
+
+```
+
+--- /collapse ---
+
 --- /task ---
 
 ### Quest completion
@@ -387,6 +496,22 @@ Set up the reaction of the quest giver on completion of the quest, apply rewards
 --- task ---
 
 The Quest Giver NPC needs to check for completion of the quest and thank the player.
+
+--- collapse ---
+
+---
+title: Check whether the player has a number of the same item
+---
+
+```
+    if (player.coins > 2) // if all the coins have been collected
+    {
+        message.SetText("Well done you collected the coins!");
+              
+    }
+```
+
+--- /collapse ---
 
 --- collapse ---
 
@@ -410,23 +535,6 @@ title: Check whether player has multiple different items
 ```
 
 --- /collapse ---
-
---- collapse ---
-
----
-title: Check whether the player has a number of the same item
----
-
-```
-    if (player.coins > 2) // if all the coins have been collected
-    {
-        message.SetText("Well done you collected the coins!");
-              
-    }
-```
-
---- /collapse ---
-
 
 --- /task ---
 
