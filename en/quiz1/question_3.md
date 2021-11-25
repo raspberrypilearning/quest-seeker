@@ -9,7 +9,7 @@ To work in games development you need to be really good at coding, art, storytel
 
 --- choices ---
 
-- (x) True
+- ( ) True
 
 
   --- feedback ---
@@ -18,12 +18,12 @@ To work in games development you need to be really good at coding, art, storytel
 
   --- /feedback ---
 
-- ( ) False
+- (x) False
 
 
   --- feedback ---
 
-  Actually games development is usually done by a team of people who specialise in the tasks they really enjoy. It’s great to know a bit about each of these skills but you don’t need to be brilliant at all of them.
+  Correct! Actually games development is usually done by a team of people who specialise in the tasks they really enjoy. It’s great to know a bit about each of these skills but you don’t need to be brilliant at all of them.
 
   --- /feedback ---
 
