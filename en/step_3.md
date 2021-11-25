@@ -211,6 +211,8 @@ Set up the quest using initial visibility, trigger reactions and tracking of que
 
 --- task ---
 
+### Before the quest is accepted
+
 Set up your quest by hiding any GameObjects that should be hidden until the quest is accepted. 
 
 **Choose:**
@@ -268,72 +270,7 @@ Assign GameObjects to variables in Unity editor.
 
 --- task ---
 
-Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered or NPC following. 
-
-
-**Choose:**
-
---- collapse ---
-
----
-title: Add variables for multiple different items in a craft or recipe quest
----
-
-In a recipe or craft quest, the player will need to collect multiple items of different kinds to make a recipe or craft a new item. 
-
-![desc](images/snow-raccoon.png)
-
-**QuestSeeker** script:
-
-```
-// Add a variable for each item to be collected
-public bool hasIceBlock = false;
-public bool hasIceTool = false;
-```
-
---- /collapse ---
-
---- /task ---
-
---- task ---
-Add a script to each quest item or other NPC involved in the quest so that they react when the player collides with them.
-
-You could also check a `bool` variable and only react to the Player if the quest has been accepted. 
-
-**Choose:**
-
---- collapse ---
-
----
-title: Collect recipe or crafting quest items
----
-
-Here's an example for an IceTool, the same project also has a IceBlock collectible GameObject with a similar script. 
-
-![desc](images/ice-tool.png)
-
-```
-public class IceToolController : MonoBehaviour
-{
-    public QuestSeeker player;
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            player.hasIceTool = true;
-            gameObject.SetActive(false);
-        }
-    }
-}
-
-```
-
---- /collapse ---
-
---- /task ---
-
---- task ---
+### When quest accepted
 
 Add a `QuestAccepted` method to your new Quest Giver NPC to set up the quest when it has been accepted. Connect the method to the 'Accept' button for the quest. 
 
@@ -366,6 +303,76 @@ title: Make multiple items with the same tag appear
     {
         Collectable.SetActive(true);
     }
+
+```
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+### During the quest
+
+Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered or NPC following. 
+
+
+**Choose:**
+
+--- collapse ---
+
+---
+title: Add variables for multiple different items in a craft or recipe quest
+---
+
+In a recipe or craft quest, the player will need to collect multiple items of different kinds to make a recipe or craft a new item. 
+
+![desc](images/snow-raccoon.png)
+
+**QuestSeeker** script:
+
+```
+// Add a variable for each item to be collected
+public bool hasIceBlock = false;
+public bool hasIceTool = false;
+```
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+Add a script to each quest item or other NPC involved in the quest so that they react when the player collides with them.
+
+You could also check a `bool` variable and only react to the Player if the quest has been accepted. 
+
+**Choose:**
+
+--- collapse ---
+
+---
+title: Collect recipe or crafting quest items
+---
+
+Here's an example for an IceTool, the same project also has a IceBlock collectible GameObject with a similar script. 
+
+![desc](images/ice-tool.png)
+
+```
+public class IceToolController : MonoBehaviour
+{
+    public QuestSeeker player;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            player.hasIceTool = true;
+            gameObject.SetActive(false);
+        }
+    }
+}
 
 ```
 
@@ -433,7 +440,7 @@ title: Check whether the player has a number of the same item
 title: Currency or experience
 ---
 
-Instead of using coins you could use a different currency for your game. Or you could reward the player with XP (experience points).
+You could use coins or a different currency for your game. Or you could reward the player with XP (experience points).
 
 Keep track of currency or points rewards using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed. 
 
@@ -446,7 +453,7 @@ public int gems; // Keep track of gems.
 player.gems += 2; // Give a reward to the player
 ```
 
-![desc](images/coin-reward.gif)
+![desc](images/coin-reward.png)
 
 --- /collapse ---
 
@@ -844,6 +851,8 @@ public class EscortQuestGiver : MonoBehaviour
 --- /collapse ---
 
 --- /task ---
+
+### Debug your quest
 
 --- task ---
 
