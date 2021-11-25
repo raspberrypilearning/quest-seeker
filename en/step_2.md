@@ -19,9 +19,13 @@ Open your project to use as the world, or map, where quests will take place.
 
 --- /task ---
 
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+A <span style="color: #0faeb0">**Game Designer**</span> creates the characters, rules, goals, game mechanics and puzzles that make a game enjoyable and engaging for the player. Some Game Designers do all the coding for their game and others work in teams.
+</p>
+
 --- task ---
 
-**Plan:** Think of a quest that makes sense in the world you have built. 
+**Design:** Think of a quest that makes sense in the world you have built. 
 
 You will need to decide on:
 + An item to be fetched,
