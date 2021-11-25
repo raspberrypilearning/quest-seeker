@@ -704,6 +704,8 @@ Then use `SetActive` when the quest has been completed.
 hat.SetActive(true)
 ```
 
+![desc](images/player-gift.png)
+
 You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player. 
 
 ```
