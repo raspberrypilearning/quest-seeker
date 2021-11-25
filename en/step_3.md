@@ -5,7 +5,6 @@
 Add another NPC with a different quests and reward. You can choose from different quest types.  
 </div>
 <div>
-![](images/found-telescope.png){:width="300px"}
 </div>
 </div>
 
@@ -17,6 +16,8 @@ If quests are revealed and then completed in a specific sequence this is called 
 
 **Design:** Design your second quest. The quests will be **non-linear** so they can be started in any order. 
 
+### Quest type
+
 You quest could be:
 + A **gather** quest with multiple items of the same kind.
 + A **recipe** or **crafting** quest with multiple items of different kinds. 
@@ -26,6 +27,8 @@ You quest could be:
 + A **puzzle** or **task** quest where you have to solve a puzzle or complete a task.
 
 ![desc](images/quest-strip2.png)
+
+### Reward type
 
 The reward could be given by the new Quest Giver or another NPC and could be:
 + Experience points (XP), reputation, coins, gems or another in-game currency.
@@ -40,14 +43,18 @@ Or, a combination of these.
 <span style="color: #0faeb0">**Software Design**</span> is making decisions about how to turn your idea into code. In Unity this means deciding on the GameObjects, Scripts, Variables and Methods you will need to build your game or interactive story. 
 </p>
 
-For each quest you will need to:
+### Quest checklist
+
+For your quest you will need to:
 + Add a new NPC to be the quest giver with UI objects to communicate about the quest. 
 + Update the QuestSeeker script on the Player with variables to store the state of the new quest. 
 + Add items and other NPCs depending on the quest type. 
-+ Add a script to to the quest giver NPC to control the conversation and reward based on the state of the quest.
++ Add a script to the quest giver NPC to control the conversation and reward based on the state of the quest.
 + Add scripts to items and other NPCs according to the quest type.
 
 --- task ---
+
+### The Quest Giver
 
 Add a new GameObject to be the second QuestGiver NPC. 
 
@@ -159,6 +166,8 @@ In the Inspector, making sure you are updating the child objects and components 
 
 --- task ---
 
+### The quest items
+
 Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectibles, followers or rewards and position them in your scene. 
 
 Create a tag for the new GameObjects in your new quest, such as 'CakeQuest' and apply the tag to them - you use this tag to show all of the quest items when the quest is accepted.
@@ -195,6 +204,10 @@ title: Tag your items
 **Tip:** If all of your collectibles, followers or rewards are to look and act in the same way, make sure you add all your effects before duplicating the first GameObject. 
 
 --- /task ---
+
+### Quest control
+
+Set up the quest using initial visibility, trigger reactions and tracking of quest states. 
 
 --- task ---
 
@@ -254,6 +267,7 @@ Assign GameObjects to variables in Unity editor.
 --- /task ---
 
 --- task ---
+
 Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered or NPC following. 
 
 
@@ -359,6 +373,10 @@ title: Make multiple items with the same tag appear
 
 --- /task ---
 
+### Quest completion
+
+Set up the reaction of the quest giver on completion of the quest, apply rewards and make sure the quest can't be offered again. 
+
 --- task ---
 
 The Quest Giver NPC needs to check for completion of the quest and thank the player.
@@ -404,7 +422,6 @@ title: Check whether the player has a number of the same item
 
 
 --- /task ---
-
 
 --- task ---
 
