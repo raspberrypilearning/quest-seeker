@@ -10,7 +10,7 @@ A script on an Quest Giver NPC has the following method:
 --- code ---
 ---
 language: cs
-filename: TelescopeQuestGiver.cs
+filename: QuestGiver.cs
 line_numbers: true
 line_number_start: 20
 line_highlights: 28
@@ -21,7 +21,7 @@ line_highlights: 28
         {
             if (player.hasQuestItem)
             {
-                message.SetText("Thankyou so much for fetching my telescope!");
+                message.SetText("Thank you so much!");
                 player.coins += 15; // give the reward
 
             }
