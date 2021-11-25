@@ -294,7 +294,7 @@ When the player collects the item the item needs to disappear and optionally pla
 
 --- task ---
 
-Add a **QuestSeeker** script to the Player with a variable such as `coins` to store the reward. Add a 'UI' 'TextMeshPro' to the scene to display the reward.
+Add a **QuestSeeker** script to the Player with a variable such as `coins` to store the reward. Add a 'UI' 'TextMeshPro' to the **Scene** to display the reward.
 
 
 --- collapse ---
@@ -303,7 +303,7 @@ Add a **QuestSeeker** script to the Player with a variable such as `coins` to st
 title: Add a QuestSeeker script to the Player to manage the reward
 ---
 
-Right-click in the Hierarchy window and add a 'UI' 'TextMeshPro' to your scene to show the reward. Name the new Object 'Coins Text', or a suitable name for your reward. 
+Right-click in the Hierarchy window and add a 'UI' 'TextMeshPro' to your scene to show the reward. Name the new Object 'Coin Text', or a suitable name for your reward. 
 
 Add a new 'QuestSeeker' script component to the **Player** to store and display the reward. 
 
@@ -328,7 +328,7 @@ public class QuestSeeker : MonoBehaviour
 
 --- /collapse ---
 
-Drag the Coins TextMeshPro object to the Coin Text property in the Inspector.
+Drag the 'Coin Text' TextMeshPro object to the Coin Text property in the Inspector.
 
 --- /task ---
 
@@ -449,9 +449,15 @@ title: Update the QuestGiver script to thank and reward the player
 ---
 
 ```
+using TMPro;
+```
+
+```
 public TMP_Text message;
 public QuestSeeker player;
+```
 
+```
 void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -468,7 +474,7 @@ void OnTriggerEnter(Collider other)
     }
  ```
 
- In the Inspector, Drag the player to the Player property and the TextMeshPro object with the message to the Message property.
+ In the Inspector, drag the player to the Player property and the TextMeshPro object with the message to the Message property.
 
 --- /collapse ---
 

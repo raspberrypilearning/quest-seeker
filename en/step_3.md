@@ -529,7 +529,7 @@ title: Escort quest followers
 
 Here's an example for a follower, if the same project has other follower GameObject they will need the script too. 
 
-![desc](images/follower-item.png)
+![desc](images/follower-player.png)
 
 ```
 public class FollowerController : MonoBehaviour

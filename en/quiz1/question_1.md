@@ -1,6 +1,6 @@
 ## Reflection
 
-Well done, you have learned a lot! Now it's time to reflect - reflecting is an important part of learning because it helps make new connections in your brain.
+Well done, you have learned a lot!  
 
 Answer the three questions below to reflect on what you've learned.
 
@@ -13,6 +13,8 @@ Have fun!
 ---
 legend: Question 1 of 3
 ---
+
+A game developer added this method to the **QuestGiver** script on their QuestGiver NPC.  
 
 In a game, the player must click on a button to accept a quest. Where would you go to connect the button to the `QuestAccepted` method on the Quest Giver NPC?
 
