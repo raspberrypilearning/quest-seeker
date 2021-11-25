@@ -25,7 +25,7 @@ You quest could be:
 + A **story** quest where you have to find and talk to another NPC to find out information.
 + A **puzzle** or **task** quest where you have to solve a puzzle or complete a task.
 
-![desc](images/quest-strip.png)
+![desc](images/quest-strip2.png)
 
 The reward could be given by the new Quest Giver or another NPC and could be:
 + Experience points (XP), reputation, coins, gems or another in-game currency.
