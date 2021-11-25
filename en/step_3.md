@@ -5,6 +5,7 @@
 Add another NPC with a different quests and reward. You can choose from different quest types.  
 </div>
 <div>
+![An animated gif of the player returning to the quest giver with a friend follower. The quest giver says thank you.](images/friend-found.gif){:width="300px"}
 </div>
 </div>
 
@@ -151,14 +152,17 @@ public class QuestGiver2 : MonoBehaviour
 --- /collapse ---
 
 In the Inspector, making sure you are updating the child objects and components for your new QuestGiver NPC:
-+ Drag the Canvas, Message and Button objects to your new Script,
++ Drag the Canvas, Message and Button objects to your new Script.
 + Select the Button and add an 'OnClick' set to the `QuestAccepted` Method of your new script.
 
 --- /task ---
 
 --- task ---
 
-**Test:** Play your scene and make sure you see the new quest message and that you can Accept the quest with the button. Check that you can see the debug message in the Console.
+**Test:** Play your scene:
++ Make sure you see the new quest message 
++ Check that you can Accept the quest with the button
++ Check that you can see the debug message in the Console.
 
 ![desc](images/new-quest-accept-message.png)
 
@@ -195,7 +199,13 @@ title: Tag your items
 
 **Create a new tag.** Go to the ‘Tag’ property at the top of the Inspector window and ‘Add Tag’. Click on the ‘+’ and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
 
+![desc](images/add-new-tag.png)
+
 **Apply your new tag.** Select the GameObjects that are items in this quest in the Hierarchy window and use the Tag dropdown box to select your new tag from the list.
+
+![desc](images/multi-items-select.png)
+
+![desc](images/item-tag-apply.png)
 
 --- /collapse ---
 
@@ -233,8 +243,8 @@ GameObject[] collectables;
     {
         canvas.SetActive(false);
 
-        collectables = GameObject.FindGameObjectsWithTag("Collectable");
-        foreach (var Collectable in collectables)
+        collectables = GameObject.FindGameObjectsWithTag("Collectables");
+        foreach (var Collectables in collectables)
         {
             Collectables.SetActive(false);
         }
@@ -271,10 +281,10 @@ Assign GameObjects to variables in Unity editor.
 --- collapse ---
 
 ---
-title: Hide child items
+title: Set visibility of child items
 ---
 
-![desc](images/pass-object.png)
+![desc](images/quest-giver-item.png)
 
 **QuestGiver2** script
 
@@ -559,7 +569,7 @@ public class FollowerController : MonoBehaviour
 title: Make a child item transfer or disappear
 ---
 
-![desc](images/pass-object.png)
+![desc](images/pass-object-complete.png)
 
 On the script for the NPC to receive the item. 
 

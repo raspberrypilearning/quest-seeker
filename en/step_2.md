@@ -81,6 +81,10 @@ Add a Box Collider to the Quest Giver so that the player can't walk through them
 The Quest Giver will offer the player a quest when they get close enough.
 
 --- task ---
+Check that your Player GameObject has the 'Player' tag.
+--- /task ---
+
+--- task ---
 
 Add a UI TextMeshPro named 'Quest Text' as a **child of the Quest Giver** and add your quest message to it. 
 
@@ -103,6 +107,8 @@ You can add another UI TextMeshPro to the same canvas with the name of the Quest
 ![The Game view showing canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the Quest message.](images/quest-giver-text.png)
 
 --- /collapse ---
+
+[[[unity-ui-positioning-2d]]]
 
 --- /task ---
 
@@ -246,7 +252,7 @@ Click on the circle for the field underneath ‘Runtime’, click on ‘Scene’
 
 --- /collapse ---
 
-**Tip:** When you have a Canvas as a child object you will need to disable it in the Inspector, by unchecking the box next to the name, so you can focus on the GameObject using 'F' or 'Shift-F'. If you need to see it again to edit it you can check the box. 
+**Tip:** If you have a Canvas as a child object then you won't be able to focus on the parent GameObject in the Scene view. To fix this you can disable the Canvas in the Inspector, by unchecking the box next to the name. If you need to see the Canvas again to edit it you can check the box. 
 
 ![The Inspector window for the Canvas showing that the Canvas is unselected with an empty check box to the left of the name.](images/canvas-unchecked.png)
 

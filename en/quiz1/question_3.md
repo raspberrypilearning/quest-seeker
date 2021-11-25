@@ -9,7 +9,7 @@ To work in games development you need to be really good at coding, art, storytel
 
 --- choices ---
 
-- (x) True
+- () True
 
 
   --- feedback ---
@@ -18,7 +18,7 @@ To work in games development you need to be really good at coding, art, storytel
 
   --- /feedback ---
 
-- ( ) False
+- (x) False
 
 
   --- feedback ---

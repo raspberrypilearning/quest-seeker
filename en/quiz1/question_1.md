@@ -16,7 +16,7 @@ legend: Question 1 of 3
 
 In a game, the player must click on a button to accept a quest. Where would you go to connect the button to the `QuestAccepted` method on the Quest Giver NPC?
 
-![An On Click event connected to the QuestAccepted methd of a QuestGiver game object.](images/button-onclick.png)
+![An On Click event connected to the QuestAccepted method of a QuestGiver game object.](images/button-onclick.png)
 
 --- choices ---
 
