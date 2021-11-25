@@ -7,9 +7,14 @@ legend: Question 2 of 3
 
 A script on an Quest Giver NPC has the following method:
 
-<mark>Highlight the blank line.</mark>
-
-```
+--- code ---
+---
+language: cs
+filename: TelescopeQuestGiver.cs
+line_numbers: true
+line_number_start: 20
+line_highlights: 28
+---
 void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -24,7 +29,7 @@ void OnTriggerEnter(Collider other)
             canvas.SetActive(true);
         }
     }
-```
+--- /code ---
 
 The game has a bug that allows the player to keep collecting more coins by repeatedly colliding with the NPC after completing the quest. Which line of code could you add after giving the reward to fix this?
 

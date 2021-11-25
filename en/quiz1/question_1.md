@@ -14,43 +14,43 @@ Have fun!
 legend: Question 1 of 3
 ---
 
-A game developer added this method to the **QuestGiver** script on their QuestGiver NPC.  
+A button's OnClick event needs a GameObject with a script that has a public method. 
 
-In a game, the player must click on a button to accept a quest. Where would you go to connect the button to the `QuestAccepted` method on the Quest Giver NPC?
+What is the name of the **method** called when this button is clicked? 
 
-![An On Click event connected to the QuestAccepted method of a QuestGiver game object.](images/button-onclick.png)
+![An OnClick event in the Inspector window with one item in this list. It has  'QuestGiver' in the box underneath the 'Runtime Only' and  'CoinQuest.CoinsAccepted' in the box to the right.](images/quiz-question.png)
 
 --- choices ---
 
-- ( ) Canvas
+- ( ) QuestGiver
 
   --- feedback ---
 
-  No, the Canvas is a container for UI elements. It contains child objects such as Buttons and Text.
+  No, `QuestGiver` is the name of the GameObject.
 
   --- /feedback ---
 
-- ( ) Quest Giver NPC
+- ( ) CoinQuest
 
   --- feedback ---
 
-  No, the Quest Giver NPC needs to have the `QuestAccepted` method on a script but this isn't where you connect it to the button. 
+  No, `CoinQuest` is the name of the Script. 
 
   --- /feedback ---
 
-- (x) Button
+- (x) CoinsAccepted
 
   --- feedback ---
 
-  Yes, that's correct. You select the Button and then go to the Inspector and add an `On Click` event and add the the Quest Giver NPC and select the `QuestAccepted` method.
+  Yes, that's correct. The `QuestGiver` GameObject has a `CoinQuest` script attached that has a public `CoinsAccepted` method.
 
   --- /feedback ---
 
-- ( ) A script on the Quest Giver NPC
+- ( ) OnClick()
 
   --- feedback ---
 
-  No, a script on the Quest Giver NPC needs to have the `QuestAccepted` method but this isn't where you connect it to the button. 
+  No, `OnClick` is the event that is triggered when the button is clicked. 
 
   --- /feedback ---
 
