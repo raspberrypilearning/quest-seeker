@@ -15,7 +15,7 @@ line_numbers: true
 line_number_start: 20
 line_highlights: 28
 ---
-void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
