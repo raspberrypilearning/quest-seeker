@@ -641,14 +641,10 @@ title: Check whether player has multiple different items
 ---
 
 ```
-    // And && condition to check whether 
     if (player.hasIceBlock && player.hasIceTool)
     {
         // Change to a successful completion message
         message.SetText("Thankyou for helping me finish my ice dome. You can climb it if you like.");
-
-        // Reward and story actions
-        iceDome.SetActive(true);
     }
 
 ```
