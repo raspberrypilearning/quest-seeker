@@ -48,7 +48,7 @@ Or, a combination of these.
 For your quest you will need to:
 + Add a new NPC to be the quest giver with UI objects to communicate about the quest. 
 + Update the QuestSeeker script on the Player with variables to store the state of the new quest. 
-+ Add items and other NPCs depending on the quest type. 
++ Add items and other NPCs depending on the quest type.
 + Add a script to the quest giver NPC to control the conversation and reward based on the state of the quest.
 + Add scripts to items and other NPCs according to the quest type.
 
@@ -160,7 +160,7 @@ In the Inspector, making sure you are updating the child objects and components 
 
 **Test:** Play your scene and make sure you see the new quest message and that you can Accept the quest with the button. Check that you can see the debug message in the Console.
 
-![desc](images/new-quest-accept.png)
+![desc](images/new-quest-accept-message.png)
 
 --- /task ---
 
@@ -169,8 +169,6 @@ In the Inspector, making sure you are updating the child objects and components 
 ### The quest items
 
 Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectibles, followers or rewards and position them in your scene. 
-
-Create a tag for the new GameObjects in your new quest, such as 'CakeQuest' and apply the tag to them - you use this tag to show all of the quest items when the quest is accepted.
 
 Add a Box Collider component to your item GameObject and check the 'Is Trigger' Box Collider property.
 
@@ -187,7 +185,7 @@ You could also add the `IdleWalk` animation or create a new Animator.
 
 [[[unity-animation]]]
 
-If your quest has multiple items then add the same tag to each of them. 
+If your quest has multiple items that need to be deactivated and activated at the same time then add the same tag to each of them. 
 
 --- collapse ---
 
@@ -205,7 +203,7 @@ title: Tag your items
 
 --- /task ---
 
-### Quest control
+### Controlling the quest
 
 Set up the quest using initial visibility, trigger reactions and tracking of quest states. 
 
@@ -223,6 +221,8 @@ Set up your quest by hiding any GameObjects that should be hidden until the ques
 title: Hide items with the same tag
 ---
 
+![desc](images/key-multiple.png)
+
 **QuestGiver2** script
 
 ```
@@ -236,7 +236,7 @@ GameObject[] collectables;
         collectables = GameObject.FindGameObjectsWithTag("Collectable");
         foreach (var Collectable in collectables)
         {
-            Collectable.SetActive(false);
+            Collectables.SetActive(false);
         }
     }
 ```
@@ -248,6 +248,8 @@ GameObject[] collectables;
 ---
 title: Hide individual items
 ---
+
+![desc](images/multi-objects.png)
 
 **QuestGiver2** script
 
@@ -263,6 +265,26 @@ title: Hide individual items
 ```
 
 Assign GameObjects to variables in Unity editor.  
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Only react if the Player has accepted the quest
+---
+
+**FollowerNPC** script
+
+```
+    void Update()
+    {
+        if(player.escortQuestAccepted)
+        {
+            // follow Player
+        }
+    }
+```
 
 --- /collapse ---
 
@@ -308,14 +330,33 @@ title: Make multiple items with the same tag appear
 
 --- /collapse ---
 
+--- collapse ---
+
+---
+title: Update a variable to say the quest has been accepted
+---
+
+**QuestSeeker** script:
+
+```
+    // The follower should only follow if the quest has been accepted
+    public bool followQuestAccepted = false;
+
+    void QuestAccepted()
+    {
+        followQuestAccepted = true;
+    }
+```
+
+--- /collapse ---
+
 --- /task ---
 
 --- task ---
 
 ### During the quest
 
-Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered or NPC following. 
-
+Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered or NPC following.
 
 **Choose:**
 
@@ -466,7 +507,7 @@ public class FollowerController : MonoBehaviour
     {
         transform.LookAt(Player.transform);
 
-        if(Player.friendFollower == true && Vector3.Distance(Player.transform.position, transform.position) > followDistance)
+        if(player.friendFollower == true && Vector3.Distance(Player.transform.position, transform.position) > followDistance)
         {
                 CharacterController controller = GetComponent<CharacterController>();
                 var moveDirection = Vector3.Normalize(Player.transform.position - transform.position);
