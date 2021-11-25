@@ -10,7 +10,7 @@ A script on an Quest Giver NPC has the following method:
 --- code ---
 ---
 language: cs
-filename: TelescopeQuestGiver.cs
+filename: QuestGiver.cs
 line_numbers: true
 line_number_start: 20
 line_highlights: 28
@@ -21,7 +21,7 @@ line_highlights: 28
         {
             if (player.hasQuestItem)
             {
-                message.SetText("Thankyou so much for fetching my telescope!");
+                message.SetText("Thank you so much!");
                 player.coins += 15; // give the reward
 
             }
@@ -35,7 +35,10 @@ The game has a bug that allows the player to keep collecting more coins by repea
 
 --- choices ---
 
-- ( ) `player.coins -= 15;`
+- ( ) 
+```
+player.coins -= 15;
+```
 
   --- feedback ---
 
@@ -43,7 +46,10 @@ The game has a bug that allows the player to keep collecting more coins by repea
 
   --- /feedback ---
 
-- (x) `player.hasQuestItem = false;`
+- (x) 
+```
+player.hasQuestItem = false;
+```
 
   --- feedback ---
 
@@ -51,7 +57,10 @@ Yes that's correct. The Quest Giver NPC checks whether the player has the quest 
 
   --- /feedback ---
 
-- ( ) `message.SetText("Hey, I already gave you a reward");`
+- ( ) 
+```
+message.SetText("Hey, I already gave you a reward");
+```
 
   --- feedback ---
 
