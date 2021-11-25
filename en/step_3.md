@@ -15,17 +15,19 @@ If quests are revealed and then completed in a specific sequence this is called 
 
 --- task ---
 
-**Plan:** Design your second quest. The quests will be **non-linear** so they can be started in any order. 
+**Design:** Design your second quest. The quests will be **non-linear** so they can be started in any order. 
 
 You quest could be:
 + A **gather** quest with multiple items of the same kind.
 + A **recipe** or **crafting** quest with multiple items of different kinds. 
 + An **escort** quest where you have to find another NPC and have them follow the player back to the Quest Giver (or to another location)
 + A **deliver** quest where you are given an object to take to another NPC. 
++ A **story** quest where you have to find and talk to another NPC to find out information.
++ A **puzzle** or **task** quest where you have to solve a puzzle or complete a task.
 
 ![desc](images/quest-strip.png)
 
-The reward could be:
+The reward could be given by the new Quest Giver or another NPC and could be:
 + Experience points (XP), reputation, coins, gems or another in-game currency.
 + An accessory for the player. 
 + Unlocking an new area or item in the game. 
@@ -33,6 +35,10 @@ The reward could be:
 Or, a combination of these. 
 
 --- /task ---
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**Software Design**</span> is making decisions about how to turn your idea into code. In Unity this means deciding on the GameObjects, Scripts, Variables and Methods you will need to build your game or interactive story. 
+</p>
 
 For each quest you will need to:
 + Add a new NPC to be the quest giver with UI objects to communicate about the quest. 
