@@ -11,8 +11,7 @@ A script on an Quest Giver NPC has the following method:
 ---
 language: cs
 filename: QuestGiver.cs
-line_number_start: 20
-line_highlights: 28
+line_highlights: 9
 ---
     void OnTriggerEnter(Collider other)
     {
