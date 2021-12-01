@@ -132,6 +132,16 @@ Add a script called 'QuestGiver' to the QuestGiver GameObject. Add `OnTriggerEnt
 
 Add code to a script on the NPC GameObject. 
 
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: true
+line_number_start: 
+line_highlights: 7-23, 27
+---
+
+--- /code ---
 ```
 public class QuestGiver : MonoBehaviour
 {
@@ -151,6 +161,11 @@ public class QuestGiver : MonoBehaviour
         {
             canvas.SetActive(false);
         }
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        canvas.SetActive(false);
     }
 }
 ```
@@ -201,19 +216,19 @@ Adjust the Button & Text size, position and colours until you are happy with the
 
 Add code to the QuestGiver script to control when the object appears so that it only appears when then quest has been accepted. 
 
-```
+--- code ---
+---
+language: python
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 6
+line_highlights: 9, 10, 30, 39
+---
 public class QuestGiver : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject button;
     public GameObject item;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        canvas.SetActive(false);
-        item.SetActive(false); // hide the quest item
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -237,8 +252,15 @@ public class QuestGiver : MonoBehaviour
         canvas.SetActive(false); // hide the message when the quest has been accepted
         button.SetActive(false); // don't show the button after the quest has been accepted
     }
-}
-```
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        canvas.SetActive(false);
+        item.SetActive(false);
+    }
+--- /code ---
+
 
 Select the QuestGiver then in the QuestGiver script component in the Inspector window, drag your item GameObject to the 'Item' property:
 
@@ -274,11 +296,11 @@ Click on the circle for the field underneath ‘Runtime’, click on ‘Scene’
 title: Nothing happens when I click the Accept button
 ---
 
-Select your QuestGiver NPC and make sure they have a script that has an `AcceptQuest` method.
+Select your QuestGiver NPC and make sure they have a script that has an `QuestAccepted` method.
 
 Check that all the variables are set on the script in the Inspector. 
 
-Click on the Button object and check that you have attached the correct Method such as `AcceptQuest` to an 'OnClick' Event. 
+Click on the Button object and check that you have attached the correct Method such as `QuestAccepted` to an 'OnClick' Event. 
 
 Add a `Debug.Log("Quest accepted");` line to the method and check the console to see that the method is being called.
 
@@ -309,6 +331,16 @@ Add a new 'QuestSeeker' script component to the **Player** to store and display 
 
 The `coins` variable needs to be `public` so that a script on the Quest Item can update it. 
 
+--- code ---
+---
+language: csharp
+filename: QuestSeeker.cs
+line_numbers: false
+line_number_start: 4
+line_highlights: 4, 8, 9, 20
+---
+
+--- /code ---
 ```
 using TMPro;
 
@@ -316,6 +348,12 @@ public class QuestSeeker : MonoBehaviour
 {
     public int coins = 0; // or the reward for your quest
     public TMP_Text coinText;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
@@ -343,7 +381,14 @@ Add a `public bool hasQuestItem = false;` variable to the **QuestSeeker** script
 title: Add a hasQuestItem variable to the QuestSeeker script
 ---
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestSeeker.cs
+line_numbers: false
+line_number_start: 4
+line_highlights: 8
+---
 using TMPro;
 
 public class QuestSeeker : MonoBehaviour
@@ -358,8 +403,7 @@ public class QuestSeeker : MonoBehaviour
        coinText.SetText("Coins: " + coins); 
     }
 }
-
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -383,12 +427,19 @@ Add a script to the QuestItem and name it 'QuestItemController'.
 
 Add code to make the item hide and update the `hasQuestItem` status on the Player. 
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestItemController.cs
+line_numbers: false
+line_number_start: 5
+line_highlights: 9-16
+---
 public class QuestItemController : MonoBehaviour
 {
-    public QuestSeeker player; 
+    public QuestSeeker player;
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -396,8 +447,7 @@ public class QuestItemController : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-}
-```
+--- /code ---
 
 Drag the Player GameObject to the player property of the QuestItemController script in the Inspector for the QuestItem.
 
@@ -447,32 +497,41 @@ Have the QuestGiver NPC display a different message if the quest is complete and
 ---
 title: Update the QuestGiver script to thank and reward the player
 ---
-
-```
+--- code ---
+---
+language: python
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 4, 11, 12, 18-23
+---
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using TMPro;
-```
 
-```
-public TMP_Text message;
-public QuestSeeker player;
-```
+public class QuestGiver : MonoBehaviour
+{
+    public GameObject canvas;
+    public GameObject button;
+    public GameObject item;
+    public TMP_Text message;
+    public QuestSeeker player;
 
-```
-void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             if (player.hasQuestItem)
             {
-                message.SetText("Thankyou so much for finding me a lucky clover!");
-                player.coins+= 10; // give the reward
-                player.hasQuestItem = false; // make sure the player can't get the reward again
-            }
-
+                message.SetText("Thankyou for finding my fishbone. Here's are 10 coins for your efforts");
+                player.coins += 10;
+                player.hasQuestItem = false;
+            }    
             canvas.SetActive(true);
         }
     }
- ```
+--- /code ---
 
  In the Inspector, drag the player to the Player property and the TextMeshPro object with the message to the Message property.
 

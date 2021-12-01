@@ -107,7 +107,14 @@ title: Create a new script for the QuestGiver NPC
 
 **QuestGiver2** script:
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver2.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 using TMPro;
 
 public class QuestGiver2 : MonoBehaviour
@@ -147,7 +154,7 @@ public class QuestGiver2 : MonoBehaviour
         button.SetActive(false);
     }
 }
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -235,7 +242,14 @@ title: Hide items with the same tag
 
 **QuestGiver2** script
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver2.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 GameObject[] collectables;
 
     // Start is called before the first frame update
@@ -249,7 +263,7 @@ GameObject[] collectables;
             Collectables.SetActive(false);
         }
     }
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -263,7 +277,14 @@ title: Hide individual items
 
 **QuestGiver2** script
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver2.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     public GameObject iceDome;
 
     void Start()
@@ -272,7 +293,7 @@ title: Hide individual items
         canvas.SetActive(false);
         iceDome.SetActive(false);
     }
-```
+--- /code ---
 
 Assign GameObjects to variables in Unity editor.  
 
@@ -288,7 +309,14 @@ title: Set visibility of child items
 
 **QuestGiver2** script
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver2.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 public GameObject telescope; // Item on NPC
 public GameObject playerTelescope; // Item on Player
 public PlayerController player;
@@ -299,7 +327,7 @@ void Start()
     playerTelescope.SetActive(false);
     canvas.SetActive(false);
 }
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -321,9 +349,16 @@ title: Make an individual item appear
 
 **QuestAccepted** method of **QuestGiver2** script:
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver2.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
         key.SetActive(true);
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -335,13 +370,19 @@ title: Make multiple items with the same tag appear
 
 **QuestAccepted** method of **QuestGiver2** script:
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver2.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     foreach (var Collectable in collectables)
     {
         Collectable.SetActive(true);
     }
-
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -351,7 +392,14 @@ title: Make multiple items with the same tag appear
 title: Make a child item appear on the player
 ---
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver2.cs
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -361,7 +409,7 @@ title: Make a child item appear on the player
             playerTelescope.SetActive(true);
         }
     }
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -373,7 +421,14 @@ title: Update a variable to say the quest has been accepted
 
 **QuestSeeker** script:
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestSeeker.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     // The follower should only follow if the quest has been accepted
     public bool followQuestAccepted = false;
 
@@ -381,7 +436,7 @@ title: Update a variable to say the quest has been accepted
     {
         followQuestAccepted = true;
     }
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -407,10 +462,17 @@ In a gather quest, the player will need to collect multiple items of the same ki
 
 **QuestSeeker** script:
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestSeeker.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 // Add a variable to store the amount collected
 public int collectables = 0;
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -426,11 +488,18 @@ In a recipe or craft quest, the player will need to collect multiple items of di
 
 **QuestSeeker** script:
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestSeeker.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 // Add a variable for each item to be collected
 public bool hasIceBlock = false;
 public bool hasIceTool = false;
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -446,10 +515,17 @@ In an escort quest, the player will need to take a follower with them.
 
 **QuestSeeker** script:
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestSeeker.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 // To control when the follower is following the player
 public bool friendFollower = false;
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -473,7 +549,14 @@ Here's an example for a coin collection quest, each coin will need this script.
 
 ![desc](images/coin-item.png)
 
-```
+--- code ---
+---
+language: csharp
+filename: CoinController.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 public class CoinController : MonoBehaviour
 {
     public QuestSeeker player;
@@ -487,8 +570,7 @@ public class CoinController : MonoBehaviour
         }
     }
 }
-
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -502,7 +584,14 @@ Here's an example for an IceTool, the same project also has a IceBlock collectab
 
 ![desc](images/ice-tool.png)
 
-```
+--- code ---
+---
+language: csharp
+filename: IceToolController.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 public class IceToolController : MonoBehaviour
 {
     public QuestSeeker player;
@@ -516,8 +605,7 @@ public class IceToolController : MonoBehaviour
         }
     }
 }
-
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -531,7 +619,14 @@ Here's an example for a follower, if the same project has other follower GameObj
 
 ![desc](images/follower-player.png)
 
-```
+--- code ---
+---
+language: csharp
+filename: FollowController.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 public class FollowerController : MonoBehaviour
 {
     public QuestSeeker player;
@@ -558,8 +653,7 @@ public class FollowerController : MonoBehaviour
         }
     }
 }
-
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -573,7 +667,14 @@ title: Make a child item transfer or disappear
 
 On the script for the NPC to receive the item. 
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -582,7 +683,7 @@ void OnTriggerEnter(Collider other)
             playerTelescope.SetActive(false);
         }
     }
-```
+--- /code ---
 
 
 --- /collapse ---
@@ -595,7 +696,14 @@ title: Only react if the Player has accepted the quest
 
 **FollowerNPC** script
 
-```
+--- code ---
+---
+language: csharp
+filename: FollowNPC.xs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     void Update()
     {
         if(player.escortQuestAccepted)
@@ -603,7 +711,7 @@ title: Only react if the Player has accepted the quest
             // follow Player
         }
     }
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -624,13 +732,20 @@ The Quest Giver NPC needs to check for completion of the quest and thank the pla
 title: Check whether the player has enough of the same item
 ---
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     if (player.coins >= 3) // if all the coins have been collected
     {
         message.SetText("Well done you collected the coins!");
               
     }
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -640,14 +755,20 @@ title: Check whether the player has enough of the same item
 title: Check whether player has multiple different items
 ---
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     if (player.hasIceBlock && player.hasIceTool)
     {
         // Change to a successful completion message
         message.SetText("Thankyou for helping me finish my ice dome. You can climb it if you like.");
     }
-
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -670,13 +791,27 @@ You could use coins or a different currency for your game. Or you could reward t
 Keep track of currency or points rewards using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed. 
 
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestSeeker.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 public int gems; // Keep track of gems. 
-``` 
+--- /code ---
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestSeeker.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 player.gems += 2; // Give a reward to the player
-```
+--- /code ---
 
 ![desc](images/coin-reward.png)
 
@@ -690,23 +825,45 @@ title: An accessory or follower
 
 You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it in the Inspector.
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 public GameObject hat;
-```
+--- /code ---
+
 
 Then use `SetActive` when the quest has been completed. 
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 hat.SetActive(true)
-```
+--- /code ---
 
 ![desc](images/player-gift.png)
 
 You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player. 
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
 player.dogFollowing = true;
-```
+--- /code ---
 
 ![desc](images/friend-found.gif)
 
@@ -722,29 +879,49 @@ A type of reward could be to remove a barrier or get access to an area or items 
 
 ![desc](images/unlock-areas.png)
 
-Think about the GameOjbects you want to remove. Create and apply a new 'Unlock' tag to them.
+Think about the GameObjects you want to remove. Create and apply a new 'Unlock' tag to them.
 
 Open your QuestGiver script and create  variable to store the Unlock GameObjects:
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     public GameObject[] unlock;
-
-```
+--- /code ---
 
 Add code to the Start() method to turn the items on at the start.
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
         unlock = GameObject.FindGameObjectsWithTag("Unlock");
 
         foreach (var Unlock in unlock)
         {
             Unlock.SetActive(true);
         }
-```
+--- /code ---
 
 Create an unlock script and attach it to a new NPC quest ally or to a new unlock item. 
 
-```
+--- code ---
+---
+language: csharp
+filename: Unlock.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
 public class Unlock : MonoBehaviour
 {
     public GameObject canvas;
@@ -779,7 +956,9 @@ public class Unlock : MonoBehaviour
         }
     }
 }
-```
+--- /code ---
+
+
 
 ![](images/railing-down.gif)
 
@@ -808,11 +987,18 @@ Make sure the reward can't be given more than once.
 title: Remove items from the player
 ---
 
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     // Make sure the reward can't be given again
     player.hasIceBlock = false;
     player.hasIceTool = false;
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -821,10 +1007,16 @@ title: Remove items from the player
 ---
 title: Reset quest variables
 ---
-
-```
+--- code ---
+---
+language: csharp
+filename: QuestGiver.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
     player.escortQuestAccepted = false;
-```
+--- /code ---
 
 --- /collapse ---
 
