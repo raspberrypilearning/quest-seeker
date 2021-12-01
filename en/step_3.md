@@ -1098,15 +1098,7 @@ Make sure that the follower is detecting the collision with the player. Make sur
 
 --- /collapse ---
 
---- collapse ---
-
----
-title: Player or NPCs are walking on top of each other!
----
-
-<mark>Add when we do this for an ingredient in the Invent project.</mark>
-
---- /collapse ---
+[[[unity-physics-colliders]]]
 
 --- collapse ---
 
@@ -1118,15 +1110,7 @@ title: My player is floating when they walk off the edge of scenery
 
 --- /collapse ---
 
---- collapse ---
-
----
-title: My character is not animating correctly
----
-
-<mark>Add when we do this for an ingredient in the Invent project.</mark>
-
---- /collapse ---
+[[[unity-animation]]]
 
 --- /task ---
 

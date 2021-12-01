@@ -218,7 +218,7 @@ Add code to the QuestGiver script to control when the object appears so that it 
 
 --- code ---
 ---
-language: python
+language: csharp
 filename: QuestGiver.cs
 line_numbers: false
 line_number_start: 6
@@ -339,9 +339,6 @@ line_numbers: false
 line_number_start: 4
 line_highlights: 4, 8, 9, 20
 ---
-
---- /code ---
-```
 using TMPro;
 
 public class QuestSeeker : MonoBehaviour
@@ -361,8 +358,7 @@ public class QuestSeeker : MonoBehaviour
        coinText.SetText("Coins: " + coins); 
     }
 }
-
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -499,7 +495,7 @@ title: Update the QuestGiver script to thank and reward the player
 ---
 --- code ---
 ---
-language: python
+language: csharp
 filename: QuestGiver.cs
 line_numbers: false
 line_number_start: 
