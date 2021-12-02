@@ -1,19 +1,6 @@
 ## What next?
 
-If you are following the [Intro to Unity](https://projects.raspberrypi.org/en/raspberrypi/unity-intro) path, you can move on to the [3D Adventure](https://projects.raspberrypi.org/en/projects/3D-adventure) project. In this project, you will make a (add description here).
+If you are following the [Intro to Unity](https://projects.raspberrypi.org/en/raspberrypi/unity-intro) path, you can move on to the [3D Adventure](https://projects.raspberrypi.org/en/projects/3d-adventure) project. In this project, you will create a 3D adventure with a goal that the player needs to achieve. Your 3D adventure could be a game, a virtual world or a visual novel with a goal and one or more endings.
 
---- print-only ---
-
-![3D Adventure project](images3d-adventure-project.png)
-
---- /print-only ---
-
-<mark>Add image</mark>
-
---- no-print ---
-
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/486719199/?autostart=false" frameborder="0"></iframe>
-</div>
-
---- /no-print ---
+[Minigames](https://raspberrypilearning.github.io/unity-webgl/minigames){:target=blank}.
+![3D Adventure project showing a number of minigames to beat in order to collect stars. There are cages, mazes and platforms with NPCs either patrolling or assisting.](images/3d-adventure.png)
