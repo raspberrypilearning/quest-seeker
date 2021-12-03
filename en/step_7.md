@@ -4,3 +4,5 @@ If you are following the [Intro to Unity](https://projects.raspberrypi.org/en/ra
 
 [Minigames](https://raspberrypilearning.github.io/unity-webgl/minigames){:target=blank}.
 ![3D Adventure project showing a number of minigames to beat in order to collect stars. There are cages, mazes and platforms with NPCs either patrolling or assisting.](images/3d-adventure.png)
+
+<iframe allowtransparency="true" width="710" height="450" src="https://raspberrypilearning.github.io/unity-webgl/minigames/" frameborder="0"></iframe>
