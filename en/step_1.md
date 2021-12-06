@@ -43,7 +43,7 @@ You are going to make some design decisions to create your quests.
 
 Explore these example projects to get more ideas:
 
-[Maze Quest](https://raspberrypilearning.github.io/unity-webgl/maze_game_web){:target=blank}
+[Maze Quest](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target=blank}
 ![A maze scene with a capsule character from 3D shapes. The player has approached and the quest to gather an item for coin reward is shown. There is a button for the player to accept.](images/quest-canvas.png){:width="400px"}
 
 [Hill Quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target=blank}
@@ -65,7 +65,7 @@ Use these example images to get more ideas:
 Snow quest: https://raspberrypilearning.github.io/unity-webgl/SnowQuest
 ![](images/snow-raccoon.png){:width="400px"}
 
-Maze quest: https://raspberrypilearning.github.io/unity-webgl/maze_game_web
+Maze quest: https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker
 ![](images/quest-canvas.png){:width="400px"}
 
 Hill Quest: https://raspberrypilearning.github.io/unity-webgl/HillQuest
