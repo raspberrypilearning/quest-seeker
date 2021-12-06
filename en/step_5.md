@@ -11,6 +11,6 @@ Here are some ideas you could try:
 
 <iframe allowtransparency="true" width="710" height="450" src="https://quest-seeker.rpfilt.repl.co" frameborder="0"></iframe>
 
-Take a look at some World builder projects created by community members in the Raspberry Pi Foundation’s gallery of [Quest seeker Community Projects](https://wke.lt/w/s/3n5xmU){:target=_blank}
+Take a look at some World builder projects created by community members in the Raspberry Pi Foundation’s gallery of [Quest seeker Community Projects](https://wke.lt/w/s/3n5xmU){:target='_blank'}
 
 --- save ---

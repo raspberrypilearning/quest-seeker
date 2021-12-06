@@ -1,6 +1,6 @@
 ## Introduction
 
-In this project, you will add NPCs and quests to the world that you created in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder) project. 
+In this project, you will add NPCs and quests to the world that you created in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'} project. 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 A <span style="color: #0faeb0">**quest**</span> is a task or mission in a computer game that the player can complete to gain a reward or move the story forward. Quests can require a player to fetch or deliver an item, gather items, escort a character to a location, find out information or solve a puzzle. On completion a player could be rewarded with experience, coins, access to new areas or new abilities.
@@ -27,7 +27,7 @@ Play the quests in the example project. Think about the type of quest and the ou
 + How do the NPCs interact with the player?
 + How are items used in the quest? 
 
-[Snow Quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest){:target=blank}
+[Snow Quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest){:target='_blank'}
 
 <iframe allowtransparency="true" width="710" height="450" src="https://raspberrypilearning.github.io/unity-webgl/SnowQuest" frameborder="0"></iframe>
 
@@ -43,10 +43,10 @@ You are going to make some design decisions to create your quests.
 
 Explore these example projects to get more ideas:
 
-[Maze Quest](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target=blank}
+[Maze Quest](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'}
 ![A maze scene with a capsule character from 3D shapes. The player has approached and the quest to gather an item for coin reward is shown. There is a button for the player to accept.](images/quest-canvas.png){:width="400px"}
 
-[Hill Quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target=blank}
+[Hill Quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'}
 ![A hill and tree scene with a cat that the player has approached and the quest to find and escort a friend is shown. There is a button for the player to accept.](images/new-quest-accept.png){:width="400px"}
 
 
