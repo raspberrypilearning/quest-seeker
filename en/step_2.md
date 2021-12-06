@@ -13,7 +13,7 @@ When the player returns to the quest giver they will be rewarded with experience
 
 --- task ---
 
-This project builds on the project you made in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder){:target=blank} project. 
+This project builds on the project you made in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'} project. 
 
 Open your project to use as the world, or map, where quests will take place. 
 
