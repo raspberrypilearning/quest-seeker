@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add another NPC with a different quests and reward. You can choose from different quest types.  
+Add another NPC with a different quest and reward. You can choose from different quest types.  
 </div>
 <div>
 ![An animated gif of the player returning to the quest giver with a friend follower. The quest giver says thank you.](images/friend-found.gif){:width="300px"}
@@ -10,7 +10,7 @@ Add another NPC with a different quests and reward. You can choose from differen
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-If quests are revealed and then completed in a specific sequence this is called <span style="color: #0faeb0">**linear**</span> gameplay or storytelling. If the player can choose the order in which they complete quests then this is <span style="color: #0faeb0">**non-linear**</span> gameplay. Some games mix linear and non-linear gameplay or storytelling. Quests that must be completed are called **main quests** and optional extra quests are called **side quests**. 
+If quests are revealed and then completed in a specific sequence, this is called <span style="color: #0faeb0">**linear**</span> gameplay or storytelling. If the player can choose the order in which they complete quests, then this is <span style="color: #0faeb0">**non-linear**</span> gameplay. Some games mix linear and non-linear gameplay or storytelling. Quests that must be completed are called **main quests** and optional extra quests are called **side quests**. 
 </p>
 
 --- task ---
@@ -20,38 +20,38 @@ If quests are revealed and then completed in a specific sequence this is called 
 ### Quest type
 
 You quest could be:
-+ A **gather** quest with multiple items of the same kind.
-+ A **recipe** or **crafting** quest with multiple items of different kinds. 
++ A **gather** quest with multiple items of the same kind
++ A **recipe** or **crafting** quest with multiple items of different kinds 
 + An **escort** quest where you have to find another NPC and have them follow the player back to the Quest Giver (or to another location)
-+ A **deliver** quest where you are given an object to take to another NPC. 
-+ A **story** quest where you have to find and talk to another NPC to find out information.
-+ A **puzzle** or **task** quest where you have to solve a puzzle or complete a task.
++ A **deliver** quest where you are given an object to take to another NPC 
++ A **story** quest where you have to find and talk to another NPC to find out information
++ A **puzzle** or **task** quest where you have to solve a puzzle or complete a task
 
 ![desc](images/quest-strip2.png)
 
 ### Reward type
 
 The reward could be given by the new Quest Giver or another NPC and could be:
-+ Experience points (XP), reputation, coins, gems or another in-game currency.
-+ An accessory for the player. 
-+ Unlocking an new area or item in the game. 
++ Experience points (XP), reputation, coins, gems, or another in-game currency
++ An accessory for the player 
++ Unlocking an new area or item in the game 
 
 Or, a combination of these. 
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Software Design**</span> is making decisions about how to turn your idea into code. In Unity this means deciding on the GameObjects, Scripts, Variables and Methods you will need to build your game or interactive story. 
+<span style="color: #0faeb0">**Software Design**</span> is making decisions about how to turn your idea into code. In Unity this means deciding on the GameObjects, Scripts, Variables, and Methods you will need to build your game or interactive story. 
 </p>
 
 ### Quest checklist
 
-For your quest you will need to:
-+ Add a new NPC to be the quest giver with UI objects to communicate about the quest. 
-+ Update the QuestSeeker script on the Player with variables to store the state of the new quest. 
-+ Add items and other NPCs depending on the quest type.
-+ Add a script to the quest giver NPC to control the conversation and reward based on the state of the quest.
-+ Add scripts to items and other NPCs according to the quest type.
+For your quest, you will need to:
++ Add a new NPC to be the Quest Giver with UI objects to communicate about the quest 
++ Update the QuestSeeker script on the Player with variables to store the state of the new quest 
++ Add items and other NPCs depending on the quest type
++ Add a script to the Quest Giver NPC to control the conversation and reward based on the state of the quest
++ Add scripts to items and other NPCs according to the quest type
 
 --- task ---
 
@@ -69,11 +69,11 @@ title: Duplicate your first NPC and make changes to it
 
 ![desc](images/duplicate-npc.png)
 
-Right-click on the QuestGiver GameObject you created for the first quest and select 'Duplicate'. This creates a copy of your QuestGiver GameObject with all the child GameObjects. 
+Right-click on the QuestGiver GameObject you created for the first quest and select **Duplicate**. This creates a copy of your QuestGiver GameObject with all the child GameObjects. 
 
-The QuestGiver GameObject will be created in the same position, use the Scene view or Inspector to position it somewhere else. 
+The QuestGiver GameObject will be created in the same position, so use the Scene view or Inspector to position it somewhere else. 
 
-Remove the existing 'QuestGiver' script component from the Inspector by clicking on the three dots and selecting 'Remove Component'.
+Remove the existing 'QuestGiver' script component from the Inspector by clicking on the three dots and selecting **Remove Component**.
 
 --- /collapse ---
 
@@ -89,12 +89,12 @@ Choose a model or create a new QuestGiver NPC GameObject out of 3D shapes.
 
 Add a Box Collider so that the Player cannot walk through the new QuestGiver NPC and a second Box Collider, that is bigger than the first, with 'Is Trigger' checked. 
 
-Right-click on the Canvas for your first NPC and choose copy. Then, right-click on your new QuestGiver NPC and choose 'Paste as Child'. This will make a copy of the UI objects for your new QuestGiver.
+Right-click on the Canvas for your first NPC and choose **copy**. Then, right-click on your new QuestGiver NPC and choose **Paste as Child**. This will make a copy of the UI objects for your new QuestGiver.
 
 --- /collapse ---
 
 In the Inspector:
-+ Edit the text in the Message on your new QuestGiver NPC Canvas to describe your new quest. Change the text style to suit your new character. 
++ Edit the text in the message on your new QuestGiver NPC Canvas to describe your new quest. Change the text style to suit your new character. 
 + Edit the text in the Name object to match your new NPC.
 
 ![desc](images/new-message.png)
@@ -158,9 +158,9 @@ public class QuestGiver2 : MonoBehaviour
 
 --- /collapse ---
 
-In the Inspector, making sure you are updating the child objects and components for your new QuestGiver NPC:
-+ Drag the Canvas, Message and Button objects to your new Script.
-+ Select the Button and add an 'OnClick' set to the `QuestAccepted` Method of your new script.
+In the Inspector, make sure you are updating the child objects and components for your new QuestGiver NPC, and:
++ Drag the Canvas, Message, and Button objects to your new Script
++ Select the Button and add an 'OnClick' set to the `QuestAccepted` Method of your new script
 
 --- /task ---
 
@@ -168,8 +168,8 @@ In the Inspector, making sure you are updating the child objects and components 
 
 **Test:** Play your scene:
 + Make sure you see the new quest message 
-+ Check that you can Accept the quest with the button
-+ Check that you can see the debug message in the Console.
++ Check that you can accept the quest with the button
++ Check that you can see the debug message in the Console
 
 ![desc](images/new-quest-accept-message.png)
 
@@ -179,13 +179,13 @@ In the Inspector, making sure you are updating the child objects and components 
 
 ### The quest items and/or NPCs
 
-Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectables, followers or rewards and position them in your scene. 
+Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectables, followers, or rewards and position them in your scene. 
 
-Add a Box Collider component to your item GameObject and check the 'Is Trigger' Box Collider property.
+Add a Box Collider component to your Item GameObject and check the 'Is Trigger' Box Collider property.
 
-![A strip of animated gifs showing a flame effect particle system, a spinning star and an animated rat.](images/animation-effects.gif)
+![A strip of animated gifs showing a flame effect particle system, a spinning star, and an animated rat.](images/animation-effects.gif)
 
-**Choose:** Add visual effects to your collectables, followers or rewards.
+**Choose:** Add visual effects to your collectables, followers, or rewards.
 
 [[[unity-particle-system]]]
 
@@ -196,7 +196,7 @@ You could also add the `IdleWalk` animation or create a new Animator.
 
 [[[unity-animation]]]
 
-If your quest has multiple items that need to be deactivated and activated at the same time then add the same tag to each of them. 
+If your quest has multiple items that need to be deactivated and activated at the same time, then add the same tag to each of them. 
 
 --- collapse ---
 
@@ -204,11 +204,11 @@ If your quest has multiple items that need to be deactivated and activated at th
 title: Tag your items
 ---
 
-**Create a new tag.** Go to the ‘Tag’ property at the top of the Inspector window and ‘Add Tag’. Click on the ‘+’ and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
+**Create a new tag:** Go to the 'Tag' property at the top of the Inspector window and **Add Tag**. Click on the **+** and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
 
 ![desc](images/add-new-tag.png)
 
-**Apply your new tag.** Select the GameObjects that are items in this quest in the Hierarchy window and use the Tag dropdown box to select your new tag from the list.
+**Apply your new tag:** Select the GameObjects that are items in this quest in the Hierarchy window and use the Tag drop-down box to select your new tag from the list.
 
 ![desc](images/multi-items-select.png)
 
@@ -216,13 +216,13 @@ title: Tag your items
 
 --- /collapse ---
 
-**Tip:** If all of your collectables, followers or rewards are to look and act in the same way, make sure you add all your effects before duplicating the first GameObject. 
+**Tip:** If all of your collectables, followers, or rewards will look and act in the same way, make sure you add all your effects before duplicating the first GameObject. 
 
 --- /task ---
 
 ### Controlling the quest
 
-Set up the quest using initial visibility, trigger reactions and tracking of quest states. 
+Set up the quest using initial visibility, trigger reactions, and tracking of quest states. 
 
 --- task ---
 
@@ -295,7 +295,7 @@ line_highlights:
     }
 --- /code ---
 
-Assign GameObjects to variables in Unity editor.  
+Assign GameObjects to variables in the Unity Editor.  
 
 --- /collapse ---
 
@@ -307,7 +307,7 @@ title: Set visibility of child items
 
 ![desc](images/quest-giver-item.png)
 
-**QuestGiver2** script
+**QuestGiver2** script:
 
 --- code ---
 ---
@@ -404,7 +404,7 @@ line_highlights:
     {
         if (other.CompareTag("Player"))
         {
-            // transfer item to player for delivery
+            // Transfer item to player for delivery
             telescope.SetActive(false);
             playerTelescope.SetActive(true);
         }
