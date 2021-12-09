@@ -446,7 +446,7 @@ line_highlights:
 
 ### During the quest
 
-Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered or NPC following.
+Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered, or NPC following.
 
 **Choose:**
 
@@ -456,7 +456,7 @@ Update the **QuestSeeker** script used by the player with variables to keep trac
 title: Add variables for multiple items of the same type in a gather quest
 ---
 
-In a gather quest, the player will need to collect multiple items of the same kind to collect the items. 
+In a gather quest, the player collects multiple items of the same kind. 
 
 ![desc](images/key-multiple.png)
 
@@ -482,7 +482,7 @@ public int collectables = 0;
 title: Add variables for multiple different items in a craft or recipe quest
 ---
 
-In a recipe or craft quest, the player will need to collect multiple items of different kinds to make a recipe or craft a new item. 
+In a recipe or craft quest, the player collects multiple items of different kinds to make a recipe or craft a new item. 
 
 ![desc](images/multi-objects.png)
 
@@ -533,7 +533,7 @@ public bool friendFollower = false;
 
 --- task ---
 
-Add a script to each quest item or other NPC involved in the quest so that they react when the player collides with them.
+Add a script to each quest item or other NPC involved in the quest so that they react when the Player collides with them.
 
 You could also check a `bool` variable and only react to the Player if the quest has been accepted. 
 
@@ -615,7 +615,7 @@ public class IceToolController : MonoBehaviour
 title: Escort quest followers
 ---
 
-Here's an example for a follower, if the same project has other follower GameObject they will need the script too. 
+Here's an example for a follower, if the same project has other follower GameObjects, they will need the script too. 
 
 ![desc](images/follower-player.png)
 
@@ -665,7 +665,7 @@ title: Make a child item transfer or disappear
 
 ![desc](images/pass-object-complete.png)
 
-On the script for the NPC to receive the item. 
+On the script for the NPC to receive the item: 
 
 --- code ---
 ---
@@ -691,10 +691,10 @@ void OnTriggerEnter(Collider other)
 --- collapse ---
 
 ---
-title: Only react if the Player has accepted the quest
+title: Only react if the player has accepted the quest
 ---
 
-**FollowerNPC** script
+**FollowerNPC** script:
 
 --- code ---
 ---
@@ -708,7 +708,7 @@ line_highlights:
     {
         if(player.escortQuestAccepted)
         {
-            // follow Player
+            // Follow Player
         }
     }
 --- /code ---
@@ -724,7 +724,7 @@ Set up the reaction of the quest giver on completion of the quest, apply rewards
 
 --- task ---
 
-The Quest Giver NPC needs to check for completion of the quest and thank the player.
+The QuestGiver NPC needs to check for completion of the quest and thank the Player.
 
 --- collapse ---
 
@@ -740,9 +740,9 @@ line_numbers: false
 line_number_start: 
 line_highlights: 
 ---
-    if (player.coins >= 3) // if all the coins have been collected
+    if (player.coins >= 3) // If all the coins have been collected
     {
-        message.SetText("Well done you collected the coins!");
+        message.SetText("Well done, you collected the coins!");
               
     }
 --- /code ---
@@ -752,7 +752,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Check whether player has multiple different items
+title: Check whether the player has multiple different items
 ---
 
 --- code ---
@@ -766,19 +766,19 @@ line_highlights:
     if (player.hasIceBlock && player.hasIceTool)
     {
         // Change to a successful completion message
-        message.SetText("Thankyou for helping me finish my ice dome. You can climb it if you like.");
+        message.SetText("Thank you for helping me finish my ice dome. You can climb it if you like.");
     }
 --- /code ---
 
 --- /collapse ---
 
-**Tip:** You can use Boolean 'and' `&&` and Boolean 'or' `||`` to combine condition checks.
+**Tip:** You can use Boolean AND `&&` and Boolean OR `||` to combine condition checks.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** What happens when your Player completes a quest? 
+**Choose:** What happens when your player completes a quest? 
 
 --- collapse ---
 
@@ -788,7 +788,7 @@ title: Currency or experience
 
 You could use coins or a different currency for your game. Or you could reward the player with XP (experience points).
 
-Keep track of currency or points rewards using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed. 
+Keep track of currency or points rewards by using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed. 
 
 
 --- code ---
@@ -799,7 +799,7 @@ line_numbers: false
 line_number_start: 
 line_highlights: 
 ---
-public int gems; // Keep track of gems. 
+public int gems; // Keep track of gems 
 --- /code ---
 
 --- code ---
@@ -823,7 +823,7 @@ player.gems += 2; // Give a reward to the player
 title: An accessory or follower
 ---
 
-You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it in the Inspector.
+You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the QuestGiver NPC to store the child item and drag it to the Inspector.
 
 --- code ---
 ---
@@ -881,7 +881,7 @@ A type of reward could be to remove a barrier or get access to an area or items 
 
 Think about the GameObjects you want to remove. Create and apply a new 'Unlock' tag to them.
 
-Open your QuestGiver script and create  variable to store the Unlock GameObjects:
+Open your QuestGiver script and create a variable to store the Unlock GameObjects:
 
 --- code ---
 ---
@@ -962,7 +962,7 @@ public class Unlock : MonoBehaviour
 
 ![](images/railing-down.gif)
 
-You could also introduce a a new NPC quest enemy or a new lock item to turn replace the barriers.
+You could also introduce a new NPC quest enemy or a new lock item to replace the barriers.
 
 ![](images/walls-back.gif)
 
@@ -973,7 +973,7 @@ You could also introduce a a new NPC quest enemy or a new lock item to turn repl
 
 --- task ---
 
-The second Quest Giver NPC needs to check whether the player has completed the quest and give the reward.
+The second QuestGiver NPC needs to check whether the player has completed the quest and then give them the reward.
 
 --- /task ---
 
@@ -1033,18 +1033,18 @@ Always check the Console for errors in your scripts. Unity gives helpful error m
 --- collapse ---
 
 ---
-title: My new Quest Giver displays the wrong message
+title: My new QuestGiver displays the wrong message
 ---
 
-Select the Quest Giver and find its script component. Make sure that the correct GameObjects (the ones for this quest which are child objects of the QuestGiver) are used. If you click on an attached GameObject in the Inspector then that object will be highlighted in the Hierarchy. 
+Select the QuestGiver and find its script component. Make sure that the correct GameObjects (the ones for this quest which are child objects of the QuestGiver) are used. If you click on an attached GameObject in the Inspector then that object will be highlighted in the Hierarchy. 
 
 Check that you have changed:
-+ The quest text in the Message TextMeshPro GameObject.
-+ The quest completion text in the `OnTriggerEnter` method that gets set when the quest is completed.
++ The quest text in the Message TextMeshPro GameObject
++ The quest completion text in the `OnTriggerEnter` method that gets set when the quest is completed
 
-If the QuestGiver isn't showing the quest complete message when you think the quest has been completed then check your code carefully. Are you correctly updating the quest state in the QuestSeeker script and correctly checking it in the QuestGiver script for this Quest Giver?
+If the QuestGiver isn't showing the quest complete message when you think the quest has been completed, then check your code carefully. Are you correctly updating the quest state in the QuestSeeker script and correctly checking it in the QuestGiver script for this QuestGiver?
 
-Add `Debug.Log()` statements and check that values change in the Inspector during Playmode when you expect them to.
+Add `Debug.Log()` statements and check that the values change in the Inspector during Play mode when you expect them to.
 
 --- /collapse ---
 
@@ -1054,17 +1054,17 @@ Add `Debug.Log()` statements and check that values change in the Inspector durin
 title: Nothing happens when I click the Accept button
 ---
 
-Select your QuestGiver NPC and make sure they have a script that has an `AcceptQuest` method.
+Select your QuestGiver NPC and make sure they have a script that has an `AcceptQuest` Method.
 
 Check that all the variables are set on the script in the Inspector. 
 
 Click on the Button object and check that you have attached the correct Method such as `AcceptQuest` to an 'OnClick' Event. 
 
-Add a `Debug.Log("Quest accepted");` line to the method and check the console to see that the method is being called.
+Add a `Debug.Log("Quest accepted");` line to the method and check the Console to see that the method is being called.
 
 If you are sure the method is being called, check that the code in the method is correct. 
 
-If the method is not being called (no Debug output) then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this then button-clicks won't be handled. If it's missing, right-click in the Hierarch and choose 'UI' then 'Event System'.
+If the method is not being called (no Debug output), then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this, then button-clicks won't be handled. If it's missing, right-click in the Hierarch and choose **UI** then **Event System**.
 
 --- /collapse ---
 
@@ -1074,9 +1074,9 @@ If the method is not being called (no Debug output) then make sure you have an `
 title: My collectable doesn't disappear
 ---
 
-Check that the collectable has a script with an `OnTriggerEnter` method that deactivates the collectable if the player collides with it. 
+Check that the collectable has a script with an `OnTriggerEnter` method that deactivates the collectable if the Player collides with it. 
 
-Make sure you have added a Box Collider with a Trigger and that the collider is bigger than non-trigger colliders so that the Player is able to trigger it. 
+Make sure you have added a Box Collider with a Trigger and that the collider is bigger than the non-trigger colliders so that the Player is able to trigger it. 
 
 Check that the Player GameObject has the 'Player' tag.
 
