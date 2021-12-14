@@ -18,6 +18,6 @@ You could also take a screenshot or make a video of your project.
 
 Inspire others with your project by submitting it to our community gallery! 
 
-To share your project with others who make the '3d adventure' project, please complete [this form.](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}
+To share your project with others who do the '3D adventure' project, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
 --- /task ---

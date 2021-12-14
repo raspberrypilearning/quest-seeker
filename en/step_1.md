@@ -1,17 +1,19 @@
 ## Introduction
 
-In this project, you will add NPCs and quests to the world that you created in the [World Builder](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'} project. 
+In this project, you will add NPCs and quests to the world that you created in the [World builder](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'} project. 
+
+This project is brought to you with generous support from [Unity Technologies](https://unity.com/){:target="_blank"}.  These [projects](https://projects.raspberrypi.org/en/pathways/unity-intro){:target="_blank"} offer young people the opportunity to take their first steps in creating virtual worlds using Real-Time 3D.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-A <span style="color: #0faeb0">**quest**</span> is a task or mission in a computer game that the player can complete to gain a reward or move the story forward. Quests can require a player to fetch or deliver an item, gather items, escort a character to a location, find out information or solve a puzzle. On completion a player could be rewarded with experience, coins, access to new areas or new abilities.
+A <span style="color: #0faeb0">**quest**</span> is a task or mission in a computer game that the player can complete to gain a reward or move the story forward. Quests can require a player to fetch or deliver an item, gather items, escort a character to a location, find out information, or solve a puzzle. On completion, a player could be rewarded with experience, coins, access to new areas, or new abilities.
 </p>
 
 You will:
 + Add an NPC with dialogue that changes based on game state
 + Manage the state of a quest using one or more variables
-+ Give behaviour to Player and NPCs to complete one or more quests (gather, escort, deliver).
++ Give behaviour to the Player and NPCs to complete one or more quests (gather, escort, deliver)
 
-![A strip of multiple images showing a maze world with gather quest, a snow world with recipe quest, a tree world with follower quest and a mouth world with gather quest.](images/example-strip.png)
+![A strip of multiple images showing a maze world with gather quest, a snow world with recipe quest, a tree world with follower quest, and a mouth world with gather quest.](images/example-strip.png)
 
 --- no-print ---
 
