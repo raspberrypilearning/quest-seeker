@@ -170,7 +170,7 @@ public class QuestGiver : MonoBehaviour
 }
 ```
 
-Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script component and drag the Canvas for the NPC to the Canvas property of the script, and the Button to the Button property. 
+Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script component and drag the Canvas for the NPC to the Canvas property of the script.
 
 ![The Script component showing the Canvas GameObject in the Canvas variable.](images/quest-script.png)
 
@@ -220,7 +220,6 @@ Add code to the QuestGiver script to control when the object appears so that it 
 ---
 language: csharp
 filename: QuestGiver.cs
-line_numbers: false
 line_number_start: 6
 line_highlights: 9, 10, 30, 39
 ---
@@ -262,9 +261,9 @@ public class QuestGiver : MonoBehaviour
 --- /code ---
 
 
-Select the QuestGiver, then in the QuestGiver script component in the Inspector window, drag your item GameObject to the 'Item' property:
+Select the QuestGiver, then in the QuestGiver script component in the Inspector window, drag your button and item GameObjects to the 'Button' and 'Item' properties:
 
-![The QuestGiver script component with 'QuestItem' in the Item variable.](images/item-script.png)
+![The QuestGiver script component with 'Button' in the Button variable and 'QuestItem' in the Item variable.](images/item-script.png)
 
 From the Hierarchy window, select the Button GameObject then go to the Inspector window 'On Click ()' property and click on the **+**.
 
@@ -316,8 +315,7 @@ When the player collects the item, the item needs to disappear and optionally pl
 
 --- task ---
 
-Add a **QuestSeeker** script to the Player with a variable such as `coins` to store the reward. Add a 'UI' 'TextMeshPro' to the Scene to display the reward.
-
+Add a 'UI' 'TextMeshPro' to the Scene to display the reward. Add a **QuestSeeker** script to the Player to store and update the reward. 
 
 --- collapse ---
 
@@ -362,7 +360,7 @@ public class QuestSeeker : MonoBehaviour
 
 --- /collapse ---
 
-Drag the 'Coin Text' TextMeshPro object to the Coin Text property in the Inspector.
+With the Player object selected, drag the 'Coin Text' TextMeshPro object to the Coin Text property in the Inspector.
 
 --- /task ---
 
