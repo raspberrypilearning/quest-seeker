@@ -140,9 +140,6 @@ line_numbers: true
 line_number_start: 
 line_highlights: 7-23, 27
 ---
-
---- /code ---
-```
 public class QuestGiver : MonoBehaviour
 {
     public GameObject canvas;
@@ -168,7 +165,7 @@ public class QuestGiver : MonoBehaviour
         canvas.SetActive(false);
     }
 }
-```
+--- /code ---
 
 Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script component and drag the Canvas for the NPC to the Canvas property of the script.
 
