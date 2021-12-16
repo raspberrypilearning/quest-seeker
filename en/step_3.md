@@ -181,7 +181,7 @@ In the Inspector, make sure you are updating the child objects and components fo
 
 Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectables, followers, or rewards and position them in your scene. 
 
-Add a Box Collider component to your Item GameObject and check the 'Is Trigger' Box Collider property.
+Add a Box Collider component to your Item GameObject that is bigger than any other colliders on your Item and check the 'Is Trigger' Box Collider property.
 
 ![A strip of animated gifs showing a flame effect particle system, a spinning star, and an animated rat.](images/animation-effects.gif)
 
