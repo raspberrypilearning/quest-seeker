@@ -70,7 +70,7 @@ Snow quest: https://raspberrypilearning.github.io/unity-webgl/SnowQuest
 Maze quest: https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker
 ![](images/quest-canvas.png){:width="400px"}
 
-Hill Quest: https://raspberrypilearning.github.io/unity-webgl/HillQuest
+Hill quest: https://raspberrypilearning.github.io/unity-webgl/HillQuest
 ![](images/new-quest-accept.png){:width="400px"}
 
 --- /print-only ---
