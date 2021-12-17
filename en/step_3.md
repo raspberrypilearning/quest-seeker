@@ -5,7 +5,7 @@
 Add another NPC with a different quest and reward. You can choose from different quest types.  
 </div>
 <div>
-![An animated gif of the player returning to the quest giver with a friend follower. The quest giver says thank you.](images/friend-found.gif){:width="300px"}
+![An animated gif of the Player returning to the Quest Giver with a friend follower. The Quest Giver says thank you.](images/friend-found.gif){:width="300px"}
 </div>
 </div>
 
@@ -33,7 +33,7 @@ You quest could be:
 
 The reward could be given by the new Quest Giver or another NPC and could be:
 + Experience points (XP), reputation, coins, gems, or another in-game currency
-+ An accessory for the player 
++ An accessory for the Player 
 + Unlocking an new area or item in the game 
 
 Or, a combination of these. 
@@ -41,7 +41,7 @@ Or, a combination of these.
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Software Design**</span> is making decisions about how to turn your idea into code. In Unity this means deciding on the GameObjects, Scripts, Variables, and Methods you will need to build your game or interactive story. 
+<span style="color: #0faeb0">**Software design**</span> is making decisions about how to turn your idea into code. In Unity, this means deciding on the GameObjects, scripts, variables, and methods you will need to build your game or interactive story. 
 </p>
 
 ### Quest checklist
@@ -57,7 +57,7 @@ For your quest, you will need to:
 
 ### The Quest Giver
 
-Add a new GameObject to be the second QuestGiver NPC. 
+Add a new GameObject to be the second Quest Giver NPC. 
 
 **Choose:**
 
@@ -69,32 +69,32 @@ title: Duplicate your first NPC and make changes to it
 
 ![desc](images/duplicate-npc.png)
 
-Right-click on the QuestGiver GameObject you created for the first quest and select **Duplicate**. This creates a copy of your QuestGiver GameObject with all the child GameObjects. 
+Right-click on the **Quest Giver GameObject** you created for the first quest and select **Duplicate**. This creates a copy of your Quest Giver GameObject with all the child GameObjects. 
 
-The QuestGiver GameObject will be created in the same position, so use the Scene view or Inspector to position it somewhere else. 
+The Quest Giver GameObject will be created in the same position, so use the Scene view or Inspector to position it somewhere else. 
 
-Remove the existing 'QuestGiver' script component from the Inspector by clicking on the three dots and selecting **Remove Component**.
+Remove the existing QuestGiver script component from the Inspector by clicking on the three dots and selecting **Remove Component**.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Add a new QuestGiver NPC GameObject
+title: Add a new Quest Giver NPC GameObject
 ---
 
-Choose a model or create a new QuestGiver NPC GameObject out of 3D shapes.  
+Choose a model or create a new Quest Giver NPC GameObject out of 3D shapes.  
 
 ![desc](images/model-shapes.png)
 
-Add a Box Collider so that the Player cannot walk through the new QuestGiver NPC and a second Box Collider, that is bigger than the first, with 'Is Trigger' checked. 
+Add a **Box Collider** so that the Player cannot walk through the new Quest Giver NPC and a second **Box Collider**, that is bigger than the first, with **IsTrigger** checked. 
 
-Right-click on the Canvas for your first NPC and choose **copy**. Then, right-click on your new QuestGiver NPC and choose **Paste as Child**. This will make a copy of the UI objects for your new QuestGiver.
+Right-click on the **Canvas** for your first NPC and choose **copy**. Then, right-click on your new **Quest Giver NPC** and choose **Paste as Child**. This will make a copy of the UI objects for your new Quest Giver.
 
 --- /collapse ---
 
 In the Inspector:
-+ Edit the text in the message on your new QuestGiver NPC Canvas to describe your new quest. Change the text style to suit your new character. 
++ Edit the text in the message on your new Quest Giver NPC Canvas to describe your new quest. Change the text style to suit your new character. 
 + Edit the text in the Name object to match your new NPC.
 
 ![desc](images/new-message.png)
@@ -102,7 +102,7 @@ In the Inspector:
 --- collapse ---
 
 ---
-title: Create a new script for the QuestGiver NPC
+title: Create a new script for the Quest Giver NPC
 ---
 
 **QuestGiver2** script:
@@ -158,9 +158,9 @@ public class QuestGiver2 : MonoBehaviour
 
 --- /collapse ---
 
-In the Inspector, make sure you are updating the child objects and components for your new QuestGiver NPC, and:
-+ Drag the Canvas, Message, and Button objects to your new Script
-+ Select the Button and add an 'OnClick' set to the `QuestAccepted` Method of your new script
+In the Inspector, make sure you are updating the child objects and components for your new Quest Giver NPC, and:
++ Drag the **Canvas**, **Message**, and **Button** objects to your new script
++ Select the **Button** and add an **OnClick** set to the `QuestAccepted` method of your new script
 
 --- /task ---
 
@@ -181,7 +181,7 @@ In the Inspector, make sure you are updating the child objects and components fo
 
 Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectables, followers, or rewards and position them in your scene. 
 
-Add a Box Collider component to your Item GameObject that is bigger than any other colliders on your Item and check the 'Is Trigger' Box Collider property.
+Add a **Box Collider** component to your Item GameObject that is bigger than any other colliders on your Item and check the **IsTrigger** Box Collider property.
 
 ![A strip of animated gifs showing a flame effect particle system, a spinning star, and an animated rat.](images/animation-effects.gif)
 
@@ -192,7 +192,7 @@ Add a Box Collider component to your Item GameObject that is bigger than any oth
 [[[unity-gameobject-spin]]]
 
 
-You could also add the `IdleWalk` animation or create a new Animator. 
+You could also add the **IdleWalk** animation or create a new Animator. 
 
 [[[unity-animation]]]
 
@@ -204,7 +204,7 @@ If your quest has multiple items that need to be deactivated and activated at th
 title: Tag your items
 ---
 
-**Create a new tag:** Go to the 'Tag' property at the top of the Inspector window and **Add Tag**. Click on the **+** and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
+**Create a new tag:** Go to the Tag property at the top of the Inspector window and **Add Tag**. Click on the **+** and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
 
 ![desc](images/add-new-tag.png)
 
@@ -368,7 +368,7 @@ line_highlights:
 title: Make multiple items with the same tag appear
 ---
 
-**QuestAccepted** method of **QuestGiver2** script:
+`QuestAccepted` method of **QuestGiver2** script:
 
 --- code ---
 ---
@@ -446,7 +446,7 @@ line_highlights:
 
 ### During the quest
 
-Update the **QuestSeeker** script used by the player with variables to keep track of the status of the quest such as items collected, items delivered, or NPC following.
+Update the **QuestSeeker** script used by the Player with variables to keep track of the status of the quest such as items collected, items delivered, or NPC following.
 
 **Choose:**
 
@@ -720,16 +720,16 @@ line_highlights:
 
 ### Quest completion
 
-Set up the reaction of the quest giver on completion of the quest, apply rewards and make sure the quest can't be offered again. 
+Set up the reaction of the Quest Giver on completion of the quest, apply rewards, and make sure the quest can't be offered again. 
 
 --- task ---
 
-The QuestGiver NPC needs to check for completion of the quest and thank the Player.
+The Quest Giver NPC needs to check for completion of the quest and thank the Player.
 
 --- collapse ---
 
 ---
-title: Check whether the player has enough of the same item
+title: Check whether the Player has enough of the same item
 ---
 
 --- code ---
@@ -752,7 +752,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Check whether the player has multiple different items
+title: Check whether the Player has multiple different items
 ---
 
 --- code ---
@@ -823,7 +823,7 @@ player.gems += 2; // Give a reward to the player
 title: An accessory or follower
 ---
 
-You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the QuestGiver NPC to store the child item and drag it to the Inspector.
+You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it to the Inspector.
 
 --- code ---
 ---
@@ -894,7 +894,7 @@ line_highlights:
     public GameObject[] unlock;
 --- /code ---
 
-Add code to the Start() method to turn the items on at the start.
+Add code to the `Start()` method to turn the items on at the start.
 
 --- code ---
 ---
@@ -973,7 +973,7 @@ You could also introduce a new NPC quest enemy or a new lock item to replace the
 
 --- task ---
 
-The second QuestGiver NPC needs to check whether the player has completed the quest and then give them the reward.
+The second Quest Giver NPC needs to check whether the Player has completed the quest and then give them the reward.
 
 --- /task ---
 
@@ -984,7 +984,7 @@ Make sure the reward can't be given more than once.
 --- collapse ---
 
 ---
-title: Remove items from the player
+title: Remove items from the Player
 ---
 
 --- code ---
@@ -1033,16 +1033,16 @@ Always check the Console for errors in your scripts. Unity gives helpful error m
 --- collapse ---
 
 ---
-title: My new QuestGiver displays the wrong message
+title: My new Quest Giver displays the wrong message
 ---
 
-Select the QuestGiver and find its script component. Make sure that the correct GameObjects (the ones for this quest which are child objects of the QuestGiver) are used. If you click on an attached GameObject in the Inspector then that object will be highlighted in the Hierarchy. 
+Select the Quest Giver and find its script component. Make sure that the correct GameObjects (the ones for this quest that are child objects of the Quest Giver) are used. If you click on an attached GameObject in the Inspector then that object will be highlighted in the Hierarchy. 
 
 Check that you have changed:
 + The quest text in the Message TextMeshPro GameObject
 + The quest completion text in the `OnTriggerEnter` method that gets set when the quest is completed
 
-If the QuestGiver isn't showing the quest complete message when you think the quest has been completed, then check your code carefully. Are you correctly updating the quest state in the QuestSeeker script and correctly checking it in the QuestGiver script for this QuestGiver?
+If the Quest Giver isn't showing the quest complete message when you think the quest has been completed, then check your code carefully. Are you correctly updating the quest state in the QuestSeeker script and correctly checking it in the QuestGiver script for this Quest Giver?
 
 Add `Debug.Log()` statements and check that the values change in the Inspector during Play mode when you expect them to.
 
@@ -1054,17 +1054,17 @@ Add `Debug.Log()` statements and check that the values change in the Inspector d
 title: Nothing happens when I click the Accept button
 ---
 
-Select your QuestGiver NPC and make sure they have a script that has an `AcceptQuest` Method.
+Select your Quest Giver NPC and make sure they have a script that has an `AcceptQuest` method.
 
 Check that all the variables are set on the script in the Inspector. 
 
-Click on the Button object and check that you have attached the correct Method such as `AcceptQuest` to an 'OnClick' Event. 
+Click on the **Button** object and check that you have attached the correct method such as `AcceptQuest` to an **OnClick Event**. 
 
 Add a `Debug.Log("Quest accepted");` line to the method and check the Console to see that the method is being called.
 
 If you are sure the method is being called, check that the code in the method is correct. 
 
-If the method is not being called (no Debug output), then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this, then button-clicks won't be handled. If it's missing, right-click in the Hierarch and choose **UI** then **Event System**.
+If the method is not being called (no Debug output), then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this, then button-clicks won't be handled. If it's missing, right-click in the Hierarchy and choose **UI** then **Event System**.
 
 --- /collapse ---
 
@@ -1078,7 +1078,7 @@ Check that the collectable has a script with an `OnTriggerEnter` method that dea
 
 Make sure you have added a Box Collider with a Trigger and that the collider is bigger than the non-trigger colliders so that the Player is able to trigger it. 
 
-Check that the Player GameObject has the 'Player' tag.
+Check that the Player GameObject has the Player tag.
 
 --- /collapse ---
 
