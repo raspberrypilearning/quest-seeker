@@ -347,7 +347,7 @@ Add a `QuestAccepted` method to your new Quest Giver NPC to set up the quest whe
 title: Make an individual item appear
 ---
 
-**QuestAccepted** method of **QuestGiver2** script:
+`QuestAccepted` method of **QuestGiver2** script:
 
 --- code ---
 ---
@@ -389,7 +389,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Make a child item appear on the player
+title: Make a child item appear on the Player
 ---
 
 --- code ---
