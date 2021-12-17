@@ -20,7 +20,7 @@ line_highlights: 9
             if (player.hasQuestItem)
             {
                 message.SetText("Thank you so much!");
-                player.coins += 15; // give the reward
+                player.coins += 15; // Give the reward
 
             }
 
@@ -51,7 +51,7 @@ player.hasQuestItem = false;
 
   --- feedback ---
 
-Yes that's correct. The Quest Giver NPC checks whether the player has the quest item before giving the reward. Setting the `player.hasQuestItem` variable to false will mean that the reward code doesn't run next time the Player collides with the Quest Giver NPC. 
+Yes that's correct. The Quest Giver NPC checks whether the Player has the quest item before giving the reward. Setting the `player.hasQuestItem` variable to false will mean that the reward code doesn't run next time the Player collides with the Quest Giver NPC. 
 
   --- /feedback ---
 
