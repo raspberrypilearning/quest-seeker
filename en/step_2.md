@@ -492,8 +492,7 @@ title: Update the QuestGiver script to thank and reward the player
 ---
 language: csharp
 filename: QuestGiver.cs
-line_numbers: false
-line_number_start: 
+line_number_start: 1
 line_highlights: 4, 11, 12, 18-23
 ---
 using System.Collections;
