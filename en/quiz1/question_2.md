@@ -5,7 +5,7 @@
 legend: Question 2 of 3
 ---
 
-A script on an Quest Giver NPC has the following method:
+A script on a Quest Giver NPC has the following method:
 
 --- code ---
 ---
