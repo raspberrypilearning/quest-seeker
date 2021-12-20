@@ -136,10 +136,11 @@ Add code to a script on the NPC GameObject.
 ---
 language: csharp
 filename: QuestGiver.cs
-line_numbers: true
+line_numbers: false
 line_number_start: 5
 line_highlights: 7-23, 27
 ---
+
 public class QuestGiver : MonoBehaviour
 {
     public GameObject canvas;
@@ -217,6 +218,7 @@ Add code to the QuestGiver script to control when the object appears so that it 
 ---
 language: csharp
 filename: QuestGiver.cs
+line_numbers: false
 line_number_start: 6
 line_highlights: 9, 10, 30, 39
 ---
