@@ -1,10 +1,10 @@
 ## Reflection
 
-Well done, you have learned a lot!  
+Well done, you have learnt a lot!  
 
-Answer the three questions below to reflect on what you've learned.
+Answer the three questions below to reflect on what you've learnt.
 
-After each question, press submit. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+After each question, press submit. You will be guided towards the correct answer. You can do this activity as many times as you want.
 
 Have fun!
 
@@ -18,7 +18,7 @@ A button's OnClick event needs a GameObject with a script that has a public meth
 
 What is the name of the **method** called when this button is clicked? 
 
-![An OnClick event in the Inspector window with one item in this list. It has  'QuestGiver' in the box underneath the 'Runtime Only' and  'CoinQuest.CoinsAccepted' in the box to the right.](images/quiz-question.png)
+![An OnClick event in the Inspector window with one item in this list. It has 'QuestGiver' in the box underneath the 'Runtime Only' and 'CoinQuest.CoinsAccepted' in the box to the right.](images/quiz-question.png)
 
 --- choices ---
 

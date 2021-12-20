@@ -4,10 +4,10 @@
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 The first quest will be a **fetch quest** where a non-player character (NPC) asks the player to find an item and bring it back to them. 
 
-When the player returns to the quest giver, they will be rewarded with experience points (XP) or a reward in the currency of your game.
+When the Player returns to the Quest Giver, they will be rewarded with experience points (XP) or a reward in the currency of your game.
 </div>
 <div>
-![An animated gif of the player approaching the quest giver and accepting a quest to find the space helmet. The player finds and collects the space helmet and returns it to the quest giver to get points.](images/first-quest.gif){:width="300px"}
+![An animated gif of the Player approaching the Quest Giver and accepting a quest to find the space helmet. The Player finds and collects the space helmet and returns it to the Quest Giver to get points.](images/first-quest.gif){:width="300px"}
 </div>
 </div>
 
@@ -37,9 +37,9 @@ You will need to decide on:
 
 --- task ---
 
-Add a GameObject for the item that the player will need to fetch. 
+Add a GameObject for the item that the Player will need to fetch. 
 
-Position the item in your world so the player will need to move from their starting position to find it. 
+Position the item in your world so the Player will need to move from their starting position to find it. 
 
 ![A strip of multiple images showing items created from models or 3D shapes including a helmet, telescope, ice tool, picture, heart, clover, and magnet.](images/item-strip.png)
 
@@ -66,19 +66,19 @@ Add a NPC to be a Quest Giver and position it so that it will be easy for the pl
 --- /task ---
 
 --- task ---
-If you choose the Cat, Rat, or Raccoon, then you can set the Animator 'Controller' to the 'IdleWalk' animation. 
+If you choose the Cat, Rat, or Raccoon, then you can set the **Animator Controller** to the **IdleWalk** animation. 
 
 --- /task ---
 
 --- task ---
 
-Add a Box Collider to the Quest Giver so that the player can't walk through them.
+Add a **Box Collider** to the **Quest Giver** so that the Player can't walk through them.
 
 ![The Box Collider component in the Inspector window.](images/box-collider.png)
 
 --- /task ---
 
-The Quest Giver will offer the player a quest when they get close enough.
+The Quest Giver will offer the Player a quest when they get close enough.
 
 --- task ---
 Check that your Player GameObject has the Player tag.
@@ -86,9 +86,9 @@ Check that your Player GameObject has the Player tag.
 
 --- task ---
 
-Add a UI TextMeshPro named 'Quest Text' as a **child of the Quest Giver** and add your quest message to it. 
+Add a UI **TextMeshPro** named `Quest Text` as a **child of the Quest Giver** and add your quest message to it. 
 
-![The Game view showing a canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the Quest message.](images/quest-giver-text.png)
+![The Game view showing a canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the quest message.](images/quest-giver-text.png)
 
 
 --- collapse ---
@@ -102,9 +102,9 @@ Change the message text, settings, and position of the text object until you are
 ![The TextMeshPro component in the Inspector window with quest text added to the Text Input and Auto Size ticked.](images/text-object-settings.png)
 ![The Rect Transform component of the Text Mesh Pro with Anchor to the bottom left and Pos x, Pos y, Poz z, width, and height tailored for the scene.](images/text-object-position.png)
 
-You can add another UI TextMeshPro to the same canvas with the name of the Quest Giver NPC if you like. 
+You can add another UI **TextMeshPro** to the same canvas with the name of the Quest Giver NPC if you like. 
 
-![The Game view showing a canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the Quest message.](images/quest-giver-text.png)
+![The Game view showing a canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the quest message.](images/quest-giver-text.png)
 
 --- /collapse ---
 
@@ -114,21 +114,21 @@ You can add another UI TextMeshPro to the same canvas with the name of the Quest
 
 --- task ---
 
-Add a Box Collider with a Trigger and a **QuestGiver** script on the Quest Giver NPC to make the quest message appear when the Player is nearby. 
+Add a **Box Collider** with a **Trigger** and a **QuestGiver** script on the Quest Giver NPC to make the quest message appear when the Player is nearby. 
 
-![An animated gif showing the Player approaching an NPC. When the player gets near the NPC, a canvas with text message is enabled on the scene.](images/quest-text.gif){:width="400px"}
+![An animated gif showing the Player approaching an NPC. When the Player gets near the NPC, a canvas with text message is enabled on the scene.](images/quest-text.gif){:width="400px"}
 
 --- collapse ---
 
 ---
-title: Make a message appear when the player is close enough
+title: Make a message appear when the Player is close enough
 ---
 
-Add another Box Collider with the Trigger property checked. This Box Collider needs to be bigger than the first Box Collider so that the player can trigger the Quest Giver to display a text box.
+Add another **Box Collider** with the Trigger property checked. This Box Collider needs to be bigger than the first Box Collider so that the Player can trigger the Quest Giver to display a text box.
 
 ![The Box Collider component with x = 3 and z = 3 to give a large range. 'Is Trigger' is selected.](images/box-trigger.png)
 
-Add a script called 'QuestGiver' to the QuestGiver GameObject. Add `OnTriggerEnter` and `OnTriggerExit` methods to show and hide the message canvas when the Player gets close and moves away. 
+Add a script called **QuestGiver** to the **QuestGiver GameObject**. Add `OnTriggerEnter` and `OnTriggerExit` methods to show and hide the message canvas when the Player gets close and moves away. 
 
 Add code to a script on the NPC GameObject. 
 
@@ -167,7 +167,7 @@ public class QuestGiver : MonoBehaviour
 }
 --- /code ---
 
-Select the QuestGiver GameObject. In the Inspector, find the QuestGiver script component and drag the Canvas for the NPC to the Canvas property of the script.
+Select the **QuestGiver GameObject**. In the Inspector, find the **QuestGiver** script component and drag the **Canvas** for the NPC to the Canvas property of the script.
 
 ![The Script component showing the Canvas GameObject in the Canvas variable.](images/quest-script.png)
 
@@ -193,9 +193,9 @@ For this quest, the item to be collected should only appear once the quest has b
 
 --- task ---
 
-Add an 'Accept' Button to the Canvas on your Quest Giver NPC and connect it to a `QuestAccepted` method on your **QuestGiver** script. Update the **Quest Giver** script so the item only appears when the quest has been accepted.
+Add an **Accept Button** to the Canvas on your Quest Giver NPC and connect it to a `QuestAccepted` method on your **QuestGiver** script. Update the **QuestGiver** script so the item only appears when the quest has been accepted.
 
-![An animated gif showing the Player approaching an NPC. When the player gets near the NPC, a canvas with text message and button is enabled on the scene. On clicking the button, an item appears.](images/quest-button.gif){:width="400px"}
+![An animated gif showing the Player approaching an NPC. When the Player gets near the NPC, a canvas with text message and button is enabled on the scene. On clicking the button, an item appears.](images/quest-button.gif){:width="400px"}
 
 --- collapse ---
 
@@ -203,7 +203,7 @@ Add an 'Accept' Button to the Canvas on your Quest Giver NPC and connect it to a
 title: Make an Item GameObject appear when a button is clicked
 ---
 
-Add a UI TextMesh Pro Button to the same canvas and click on the Text (TMP) child object of the Button then give it the text `Accept`: 
+Add a UI **TextMesh Pro Button** to the same canvas and click on the **Text (TMP)** child object of the Button then give it the text `Accept`: 
 
 ![The TextMeshPro component with Text Input 'Accept'.](images/text-button.png)
 
@@ -258,13 +258,13 @@ public class QuestGiver : MonoBehaviour
 --- /code ---
 
 
-Select the QuestGiver, then in the QuestGiver script component in the Inspector window, drag your button and item GameObjects to the 'Button' and 'Item' properties:
+Select the **Quest Giver**, then in the **QuestGiver** script component in the Inspector window, drag your **Button** and **Item GameObjects** to the Button and Item properties:
 
 ![The QuestGiver script component with 'Button' in the Button variable and 'QuestItem' in the Item variable.](images/item-script.png)
 
-From the Hierarchy window, select the Button GameObject then go to the Inspector window 'On Click ()' property and click on the **+**.
+From the Hierarchy window, select the **Button GameObject** then go to the Inspector window `OnClick()` property and click on the **+**.
 
-Click on the circle for the field underneath 'Runtime', click on **Scene** and choose your QuestGiver. In the 'Function' drop-down menu select **QuestGiver.QuestAccepted** to join your new method to the Button’s click event:
+Click on the circle for the field underneath 'Runtime', click on **Scene** and choose your **Quest Giver**. In the Function drop-down menu, select **QuestGiver.QuestAccepted** to join your new method to the Button’s click event:
 
 ![The 'OnClick()' function of the button with 'QuestGiver' populated to the left and 'QuestGiver.QuestAccepted' to the right.](images/button-click.png)
 
@@ -292,27 +292,27 @@ Click on the circle for the field underneath 'Runtime', click on **Scene** and c
 title: Nothing happens when I click the Accept button
 ---
 
-Select your QuestGiver NPC and make sure they have a script that has an `QuestAccepted` method.
+Select your **Quest Giver NPC** and make sure they have a script that has an `QuestAccepted` method.
 
 Check that all the variables are set on the script in the Inspector. 
 
-Click on the Button object and check that you have attached the correct method such as `QuestAccepted` to an 'OnClick' event. 
+Click on the **Button** object and check that you have attached the correct method such as `QuestAccepted` to an `OnClick` event. 
 
 Add a `Debug.Log("Quest accepted");` line to the method and check the console to see that the method is being called.
 
 If you are sure the method is being called, check that the code in the method is correct. 
 
-If the method is not being called (no Debug output), then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this, then button-clicks won't be handled. If it's missing, right-click in the Hierarch window and choose 'UI' then 'Event System'.
+If the method is not being called (no Debug output), then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this, then button-clicks won't be handled. If it's missing, right-click in the Hierarch window and choose **UI** then **Event System**.
 
 --- /collapse ---
 
 --- /task ---
 
-When the player collects the item, the item needs to disappear and optionally play a sound effect. The Quest Giver will also need to know when the quest has been completed. 
+When the Player collects the item, the item needs to disappear and optionally play a sound effect. The Quest Giver will also need to know when the quest has been completed. 
 
 --- task ---
 
-Add a 'UI' 'TextMeshPro' to the Scene to display the reward. Add a **QuestSeeker** script to the Player to store and update the reward. 
+Add a UI **TextMeshPro** to the scene to display the reward. Add a **QuestSeeker** script to the Player to store and update the reward. 
 
 --- collapse ---
 
@@ -320,9 +320,9 @@ Add a 'UI' 'TextMeshPro' to the Scene to display the reward. Add a **QuestSeeker
 title: Add a QuestSeeker script to the Player to manage the reward
 ---
 
-Right-click in the Hierarchy window and add a 'UI' 'TextMeshPro' to your scene to show the reward. Name the new Object `Coin Text`, or a suitable name for your reward. 
+Right-click in the Hierarchy window and add a UI **TextMeshPro** to your scene to show the reward. Name the new object `Coin Text`, or a suitable name for your reward. 
 
-Add a new 'QuestSeeker' script component to the Player to store and display the reward. 
+Add a new **QuestSeeker** script component to the Player to store and display the reward. 
 
 The `coins` variable needs to be `public` so that a script on the Quest Item can update it. 
 
@@ -357,7 +357,7 @@ public class QuestSeeker : MonoBehaviour
 
 --- /collapse ---
 
-With the Player object selected, drag the 'Coin Text' TextMeshPro object to the Coin Text property in the Inspector.
+With the Player object selected, drag the **Coin Text TextMeshPro** object to the Coin Text property in the Inspector.
 
 --- /task ---
 
@@ -402,9 +402,9 @@ public class QuestSeeker : MonoBehaviour
 
 --- task ---
 
-Add a Box Collider with a Trigger and **QuestItemController** script to your Quest Item. Add code to hide the Quest Item and set `hasQuestItem` to true on the Player's QuestSeeker script when the Player collides with the Quest Item.
+Add a **Box Collider** with a **Trigger** and **QuestItemController** script to your Quest Item. Add code to hide the Quest Item and set `hasQuestItem` to true on the Player's QuestSeeker script when the Player collides with the Quest Item.
 
-![An animated gif showing a raccoon player colliding with a star item and the item disappears.](images/collect-star.gif){:width="400px"}
+![An animated gif showing a Raccoon Player colliding with a Star item and the item disappears.](images/collect-star.gif){:width="400px"}
 
 --- collapse ---
 
@@ -412,9 +412,9 @@ Add a Box Collider with a Trigger and **QuestItemController** script to your Que
 title: Make the item disappear and set hasQuestItem to true
 ---
 
-Select the QuestItem and add a Box Collider with a Trigger. 
+Select the **Quest Item** and add a **Box Collider** with a **Trigger**. 
 
-Add a script to the QuestItem and name it `QuestItemController`.
+Add a **script** to the **Quest Item** and name it `QuestItemController`.
 
 Add code to make the item hide and update the `hasQuestItem` status on the Player. 
 
@@ -440,7 +440,7 @@ public class QuestItemController : MonoBehaviour
     }
 --- /code ---
 
-Drag the Player GameObject to the player property of the QuestItemController script in the Inspector for the QuestItem.
+Drag the **Player GameObject** to the Player property of the QuestItemController script in the Inspector for the Quest Item.
 
 ![The QuestItemController script component with Player variable populated with 'layer (Quest Seeker)'.](images/player-property.png)
 
@@ -455,8 +455,8 @@ Optionally, also play a sound when the item is collected.
 --- task ---
 
 **Test:** Play your scene:
-+ Talk to the QuestGiver NPC and accept the quest 
-+ Check that you can collect the QuestItem 
++ Talk to the Quest Giver NPC and accept the quest 
++ Check that you can collect the Quest Item 
 + While you are still in Play mode, click on the Player and check that the `hasQuestItem` property in the Inspector window is checked to show that the quest item has been collected 
 
 ![The Inspector window in run time with the Quest Seeker script component and 'Has Quest Item' selected.](images/playmode-item-collect.png)
@@ -479,7 +479,7 @@ Check that the Player GameObject has the Player tag.
 
 --- task ---
 
-Have the QuestGiver NPC display a different message if the quest is complete and give the player a reward for completing the quest.
+Have the Quest Giver NPC display a different message if the quest is complete and give the player a reward for completing the quest.
 
 ![An animated gif showing the Player approaching an NPC to complete the quest. When the player gets near the NPC, a canvas with completion message is enabled on the scene and the coins variable increases.](images/snow-coins.gif){:width="400px"}
 
@@ -524,7 +524,7 @@ public class QuestGiver : MonoBehaviour
     }
 --- /code ---
 
-In the Inspector, drag the Player to the Player property and the TextMeshPro object with the message to the Message property.
+In the Inspector, drag the **Player** to the Player property and the **TextMeshPro** object with the message to the Message property.
 
 --- /collapse ---
 
@@ -533,7 +533,7 @@ In the Inspector, drag the Player to the Player property and the TextMeshPro obj
 --- task ---
 
 **Test:** Play your scene:
-+ Make sure you get a different message after collecting the QuestItem 
++ Make sure you get a different message after collecting the Quest Item 
 + Check that the number of coins also increases
 + Make sure the player can't get the reward more than once
 
