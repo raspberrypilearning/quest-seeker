@@ -27,7 +27,7 @@ You quest could be:
 + A **story** quest where you have to find and talk to another NPC to find out information
 + A **puzzle** or **task** quest where you have to solve a puzzle or complete a task
 
-![desc](images/quest-strip2.png)
+![A montage of four example quest projects. The first quest is to find a telescope, the second quest is to find multiple different items to make an ice dome, the third is to round up cars and take them to the mechanics and the fourth is to find 3 hidden coins.](images/quest-strip2.png)
 
 ### Reward type
 
@@ -67,7 +67,7 @@ Add a new GameObject to be the second Quest Giver NPC.
 title: Duplicate your first NPC and make changes to it
 ---
 
-![desc](images/duplicate-npc.png)
+![An image showing two characters side by side. The first is the original NPC, the second looks the same but has a different coloured body.](images/duplicate-npc.png)
 
 Right-click on the **Quest Giver GameObject** you created for the first quest and select **Duplicate**. This creates a copy of your Quest Giver GameObject with all the child GameObjects. 
 
@@ -85,7 +85,7 @@ title: Add a new Quest Giver NPC GameObject
 
 Choose a model or create a new Quest Giver NPC GameObject out of 3D shapes.  
 
-![desc](images/model-shapes.png)
+![Theo characters side by side. The first is the Cat model that came with the starter package. The second is a character made from cylinder and capsule 3D shapes.](images/model-shapes.png)
 
 Add a **Box Collider** so that the Player cannot walk through the new Quest Giver NPC and a second **Box Collider**, that is bigger than the first, with **IsTrigger** checked. 
 
@@ -97,7 +97,7 @@ In the Inspector:
 + Edit the text in the message on your new Quest Giver NPC Canvas to describe your new quest. Change the text style to suit your new character. 
 + Edit the text in the Name object to match your new NPC.
 
-![desc](images/new-message.png)
+![A text message in the Game view that has the 'Quest Giver' name in bold yellow font and below it the quest message 'I have a quest for you...' in black font.](images/new-message.png)
 
 --- collapse ---
 
@@ -171,7 +171,7 @@ In the Inspector, make sure you are updating the child objects and components fo
 + Check that you can accept the quest with the button
 + Check that you can see the debug message in the Console
 
-![desc](images/new-quest-accept-message.png)
+![The Game view showing a player character and NPC. The NPC collider has triggered the message, character tag and accept button to appear.](images/new-quest-accept-message.png)
 
 --- /task ---
 
@@ -206,13 +206,13 @@ title: Tag your items
 
 **Create a new tag:** Go to the Tag property at the top of the Inspector window and **Add Tag**. Click on the **+** and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
 
-![desc](images/add-new-tag.png)
+![The tag list showing existing project tags and a button in the bottom right corner marked with a plus sign.](images/add-new-tag.png)
 
 **Apply your new tag:** Select the GameObjects that are items in this quest in the Hierarchy window and use the Tag drop-down box to select your new tag from the list.
 
-![desc](images/multi-items-select.png)
+![The Hierarchy window with multiple GameObjects selected.](images/multi-items-select.png)
 
-![desc](images/item-tag-apply.png)
+![The top of the Inspector window with the new tag appearing in the dropdown list of available tags.](images/item-tag-apply.png)
 
 --- /collapse ---
 
@@ -238,7 +238,7 @@ Set up your quest by hiding any GameObjects that should be hidden until the ques
 title: Hide items with the same tag
 ---
 
-![desc](images/key-multiple.png)
+![The Game view showing multiple identical keys made from 3D shapes.](images/key-multiple.png)
 
 **QuestGiver2** script
 
@@ -273,7 +273,7 @@ GameObject[] collectables;
 title: Hide individual items
 ---
 
-![desc](images/multi-objects.png)
+![The Game view showing one key and one telescope both made from 3D shapes.](images/multi-objects.png)
 
 **QuestGiver2** script
 
@@ -305,7 +305,7 @@ Assign GameObjects to variables in the Unity Editor.
 title: Set visibility of child items
 ---
 
-![desc](images/quest-giver-item.png)
+![The Game view showing Cat player GameObject holding a telescope child GameObject.](images/quest-giver-item.png)
 
 **QuestGiver2** script:
 
@@ -458,7 +458,7 @@ title: Add variables for multiple items of the same type in a gather quest
 
 In a gather quest, the player collects multiple items of the same kind. 
 
-![desc](images/key-multiple.png)
+![The Game view showing multiple, identical keys made from 3D shapes.](images/key-multiple.png)
 
 **QuestSeeker** script:
 
@@ -484,7 +484,7 @@ title: Add variables for multiple different items in a craft or recipe quest
 
 In a recipe or craft quest, the player collects multiple items of different kinds to make a recipe or craft a new item. 
 
-![desc](images/multi-objects.png)
+![The Game view showing a key and a telescope. Both made from 3D shapes.](images/multi-objects.png)
 
 **QuestSeeker** script:
 
@@ -511,7 +511,7 @@ title: Add variables for a follower
 
 In an escort quest, the player will need to take a follower with them. 
 
-![desc](images/follower-player.png)
+![The Game view showing a dog NPC following behind a Cat player character.](images/follower-player.png)
 
 **QuestSeeker** script:
 
@@ -547,7 +547,7 @@ title: Gather quest items
 
 Here's an example for a coin collection quest, each coin will need this script. 
 
-![desc](images/coin-item.png)
+![The Game view showing a gold coin made from cyinders.](images/coin-item.png)
 
 --- code ---
 ---
@@ -582,7 +582,7 @@ title: Collect recipe or crafting quest items
 
 Here's an example for an IceTool, the same project also has a IceBlock collectable GameObject with a similar script. 
 
-![desc](images/ice-tool.png)
+![The Game view showing a grey ice tool made from 3D shapes.](images/ice-tool.png)
 
 --- code ---
 ---
@@ -617,7 +617,7 @@ title: Escort quest followers
 
 Here's an example for a follower, if the same project has other follower GameObjects, they will need the script too. 
 
-![desc](images/follower-player.png)
+![The Game view showing a dog NPC following behind a Cat player character.](images/follower-player.png)
 
 --- code ---
 ---
@@ -663,7 +663,7 @@ public class FollowerController : MonoBehaviour
 title: Make a child item transfer or disappear
 ---
 
-![desc](images/pass-object-complete.png)
+![The Game view showing a Raccoon and a Rat. The Rat is holding a telescope child GameObject.](images/pass-object-complete.png)
 
 On the script for the NPC to receive the item: 
 
@@ -813,7 +813,7 @@ line_highlights:
 player.gems += 2; // Give a reward to the player
 --- /code ---
 
-![desc](images/coin-reward.png)
+![The Game view showing a tooth fairy NPC with quest message 'Help me clean up this mouth. Bring me the piece of food and I'll give you 10 coins'.](images/coin-reward.png)
 
 --- /collapse ---
 
@@ -850,7 +850,7 @@ line_highlights:
 hat.SetActive(true)
 --- /code ---
 
-![desc](images/player-gift.png)
+![The Game view with a Raccon and a Cat. The Cat is wearing a hat and the message says 'Well done. Have a hat!'.](images/player-gift.png)
 
 You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player. 
 
@@ -865,7 +865,7 @@ line_highlights:
 player.dogFollowing = true;
 --- /code ---
 
-![desc](images/friend-found.gif)
+![An animated image showing a Raccoon player character leading an NPC Cat character back to another NPC Cat charcter with the message appearing ' Thankyou for finding my friend'.](images/friend-found.gif)
 
 --- /collapse ---
 
@@ -877,7 +877,7 @@ title: Unlock
 
 A type of reward could be to remove a barrier or get access to an area or items that were not available previously.
 
-![desc](images/unlock-areas.png)
+![A side by side image of the Game view showing coins trapped behind walls and railings that have different colours to the other walls in the scenes.](images/unlock-areas.png)
 
 Think about the GameObjects you want to remove. Create and apply a new 'Unlock' tag to them.
 
@@ -960,11 +960,11 @@ public class Unlock : MonoBehaviour
 
 
 
-![](images/railing-down.gif)
+![An animated image showing a player colliding with the trigger area of an NPC causing railings in the background to disappear.](images/railing-down.gif)
 
 You could also introduce a new NPC quest enemy or a new lock item to replace the barriers.
 
-![](images/walls-back.gif)
+![An animated image showing a player colliding with the trigger area of an enemy NPC causing a wall in the background to appear.](images/walls-back.gif)
 
 --- /collapse ---
 
