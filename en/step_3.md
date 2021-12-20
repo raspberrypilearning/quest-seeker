@@ -396,7 +396,7 @@ title: Make a child item appear on the Player
 ---
 language: csharp
 filename: QuestGiver2.cs
-line_numbers: true
+line_numbers: false
 line_number_start: 
 line_highlights: 
 ---
@@ -858,7 +858,7 @@ You could also make an NPC character become a follower or a pet by changing the 
 ---
 language: csharp
 filename: QuestGiver.cs
-line_numbers: true
+line_numbers: false
 line_number_start: 
 line_highlights: 
 ---
