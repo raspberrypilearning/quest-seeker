@@ -27,7 +27,7 @@ You quest could be:
 + A **story** quest where you have to find and talk to another NPC to find out information
 + A **puzzle** or **task** quest where you have to solve a puzzle or complete a task
 
-![A montage of four example quest projects. The first quest is to find a telescope, the second quest is to find multiple different items to make an ice dome, the third is to round up cars and take them to the mechanics and the fourth is to find 3 hidden coins.](images/quest-strip2.png)
+![A montage of four example quest projects. The first quest is to find a telescope, the second quest is to find multiple different items to make an ice dome, the third is to round up cars and take them to the mechanics, and the fourth is to find three hidden coins.](images/quest-strip2.png)
 
 ### Reward type
 
@@ -85,7 +85,7 @@ title: Add a new Quest Giver NPC GameObject
 
 Choose a model or create a new Quest Giver NPC GameObject out of 3D shapes.  
 
-![Theo characters side by side. The first is the Cat model that came with the starter package. The second is a character made from cylinder and capsule 3D shapes.](images/model-shapes.png)
+![The characters side by side. The first is the Cat model that came with the starter package. The second is a character made from cylinders and capsule 3D shapes.](images/model-shapes.png)
 
 Add a **Box Collider** so that the Player cannot walk through the new Quest Giver NPC and a second **Box Collider**, that is bigger than the first, with **IsTrigger** checked. 
 
@@ -171,7 +171,7 @@ In the Inspector, make sure you are updating the child objects and components fo
 + Check that you can accept the quest with the button
 + Check that you can see the debug message in the Console
 
-![The Game view showing a player character and NPC. The NPC collider has triggered the message, character tag and accept button to appear.](images/new-quest-accept-message.png)
+![The Game view showing a player character and NPC. The NPC collider has triggered the message, character tag, and 'Accept' button to appear.](images/new-quest-accept-message.png)
 
 --- /task ---
 
@@ -212,7 +212,7 @@ title: Tag your items
 
 ![The Hierarchy window with multiple GameObjects selected.](images/multi-items-select.png)
 
-![The top of the Inspector window with the new tag appearing in the dropdown list of available tags.](images/item-tag-apply.png)
+![The top of the Inspector window with the new tag appearing in the drop-down list of available tags.](images/item-tag-apply.png)
 
 --- /collapse ---
 
@@ -305,7 +305,7 @@ Assign GameObjects to variables in the Unity Editor.
 title: Set visibility of child items
 ---
 
-![The Game view showing Cat player GameObject holding a telescope child GameObject.](images/quest-giver-item.png)
+![The Game view showing the Cat Player GameObject holding a telescope child GameObject.](images/quest-giver-item.png)
 
 **QuestGiver2** script:
 
@@ -511,7 +511,7 @@ title: Add variables for a follower
 
 In an escort quest, the player will need to take a follower with them. 
 
-![The Game view showing a dog NPC following behind a Cat player character.](images/follower-player.png)
+![The Game view showing a dog NPC following behind a Cat Player character.](images/follower-player.png)
 
 **QuestSeeker** script:
 
@@ -547,7 +547,7 @@ title: Gather quest items
 
 Here's an example for a coin collection quest, each coin will need this script. 
 
-![The Game view showing a gold coin made from cyinders.](images/coin-item.png)
+![The Game view showing a gold coin made from cylinders.](images/coin-item.png)
 
 --- code ---
 ---
@@ -617,7 +617,7 @@ title: Escort quest followers
 
 Here's an example for a follower, if the same project has other follower GameObjects, they will need the script too. 
 
-![The Game view showing a dog NPC following behind a Cat player character.](images/follower-player.png)
+![The Game view showing a dog NPC following behind a Cat Player character.](images/follower-player.png)
 
 --- code ---
 ---
@@ -850,7 +850,7 @@ line_highlights:
 hat.SetActive(true)
 --- /code ---
 
-![The Game view with a Raccon and a Cat. The Cat is wearing a hat and the message says 'Well done. Have a hat!'.](images/player-gift.png)
+![The Game view with a Raccon and a Cat. The Cat is wearing a hat and the message says 'Well done. Have a hat!'](images/player-gift.png)
 
 You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player. 
 
@@ -865,7 +865,7 @@ line_highlights:
 player.dogFollowing = true;
 --- /code ---
 
-![An animated image showing a Raccoon player character leading an NPC Cat character back to another NPC Cat charcter with the message appearing ' Thankyou for finding my friend'.](images/friend-found.gif)
+![An animated image showing a Raccoon Player character leading an NPC Cat character back to another NPC Cat charcter with the message 'Thank you for finding my friend'.](images/friend-found.gif)
 
 --- /collapse ---
 
@@ -877,7 +877,7 @@ title: Unlock
 
 A type of reward could be to remove a barrier or get access to an area or items that were not available previously.
 
-![A side by side image of the Game view showing coins trapped behind walls and railings that have different colours to the other walls in the scenes.](images/unlock-areas.png)
+![Side-by-side images of the Game view showing coins trapped behind walls and railings that have different colours to the other walls in the scenes.](images/unlock-areas.png)
 
 Think about the GameObjects you want to remove. Create and apply a new 'Unlock' tag to them.
 
@@ -960,11 +960,11 @@ public class Unlock : MonoBehaviour
 
 
 
-![An animated image showing a player colliding with the trigger area of an NPC causing railings in the background to disappear.](images/railing-down.gif)
+![An animated image showing a Player colliding with the trigger area of an NPC, causing railings in the background to disappear.](images/railing-down.gif)
 
 You could also introduce a new NPC quest enemy or a new lock item to replace the barriers.
 
-![An animated image showing a player colliding with the trigger area of an enemy NPC causing a wall in the background to appear.](images/walls-back.gif)
+![An animated image showing a Player colliding with the trigger area of an enemy NPC, causing a wall in the background to appear.](images/walls-back.gif)
 
 --- /collapse ---
 
