@@ -45,12 +45,17 @@ You are going to make some design decisions to create your quests.
 
 Explore these example projects to get more ideas:
 
-[Maze quest](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'}
+Maze quest:[Try it](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'} 
 ![A maze scene with a capsule character from 3D shapes. The Player has approached and the quest to gather an item for coin reward is shown. There is a button for the player to accept.](images/quest-canvas.png){:width="400px"}
 
-[Hill quest](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'}
+Hill Quest:[Try it](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'}
 ![A hill and tree scene with a cat that the Player has approached and the quest to find and escort a friend is shown. There is a button for the player to accept.](images/new-quest-accept.png){:width="400px"}
 
+To explore how these projects have been made, download and unzip the [Unity packages](https://rpf.io/p/en/quest-seeker-get){:target='_blank'} then import each one into an new 3D Unity project.
+  
+[[[unity-create-3d-project]]]
+
+[[[unity-importing-a-package]]]
 
 --- /task ---
 
