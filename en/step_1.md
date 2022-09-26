@@ -1,4 +1,4 @@
-## Introduction
+## You will make
 
 In this project, you will add NPCs and quests to the world that you created in the [World builder](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'} project. 
 
@@ -17,12 +17,12 @@ You will:
 
 --- no-print ---
 
+### Play ▶️
+
 --- task ---
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-
-### Try it 
 
 Play the quests in the example project. Think about the type of quest and the outcome.  
 + What is the reward for completing the quest? 
@@ -37,7 +37,7 @@ Play the quests in the example project. Think about the type of quest and the ou
 
 --- /task ---
 
-### Get inspiration 
+### Get ideas 💭
 
 You are going to make some design decisions to create your quests.
 
@@ -63,7 +63,7 @@ To explore how these projects have been made, download and unzip the [Unity pack
 
 --- print-only ---
 
-### Get inspiration 
+### Get ideas 💭
 
 You are going to make some design decisions to create your quests.
 

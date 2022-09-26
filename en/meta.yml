@@ -8,20 +8,20 @@ listed: true
 copyedit: true
 last_tested: '2021-03-26'
 steps:
-- title: Introduction
-- title: First quest
-- title: Second quest
-  completion:
-  - engaged
-  - internal
-- title: Reflection
-  knowledge_quiz:
-    path: quiz1
-    version: 1
-    questions: 3
-    passing_score: 3
-  completion:
-  - external
-- title: Upgrade your project
-- title: Share
-- title: What next?
+  - title: You will make
+  - title: First quest
+  - title: Second quest
+    completion:
+      - engaged
+      - internal
+  - title: Quick quiz
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Upgrade your project
+  - title: Share
+  - title: What next?
