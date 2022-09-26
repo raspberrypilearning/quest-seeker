@@ -1,13 +1,12 @@
 ---
 title: Quest seeker
 hero_image: images/banner.png
-description:
-  Add NPCs and quests to the world that you created in the World builder
+description: Add NPCs and quests to the world that you created in the World builder
   project
 version: 4
 listed: true
 copyedit: true
-last_tested: "2021-03-26"
+last_tested: '2021-03-26'
 steps:
   - title: You will make
   - title: First quest
