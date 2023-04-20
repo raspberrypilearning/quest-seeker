@@ -10,6 +10,8 @@ Here are some ideas you could try:
 + Allow the player to choose between different questions by using multiple buttons
 
 <iframe allowtransparency="true" width="710" height="450" src="https://quest-seeker.rpfilt.repl.co" frameborder="0"></iframe>
+<iframe allowtransparency="true" width="710" height="450" src="https://weatherquest.rpfilt.repl.co/" frameborder="0"></iframe>
+<iframe allowtransparency="true" width="710" height="450" src="https://castlequestseeker.rpfilt.repl.co" frameborder="0"></iframe>
 
 Take a look at some Quest seeker projects created by community members in the Raspberry Pi Foundation’s gallery of [Quest seeker Community Projects](https://wke.lt/w/s/3n5xmU){:target='_blank'}.
 
