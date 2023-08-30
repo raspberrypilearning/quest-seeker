@@ -1,0 +1,105 @@
+QUEST GIVER
+
+I HAVE A QUEST FOR YOU.
+
+FIND MY SPACE HELMET AND I'LL GIVE YOU 5 COINS.
+
+Snow Raccoon
+
+To craft my ice dome I need one more ice block and an ice tool. 
+
+Will you find them for me?
+
+Cat
+
+Will you find my friend in the party hat and bring them here?
+
+Help me clean up thi mounth.
+
+Bring me the piece of food and I'll give you 10 coins.
+
+Accept
+
+ACCEPT
+
+Start is called before the first frame update
+
+Please help me find my star to get back home. Do you accept?
+
+Make the quest item appear
+
+Hide the message when the quest has been accepted
+
+Don't show the button after the quest has been accepted
+
+Quest accepted
+
+Or the reward for your quest
+
+Coins: 
+
+Update is called once per frame
+
+Check the tag of the colliding object
+
+Thank you for finding my fishbone. Here's 10 coins for your efforts!
+
+Cat with a Hat
+
+Thank you so much for fetching my telescope!
+
+Round up the rest of the cars and bring them to the mechanics before it closes.
+
+I have a quest for you.
+
+I've hidden 3 coins, find them and keep them.
+
+Quest giver 2 start
+
+Update with the name of your quest
+
+Quest 2 accepted
+
+Update with the name of your quest
+
+Don't show the quest message at the start
+
+Item on NPC
+
+Item on Player
+
+Transfer item to player for delivery
+
+The follower should only follow if the quest has been accepted
+
+Add a variable to store the amount collected
+
+Add a variable for each item to be collected
+
+To control when the follower is following the playe
+
+Follow Player
+
+If all the coins have been collected
+
+Well done, you collected the coins!
+
+Change to a successful completion message
+
+Thank you for helping me finish my ice dome. You can climb it if you like.
+
+Keep track of gems
+
+Give a reward to the player
+
+Well done. Have a hat!
+
+Thank you for finding my friend.
+
+Make sure the reward can't be given again
+
+Thank you so much!
+
+Give the reward
+
+Hey, I already gave you a reward.
