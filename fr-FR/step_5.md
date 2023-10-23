@@ -1,18 +1,18 @@
-## Upgrade your project
+## Améliorer ton projet
 
-If you have time, you can upgrade your project.
+Si tu as le temps, tu peux perfectionner ton projet.
 
-Here are some ideas you could try:
+Voici quelques idées que tu pourrais essayer :
 
-+ Improve the appearance of the UI Text using font colours and coloured UI Panels
-+ Add multiple quests to the same NPC so that they offer you a new quest when you complete a quest
-+ Allow some quests to reset so they can be completed multiple times to earn more XP or coins
-+ Allow the player to choose between different questions by using multiple buttons
++ Améliore l'apparence du texte de l'UI en utilisant les couleurs de la police et les panneaux d'interface colorés
++ Ajoute plusieurs quêtes au même PNJ pour qu'il te propose une nouvelle quête lorsque tu en termines une
++ Permets à certaines quêtes de se réinitialiser afin qu'elles puissent être accomplies plusieurs fois pour gagner plus d'XP ou de pièces
++ Permets au joueur de choisir entre différentes questions en utilisant plusieurs boutons
 
 <iframe allowtransparency="true" width="710" height="450" src="https://quest-seeker.rpfilt.repl.co" frameborder="0"></iframe>
 <iframe allowtransparency="true" width="710" height="450" src="https://weatherquest.rpfilt.repl.co/" frameborder="0"></iframe>
 <iframe allowtransparency="true" width="710" height="450" src="https://castlequestseeker.rpfilt.repl.co" frameborder="0"></iframe>
 
-Take a look at some Quest seeker projects created by community members in the Raspberry Pi Foundation’s gallery of [Quest seeker Community Projects](https://wke.lt/w/s/3n5xmU){:target='_blank'}.
+Jette un coup d'œil à certains projets Chasseur de quête créés par les membres de la communauté dans la galerie de Raspberry Pi Foundation de [Quest Seeker Community Projects](https://wke.lt/w/s/3n5xmU){:target='_blank'}.
 
 --- save ---
