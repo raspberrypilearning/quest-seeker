@@ -1,57 +1,57 @@
-## You will make
+## Ce que tu vas faire
 
-In this project, you will add NPCs and quests to the world that you created in the [World builder](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'} project.
+Dans ce projet, tu ajouteras des PNJ et des quêtes au monde que tu as créé dans le projet [Bâtisseur de mondes](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'}.
 
-This project is brought to you with generous support from [Unity Technologies](https://unity.com/){:target="_blank"}.  These [projects](https://projects.raspberrypi.org/en/pathways/unity-intro){:target="_blank"} offer young people the opportunity to take their first steps in creating virtual worlds using Real-Time 3D.
+Ce projet t'est présenté grâce au soutien généreux de [Unity Technologies](https://unity.com/){:target="_blank"}.  Ces [projets](https://projects.raspberrypi.org/en/pathways/unity-intro){:target="_blank"} proposent aux jeunes de faire leurs premiers pas dans la création de mondes virtuels en 3D temps réel.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-A <span style="color: #0faeb0">**quest**</span> is a task or mission in a computer game that the player can complete to gain a reward or move the story forward. Quests can require a player to fetch or deliver an item, gather items, escort a character to a location, find out information, or solve a puzzle. On completion, a player could be rewarded with experience, coins, access to new areas, or new abilities.
+Une <span style="color: #0faeb0">**quête**</span> est une tâche ou une mission dans un jeu vidéo que le joueur peut accomplir pour obtenir une récompense ou faire avancer l'histoire. Les quêtes peuvent demander au joueur d'aller chercher ou de livrer un objet, de rassembler des objets, d'escorter un personnage jusqu'à un endroit, de trouver des informations ou de résoudre une énigme. Lorsqu'il a terminé, le joueur peut être récompensé par de l'expérience, des pièces, l'accès à de nouvelles zones ou de nouvelles capacités.
 </p>
 
-You will:
-+ Add an NPC with dialogue that changes based on game state
-+ Manage the state of a quest using one or more variables
-+ Give behaviour to the Player and NPCs to complete one or more quests (gather, escort, deliver)
+Tu vas :
++ Ajouter un PNJ avec des dialogues qui changent en fonction de l'état du jeu
++ Gérer l'état d'une quête à l'aide d'une ou plusieurs variables
++ Donner un comportement au joueur et aux PNJ pour accomplir une ou plusieurs quêtes (rassembler, escorter, livrer)
 
-![A strip of multiple images showing a maze world with gather quest, a snow world with recipe quest, a tree world with follower quest, and a mouth world with gather quest.](images/example-strip.png)
+![Une bande de plusieurs images montrant un monde labyrinthe avec une quête de collecte, un monde enneigé avec une quête de recette, un monde d'arbre avec une quête de suiveur, et un monde de bouche avec une quête de collecte.](images/example-strip.png)
 
 --- no-print ---
 
-### Play ▶️
+### Joue ▶️
 
 --- task ---
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">
 
-Play the quests in the example project. Think about the type of quest and the outcome.
-+ What is the reward for completing the quest?
-+ How do the NPCs interact with the player?
-+ How are items used in the quest?
+Joue les quêtes du projet d'exemple. Réfléchis au type de quête et à son résultat.
++ Quelle est la récompense pour avoir accompli la quête ?
++ Comment les PNJ interagissent-ils avec le joueur ?
++ Comment les objets sont-ils utilisés dans la quête ?
 
 [Snow quest](https://raspberrypilearning.github.io/unity-webgl/SnowQuest){:target='_blank'}
 
 <iframe allowtransparency="true" width="710" height="450" src="https://raspberrypilearning.github.io/unity-webgl/SnowQuest" frameborder="0"></iframe>
 
-![A snow scene with a raccoon that has a white snow material so it looks like a snowman raccoon. The Player has approached and the quest to gather items needed to make an ice tool is shown. There is a button for the player to accept.](images/snow-raccoon.png){:width="400px"}
+![Une scène de neige avec un raton laveur qui a une matière blanche pour ressembler à un bonhomme de neige raton laveur. Le joueur s'est approché et la quête pour rassembler les objets nécessaires à la fabrication d'un outil de glace est montrée. Il y a un bouton pour que le joueur accepte.](images/snow-raccoon.png){:width="400px"}
 
 --- /task ---
 
-### Get ideas 💭
+### Trouver des idées 💭
 
-You are going to make some design decisions to create your quests.
+Tu vas prendre des décisions de conception pour créer tes quêtes.
 
 --- task ---
 
-Explore these example projects to get more ideas:
+Explore ces exemples de projets pour obtenir plus d'idées :
 
-Maze quest:[Try it](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'} 
-![A maze scene with a capsule character from 3D shapes. The Player has approached and the quest to gather an item for coin reward is shown. There is a button for the player to accept.](images/quest-canvas.png){:width="400px"}
+Maze quest :[Essaie-le](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'} 
+![Scène de labyrinthe avec un personnage de capsule à partir de formes 3D. Le joueur s'est approché et la quête consistant à rassembler un objet pour obtenir une pièce de monnaie est affichée. Un bouton permet au joueur d'accepter.](images/quest-canvas.png){:width="400px"}
 
-Hill Quest:[Try it](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'}
-![A hill and tree scene with a cat that the Player has approached and the quest to find and escort a friend is shown. There is a button for the player to accept.](images/new-quest-accept.png){:width="400px"}
+Hill Quest :[Essaie-le](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'}
+![Une scène de colline et d'arbre avec un chat que le joueur a approché et la quête de trouver et d'escorter un ami est montrée. Un bouton permet au joueur d'accepter.](images/new-quest-accept.png){:width="400px"}
 
-To explore how these projects have been made, download and unzip the [Unity packages](https://rpf.io/p/en/quest-seeker-get){:target='_blank'} then import each one into an new 3D Unity project.
+Pour découvrir comment ces projets ont été réalisés, télécharge et décompresse les [packages Unity](https://rpf.io/p/en/quest-seeker-get){:target='_blank'} puis importe chacun d'entre eux dans un nouveau projet 3D Unity.
 
 [[[unity-create-3d-project]]]
 
@@ -63,17 +63,17 @@ To explore how these projects have been made, download and unzip the [Unity pack
 
 --- print-only ---
 
-### Get ideas 💭
+### Trouve l'inspiration 💭
 
-You are going to make some design decisions to create your quests.
+Tu vas prendre des décisions de conception pour créer tes quêtes.
 
-Use these example images to get more ideas:
+Utilise ces images d'exemple pour avoir plus d'idées :
 
-Snow quest: https://raspberrypilearning.github.io/unity-webgl/SnowQuest ![](images/snow-raccoon.png){:width="400px"}
+Snow quest : https://raspberrypilearning.github.io/unity-webgl/SnowQuest ![](images/snow-raccoon.png){:width="400px"}
 
-Maze quest: https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker ![](images/quest-canvas.png){:width="400px"}
+Maze quest : https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker ![](images/quest-canvas.png){:width="400px"}
 
-Hill quest: https://raspberrypilearning.github.io/unity-webgl/HillQuest ![](images/new-quest-accept.png){:width="400px"}
+Hill quest : https://raspberrypilearning.github.io/unity-webgl/HillQuest ![](images/new-quest-accept.png){:width="400px"}
 
 --- /print-only ---
 
