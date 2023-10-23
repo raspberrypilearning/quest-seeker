@@ -1,18 +1,18 @@
-## Upgrade your project
+## Verbeter je project
 
-If you have time, you can upgrade your project.
+Als je tijd hebt, kun je jouw project verbeteren.
 
-Here are some ideas you could try:
+Hier zijn een paar andere ideeën die je zou kunnen proberen:
 
-+ Improve the appearance of the UI Text using font colours and coloured UI Panels
-+ Add multiple quests to the same NPC so that they offer you a new quest when you complete a quest
-+ Allow some quests to reset so they can be completed multiple times to earn more XP or coins
-+ Allow the player to choose between different questions by using multiple buttons
++ Verbeter het uiterlijk van de UI tekst met behulp van lettertype kleuren en gekleurde UI Panelen
++ Voeg meerdere quests toe aan dezelfde NPC zodat ze je een nieuwe quest aanbieden wanneer je een quest hebt voltooid
++ Laat sommige quests opnieuw instellen, zodat ze meerdere keren kunnen worden voltooid om meer XP of munten te verdienen
++ Laat de speler kiezen tussen verschillende vragen door meerdere knoppen te gebruiken
 
 <iframe allowtransparency="true" width="710" height="450" src="https://quest-seeker.rpfilt.repl.co" frameborder="0"></iframe>
 <iframe allowtransparency="true" width="710" height="450" src="https://weatherquest.rpfilt.repl.co/" frameborder="0"></iframe>
 <iframe allowtransparency="true" width="710" height="450" src="https://castlequestseeker.rpfilt.repl.co" frameborder="0"></iframe>
 
-Take a look at some Quest seeker projects created by community members in the Raspberry Pi Foundation’s gallery of [Quest seeker Community Projects](https://wke.lt/w/s/3n5xmU){:target='_blank'}.
+Bekijk enkele Speurneuzen-projecten gemaakt door communityleden in de galerij van de Raspberry Pi Foundation met [Speurneuzen Community Projects](https://wke.lt/w/s/3n5xmU){:target='_blank'}.
 
 --- save ---
