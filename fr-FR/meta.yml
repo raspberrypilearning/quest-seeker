@@ -1,25 +1,25 @@
 ---
-title: Quest seeker
+title: Chercheur de quête
 hero_image: images/banner.png
-description: Add NPCs and quests to the world that you created in the World builder project
-meta_title: Learn Unity | Game development | Quest seeker
-meta_description: Learn Unity game development with the Raspberry Pi Foundation. Add NPCs and quests to a world that you create using Unity.
+description: Ajoute des PNJ et des quêtes au monde que tu as créé dans le projet Bâtisseur de mondes
+meta_title: Apprendre Unity | Développement de jeux | Chercheur de quête
+meta_description: Apprends le développement de jeux Unity avec Raspberry Pi Foundation. Ajoute des PNJ et des quêtes à un monde que tu crées en utilisant Unity.
 version: 4
 listed: true
 copyedit: true
 last_tested: '2021-03-26'
 steps:
   - 
-    title: You will make
+    title: Ce que tu vas faire
   - 
-    title: First quest
+    title: Première quête
   - 
-    title: Second quest
+    title: Deuxième quête
     completion:
       - engaged
       - internal
   - 
-    title: Quick quiz
+    title: Questionnaire rapide
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -28,8 +28,8 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: Améliorer ton projet
   - 
-    title: Share
+    title: Partager
   - 
-    title: What next?
+    title: Et ensuite ?
