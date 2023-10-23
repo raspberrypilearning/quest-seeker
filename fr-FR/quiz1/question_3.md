@@ -2,28 +2,28 @@
 --- question ---
 
 ---
-legend: Question 3 of 3
+legend: Question 3 sur 3
 ---
 
-To work in games development you need to be really good at coding, art, storytelling, music, and be an expert at playing games.
+Pour travailler dans le développement de jeux, tu dois être vraiment doué pour le codage, l'art, la narration, la musique, et être un expert en jeux vidéo.
 
 --- choices ---
 
-- ( ) True
+- ( ) Vrai
 
 
   --- feedback ---
 
-  That’s not correct. A games development team needs all of those skills, but they don’t need to be in the same person.
+  Ce n'est pas vrai. Une équipe de développement de jeux a besoin de toutes ces compétences, mais elles ne doivent pas nécessairement se trouver chez la même personne.
 
   --- /feedback ---
 
-- (x) False
+- (x) Faux
 
 
   --- feedback ---
 
-  Correct! Actually games development is usually done by a team of people who specialise in the tasks they really enjoy. It’s great to know a bit about each of these skills, but you don’t need to be brilliant at all of them.
+  Correct ! En fait, le développement de jeux est généralement effectué par une équipe de personnes qui se spécialisent dans les tâches qu'elles aiment vraiment. C'est bien de connaître un peu chacune de ces compétences, mais tu n'as pas besoin d'être brillant dans chacune d'entre elles.
 
   --- /feedback ---
 
