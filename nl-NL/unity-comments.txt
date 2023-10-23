@@ -1,105 +1,105 @@
-QUEST GIVER
+OPDRACHTGEVER
 
-I HAVE A QUEST FOR YOU.
+IK HEB EEN OPDRACHT VOOR JOU.
 
-FIND MY SPACE HELMET AND I'LL GIVE YOU 5 COINS.
+VIND MIJN RUIMTEHELM EN IK GEEF JE 5 MUNTEN.
 
-Snow Raccoon
+Sneeuw Wasbeer
 
-To craft my ice dome I need one more ice block and an ice tool. 
+Om mijn iglo te maken heb ik nog een ijsblok en een ijsgereedschap nodig. 
 
-Will you find them for me?
+Vind je ze voor mij?
 
-Cat
+Kat
 
-Will you find my friend in the party hat and bring them here?
+Vind jij mijn vriend met de feestmuts op en breng je hem hierheen?
 
-Help me clean up thi mounth.
+Help me om je mond schoon te maken.
 
-Bring me the piece of food and I'll give you 10 coins.
+Breng me het eten en ik geef je 10 munten.
 
-Accept
+Accepteren
 
-ACCEPT
+ACCEPTEREN
 
-Start is called before the first frame update
+Start wordt aangeroepen vóór de eerste frame-update
 
-Please help me find my star to get back home. Do you accept?
+Help me alsjeblieft mijn ster te vinden om terug naar huis te gaan. Accepteer je?
 
-Make the quest item appear
+Laat het quest tem verschijnen
 
-Hide the message when the quest has been accepted
+Verberg het bericht wanneer de quest is geaccepteerd
 
-Don't show the button after the quest has been accepted
+Laat de knop niet zien nadat de quest is geaccepteerd
 
-Quest accepted
+Quest geaccepteerd
 
-Or the reward for your quest
+Of de beloning voor je zoektocht
 
-Coins: 
+Munten: 
 
-Update is called once per frame
+Update wordt één keer per frame aangeroepen
 
-Check the tag of the colliding object
+Controleer de tag van het botsende object
 
-Thank you for finding my fishbone. Here's 10 coins for your efforts!
+Bedankt voor het vinden van mijn visgraat. Hier zijn 10 munten voor je inspanningen!
 
-Cat with a Hat
+Kat met een Hoed
 
-Thank you so much for fetching my telescope!
+Hartelijk dank voor het ophalen van mijn telescoop!
 
-Round up the rest of the cars and bring them to the mechanics before it closes.
+Verzamel de rest van de auto's en breng ze naar de garage voordat deze sluit.
 
-I have a quest for you.
+Ik heb een quest voor je.
 
-I've hidden 3 coins, find them and keep them.
+Ik heb 3 munten verstopt, vind en bewaar ze.
 
-Quest giver 2 start
+Opdrachtgever 2 start
 
-Update with the name of your quest
+Update met de naam van je quest
 
-Quest 2 accepted
+Opdracht 2 geaccepteerd
 
-Update with the name of your quest
+Update met de naam van je quest
 
-Don't show the quest message at the start
+Laat het quest bericht niet aan het begin zien
 
-Item on NPC
+Item op NPC
 
-Item on Player
+Item op speler
 
-Transfer item to player for delivery
+Verplaats item naar de speler voor levering
 
-The follower should only follow if the quest has been accepted
+De volger mag alleen volgen als de quest is geaccepteerd
 
-Add a variable to store the amount collected
+Voeg een variabele toe om het verzamelde bedrag op te slaan
 
-Add a variable for each item to be collected
+Voeg een variabele toe voor elk item dat moet worden verzameld
 
-To control when the follower is following the playe
+Om te bepalen wanneer de volger de speler volgt
 
-Follow Player
+Volg Speler
 
-If all the coins have been collected
+Als alle munten zijn verzameld
 
-Well done, you collected the coins!
+Goed gedaan, je hebt de munten verzameld!
 
-Change to a successful completion message
+Verander in een succesvol voltooiingsbericht
 
-Thank you for helping me finish my ice dome. You can climb it if you like.
+Bedankt dat je me hebt geholpen mijn iglo af te maken. Je kunt hem beklimmen als je wilt.
 
-Keep track of gems
+Houd de edelstenen bij
 
-Give a reward to the player
+Geef een beloning aan de speler
 
-Well done. Have a hat!
+Goed gedaan. Draag een hoed!
 
-Thank you for finding my friend.
+Bedankt voor het vinden van mijn vriend.
 
-Make sure the reward can't be given again
+Zorg ervoor dat de beloning niet vaker dan één keer kan worden gegeven
 
-Thank you so much!
+Heel erg bedankt!
 
-Give the reward
+Geef de beloning
 
-Hey, I already gave you a reward.
+Hé, ik heb je al een beloning gegeven.
