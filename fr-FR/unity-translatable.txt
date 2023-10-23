@@ -1,61 +1,61 @@
-Player
+Joueur
 
-QuestGiver
+DonneurQuete
 
-QuestAccepted
+QueteAcceptee
 
-item
+objet
 
 canvas
 
-button
+bouton
 
-QuestSeeker
+ChercheurQuete
 
-coins
+pieces
 
-coinText
+pieceTexte
 
-hasQuestItem
+aObjetQuete
 
-QuestItemController
+ControlleurObjetQuete
 
-collectSound
+sonCollecte
 
 message
 
-QuestGiver2
+DonneurQuete2
 
 Collectables
 
-iceDome
+domeGlace
 
 telescope
 
-playerTelescope
+joueurTelescope
 
-followQuestAccepted
+suivreQueteAcceptee
 
-hasIceBlock
+aBlocGlace
 
-hasIceTool
+aPiolet
 
-friendFollower
+amiSuiveur
 
-IceToolController
+ControleurPiolet
 
-FollowerController
+ControleurSuiveur
 
-followSpeed
+suivreVitesse
 
-followDistance
+suivreDistance
 
-escortQuestAccepted
+escortQueteAcceptee
 
-gems
+gemmes
 
-hat
+chapeau
 
-dogFollowing
+chienSuiveur
 
-unlock
+débloquer
