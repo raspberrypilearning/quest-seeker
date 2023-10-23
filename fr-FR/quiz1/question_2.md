@@ -2,10 +2,10 @@
 --- question ---
 
 ---
-legend: Question 2 of 3
+legend: Question 2 sur 3
 ---
 
-A script on a Quest Giver NPC has the following method:
+Un script sur un PNJ Donneur de quête a la méthode suivante :
 
 --- code ---
 ---
@@ -29,7 +29,7 @@ line_highlights: 9
     }
 --- /code ---
 
-The game has a bug that allows the player to keep collecting more coins by repeatedly colliding with the NPC after completing the quest. Which line of code could you add after giving the reward to fix this?
+Le jeu comporte un bug qui permet au joueur de continuer à collecter plus de pièces en entrant en collision de façon répétée avec le PNJ après avoir terminé la quête. Quelle ligne de code pourrais-tu ajouter après avoir donné la récompense pour résoudre ce problème ?
 
 --- choices ---
 
@@ -40,7 +40,7 @@ player.coins -= 15;
 
   --- feedback ---
 
-  No, that would remove the reward every time it was given, including the first time. The player would never get the reward.
+  Non, cela supprimerait la récompense à chaque fois qu'elle est donnée, y compris la première fois. Le joueur ne recevrait jamais la récompense.
 
   --- /feedback ---
 
@@ -51,7 +51,7 @@ player.hasQuestItem = false;
 
   --- feedback ---
 
-Yes that's correct. The Quest Giver NPC checks whether the Player has the quest item before giving the reward. Setting the `player.hasQuestItem` variable to false will mean that the reward code doesn't run next time the Player collides with the Quest Giver NPC.
+Oui, c'est correct. Le PNJ Donneur de quête vérifie si le joueur possède l'objet de quête avant de lui donner la récompense. En définissant la variable `player.aObjectquete` sur false, le code de récompense ne s'exécutera pas la prochaine fois que le joueur entrera en collision avec le PNJ Donneur de quête.
 
   --- /feedback ---
 
@@ -62,7 +62,7 @@ message.SetText("Hey, I already gave you a reward");
 
   --- feedback ---
 
-No. This would just change the message the player sees. It wouldn't change the reward they are given.
+Non. Cela changerait simplement le message que le joueur voit. Cela ne changerait rien à la récompense qui leur est accordée.
 
   --- /feedback ---
 
