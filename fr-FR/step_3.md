@@ -1,111 +1,111 @@
-## Second quest
+## Deuxième quête
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add another NPC with a different quest and reward. You can choose from different quest types.  
+Ajoute un autre PNJ avec une quête et une récompense différentes. Tu peux choisir parmi différents types de quêtes.  
 </div>
 <div>
-![An animated gif of the Player returning to the Quest Giver with a friend follower. The Quest Giver says thank you.](images/friend-found.gif){:width="300px"}
+![Un gif animé du joueur revenant vers le donneur de quête avec un ami suiveur. Le donneur d'ordre dit merci.](images/friend-found.gif){:width="300px"}
 </div>
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-If quests are revealed and then completed in a specific sequence, this is called <span style="color: #0faeb0">**linear**</span> gameplay or storytelling. If the player can choose the order in which they complete quests, then this is <span style="color: #0faeb0">**non-linear**</span> gameplay. Some games mix linear and non-linear gameplay or storytelling. Quests that must be completed are called **main quests** and optional extra quests are called **side quests**. 
+Si les quêtes sont révélées puis accomplies dans un ordre précis, on parle de gameplay <span style="color: #0faeb0">**linéaire**</span> ou de storytelling. Si le joueur peut choisir l'ordre dans lequel il accomplit les quêtes, il s'agit alors d'un gameplay <span style="color: #0faeb0">**non linéaire**</span>. Certains jeux mélangent un gameplay ou une narration linéaire et non linéaire. Les quêtes qui doivent être accomplies sont appelées **quêtes principales** et les quêtes supplémentaires facultatives sont appelées **quêtes annexes**. 
 </p>
 
 --- task ---
 
-**Design:** Design your second quest. The quests will be **non-linear** so they can be started in any order.
+**Conception :** conçois ta deuxième quête. Les quêtes seront **non linéaires**, elles peuvent donc être commencées dans n'importe quel ordre.
 
-### Quest type
+### Type de quête
 
-You quest could be:
-+ A **gather** quest with multiple items of the same kind
-+ A **recipe** or **crafting** quest with multiple items of different kinds
-+ An **escort** quest where you have to find another NPC and have them follow the player back to the Quest Giver (or to another location)
-+ A **deliver** quest where you are given an object to take to another NPC
-+ A **story** quest where you have to find and talk to another NPC to find out information
-+ A **puzzle** or **task** quest where you have to solve a puzzle or complete a task
+Ta quête pourrait être :
++ Une quête **récolte** avec plusieurs objets de même nature
++ Une quête **recette** ou **artisanat** avec plusieurs objets de différentes sortes
++ Une quête **escorte** où tu dois trouver un autre PNJ et lui demander de suivre le joueur jusqu'au donneur de quête (ou jusqu'à un autre endroit)
++ Une quête **livraison** où l'on te donne un objet à apporter à un autre PNJ
++ Une quête **histoire** où tu dois trouver et parler à un autre PNJ pour obtenir des informations
++ Une quête **énigme** ou **tâche** où tu dois résoudre une énigme ou accomplir une tâche
 
-![A montage of four example quest projects. The first quest is to find a telescope, the second quest is to find multiple different items to make an ice dome, the third is to round up cars and take them to the mechanics, and the fourth is to find three hidden coins.](images/quest-strip2.png)
+![Montage de quatre exemples de projets de quête. La première quête consiste à trouver un télescope, la deuxième à trouver plusieurs objets différents pour fabriquer un dôme de glace, la troisième à rassembler des voitures et à les emmener chez le mécanicien, et la quatrième à trouver trois pièces de monnaie cachées.](images/quest-strip2.png)
 
-### Reward type
+### Type de récompense
 
-The reward could be given by the new Quest Giver or another NPC and could be:
-+ Experience points (XP), reputation, coins, gems, or another in-game currency
-+ An accessory for the Player
-+ Unlocking an new area or item in the game
+La récompense peut être donnée par le nouveau donneur de quête ou un autre PNJ et peut être :
++ Points d'expérience (XP), réputation, pièces, gemmes ou autre monnaie du jeu
++ Un accessoire pour le joueur
++ Déverrouillage d'une nouvelle zone ou d'un nouvel objet dans le jeu
 
-Or, a combination of these.
+Ou une combinaison de ces éléments.
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Software design**</span> is making decisions about how to turn your idea into code. In Unity, this means deciding on the GameObjects, scripts, variables, and methods you will need to build your game or interactive story. 
+<span style="color: #0faeb0">**La conception de logiciels**</span> consiste à prendre des décisions sur la façon de transformer ton idée en code. Dans Unity, cela signifie décider des GameObjects, des scripts, des variables et des méthodes dont tu auras besoin pour construire ton jeu ou ton histoire interactive. 
 </p>
 
-### Quest checklist
+### Checklist de quête
 
-For your quest, you will need to:
-+ Add a new NPC to be the Quest Giver with UI objects to communicate about the quest
-+ Update the QuestSeeker script on the Player with variables to store the state of the new quest
-+ Add items and other NPCs depending on the quest type
-+ Add a script to the Quest Giver NPC to control the conversation and reward based on the state of the quest
-+ Add scripts to items and other NPCs according to the quest type
+Pour ta quête, tu auras besoin de :
++ Ajouter un nouveau PNJ qui sera le donneur de quête avec des objets UI pour communiquer sur la quête
++ Mettre à jour le script QuestSeeker sur le joueur avec des variables pour stocker l'état de la nouvelle quête
++ Ajouter des objets et d'autres PNJ en fonction du type de quête
++ Ajouter un script au PNJ donneur de quête pour contrôler la conversation et la récompense en fonction de l'état de la quête
++ Ajouter des scripts aux objets et autres PNJ en fonction du type de quête
 
 --- task ---
 
-### The Quest Giver
+### Le donneur de quête
 
-Add a new GameObject to be the second Quest Giver NPC.
+Ajoute un nouveau GameObject qui sera le deuxième PNJ Donneur de quête.
 
-**Choose:**
+**Choisir :**
 
 --- collapse ---
 
 ---
-title: Duplicate your first NPC and make changes to it
+title: Dupliquer ton premier PNJ et le modifier
 ---
 
-![An image showing two characters side by side. The first is the original NPC, the second looks the same but has a different coloured body.](images/duplicate-npc.png)
+![Une image montrant deux personnages côte à côte. Le premier est le PNJ original, le second a la même apparence mais a un corps de couleur différente.](images/duplicate-npc.png)
 
-Right-click on the **Quest Giver GameObject** you created for the first quest and select **Duplicate**. This creates a copy of your Quest Giver GameObject with all the child GameObjects.
+Fais un clic droit sur le GameObject **Donneur de quête** que tu as créé pour la première quête et sélectionne **Duplicate**. Cela crée une copie de ton GameObject Donneur de quête avec tous les GameObjects enfants.
 
-The Quest Giver GameObject will be created in the same position, so use the Scene view or Inspector to position it somewhere else.
+Le GameObject Donneur de quête sera créé à la même position, alors utilise la vue Scene ou l'Inspector pour le positionner ailleurs.
 
-Remove the existing QuestGiver script component from the Inspector by clicking on the three dots and selecting **Remove Component**.
+Supprime le composant de script QuestGiver existant de l'Inspector en cliquant sur les trois points et en sélectionnant **Remove Component**.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Add a new Quest Giver NPC GameObject
+title: Ajouter un nouveau GameObject PNJ Donneur de quête
 ---
 
-Choose a model or create a new Quest Giver NPC GameObject out of 3D shapes.
+Choisis un modèle ou crée un nouveau GameObject PNJ Donneur de quête à partir de formes 3D.
 
-![The characters side by side. The first is the Cat model that came with the starter package. The second is a character made from cylinders and capsule 3D shapes.](images/model-shapes.png)
+![Les personnages côte à côte. Le premier est le modèle Cat fourni avec le kit de démarrage. Le deuxième est un personnage composé de cylindres et de capsules en 3D.](images/model-shapes.png)
 
-Add a **Box Collider** so that the Player cannot walk through the new Quest Giver NPC and a second **Box Collider**, that is bigger than the first, with **IsTrigger** checked.
+Ajoute un **Box Collider** pour que le joueur ne puisse pas passer à travers le nouveau PNJ Donneur de quête et un deuxième **Box Collider**, qui est plus grand que le premier, avec **IsTrigger** coché.
 
-Right-click on the **Canvas** for your first NPC and choose **copy**. Then, right-click on your new **Quest Giver NPC** and choose **Paste as Child**. This will make a copy of the UI objects for your new Quest Giver.
+Fais un clic droit sur le **Canvas** de ton premier PNJ et choisis **copy**. Ensuite, fais un clic droit sur ton nouveau **PNJ Donneur de quête** et choisis **Paste as Child**. Cela permet de faire une copie des objets UI pour ton nouveau donneur de quête.
 
 --- /collapse ---
 
-In the Inspector:
-+ Edit the text in the message on your new Quest Giver NPC Canvas to describe your new quest. Change the text style to suit your new character.
-+ Edit the text in the Name object to match your new NPC.
+Dans l'Inspector :
++ Modifie le texte du message de ton nouveau canvas de PNJ Donneur de quête pour décrire ta nouvelle quête. Modifie le style du texte pour l'adapter à ton nouveau personnage.
++ Modifie le texte de l'objet Name pour qu'il corresponde à ton nouveau PNJ.
 
-![A text message in the Game view that has the 'Quest Giver' name in bold yellow font and below it the quest message 'I have a quest for you...' in black font.](images/new-message.png)
+![Un message textuel dans la vue Game qui comporte le nom du « donneur de quête » en caractères jaunes gras et, en dessous, le message de quête « J'ai une quête pour toi... » en caractères noirs.](images/new-message.png)
 
 --- collapse ---
 
 ---
-title: Create a new script for the Quest Giver NPC
+title: Créer un nouveau script pour le PNJ Donneur de quête
 ---
 
-**QuestGiver2** script:
+Script **QuestGiver2** :
 
 --- code ---
 ---
@@ -151,89 +151,89 @@ public class QuestGiver2 : MonoBehaviour
 
 --- /collapse ---
 
-In the Inspector, make sure you are updating the child objects and components for your new Quest Giver NPC, and:
-+ Drag the **Canvas**, **Message**, and **Button** objects to your new script
-+ Select the **Button** and add an **OnClick** set to the `QuestAccepted` method of your new script
+Dans l'Inspector, assure-toi de mettre à jour les objets enfants et les composants de ton nouveau PNJ Donneur de quête, et :
++ Fais glisser les objets **Canvas**, **Message** et **Button** vers ton nouveau script
++ Sélectionne le **Button** et ajoute un **OnClick** défini à la méthode `QueteAcceptee` de ton nouveau script
 
 --- /task ---
 
 --- task ---
 
-**Test:** Play your scene:
-+ Make sure you see the new quest message
-+ Check that you can accept the quest with the button
-+ Check that you can see the debug message in the Console
+**Test :** joue ta scène :
++ Assure-toi de voir le message de la nouvelle quête
++ Vérifie que tu peux accepter la quête à l'aide du bouton
++ Vérifie que tu peux voir le message de débogage dans la console
 
-![The Game view showing a player character and NPC. The NPC collider has triggered the message, character tag, and 'Accept' button to appear.](images/new-quest-accept-message.png)
+![La vue Game montre un joueur et un PNJ. Le collider PNJ a déclenché l'apparition du message, du tag du personnage et du bouton « Accepter ».](images/new-quest-accept-message.png)
 
 --- /task ---
 
 --- task ---
 
-### The quest items and/or NPCs
+### Les objets de quête et/ou les PNJ
 
-Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectables, followers, or rewards and position them in your scene.
+Selon le type de quête que tu as choisi, ajoute ou crée les GameObjects que tu utiliseras comme objets à collecter, suiveurs ou récompenses et positionne-les dans ta scène.
 
-Add a **Box Collider** component to your Item GameObject that is bigger than any other colliders on your Item and check the **IsTrigger** Box Collider property.
+Ajoute un composant **Box Collider** à ton GameObject Item qui est plus grand que tous les autres colliders de ton Item et vérifie la propriété Box Collider **IsTrigger**.
 
-![A strip of animated gifs showing a flame effect particle system, a spinning star, and an animated rat.](images/animation-effects.gif)
+![Une bande de gifs animés montrant un système de particules à effet de flamme, une étoile qui tourne et un rat animé.](images/animation-effects.gif)
 
-**Choose:** Add visual effects to your collectables, followers, or rewards.
+**Choisir :** ajoute des effets visuels à tes objets à collecter, tes suiveurs ou tes récompenses.
 
 [[[unity-particle-system]]]
 
 [[[unity-gameobject-spin]]]
 
 
-You could also add the **IdleWalk** animation or create a new Animator.
+Tu pourrais aussi ajouter l'animation **IdleWalk** ou créer un nouvel Animator.
 
 [[[unity-animation]]]
 
-If your quest has multiple items that need to be deactivated and activated at the same time, then add the same tag to each of them.
+Si ta quête comporte plusieurs éléments qui doivent être désactivés et activés en même temps, alors ajoute le même tag à chacun d'entre eux.
 
 --- collapse ---
 
 ---
-title: Tag your items
+title: Mettre un tag à tes objets
 ---
 
-**Create a new tag:** Go to the Tag property at the top of the Inspector window and **Add Tag**. Click on the **+** and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
+**Créer un nouveau tag :** va dans la propriété Tag en haut de la fenêtre Inspector et **Add Tag**. Clique sur le **+** et ajoute un Tag pour ta quête, par exemple « Quetecle ». Cela te permettra de trouver tous les GameObjects ayant le même Tag afin que tu puisses les activer et les désactiver.
 
-![The tag list showing existing project tags and a button in the bottom right corner marked with a plus sign.](images/add-new-tag.png)
+![La liste des tags montre les tags de projet existants et un bouton dans le coin inférieur droit marqué d'un signe plus.](images/add-new-tag.png)
 
-**Apply your new tag:** Select the GameObjects that are items in this quest in the Hierarchy window and use the Tag drop-down box to select your new tag from the list.
+**Appliquer ton nouveau Tag :** sélectionne les GameObjects qui sont des objets de cette quête dans la fenêtre Hierarchy et utilise la liste déroulante Tag pour sélectionner ton nouveau Tag dans la liste.
 
-![The Hierarchy window with multiple GameObjects selected.](images/multi-items-select.png)
+![La fenêtre Hierarchy avec plusieurs GameObjects sélectionnés.](images/multi-items-select.png)
 
-![The top of the Inspector window with the new tag appearing in the drop-down list of available tags.](images/item-tag-apply.png)
+![La partie supérieure de la fenêtre Inspector avec le nouveau tag apparaissant dans la liste déroulante des tags disponibles.](images/item-tag-apply.png)
 
 --- /collapse ---
 
-**Tip:** If all of your collectables, followers, or rewards will look and act in the same way, make sure you add all your effects before duplicating the first GameObject.
+**Astuce :** si tous tes objets à collecter, tes suiveurs ou tes récompenses auront la même apparence et agiront de la même façon, assure-toi d'ajouter tous tes effets avant de dupliquer le premier GameObject.
 
 --- /task ---
 
-### Controlling the quest
+### Contrôler la quête
 
-Set up the quest using initial visibility, trigger reactions, and tracking of quest states.
+Configure la quête en utilisant la visibilité initiale, les réactions de déclenchement et le suivi des états de la quête.
 
 --- task ---
 
-### Before the quest is accepted
+### Avant que la quête soit acceptée
 
-Set up your quest by hiding any GameObjects that should be hidden until the quest is accepted.
+Mets en place ta quête en cachant tous les GameObjects qui doivent être cachés jusqu'à ce que la quête soit acceptée.
 
-**Choose:**
+**Choisir :**
 
 --- collapse ---
 
 ---
-title: Hide items with the same tag
+title: Cacher les objets avec le même tag
 ---
 
-![The Game view showing multiple identical keys made from 3D shapes.](images/key-multiple.png)
+![La vue Game montre plusieurs clés identiques fabriquées à partir de formes 3D.](images/key-multiple.png)
 
-**QuestGiver2** script
+Script **QuestGiver2**
 
 --- code ---
 ---
@@ -260,12 +260,12 @@ GameObject[] collectables;
 --- collapse ---
 
 ---
-title: Hide individual items
+title: Cacher les objets individuels
 ---
 
-![The Game view showing one key and one telescope both made from 3D shapes.](images/multi-objects.png)
+![La vue Game montre une clé et un télescope, tous deux fabriqués à partir de formes 3D.](images/multi-objects.png)
 
-**QuestGiver2** script
+Script **QuestGiver2**
 
 --- code ---
 ---
@@ -283,19 +283,19 @@ line_highlights:
     }
 --- /code ---
 
-Assign GameObjects to variables in the Unity Editor.
+Attribue des GameObjects à des variables dans l'éditeur Unity.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Set visibility of child items
+title: Définir la visibilité des objets enfants
 ---
 
-![The Game view showing the Cat Player GameObject holding a telescope child GameObject.](images/quest-giver-item.png)
+![La vue Game montre le GameObject Joueur Cat qui tient un GameObject enfant télescope.](images/quest-giver-item.png)
 
-**QuestGiver2** script:
+Script **QuestGiver2** :
 
 --- code ---
 ---
@@ -318,19 +318,19 @@ void Start()
 
 --- task ---
 
-### When quest accepted
+### Lorsque la quête est acceptée
 
-Add a `QuestAccepted` method to your new Quest Giver NPC to set up the quest when it has been accepted. Connect the method to the 'Accept' button for the quest.
+Ajoute une méthode `QueteAcceptee` à ton nouveau PNJ Donneur de quête pour configurer la quête lorsqu'elle a été acceptée. Relie la méthode au bouton « Accepter » de la quête.
 
-**Choose:**
+**Choisir :**
 
 --- collapse ---
 
 ---
-title: Make an individual item appear
+title: Faire apparaître un objet individuel
 ---
 
-`QuestAccepted` method of **QuestGiver2** script:
+Méthode `QueteAcceptee` du script **QuestGiver2** :
 
 --- code ---
 ---
@@ -346,10 +346,10 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Make multiple items with the same tag appear
+title: Faire apparaître plusieurs objets avec le même tag
 ---
 
-`QuestAccepted` method of **QuestGiver2** script:
+Méthode `QueteAcceptee` du script **QuestGiver2** :
 
 --- code ---
 ---
@@ -368,7 +368,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Make a child item appear on the Player
+title: Faire apparaître un objet enfant sur le joueur
 ---
 
 --- code ---
@@ -393,10 +393,10 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Update a variable to say the quest has been accepted
+title: Mettre à jour une variable pour dire que la quête a été acceptée
 ---
 
-**QuestSeeker** script:
+Script **QuestSeeker** :
 
 --- code ---
 ---
@@ -419,23 +419,23 @@ line_highlights:
 
 --- task ---
 
-### During the quest
+### Pendant la quête
 
-Update the **QuestSeeker** script used by the Player with variables to keep track of the status of the quest such as items collected, items delivered, or NPC following.
+Mets à jour le script **QuestSeeker** utilisé par le joueur avec des variables pour garder une trace de l'état de la quête, comme les objets collectés, les objets livrés ou les PNJ qui suivent.
 
-**Choose:**
+**Choisir :**
 
 --- collapse ---
 
 ---
-title: Add variables for multiple items of the same type in a gather quest
+title: Ajouter des variables pour plusieurs objets du même type dans une quête de collecte
 ---
 
-In a gather quest, the player collects multiple items of the same kind.
+Dans une quête de collecte, le joueur collecte plusieurs objets du même type.
 
-![The Game view showing multiple, identical keys made from 3D shapes.](images/key-multiple.png)
+![La vue Game montre plusieurs clés identiques fabriquées à partir de formes 3D.](images/key-multiple.png)
 
-**QuestSeeker** script:
+Script **QuestSeeker** :
 
 --- code ---
 ---
@@ -449,14 +449,14 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Add variables for multiple different items in a craft or recipe quest
+title: Ajouter des variables pour plusieurs objets différents dans une quête d'artisanat ou de recette
 ---
 
-In a recipe or craft quest, the player collects multiple items of different kinds to make a recipe or craft a new item.
+Dans une quête de recette ou d'artisanat, le joueur collecte plusieurs objets de différentes sortes pour créer une recette ou fabriquer un nouvel objet.
 
-![The Game view showing a key and a telescope. Both made from 3D shapes.](images/multi-objects.png)
+![La vue Game montrant une clé et un télescope. Les deux sont en formes 3D.](images/multi-objects.png)
 
-**QuestSeeker** script:
+Script **QuestSeeker** :
 
 --- code ---
 ---
@@ -470,14 +470,14 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Add variables for a follower
+title: Ajouter des variables pour un suiveur
 ---
 
-In an escort quest, the player will need to take a follower with them.
+Dans une quête d'escorte, le joueur devra emmener un suiveur avec lui.
 
-![The Game view showing a dog NPC following behind a Cat Player character.](images/follower-player.png)
+![La vue Game montre un PNJ chien qui suit un joueur chat.](images/follower-player.png)
 
-**QuestSeeker** script:
+Script **QuestSeeker** :
 
 --- code ---
 ---
@@ -492,21 +492,21 @@ line_highlights:
 
 --- task ---
 
-Add a script to each quest item or other NPC involved in the quest so that they react when the Player collides with them.
+Ajoute un script à chaque objet de quête ou autre PNJ impliqué dans la quête pour qu'ils réagissent lorsque le joueur entre en collision avec eux.
 
-You could also check a `bool` variable and only react to the Player if the quest has been accepted.
+Tu pourrais aussi vérifier une variable `bool` et ne réagir au joueur que si la quête a été acceptée.
 
-**Choose:**
+**Choisir :**
 
 --- collapse ---
 
 ---
-title: Gather quest items
+title: Collecter des objets de quête
 ---
 
-Here's an example for a coin collection quest, each coin will need this script.
+Voici un exemple pour une quête de collection de pièces, chaque pièce aura besoin de ce script.
 
-![The Game view showing a gold coin made from cylinders.](images/coin-item.png)
+![La vue Game montre une pièce d'or fabriquée à partir de cylindres.](images/coin-item.png)
 
 --- code ---
 ---
@@ -531,12 +531,12 @@ public class CoinController : MonoBehaviour
 --- collapse ---
 
 ---
-title: Collect recipe or crafting quest items
+title: Collecter des objets de recette ou d'artisanat
 ---
 
-Here's an example for an IceTool, the same project also has a IceBlock collectable GameObject with a similar script.
+Voici un exemple pour un IceTool, le même projet a également un GameObject IceBlock collectable avec un script similaire.
 
-![The Game view showing a grey ice tool made from 3D shapes.](images/ice-tool.png)
+![La vue Game montre un outil de glace grise fabriqué à partir de formes 3D.](images/ice-tool.png)
 
 --- code ---
 ---
@@ -561,12 +561,12 @@ public class IceToolController : MonoBehaviour
 --- collapse ---
 
 ---
-title: Escort quest followers
+title: Escorter des suiveurs de la quête
 ---
 
-Here's an example for a follower, if the same project has other follower GameObjects, they will need the script too.
+Voici un exemple pour un suiveur, si le même projet a d'autres GameObjects suiveurs, ils auront également besoin du script.
 
-![The Game view showing a dog NPC following behind a Cat Player character.](images/follower-player.png)
+![La vue Game montre un PNJ chien qui suit un joueur chat.](images/follower-player.png)
 
 --- code ---
 ---
@@ -602,12 +602,12 @@ public class FollowerController : MonoBehaviour
 --- collapse ---
 
 ---
-title: Make a child item transfer or disappear
+title: Faire transférer ou disparaître un objet enfant
 ---
 
-![The Game view showing a Raccoon and a Rat. The Rat is holding a telescope child GameObject.](images/pass-object-complete.png)
+![La vue Game montre un raton laveur et un rat. Le Rat tient un GameObject enfant télescope.](images/pass-object-complete.png)
 
-On the script for the NPC to receive the item:
+Sur le script pour le PNJ qui recevra l'objet :
 
 --- code ---
 ---
@@ -629,10 +629,10 @@ void OnTriggerEnter(Collider other)
 --- collapse ---
 
 ---
-title: Only react if the player has accepted the quest
+title: Ne réagit que si le joueur a accepté la quête
 ---
 
-**FollowerNPC** script:
+Script **FollowerNPC** :
 
 --- code ---
 ---
@@ -654,18 +654,18 @@ line_highlights:
 
 --- /task ---
 
-### Quest completion
+### Fin de quête
 
-Set up the reaction of the Quest Giver on completion of the quest, apply rewards, and make sure the quest can't be offered again.
+Définis la réaction du donneur de quête à l'issue de la quête, applique les récompenses et fais en sorte que la quête ne puisse pas être proposée à nouveau.
 
 --- task ---
 
-The Quest Giver NPC needs to check for completion of the quest and thank the Player.
+Le PNJ donneur de quête doit vérifier que la quête est terminée et remercier le joueur.
 
 --- collapse ---
 
 ---
-title: Check whether the Player has enough of the same item
+title: Vérifier si le joueur dispose d'une quantité suffisante du même objet
 ---
 
 --- code ---
@@ -686,7 +686,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Check whether the Player has multiple different items
+title: Vérifier si le joueur possède plusieurs objets différents
 ---
 
 --- code ---
@@ -704,23 +704,23 @@ line_highlights:
 
 --- /collapse ---
 
-**Tip:** You can use Boolean AND `&&` and Boolean OR `||` to combine condition checks.
+**Astuce :** tu peux utiliser le Booléen AND `&&` et le Booléen OR `||` pour combiner des vérifications de conditions.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** What happens when your player completes a quest?
+**Choisir :** Que se passe-t-il lorsque ton joueur accomplit une quête ?
 
 --- collapse ---
 
 ---
-title: Currency or experience
+title: Monnaie ou expérience
 ---
 
-You could use coins or a different currency for your game. Or you could reward the player with XP (experience points).
+Tu peux utiliser des pièces de monnaie ou une autre monnaie pour ton jeu. Tu peux aussi récompenser le joueur avec des XP (points d'expérience).
 
-Keep track of currency or points rewards by using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed.
+Garde une trace des récompenses en monnaie ou en points en utilisant une variable dans le script QuestSeeker et demande aux scripts QuestGiver de la mettre à jour lorsqu'une quête est terminée.
 
 
 --- code ---
@@ -737,17 +737,17 @@ line_highlights:
 ---
 player.gems += 2; // Give a reward to the player --- /code ---
 
-![The Game view showing a tooth fairy NPC with quest message 'Help me clean up this mouth. Bring me the piece of food and I'll give you 10 coins'.](images/coin-reward.png)
+![La vue Game montre un PNJ de la petite souris avec le message de quête « Aide-moi à nettoyer cette bouche ». Apporte-moi le morceau de nourriture et je te donnerai 10 pièces ».](images/coin-reward.png)
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: An accessory or follower
+title: Un accessoire ou un suiveur
 ---
 
-You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it to the Inspector.
+Tu pourrais utiliser `SetActive` pour permettre à un objet enfant d'afficher un accessoire tel qu'un chapeau. Tu devras créer une variable publique sur le PNJ Donneur de quête pour stocker l'objet enfant et le faire glisser vers l'Inspector.
 
 --- code ---
 ---
@@ -757,7 +757,7 @@ line_highlights:
 public GameObject hat; --- /code ---
 
 
-Then use `SetActive` when the quest has been completed.
+Utilise ensuite `SetActive` lorsque la quête a été accomplie.
 
 --- code ---
 ---
@@ -766,9 +766,9 @@ line_highlights:
 ---
 hat.SetActive(true) --- /code ---
 
-![The Game view with a Raccon and a Cat. The Cat is wearing a hat and the message says 'Well done. Have a hat!'](images/player-gift.png)
+![La vue Game avec un raton laveur et un chat. Le chat porte un chapeau et le message dit « Bien joué ». Prends un chapeau ! »](images/player-gift.png)
 
-You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player.
+Tu peux aussi faire en sorte qu'un personnage PNJ devienne un suiveur ou un animal de compagnie en changeant la variable qu'il vérifie pour décider s'il doit suivre le joueur.
 
 --- code ---
 ---
@@ -777,23 +777,23 @@ line_highlights:
 ---
 player.dogFollowing = true; --- /code ---
 
-![An animated image showing a Raccoon Player character leading an NPC Cat character back to another NPC Cat charcter with the message 'Thank you for finding my friend'.](images/friend-found.gif)
+![Image animée montrant un joueur raton laveur qui ramène un personnage chat PNJ vers un autre personnage chat PNJ avec le message « Merci d'avoir retrouvé mon ami ».](images/friend-found.gif)
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Unlock
+title: Déblocage
 ---
 
-A type of reward could be to remove a barrier or get access to an area or items that were not available previously.
+Un type de récompense pourrait être la suppression d'un obstacle ou l'accès à une zone ou à des articles qui n'étaient pas disponibles auparavant.
 
-![Side-by-side images of the Game view showing coins trapped behind walls and railings that have different colours to the other walls in the scenes.](images/unlock-areas.png)
+![Images côte à côte de la vue Game montrant des pièces piégées derrière des murs et des rambardes qui ont des couleurs différentes de celles des autres murs des scènes.](images/unlock-areas.png)
 
-Think about the GameObjects you want to remove. Create and apply a new 'Unlock' tag to them.
+Réfléchis aux GameObjects que tu veux supprimer. Créée et applique-leur une nouveau tag « Déblocage ».
 
-Open your QuestGiver script and create a variable to store the Unlock GameObjects:
+Ouvre ton script QuestGiver et crée une variable pour stocker les GameObjects à débloquer :
 
 --- code ---
 ---
@@ -804,7 +804,7 @@ line_highlights:
     public GameObject[] unlock;
 --- /code ---
 
-Add code to the `Start()` method to turn the items on at the start.
+Ajoute du code à la méthode `Start()` pour activer les objets au départ.
 
 --- code ---
 ---
@@ -820,7 +820,7 @@ line_highlights:
         }
 --- /code ---
 
-Create an unlock script and attach it to a new NPC quest ally or to a new unlock item.
+Crée un script de déblocage et attache-le à un nouvel allié de quête PNJ ou à un nouvel objet de déblocage.
 
 --- code ---
 ---
@@ -861,11 +861,11 @@ public class Unlock : MonoBehaviour
 
 
 
-![An animated image showing a Player colliding with the trigger area of an NPC, causing railings in the background to disappear.](images/railing-down.gif)
+![Une image animée montrant un joueur qui entre en collision avec la zone de déclenchement d'un PNJ, ce qui fait disparaître les rampes en arrière-plan.](images/railing-down.gif)
 
-You could also introduce a new NPC quest enemy or a new lock item to replace the barriers.
+Tu pourrais aussi introduire un nouvel ennemi de quête PNJ ou un nouvel objet de blocage pour remplacer les barrières.
 
-![An animated image showing a Player colliding with the trigger area of an enemy NPC, causing a wall in the background to appear.](images/walls-back.gif)
+![Image animée montrant un joueur entrant en collision avec la zone de déclenchement d'un PNJ ennemi, provoquant l'apparition d'un mur en arrière-plan.](images/walls-back.gif)
 
 --- /collapse ---
 
@@ -874,18 +874,18 @@ You could also introduce a new NPC quest enemy or a new lock item to replace the
 
 --- task ---
 
-The second Quest Giver NPC needs to check whether the Player has completed the quest and then give them the reward.
+Le deuxième PNJ Donneur de quête doit vérifier si le joueur a terminé la quête, puis lui donner la récompense.
 
 --- /task ---
 
 --- task ---
 
-Make sure the reward can't be given more than once.
+Assure-toi que la récompense ne peut pas être donnée plus d'une fois.
 
 --- collapse ---
 
 ---
-title: Remove items from the Player
+title: Supprimer des objets du joueur
 ---
 
 --- code ---
@@ -904,7 +904,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Reset quest variables
+title: Réinitialiser les variables de quête
 ---
 --- code ---
 ---
@@ -919,79 +919,79 @@ line_highlights:
 
 --- /task ---
 
-### Debug your quest
+### Déboguer ta quête
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix.
+**Debogage :** il se peut que tu trouves des bogues dans ton projet que tu dois corriger.
 
-Always check the Console for errors in your scripts. Unity gives helpful error messages for lots of common problems and you can often click on the error message to go straight to the problem.
+Vérifie toujours dans la console si tes scripts contiennent des erreurs. Unity donne des messages d'erreur utiles pour de nombreux problèmes courants et tu peux souvent cliquer sur le message d'erreur pour aller directement au problème.
 
 --- collapse ---
 
 ---
-title: My new Quest Giver displays the wrong message
+title: Mon nouveau donneur de quête affiche le mauvais message
 ---
 
-Select the Quest Giver and find its script component. Make sure that the correct GameObjects (the ones for this quest that are child objects of the Quest Giver) are used. If you click on an attached GameObject in the Inspector then that object will be highlighted in the Hierarchy.
+Sélectionne le donneur de quête et trouve son composant de script. Assure-toi que les bons GameObjects (ceux de cette quête qui sont des objets enfants du donneur de quête) sont utilisés. Si tu cliques sur un GameObject attaché dans l'Inspector, cet objet sera mis en évidence dans Hierarchy.
 
-Check that you have changed:
-+ The quest text in the Message TextMeshPro GameObject
-+ The quest completion text in the `OnTriggerEnter` method that gets set when the quest is completed
+Vérifie que tu as bien changé :
++ Le texte de la quête dans le message GameObject TextMeshPro
++ Le texte de fin de quête dans la méthode `OnTriggerEnter` qui est défini lorsque la quête est terminée
 
-If the Quest Giver isn't showing the quest complete message when you think the quest has been completed, then check your code carefully. Are you correctly updating the quest state in the QuestSeeker script and correctly checking it in the QuestGiver script for this Quest Giver?
+Si le donneur de quête n'affiche pas le message de fin de quête alors que tu penses que la quête est terminée, alors vérifie bien ton code. Mets-tu correctement à jour l'état de la quête dans le script QuestSeeker et vérifies-tu correctement l'état de la quête dans le script QuestGiver pour ce donneur de quête ?
 
-Add `Debug.Log()` statements and check that the values change in the Inspector during Play mode when you expect them to.
+Ajoute des déclarations `Debug.Log()` et vérifie que les valeurs changent dans l'Inspector en mode Play comme prévu.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Nothing happens when I click the Accept button
+title: Rien ne se passe quand je clique sur le bouton Accepter
 ---
 
-Select your Quest Giver NPC and make sure they have a script that has an `AcceptQuest` method.
+Sélectionne ton PNJ Donneur de quête et assure-toi qu'il a un script qui a une méthode `AccepterQuete`.
 
-Check that all the variables are set on the script in the Inspector.
+Vérifie que toutes les variables sont définies sur le script dans l'Inspector.
 
-Click on the **Button** object and check that you have attached the correct method such as `AcceptQuest` to an **OnClick Event**.
+Clique sur l'objet **Button** et vérifie que tu as attaché la bonne méthode telle que `AccepterQuete` à un événement **OnClick**.
 
-Add a `Debug.Log("Quest accepted");` line to the method and check the Console to see that the method is being called.
+Ajoute une ligne `Debug.Log("Quête acceptée");` à la méthode et vérifie dans la Console que la méthode est bien appelée.
 
-If you are sure the method is being called, check that the code in the method is correct.
+Si tu es sûr que la méthode est appelée, vérifie que le code de la méthode est correct.
 
-If the method is not being called (no Debug output), then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this, then button-clicks won't be handled. If it's missing, right-click in the Hierarchy and choose **UI** then **Event System**.
+Si la méthode n'est pas appelée (pas de sortie Debug), alors vérifie que tu as un GameObject `EventSystem` dans ton projet. Si tu le supprimes accidentellement, les clics sur les boutons ne seront pas pris en compte. S'il est manquant, fais un clic droit dans Hierarchy et choisis **UI** puis **Event System**.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: My collectable doesn't disappear
+title: Mon collectable ne disparaît pas
 ---
 
-Check that the collectable has a script with an `OnTriggerEnter` method that deactivates the collectable if the Player collides with it.
+Vérifie que le collectable possède un script avec une méthode `OnTriggerEnter` qui désactive le collectable si le joueur entre en collision avec lui.
 
-Make sure you have added a Box Collider with a Trigger and that the collider is bigger than the non-trigger colliders so that the Player is able to trigger it.
+Assure-toi d'avoir ajouté un Box Collider avec un Trigger et que le collider est plus grand que tous les colliders sans trigger afin que le joueur puisse le déclencher.
 
-Check that the Player GameObject has the Player tag.
+Vérifie que le GameObject Joueur possède le tag Joueur.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: My follower doesn't follow
+title: Mon suiveur ne suit pas
 ---
 
-Check that you have added a Character Controller component and a script to control the follower's movement.
+Vérifie que tu as ajouté un composant Character Controller et un script pour contrôler le mouvement du suiveur.
 
-Make sure that the script has access to the Player, if you are using a public variable for the Player then check that you have assigned it in the Inspector.
+Si tu utilises une variable publique pour le joueur, vérifie que tu l'as bien assignée dans l'Inspector.
 
-Check that the conditions to follow the player are true. Use `Debug.Log()` statements and check variables in the Inspector.
+Vérifie que les conditions pour suivre le joueur sont vraies. Utilise les instructions `Debug.Log()` et vérifie les variables dans l'Inspector.
 
-Make sure that the follower is detecting the collision with the player. Make sure the follower has a Box Collider with a Trigger and that this collider is bigger than other colliders.
+Assure-toi que le suiveur détecte la collision avec le joueur. Assure-toi que le suiveur a un Box Collider avec un Trigger et que ce collider est plus grand que les autres.
 
 --- /collapse ---
 
