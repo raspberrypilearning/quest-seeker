@@ -1,5 +1,5 @@
-## What next?
+## Wat kun je verder nog doen?
 
-If you are following the [Introduction to Unity](https://projects.raspberrypi.org/en/raspberrypi/unity-intro){:target='_blank'} path, you can move on to the [3D adventure](https://projects.raspberrypi.org/en/projects/3d-adventure){:target='_blank'} project. In this project, you will create a 3D adventure with a goal that the player needs to achieve. Your 3D adventure could be a game, a virtual world, or a visual novel with a goal and one or more endings.
+Als je het [Inleiding tot Unity](https://projects.raspberrypi.org/en/raspberrypi/unity-intro){:target='_blank'}-pad volgt, kun je doorgaan naar het [ 3D Avontuur](https://projects.raspberrypi.org/en/projects/3d-adventure){:target='_blank'}-project. In dit project ga je een 3D-avontuur maken met een doel dat de speler moet bereiken. Je 3D-avontuur kan een spel, een virtuele wereld of een visuele roman zijn met een doel en een of meer einden.
 
 <iframe allowtransparency="true" width="710" height="450" src="https://raspberrypilearning.github.io/unity-webgl/minigames/" frameborder="0"></iframe>
