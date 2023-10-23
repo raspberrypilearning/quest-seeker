@@ -1,111 +1,111 @@
-## Second quest
+## Tweede quest
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add another NPC with a different quest and reward. You can choose from different quest types.  
+Voeg nog een NPC toe met een andere quest en beloning. Je kunt uit verschillende soorten opdrachten kiezen.  
 </div>
 <div>
-![An animated gif of the Player returning to the Quest Giver with a friend follower. The Quest Giver says thank you.](images/friend-found.gif){:width="300px"}
+![Een gif van de Speler die terugkeert naar de Opdrachtgever met een vriendelijke volger. De Opdrachtgever zegt dankjewel.](images/friend-found.gif){:width="300px"}
 </div>
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-If quests are revealed and then completed in a specific sequence, this is called <span style="color: #0faeb0">**linear**</span> gameplay or storytelling. If the player can choose the order in which they complete quests, then this is <span style="color: #0faeb0">**non-linear**</span> gameplay. Some games mix linear and non-linear gameplay or storytelling. Quests that must be completed are called **main quests** and optional extra quests are called **side quests**. 
+Als quests worden onthuld en vervolgens in een bepaalde reeks worden voltooid, heet dit <span style="color: #0faeb0">**lineair**</span> gameplay of storytelling. Als de speler de volgorde kan kiezen waarin hij de quests uitvoert, dan is dit <span style="color: #0faeb0">**niet-lineair**</span> gameplay. Sommige games mixen lineair en niet-lineair gameplay of storytelling. Opdrachten die moeten worden voltooid worden **main quests** genoemd en optionele opdrachten worden **side quests** genoemd. 
 </p>
 
 --- task ---
 
-**Design:** Design your second quest. The quests will be **non-linear** so they can be started in any order.
+**Ontwerp:** Ontwerp je tweede quest. De opdrachten zullen **niet-lineair** zijn zodat ze in elke volgorde kunnen worden gestart.
 
-### Quest type
+### Opdracht type
 
-You quest could be:
-+ A **gather** quest with multiple items of the same kind
-+ A **recipe** or **crafting** quest with multiple items of different kinds
-+ An **escort** quest where you have to find another NPC and have them follow the player back to the Quest Giver (or to another location)
-+ A **deliver** quest where you are given an object to take to another NPC
-+ A **story** quest where you have to find and talk to another NPC to find out information
-+ A **puzzle** or **task** quest where you have to solve a puzzle or complete a task
+Je quest zou kunnen zijn:
++ Een **verzamel** quest met meerdere voorwerpen van hetzelfde type
++ Een **recept** of **bouw** opdracht met meerdere items van verschillende soorten
++ Een **begeleid** quest waar je een andere NPC moet vinden en deze de speler terug laat volgen naar de Opdrachtgever (of naar een andere locatie)
++ Een **bezorg** quest waar je een object krijgt om naar een andere NPC te brengen
++ Een **story** quest waar je een andere NPC moet vinden en met andere NPC moet communiceren om meer informatie te krijgen
++ Een **puzzel** of **taak** quest waar je een puzzel moet oplossen of een taak moet voltooien
 
-![A montage of four example quest projects. The first quest is to find a telescope, the second quest is to find multiple different items to make an ice dome, the third is to round up cars and take them to the mechanics, and the fourth is to find three hidden coins.](images/quest-strip2.png)
+![Een montage van vier voorbeeld quest projecten. De eerste quest is het vinden van een telescoop, de tweede het vinden van meerdere verschillende voorwerpen om een iglo te maken, de derde is het verzamelen van auto's en deze meenemen naar de garage, en de vierde is het vinden van drie verborgen munten.](images/quest-strip2.png)
 
-### Reward type
+### Soort beloning
 
-The reward could be given by the new Quest Giver or another NPC and could be:
-+ Experience points (XP), reputation, coins, gems, or another in-game currency
-+ An accessory for the Player
-+ Unlocking an new area or item in the game
+De beloning kan gegeven worden door de nieuwe Opdrachtgever of een andere NPC en kan zijn:
++ Ervaringspunten (XP), reputatie, munten, edelstenen of een andere in-game valuta
++ Een accessoire voor de speler
++ Een nieuw gebied of item in het spel ontgrendelen
 
-Or, a combination of these.
+Of een combinatie hiervan.
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Software design**</span> is making decisions about how to turn your idea into code. In Unity, this means deciding on the GameObjects, scripts, variables, and methods you will need to build your game or interactive story. 
+<span style="color: #0faeb0">**Softwareontwerp**</span> is het nemen van beslissingen over hoe je jouw idee in code omzet. In Unity betekent dit dat je moet beslissen over de GameObjects, scripts, variabelen en methoden die je nodig hebt om je game of interactieve verhaal te bouwen. 
 </p>
 
-### Quest checklist
+### Quest-checklist
 
-For your quest, you will need to:
-+ Add a new NPC to be the Quest Giver with UI objects to communicate about the quest
-+ Update the QuestSeeker script on the Player with variables to store the state of the new quest
-+ Add items and other NPCs depending on the quest type
-+ Add a script to the Quest Giver NPC to control the conversation and reward based on the state of the quest
-+ Add scripts to items and other NPCs according to the quest type
+Voor elk niveau, moet je:
++ Een nieuwe NPC toevoegen als Opdrachtgever met UI-objecten om over de opdracht te communiceren
++ Het QuestZoeker-script op de speler bijwerken met variabelen om de status van de nieuwe quest op te slaan
++ Items en andere NPC's toevoegen, afhankelijk van het type quest
++ Een script toevoegen aan de Opdrachtgever NPC om het gesprek te besturen en te belonen op basis van de status van de quest
++ Scripts toevoegen aan Items en andere NPC's afhankelijk van het type quest
 
 --- task ---
 
-### The Quest Giver
+### De Opdrachtgever
 
-Add a new GameObject to be the second Quest Giver NPC.
+Voeg een nieuw GameObject toe om de tweede Opdrachtgever NPC aan te maken.
 
-**Choose:**
+**Kies:**
 
 --- collapse ---
 
 ---
-title: Duplicate your first NPC and make changes to it
+title: Dupliceer je eerste NPC en verander het
 ---
 
-![An image showing two characters side by side. The first is the original NPC, the second looks the same but has a different coloured body.](images/duplicate-npc.png)
+![Een afbeelding met twee personages naast elkaar. De eerste is de originele NPC, de tweede ziet er hetzelfde uit maar heeft een ander gekleurd lichaam.](images/duplicate-npc.png)
 
-Right-click on the **Quest Giver GameObject** you created for the first quest and select **Duplicate**. This creates a copy of your Quest Giver GameObject with all the child GameObjects.
+Klik met de rechtermuisknop op het **Opdrachtgever GameObject** dat je hebt gemaakt voor de eerste opdracht en selecteer **Duplicate**. Dit maakt een kopie van je OpdrachtGever GameObject inclusief alle onderliggende GameObjects.
 
-The Quest Giver GameObject will be created in the same position, so use the Scene view or Inspector to position it somewhere else.
+Het Opdrachtgever GameObject zal worden aangemaakt op dezelfde positie, dus gebruik de Scèneweergave of Inspector om het ergens anders te plaatsen.
 
-Remove the existing QuestGiver script component from the Inspector by clicking on the three dots and selecting **Remove Component**.
+Verwijder de bestaande OpdrachtGever-scriptcomponent uit de Inspector door op de drie stippen te klikken en **Remove Component** te selecteren.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Add a new Quest Giver NPC GameObject
+title: Voeg een nieuw Opdrachtgever NPC GameObject toe
 ---
 
-Choose a model or create a new Quest Giver NPC GameObject out of 3D shapes.
+Kies een model of maak een nieuw Opdrachtgever NPC GameObject uit 3D-vormen.
 
-![The characters side by side. The first is the Cat model that came with the starter package. The second is a character made from cylinders and capsule 3D shapes.](images/model-shapes.png)
+![De personages naast elkaar. De eerste is het Cat-model dat bij het starterpakket werd geleverd. De tweede is een personage gemaakt van cilinders en capsule-3D-vormen.](images/model-shapes.png)
 
-Add a **Box Collider** so that the Player cannot walk through the new Quest Giver NPC and a second **Box Collider**, that is bigger than the first, with **IsTrigger** checked.
+Voeg een **Box Collider** toe zodat de speler niet door de nieuwe Opdrachtgever NPC kan lopen en een tweede **Box Collider**, die groter is dan de eerste, waarbij **IsTrigger** wordt aangevinkt.
 
-Right-click on the **Canvas** for your first NPC and choose **copy**. Then, right-click on your new **Quest Giver NPC** and choose **Paste as Child**. This will make a copy of the UI objects for your new Quest Giver.
+Klik met de rechtermuisknop op de **Canvas** voor je eerste NPC en kies **copy**. Klik met de rechtermuisknop op je **Opdrachtgever NPC** en kies **Paste as Child**. Dit maakt een kopie van de UI objecten van je nieuwe Opdrachtgever.
 
 --- /collapse ---
 
-In the Inspector:
-+ Edit the text in the message on your new Quest Giver NPC Canvas to describe your new quest. Change the text style to suit your new character.
-+ Edit the text in the Name object to match your new NPC.
+In de inspector:
++ Bewerk de tekst in het bericht op je nieuwe Opdrachtgever NPC Canvas om je nieuwe opdracht te beschrijven. Gebruik een tekststijl die past bij je nieuwe personage.
++ Bewerk de tekst in het Name object zodat deze overeenkomt met je nieuwe NPC.
 
-![A text message in the Game view that has the 'Quest Giver' name in bold yellow font and below it the quest message 'I have a quest for you...' in black font.](images/new-message.png)
+![Een tekstbericht in de spelweergave met de naam 'Opdrachtgever' in vetgedrukt geel lettertype en daaronder het bericht 'Ik heb een opdracht voor jou...' in zwart lettertype.](images/new-message.png)
 
 --- collapse ---
 
 ---
-title: Create a new script for the Quest Giver NPC
+title: Maak een nieuw script voor de Opdrachtgever NPC
 ---
 
-**QuestGiver2** script:
+**OpdrachtGever2** -script:
 
 --- code ---
 ---
@@ -151,96 +151,96 @@ public class QuestGiver2 : MonoBehaviour
 
 --- /collapse ---
 
-In the Inspector, make sure you are updating the child objects and components for your new Quest Giver NPC, and:
-+ Drag the **Canvas**, **Message**, and **Button** objects to your new script
-+ Select the **Button** and add an **OnClick** set to the `QuestAccepted` method of your new script
+Zorg ervoor dat je in de Inspector de onderliggende objecten en componenten voor je nieuwe Opdrachtgever NPC bijwerkt, en:
++ Sleep de **Canvas**, **Message**en **Button** objecten naar je nieuwe script
++ Selecteer de **Button** en voeg een **onClik** toe die is ingesteld op de `OpdrachtGeaccepteerd` methode van je nieuwe script
 
 --- /task ---
 
 --- task ---
 
-**Test:** Play your scene:
-+ Make sure you see the new quest message
-+ Check that you can accept the quest with the button
-+ Check that you can see the debug message in the Console
+**Test:** Speel je scène af:
++ Zorg ervoor dat je het nieuwe opdracht bericht ziet
++ Controleer of je de quest kunt accepteren met de knop
++ Controleer of je het debug bericht in de Console kunt zien
 
-![The Game view showing a player character and NPC. The NPC collider has triggered the message, character tag, and 'Accept' button to appear.](images/new-quest-accept-message.png)
+![De Game weergave toont een speler personage en een NPC. De NPC collider heeft het bericht, de character tag en de 'Accepteren' knop geactiveerd om te verschijnen.](images/new-quest-accept-message.png)
 
 --- /task ---
 
 --- task ---
 
-### The quest items and/or NPCs
+### De quest items en/of NPC's
 
-Depending on the type of quest you have chosen, add or create the GameObjects that you will use as collectables, followers, or rewards and position them in your scene.
+Afhankelijk van het type quest dat je hebt gekozen, maak je GameObjects of voeg ze toe, die je als prijzen, volgers, of beloningen gaat gebruiken en plaats ze in je scène.
 
-Add a **Box Collider** component to your Item GameObject that is bigger than any other colliders on your Item and check the **IsTrigger** Box Collider property.
+Voeg een **Box Collider** component toe aan je Item GameObject die groter is dan alle andere colliders op je Item en controleer de eigenschap **IsTrigger** van de Box Collider.
 
-![A strip of animated gifs showing a flame effect particle system, a spinning star, and an animated rat.](images/animation-effects.gif)
+![Een strook van gifs met een vlameffect particle systeem, een draaiende ster en een geanimeerde rat.](images/animation-effects.gif)
 
-**Choose:** Add visual effects to your collectables, followers, or rewards.
+**Kies:** Voeg visuele effecten toe aan je verzamelobjecten, volgers of beloningen.
 
 [[[unity-particle-system]]]
 
 [[[unity-gameobject-spin]]]
 
 
-You could also add the **IdleWalk** animation or create a new Animator.
+Je kunt ook de **IdleWalk** animatie toevoegen of een nieuwe Animator maken.
 
 [[[unity-animation]]]
 
-If your quest has multiple items that need to be deactivated and activated at the same time, then add the same tag to each of them.
+Als je quest meerdere items heeft die moeten worden gedeactiveerd en tegelijkertijd geactiveerd voeg dan dezelfde tag toe aan elk van hen.
 
 --- collapse ---
 
 ---
-title: Tag your items
+title: Label je items
 ---
 
-**Create a new tag:** Go to the Tag property at the top of the Inspector window and **Add Tag**. Click on the **+** and add a tag for your quest, for example 'KeyQuest'. This will allow you to find all the GameObjects with the same tag so you can activate and deactivate them.
+**Maak een nieuwe tag aan:** Ga naar de Tag eigenschap bovenaan het Inspector venster en kiest **Add Tag**. Klik op de **+** en voeg een tag toe voor jouw quest, bijvoorbeeld 'KeyQuest'. Hierdoor kun je alle GameObjects met dezelfde tag vinden, zodat je ze kunt activeren en deactiveren.
 
-![The tag list showing existing project tags and a button in the bottom right corner marked with a plus sign.](images/add-new-tag.png)
+![De taglijst toont bestaande projecttags en een knop in de rechterbenedenhoek gemarkeerd met een plus teken.](images/add-new-tag.png)
 
-**Apply your new tag:** Select the GameObjects that are items in this quest in the Hierarchy window and use the Tag drop-down box to select your new tag from the list.
+**Pas je nieuwe tag toe:** Selecteer de GameObjects die items zijn in deze quest in het Hierarchy-venster en gebruik de Tag keuzelijst om je nieuwe tag uit de lijst te selecteren.
 
-![The Hierarchy window with multiple GameObjects selected.](images/multi-items-select.png)
+![Het Hierarchy venster met meerdere GameObjects geselecteerd.](images/multi-items-select.png)
 
-![The top of the Inspector window with the new tag appearing in the drop-down list of available tags.](images/item-tag-apply.png)
+![De bovenkant van het Inspector-venster met de nieuwe tag verschijnt in de drop-down lijst met beschikbare tags.](images/item-tag-apply.png)
 
 --- /collapse ---
 
-**Tip:** If all of your collectables, followers, or rewards will look and act in the same way, make sure you add all your effects before duplicating the first GameObject.
+**Tip:** Als al je verzamelobjecten, volgers of beloningen er hetzelfde uitzien en zich hetzelfde gedragen, zorg er dan voor dat je al je effecten toevoegt voordat je het eerste GameObject dupliceert.
 
 --- /task ---
 
-### Controlling the quest
+### De quest besturen
 
-Set up the quest using initial visibility, trigger reactions, and tracking of quest states.
+Stel de quest op met de initiële zichtbaarheid, trigger reacties en het volgen van de quest statussen.
 
 --- task ---
 
-### Before the quest is accepted
+### Voordat de quest wordt geaccepteerd
 
-Set up your quest by hiding any GameObjects that should be hidden until the quest is accepted.
+Stel je quest in door alle spelobjecten te verbergen die verborgen moeten worden totdat de quest is geaccepteerd.
 
-**Choose:**
+**Kies:**
 
 --- collapse ---
 
 ---
-title: Hide items with the same tag
+title: Verberg items met dezelfde tag
 ---
 
-![The Game view showing multiple identical keys made from 3D shapes.](images/key-multiple.png)
+![De Game weergave toont meerdere identieke sleutels gemaakt van 3D vormen.](images/key-multiple.png)
 
-**QuestGiver2** script
+**OpdrachtGever2** -script
 
 --- code ---
 ---
 language: csharp filename: QuestGiver2.cs line_numbers: false line_number_start:
 line_highlights:
 ---
-GameObject[] collectables;
+GameObject[] verzamelobjecten;
 
     // Start is called before the first frame update
     void Start()
@@ -260,12 +260,12 @@ GameObject[] collectables;
 --- collapse ---
 
 ---
-title: Hide individual items
+title: Afzonderlijke items verbergen
 ---
 
-![The Game view showing one key and one telescope both made from 3D shapes.](images/multi-objects.png)
+![De Game weergave toont één sleutel en één telescoop beide gemaakt van 3D vormen.](images/multi-objects.png)
 
-**QuestGiver2** script
+**OpdrachtGever2** -script
 
 --- code ---
 ---
@@ -283,19 +283,19 @@ line_highlights:
     }
 --- /code ---
 
-Assign GameObjects to variables in the Unity Editor.
+GameObjects toewijzen aan variabelen in de Unity Editor.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Set visibility of child items
+title: Stel zichtbaarheid in voor onderliggende items
 ---
 
-![The Game view showing the Cat Player GameObject holding a telescope child GameObject.](images/quest-giver-item.png)
+![Het Game weergave van het Cat Speler GameObject met een telescoop onderliggend GameObject.](images/quest-giver-item.png)
 
-**QuestGiver2** script:
+**OpdrachtGever2** -script:
 
 --- code ---
 ---
@@ -318,19 +318,19 @@ void Start()
 
 --- task ---
 
-### When quest accepted
+### Wanneer de quest geaccepteerd wordt
 
-Add a `QuestAccepted` method to your new Quest Giver NPC to set up the quest when it has been accepted. Connect the method to the 'Accept' button for the quest.
+Voeg een `OpdrachtGeaccepteerd` methode toe aan je nieuwe Opdrachtgever NPC om de quest in te stellen zetten wanneer deze geaccepteerd is. Verbind de methode met de knop 'Accepteren' voor de quest.
 
-**Choose:**
+**Kies:**
 
 --- collapse ---
 
 ---
-title: Make an individual item appear
+title: laat een afzonderlijk item verschijnen
 ---
 
-`QuestAccepted` method of **QuestGiver2** script:
+`OpdrachtGeaccepteerd` methode van **OpdrachtGever2** script:
 
 --- code ---
 ---
@@ -346,10 +346,10 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Make multiple items with the same tag appear
+title: Laat meerdere items met dezelfde tag verschijnen
 ---
 
-`QuestAccepted` method of **QuestGiver2** script:
+`OpdrachtGeaccepteerd` methode van **OpdrachtGever2** script:
 
 --- code ---
 ---
@@ -368,7 +368,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Make a child item appear on the Player
+title: Laat een onderliggend item op de Speler verschijnen
 ---
 
 --- code ---
@@ -393,10 +393,10 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Update a variable to say the quest has been accepted
+title: Update een variabele om aan te geven dat de quest is geaccepteerd
 ---
 
-**QuestSeeker** script:
+**OpdrachtGever** -script:
 
 --- code ---
 ---
@@ -419,23 +419,23 @@ line_highlights:
 
 --- task ---
 
-### During the quest
+### Tijdens de quest
 
-Update the **QuestSeeker** script used by the Player with variables to keep track of the status of the quest such as items collected, items delivered, or NPC following.
+Update het **QuestZoeker** -script dat door de speler wordt gebruikt met variabelen om de status van de quest bij te houden, zoals verzamelde items, afgeleverde items of het aantal volgende NPC's.
 
-**Choose:**
+**Kies:**
 
 --- collapse ---
 
 ---
-title: Add variables for multiple items of the same type in a gather quest
+title: Voeg variabelen toe voor meerdere items van hetzelfde type in een verzamel quest
 ---
 
-In a gather quest, the player collects multiple items of the same kind.
+Bij een verzamel quest verzamelt de speler meerdere items van dezelfde soort.
 
-![The Game view showing multiple, identical keys made from 3D shapes.](images/key-multiple.png)
+![De Game weergave toont meervoudige, identieke toetsen gemaakt uit 3D-vormen.](images/key-multiple.png)
 
-**QuestSeeker** script:
+**OpdrachtGever** -script:
 
 --- code ---
 ---
@@ -449,14 +449,14 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Add variables for multiple different items in a craft or recipe quest
+title: Voeg variabelen toe voor meerdere verschillende items in een bouw- of recepten quest
 ---
 
-In a recipe or craft quest, the player collects multiple items of different kinds to make a recipe or craft a new item.
+Bij een recepten- of bouwquest verzamelt de speler meerdere items van verschillende soorten om een recept te maken of een nieuw item te maken.
 
-![The Game view showing a key and a telescope. Both made from 3D shapes.](images/multi-objects.png)
+![De Game weergave toont een sleutel en een telescoop. Beiden gemaakt van 3D-vormen.](images/multi-objects.png)
 
-**QuestSeeker** script:
+**OpdrachtGever** -script:
 
 --- code ---
 ---
@@ -470,14 +470,14 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Add variables for a follower
+title: Voeg variabelen toe voor een volger
 ---
 
-In an escort quest, the player will need to take a follower with them.
+In een begeleid quest zal de speler een volger mee moeten nemen.
 
-![The Game view showing a dog NPC following behind a Cat Player character.](images/follower-player.png)
+![De Game weergave van een hond NPC die een Cat Player personage volgt.](images/follower-player.png)
 
-**QuestSeeker** script:
+**OpdrachtGever** -script:
 
 --- code ---
 ---
@@ -492,21 +492,21 @@ line_highlights:
 
 --- task ---
 
-Add a script to each quest item or other NPC involved in the quest so that they react when the Player collides with them.
+Voeg een script toe aan elk quest item of andere NPC die bij de quest betrokken is, zodat ze reageren wanneer de speler ermee in botsing komt.
 
-You could also check a `bool` variable and only react to the Player if the quest has been accepted.
+Je kunt ook een variabele `bool` aanvinken en alleen op de Speler reageren als de quest is geaccepteerd.
 
-**Choose:**
+**Kies:**
 
 --- collapse ---
 
 ---
-title: Gather quest items
+title: Verzamel quest items
 ---
 
-Here's an example for a coin collection quest, each coin will need this script.
+Hier is een voorbeeld voor een munten verzamelen quest, waarbij elke munt dit script nodig heeft.
 
-![The Game view showing a gold coin made from cylinders.](images/coin-item.png)
+![Het Game weergave van een gouden munt gemaakt van cilinders.](images/coin-item.png)
 
 --- code ---
 ---
@@ -531,12 +531,12 @@ public class CoinController : MonoBehaviour
 --- collapse ---
 
 ---
-title: Collect recipe or crafting quest items
+title: Verzamel ingrediënten of maak een item quest
 ---
 
-Here's an example for an IceTool, the same project also has a IceBlock collectable GameObject with a similar script.
+Hier is een voorbeeld voor een IJsGereedschap, hetzelfde project heeft ook een IJsblok-verzamelbaar GameObject met een soortgelijk script.
 
-![The Game view showing a grey ice tool made from 3D shapes.](images/ice-tool.png)
+![De Game weergave toont een grijs ijsgereedschap gemaakt van 3D vormen.](images/ice-tool.png)
 
 --- code ---
 ---
@@ -561,12 +561,12 @@ public class IceToolController : MonoBehaviour
 --- collapse ---
 
 ---
-title: Escort quest followers
+title: Begeleid quest volgers
 ---
 
-Here's an example for a follower, if the same project has other follower GameObjects, they will need the script too.
+Hier is een voorbeeld voor een volger. Als hetzelfde project andere GameObjects van volgers heeft, hebben zij het script ook nodig.
 
-![The Game view showing a dog NPC following behind a Cat Player character.](images/follower-player.png)
+![De Game weergave van een hond NPC die een Cat Player personage volgt.](images/follower-player.png)
 
 --- code ---
 ---
@@ -602,12 +602,12 @@ public class FollowerController : MonoBehaviour
 --- collapse ---
 
 ---
-title: Make a child item transfer or disappear
+title: Laat een onderliggend item overbrengen of verdwijnen
 ---
 
-![The Game view showing a Raccoon and a Rat. The Rat is holding a telescope child GameObject.](images/pass-object-complete.png)
+![De spelweergave toont een Raccoon en een Rat. De Rat houdt een telescoop onderliggend GameObject vast.](images/pass-object-complete.png)
 
-On the script for the NPC to receive the item:
+In het script voor de NPC om het item te ontvangen:
 
 --- code ---
 ---
@@ -629,10 +629,10 @@ void OnTriggerEnter(Collider other)
 --- collapse ---
 
 ---
-title: Only react if the player has accepted the quest
+title: Reageer alleen als de speler de quest heeft geaccepteerd
 ---
 
-**FollowerNPC** script:
+**VolgerNPC** -script:
 
 --- code ---
 ---
@@ -654,18 +654,18 @@ line_highlights:
 
 --- /task ---
 
-### Quest completion
+### Quest voltooid
 
-Set up the reaction of the Quest Giver on completion of the quest, apply rewards, and make sure the quest can't be offered again.
+Zorg voor de reactie van de Opdrachtgever na voltooiing van de quest, pas beloningen toe en zorg ervoor dat de quest niet opnieuw kan worden aangeboden.
 
 --- task ---
 
-The Quest Giver NPC needs to check for completion of the quest and thank the Player.
+De Opdrachtgever NPC moet controleren of de quest is voltooid en de speler bedanken.
 
 --- collapse ---
 
 ---
-title: Check whether the Player has enough of the same item
+title: Controleer of de Speler genoeg van hetzelfde item verzameld heeft
 ---
 
 --- code ---
@@ -686,7 +686,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Check whether the Player has multiple different items
+title: Controleer of de Speler meerdere verschillende items heeft verzameld
 ---
 
 --- code ---
@@ -704,23 +704,23 @@ line_highlights:
 
 --- /collapse ---
 
-**Tip:** You can use Boolean AND `&&` and Boolean OR `||` to combine condition checks.
+**Tip:** Je kunt Boolean AND `&&` en Boolean OF `||` gebruiken om voorwaardelijke controles te combineren.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** What happens when your player completes a quest?
+**Kies:** Wat gebeurt er als je speler een quest voltooid?
 
 --- collapse ---
 
 ---
-title: Currency or experience
+title: Valuta of ervaring
 ---
 
-You could use coins or a different currency for your game. Or you could reward the player with XP (experience points).
+Je kunt munten of een andere valuta gebruiken voor je spel. Of je kunt de speler belonen met XP (ervaringspunten).
 
-Keep track of currency or points rewards by using a variable on the QuestSeeker script and have the QuestGiver scripts update it when a quest is completed.
+Houd valuta of punten beloningen bij met een variabele in het QuestZoeker script en laat de Opdrachtgever scripts updaten wanneer een quest is voltooid.
 
 
 --- code ---
@@ -737,17 +737,17 @@ line_highlights:
 ---
 player.gems += 2; // Give a reward to the player --- /code ---
 
-![The Game view showing a tooth fairy NPC with quest message 'Help me clean up this mouth. Bring me the piece of food and I'll give you 10 coins'.](images/coin-reward.png)
+![Het Game weergave toont een tandenfee NPC met bericht 'Help me om deze mond schoon te maken'. Breng me het eten en ik geef je 10 munten”.](images/coin-reward.png)
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: An accessory or follower
+title: Een accessoire of volger
 ---
 
-You could use `SetActive` to enable a child item to show an accessory such as a hat. You will need to create a public variable on the Quest Giver NPC to store the child item and drag it to the Inspector.
+Je kunt `SetActive` gebruiken om via een onderliggend item een accessoire te laten zien zoals een hoed. Je moet een public variabele maken op de Opdrachtgever NPC om het onderliggende item op te slaan en naar de Inspector te slepen.
 
 --- code ---
 ---
@@ -757,7 +757,7 @@ line_highlights:
 public GameObject hat; --- /code ---
 
 
-Then use `SetActive` when the quest has been completed.
+Gebruik daarna `SetActive` wanneer de quest is voltooid.
 
 --- code ---
 ---
@@ -766,9 +766,9 @@ line_highlights:
 ---
 hat.SetActive(true) --- /code ---
 
-![The Game view with a Raccon and a Cat. The Cat is wearing a hat and the message says 'Well done. Have a hat!'](images/player-gift.png)
+![De spelweergave toont een Raccoon en een Cat. De Cat draagt een hoed en de boodschap 'Goed gedaan' wordt getoond. Draag een hoed!'](images/player-gift.png)
 
-You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player.
+Je kunt een NPC-personage ook een volger of een huisdier laten worden door de variabele te wijzigen die ze controleren om te beslissen of ze de speler willen volgen.
 
 --- code ---
 ---
@@ -777,23 +777,23 @@ line_highlights:
 ---
 player.dogFollowing = true; --- /code ---
 
-![An animated image showing a Raccoon Player character leading an NPC Cat character back to another NPC Cat charcter with the message 'Thank you for finding my friend'.](images/friend-found.gif)
+![Een geanimeerde afbeelding met een Raccoon Speler-personage dat een NPC Cat personage terugleidt naar een andere NPC Cat personage met het bericht 'Bedankt voor het vinden van mijn vriend'.](images/friend-found.gif)
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Unlock
+title: Ontgrendelen
 ---
 
-A type of reward could be to remove a barrier or get access to an area or items that were not available previously.
+Een soort beloning kan zijn het verwijderen van een barrière of het verkrijgen van toegang tot een gebied of items die voorheen niet beschikbaar waren.
 
-![Side-by-side images of the Game view showing coins trapped behind walls and railings that have different colours to the other walls in the scenes.](images/unlock-areas.png)
+![Zij-aan-zij afbeeldingen van de Game-weergave met munten die vastzitten achter muren en balustrades en die een andere kleur hebben dan de andere muren in de scènes.](images/unlock-areas.png)
 
-Think about the GameObjects you want to remove. Create and apply a new 'Unlock' tag to them.
+Denk na over de GameObjects die je wilt verwijderen. Maak een nieuwe 'Unlock'-tag en pas deze toe.
 
-Open your QuestGiver script and create a variable to store the Unlock GameObjects:
+Open je OpdrachtGever-script en maak een variabele om de Ontgrendel GameObjecten op te slaan:
 
 --- code ---
 ---
@@ -804,7 +804,7 @@ line_highlights:
     public GameObject[] unlock;
 --- /code ---
 
-Add code to the `Start()` method to turn the items on at the start.
+Voeg code toe aan de `Start()` methode om de items aan het begin in te schakelen.
 
 --- code ---
 ---
@@ -820,7 +820,7 @@ line_highlights:
         }
 --- /code ---
 
-Create an unlock script and attach it to a new NPC quest ally or to a new unlock item.
+Maak een ontgrendelingsscript en koppel dit aan een nieuwe NPC-quest bondgenoot of aan een nieuw ontgrendelingsitem.
 
 --- code ---
 ---
@@ -861,11 +861,11 @@ public class Unlock : MonoBehaviour
 
 
 
-![An animated image showing a Player colliding with the trigger area of an NPC, causing railings in the background to disappear.](images/railing-down.gif)
+![Een geanimeerde afbeelding waarin een speler in botsing komt met het triggergebied van een NPC, waardoor de balustrades op de achtergrond verdwijnen.](images/railing-down.gif)
 
-You could also introduce a new NPC quest enemy or a new lock item to replace the barriers.
+Je kunt ook een nieuwe NPC-quest vijand of een nieuw slotitem introduceren om de barrières te vervangen.
 
-![An animated image showing a Player colliding with the trigger area of an enemy NPC, causing a wall in the background to appear.](images/walls-back.gif)
+![Een geanimeerde afbeelding waarin een speler in botsing komt met het triggergebied van een vijandelijke NPC, waardoor een muur in de achtergrond verschijnt.](images/walls-back.gif)
 
 --- /collapse ---
 
@@ -874,18 +874,18 @@ You could also introduce a new NPC quest enemy or a new lock item to replace the
 
 --- task ---
 
-The second Quest Giver NPC needs to check whether the Player has completed the quest and then give them the reward.
+De tweede Opdrachtgever NPC moet controleren of de speler de quest heeft voltooid en hem vervolgens de beloning geven.
 
 --- /task ---
 
 --- task ---
 
-Make sure the reward can't be given more than once.
+Zorg ervoor dat de beloning niet vaker dan één keer kan worden gegeven.
 
 --- collapse ---
 
 ---
-title: Remove items from the Player
+title: Items van de speler verwijderen
 ---
 
 --- code ---
@@ -904,7 +904,7 @@ line_highlights:
 --- collapse ---
 
 ---
-title: Reset quest variables
+title: quest variabelen opnieuw instellen
 ---
 --- code ---
 ---
@@ -919,79 +919,79 @@ line_highlights:
 
 --- /task ---
 
-### Debug your quest
+### Los fouten op in je quest
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix.
+**Fouten oplossen:** Mogelijk vind je enkele fouten in jouw project die je moet oplossen.
 
-Always check the Console for errors in your scripts. Unity gives helpful error messages for lots of common problems and you can often click on the error message to go straight to the problem.
+Controleer altijd de console op fouten in jouw scripts. Unity geeft nuttige foutmeldingen voor veel voorkomende problemen en je kunt vaak op de foutmelding klikken om rechtstreeks naar het probleem te gaan.
 
 --- collapse ---
 
 ---
-title: My new Quest Giver displays the wrong message
+title: Mijn nieuwe Opdrachtgever geeft de verkeerde boodschap weer
 ---
 
-Select the Quest Giver and find its script component. Make sure that the correct GameObjects (the ones for this quest that are child objects of the Quest Giver) are used. If you click on an attached GameObject in the Inspector then that object will be highlighted in the Hierarchy.
+Selecteer de Opdrachtgever en zoek de scriptcomponent ervan. Zorg ervoor dat de juiste GameObjects (degene voor deze zoektocht die onderliggende objecten zijn van de Opdrachtgever) worden gebruikt. Als je op een bijgevoegd GameObject in de Inspector klikt, wordt dat object gemarkeerd in de Hierarchy.
 
-Check that you have changed:
-+ The quest text in the Message TextMeshPro GameObject
-+ The quest completion text in the `OnTriggerEnter` method that gets set when the quest is completed
+Controleer of je het volgende hebt gewijzigd:
++ De opdracht tekst in het MessageTextMeshPro GameObject
++ De tekst voor het voltooien van de quest in de `OnTriggerEnter` -methode die wordt ingesteld wanneer de quest is voltooid
 
-If the Quest Giver isn't showing the quest complete message when you think the quest has been completed, then check your code carefully. Are you correctly updating the quest state in the QuestSeeker script and correctly checking it in the QuestGiver script for this Quest Giver?
+Als de Opdrachtgever het quest voltooid bericht niet laat zien wanneer je denkt dat de quewst is voltooid, controleer dan je code zorgvuldig. Heb je QuestZoeker status in het QuestZoeker script correct bijgewerkt en correct gecontroleerd in het OpdrachtGever script van deze Opdrachtgever?
 
-Add `Debug.Log()` statements and check that the values change in the Inspector during Play mode when you expect them to.
+Voeg `Debug.Log()` opdrachten toe en controleer of de waarden veranderen in de Inspector tijdens de Speelmodus wanneer je dat verwacht.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Nothing happens when I click the Accept button
+title: Er gebeurt niets als ik op de knop Accepteren klik
 ---
 
-Select your Quest Giver NPC and make sure they have a script that has an `AcceptQuest` method.
+Selecteer je Opdrachtgever NPC en zorg ervoor dat er een script is met een `AccepteerQuest` methode.
 
-Check that all the variables are set on the script in the Inspector.
+Controleer of alle variabelen zijn ingesteld op het script in de Inspector.
 
-Click on the **Button** object and check that you have attached the correct method such as `AcceptQuest` to an **OnClick Event**.
+Klik op het **Button** object en controleer of je de juiste methode, zoals `OpdrachtGeaccepteerd` aan een **OnClick** -evenement hebt gekoppeld.
 
-Add a `Debug.Log("Quest accepted");` line to the method and check the Console to see that the method is being called.
+Voeg een `Debug.Log("Opdracht geaccepteerd");` regel toe aan de methode en controleer de console om te zien dat de methode wordt aangeroepen.
 
-If you are sure the method is being called, check that the code in the method is correct.
+Als je zeker weet dat de methode wordt aangeroepen, controleer dan of de code in de methode juist is.
 
-If the method is not being called (no Debug output), then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this, then button-clicks won't be handled. If it's missing, right-click in the Hierarchy and choose **UI** then **Event System**.
+Als de methode niet wordt aangeroepen (geen Debug output), zorg er dan voor dat je een `EventSystem` GameObject in je project hebt. Als je dit per ongeluk verwijdert, worden klikken op de knop niet behandeld. Als het ontbreekt, klik dan met de rechtermuisknop in het Hierarchy venster en kies **UI** dan **Event System**.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: My collectable doesn't disappear
+title: Mijn Quest Item verdwijnt niet
 ---
 
-Check that the collectable has a script with an `OnTriggerEnter` method that deactivates the collectable if the Player collides with it.
+Controleer of het verzamelobject een script heeft met een `OnTriggerEnter` methode die het verzamelobject deactiveert als de Speler ermee botst.
 
-Make sure you have added a Box Collider with a Trigger and that the collider is bigger than the non-trigger colliders so that the Player is able to trigger it.
+Zorg ervoor dat je een Box Collider met een Trigger hebt toegevoegd en dat de collider groter is dan een niet-trigger collider, zodat de speler het kan activeren.
 
-Check that the Player GameObject has the Player tag.
+Zorg ervoor dat het Player GameObject de Player-tag heeft.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: My follower doesn't follow
+title: Mijn volger volgt niet
 ---
 
-Check that you have added a Character Controller component and a script to control the follower's movement.
+Controleer of je een Character Controller-component en een script hebt toegevoegd om de beweging van de volger te besturen.
 
-Make sure that the script has access to the Player, if you are using a public variable for the Player then check that you have assigned it in the Inspector.
+Zorg ervoor dat het script toegang heeft tot de Speler. Als je een public variabele voor de Speler gebruikt, controleer dan of je deze in de Inspector hebt toegewezen.
 
-Check that the conditions to follow the player are true. Use `Debug.Log()` statements and check variables in the Inspector.
+Controleer of de voorwaarden om de speler te volgen waar zijn. Gebruik `Debug.Log()` instructies en controleer variabelen in de Inspector.
 
-Make sure that the follower is detecting the collision with the player. Make sure the follower has a Box Collider with a Trigger and that this collider is bigger than other colliders.
+Zorg ervoor dat de volger de botsing met de speler detecteert. Zorg ervoor dat de volger een Box Collider met een Trigger heeft en dat deze collider groter is dan andere colliders.
 
 --- /collapse ---
 
