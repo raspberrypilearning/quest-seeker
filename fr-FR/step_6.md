@@ -1,10 +1,10 @@
-## Share
+## Partager
 
-If you are in a club, why not share your project with friends?
+Si tu es dans un club, pourquoi ne pas partager ton projet avec des amis ?
 
-You could also show your family how your project works.
+Tu peux également montrer à ta famille comment fonctionne ton projet.
 
-You can build your project as a 'WebGL' project and upload it to a website so others can try it out.
+Tu peux créer ton projet en tant que projet « WebGL » et le télécharger sur un site web pour que d'autres puissent l'essayer.
 
 [[[webgl-setup]]]
 
@@ -12,12 +12,12 @@ You can build your project as a 'WebGL' project and upload it to a website so ot
 
 [[[unity-sharing]]]
 
-You could also take a screenshot or make a video of your project.
+Tu peux aussi faire une capture d'écran ou réaliser une vidéo de ton projet.
 
 --- task ---
 
-Inspire others with your project by submitting it to our community gallery!
+Inspire les autres avec ton projet en le soumettant à notre community gallery !
 
-To share your project with others who do the '3D adventure' project, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+Pour partager ton projet avec les autres créateurs du projet « aventure 3d », il te suffit de remplir [ce formulaire](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
 --- /task ---
