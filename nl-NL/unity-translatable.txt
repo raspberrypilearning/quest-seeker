@@ -1,61 +1,61 @@
-Player
+Speler
 
-QuestGiver
+Opdrachtgever
 
-QuestAccepted
+OpdrachtGeaccepteerd
 
 item
 
 canvas
 
-button
+knop
 
-QuestSeeker
+QuestZoeker
 
-coins
+munten
 
-coinText
+muntTekst
 
-hasQuestItem
+heeftOpdrachtItem
 
 QuestItemController
 
-collectSound
+verzamelGeluid
 
-message
+bericht
 
-QuestGiver2
+OpdrachtGever2
 
-Collectables
+Verzamelobjecten
 
-iceDome
+iglo
 
-telescope
+telescoop
 
-playerTelescope
+spelerTelescoop
 
-followQuestAccepted
+volgQuestGeaccepteerd
 
-hasIceBlock
+heeftIjsBlok
 
-hasIceTool
+heeftIjsGereedschap
 
-friendFollower
+vriendVolger
 
-IceToolController
+IjsGereedschapController
 
-FollowerController
+VolgerController
 
-followSpeed
+volgSnelheid
 
-followDistance
+volgAfstand
 
-escortQuestAccepted
+begeleidQuestGeaccepteerd
 
-gems
+edelstenen
 
-hat
+hoed
 
-dogFollowing
+hondVolgt
 
-unlock
+ontgrendel
