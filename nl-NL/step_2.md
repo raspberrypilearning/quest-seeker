@@ -1,49 +1,49 @@
-## First quest
+## Eerste quest
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The first quest will be a **fetch quest** where a non-player character (NPC) asks the player to find an item and bring it back to them. 
+De eerste quest zal een **zoek quest** zijn waar een niet-speler personage (NPC) de speler vraagt om een voorwerp te vinden en het naar hem terug te brengen. 
 
-When the Player returns to the Quest Giver, they will be rewarded with experience points (XP) or a reward in the currency of your game.
+Wanneer de speler terugkeert naar de opdrachtgever, wordt hij beloond met ervaringspunten (XP) of een beloning in de valuta van je spel.
 </div>
 <div>
-![An animated gif of the Player approaching the Quest Giver and accepting a quest to find the space helmet. The Player finds and collects the space helmet and returns it to the Quest Giver to get points.](images/first-quest.gif){:width="300px"}
+![Een gif van de speler die de opdrachtgever benadert en een zoektocht accepteert om de ruimtehelm te vinden. De speler vindt en verzamelt de ruimtehelm en geeft deze terug aan de opdrachtgever om punten te krijgen.](images/first-quest.gif){:width="300px"}
 </div>
 </div>
 
 --- task ---
 
-This project builds on the project you made in the [World builder](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'} project.
+Dit project bouwt voort op het project dat je hebt gemaakt in het project [Bouw je eigen wereld](https://projects.raspberrypi.org/en/projects/world-builder){:target='_blank'}.
 
-Open your project to use as the world, or map, where quests will take place.
+Open je project om het te gebruiken als de wereld of kaart, waar de opdrachten plaatsvinden.
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-A <span style="color: #0faeb0">**Game Designer**</span> creates the characters, rules, goals, game mechanics, and puzzles that make a game enjoyable and engaging for the player. Some Game Designers do all the coding for their game and others work in teams.
+Een <span style="color: #0faeb0">**Game Designer**</span> creëert de personages, regels, doelen, spelmechanismen en puzzels die een spel leuk en boeiend maken voor de speler. Sommige gameontwerpers maken alle code voor hun game zelf, anderen werken in teams.
 </p>
 
 --- task ---
 
-**Design:** Think of a quest that makes sense in the world you have built.
+**Ontwerp:** Bedenk een quest die past in de wereld die je hebt gebouwd.
 
-You will need to decide on:
-+ An item to be fetched
-+ A non-player character (NPC) to give the quest to the player
-+ The messages for the NPC to display before and after the quest is completed
-+ A reward of experience points or currency (coins or gems) in your game
+Je zult moeten beslissen over:
++ Een item dat moet worden opgehaald
++ Een niet-speler karakter (NPC) om de opdracht te geven aan de speler
++ De berichten voor de NPC om weer te geven voor en nadat de quest voltooid is
++ Een beloning van ervaringspunten of valuta (munten of edelstenen) in je spel
 
 --- /task ---
 
 --- task ---
 
-Add a GameObject for the item that the Player will need to fetch.
+Voeg een GameObject toe voor het voorwerp dat de speler moet halen.
 
-Position the item in your world so the Player will need to move from their starting position to find it.
+Plaats het item zo in je wereld zodat de speler vanaf zijn beginpositie niet direct kan zien en moet bewegen om het te vinden.
 
-![A strip of multiple images showing items created from models or 3D shapes including a helmet, telescope, ice tool, picture, heart, clover, and magnet.](images/item-strip.png)
+![Een strip van meerdere afbeeldingen die items laten zien die gemaakt zijn van modellen of 3D-vormen waaronder een helm, telescoop, ijsgereedschap, afbeelding, hart, klaver en magneet.](images/item-strip.png)
 
-**Choose:**
+**Kies:**
 
 [[[unity-item-model]]]
 
@@ -53,11 +53,11 @@ Position the item in your world so the Player will need to move from their start
 
 --- task ---
 
-Add a NPC to be a Quest Giver and position it so that it will be easy for the player to find them.
+Voeg een NPC toe als opdrachtgever en positioneer deze zo dat de speler deze gemakkelijk kan vinden.
 
-![A strip of multiple images showing NPCs created from models or 3D shapes.](images/NPC-strip.png)
+![Een strip van meerdere afbeeldingen met NPC's gemaakt van modellen of 3D-vormen.](images/NPC-strip.png)
 
-**Choose:**
+**Kies:**
 
 [[[unity-npc-model]]]
 
@@ -65,42 +65,42 @@ Add a NPC to be a Quest Giver and position it so that it will be easy for the pl
 
 --- /task ---
 
---- task --- If you choose the Cat, Rat, or Raccoon, then you can set the **Animator Controller** to the **IdleWalk** animation.
+--- taak --- Als je de Cat, Rat of Raccoon kiest, dan kun je **Animator Controller** instellen op de **IdleWalk** animatie.
 
 --- /task ---
 
 --- task ---
 
-Add a **Box Collider** to the **Quest Giver** so that the Player can't walk through them.
+Voeg een **Box Collider** toe aan de **Opdrachtgever** zodat de speler er niet doorheen kan lopen.
 
-![The Box Collider component in the Inspector window.](images/box-collider.png)
+![De Box Collider component in het Inspector venster.](images/box-collider.png)
 
 --- /task ---
 
-The Quest Giver will offer the Player a quest when they get close enough.
+De Opdrachtgever zal de speler een quest aanbieden als hij dichtbij genoeg komt.
 
---- task --- Check that your Player GameObject has the Player tag. --- /task ---
+--- Zorg ervoor dat het Player GameObject de Player-tag heeft. --- /task ---
 
 --- task ---
 
-Add a UI **TextMeshPro** named `Quest Text` as a **child of the Quest Giver** and add your quest message to it.
+Voeg een UI **TextMeshPro** met de naam `Quest Text` toe als **onderliggend object van de Opdrachtgever** en voeg je bericht met de opdracht eraan toe.
 
-![The Game view showing a canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the quest message.](images/quest-giver-text.png)
+![De Game weergave toont een canvas met twee tekst GameObjects met verschillende stijlen en kleuren. Eén met de naam van de Opdrachtgever naam en de andere met het opdracht bericht.](images/quest-giver-text.png)
 
 
 --- collapse ---
 
 ---
-title: Add and position TextMeshPro text
+title: TextMeshPro-tekst toevoegen en positioneren
 ---
 
-Change the message text, settings, and position of the text object until you are happy:
+Wijzig de tekst van het bericht, instellingen en de positie van het tekstobject totdat je tevreden bent:
 
-![The TextMeshPro component in the Inspector window with quest text added to the Text Input and Auto Size ticked.](images/text-object-settings.png) ![The Rect Transform component of the Text Mesh Pro with Anchor to the bottom left and Pos x, Pos y, Poz z, width, and height tailored for the scene.](images/text-object-position.png)
+![Het TextMeshPro-onderdeel in het venster Inspector met tekst van de quest toegevoegd aan de tekstinvoer en de automatische grootte geselecteerd.](images/text-object-settings.png) ![De Rect-Transform component van de Text Mesh Pro met Anchor linksonder en Pos X, Pos Y, Pos Z, width (breedte) en height (hoogte) afgestemd op de scène.](images/text-object-position.png)
 
-You can add another UI **TextMeshPro** to the same canvas with the name of the Quest Giver NPC if you like.
+Je kunt nog een UI **TextMeshPro** toevoegen aan hetzelfde canvas met de naam van de opdrachtgever NPC als je wilt.
 
-![The Game view showing a canvas with two text GameObjects with different styles and colours. One with the Quest Giver name and the other with the quest message.](images/quest-giver-text.png)
+![De Game weergave toont een canvas met twee tekst GameObjects met verschillende stijlen en kleuren. Eén met de naam van de Opdrachtgever naam en de andere met het opdracht bericht.](images/quest-giver-text.png)
 
 --- /collapse ---
 
@@ -110,23 +110,23 @@ You can add another UI **TextMeshPro** to the same canvas with the name of the Q
 
 --- task ---
 
-Add a **Box Collider** with a **Trigger** and a **QuestGiver** script on the Quest Giver NPC to make the quest message appear when the Player is nearby.
+Voeg een **Box Collider** toe met een **Trigger** en een **Opdrachtgever** script aan de Opdrachtgever NPC om het bericht te laten verschijnen wanneer de speler in de buurt is.
 
-![An animated gif showing the Player approaching an NPC. When the Player gets near the NPC, a canvas with text message is enabled on the scene.](images/quest-text.gif){:width="400px"}
+![Een geanimeerde gif laat zien dat de speler een NPC nadert. Wanneer de speler in de buurt van de NPC komt, is een canvas met tekstbericht ingeschakeld op de scène.](images/quest-text.gif){:width="400px"}
 
 --- collapse ---
 
 ---
-title: Make a message appear when the Player is close enough
+title: Laat een bericht verschijnen als de speler dichtbij genoeg is
 ---
 
-Add another **Box Collider** with the Trigger property checked. This Box Collider needs to be bigger than the first Box Collider so that the Player can trigger the Quest Giver to display a text box.
+Voeg nog een **Box Collider** toe met de Trigger-eigenschap is aangevinkt. Deze Box Collider moet groter zijn dan de eerste Box Collider, zodat de speler de Opdrachtgever kan activeren om een tekstvak weer te geven.
 
-![The Box Collider component with x = 3 and z = 3 to give a large range. 'Is Trigger' is selected.](images/box-trigger.png)
+![De Box Collider component met X = 3 en Z = 3 om een groot bereik te geven. 'Is Trigger' is geselecteerd.](images/box-trigger.png)
 
-Add a script called **QuestGiver** to the **QuestGiver GameObject**. Add `OnTriggerEnter` and `OnTriggerExit` methods to show and hide the message canvas when the Player gets close and moves away.
+Voeg een script toe met de naam **Opdrachtgever** aan het **Opdrachtgever GameObject**. Voeg `OnTriggerEnter` en `OnTriggerExit` methoden toe om het berichtencanvas te tonen en te verbergen wanneer de speler dichtbij komt en weggaat.
 
-Add code to a script on the NPC GameObject.
+Voeg code toe aan een script op het NPC GameObject.
 
 --- code ---
 ---
@@ -159,9 +159,9 @@ public class QuestGiver : MonoBehaviour
     }
 } --- /code ---
 
-Select the **QuestGiver GameObject**. In the Inspector, find the **QuestGiver** script component and drag the **Canvas** for the NPC to the Canvas property of the script.
+Selecteer het **Opdrachtgever GameObject**. In de Inspector, zoek de **Opdrachtgever** script component en sleep het **Canvas** voor de NPC naar de Canvas eigenschap van het script.
 
-![The Script component showing the Canvas GameObject in the Canvas variable.](images/quest-script.png)
+![De scriptcomponent toont het Canvas GameObject in de Canvas variabele.](images/quest-script.png)
 
 --- /collapse ---
 
@@ -169,11 +169,11 @@ Select the **QuestGiver GameObject**. In the Inspector, find the **QuestGiver** 
 
 --- task ---
 
-**Test:** Play your scene:
-+ Check that the Player can't walk through the Quest Giver
-+ Make sure the quest message appears when the Player is near the Quest Giver
+**Test:** Speel je scène af:
++ Controleer of de speler niet door de Opdrachtgever kan lopen
++ Zorg ervoor dat het bericht verschijnt wanneer de speler in de buurt van de opdrachtgever is
 
-**Debug:**
+**Fouten oplossen:**
 
 [[[unity-collider-error]]]
 
@@ -181,29 +181,29 @@ Select the **QuestGiver GameObject**. In the Inspector, find the **QuestGiver** 
 
 --- /task ---
 
-For this quest, the item to be collected should only appear once the quest has been accepted.
+Voor deze quest mag het te verzamelen item pas verschijnen als de quest is geaccepteerd.
 
 --- task ---
 
-Add an **Accept Button** to the Canvas on your Quest Giver NPC and connect it to a `QuestAccepted` method on your **QuestGiver** script. Update the **QuestGiver** script so the item only appears when the quest has been accepted.
+Voeg een **Accepteer knop** toe aan het Canvas op je Oprachtgever NPC en verbind deze met een `QuestGeaccepteerd` methode op je **OpdrachtGever** script. Update het script **OpdrachtGever** zodat het item alleen wordt weergegeven wanneer de quest is geaccepteerd.
 
-![An animated gif showing the Player approaching an NPC. When the Player gets near the NPC, a canvas with text message and button is enabled on the scene. On clicking the button, an item appears.](images/quest-button.gif){:width="400px"}
+![Een geanimeerde gif laat zien dat de speler een NPC nadert. Wanneer de speler in de buurt van de NPC komt, wordt een canvas met tekstbericht en knop ingeschakeld op de scène. Als je op de knop klikt, verschijnt een item.](images/quest-button.gif){:width="400px"}
 
 --- collapse ---
 
 ---
-title: Make an Item GameObject appear when a button is clicked
+title: Laat een Item GameObject verschijnen wanneer op een knop wordt geklikt
 ---
 
-Add a UI **TextMesh Pro Button** to the same canvas and click on the **Text (TMP)** child object of the Button then give it the text `Accept`:
+Voeg een UI **TextMesh Pro-knop** toe aan hetzelfde canvas en klik op het **Text (TMP)** onderliggend object van de knop en geef het vervolgens de tekst `Accepteren`:
 
-![The TextMeshPro component with Text Input 'Accept'.](images/text-button.png)
+![De TextMeshPro-component met tekstinvoer 'Accepteren'.](images/text-button.png)
 
-Adjust the Button and text size, position, and colours until you are happy with them:
+Pas de grootte van de knop en de tekstgrootte, positie en kleuren aan totdat je er blij mee bent:
 
-![A snow quest with quest message and accept button at the bottom of the scene.](images/quest-canvas-snow.png)
+![Een snow quest met opdracht bericht en accepteer de knop onderaan de scène.](images/quest-canvas-snow.png)
 
-Add code to the QuestGiver script to control when the object appears so that it only appears when then quest has been accepted.
+Voeg code toe aan het OpdrachtGever script om te regelen wanneer het object verschijnt, zodat het alleen verschijnt wanneer de quest is geaccepteerd.
 
 --- code ---
 ---
@@ -245,73 +245,73 @@ public class QuestGiver : MonoBehaviour
 --- /code ---
 
 
-Select the **Quest Giver**, then in the **QuestGiver** script component in the Inspector window, drag your **Button** and **Item GameObjects** to the Button and Item properties:
+Selecteer de **OpdrachtGever**, sleep dan in de **OpdrachtGever** script component in het Inspector venster, je **Knop** en **Item GameObjects** naar de knop en voorwerp eigenschappen:
 
-![The QuestGiver script component with 'Button' in the Button variable and 'QuestItem' in the Item variable.](images/item-script.png)
+![Het OpdrachtGever script component met 'Knop' in de knop variabele en 'QuestItem' in de Item variabele.](images/item-script.png)
 
-From the Hierarchy window, select the **Button GameObject** then go to the Inspector window `OnClick()` property and click on the **+**.
+Selecteer in het Hierarchy venster de **knop GameObject** ga vervolgens in het Inspector venster naar de `On Click ()` eigenschap en klik op de **+**.
 
-Click on the circle for the field underneath 'Runtime', click on **Scene** and choose your **Quest Giver**. In the Function drop-down menu, select **QuestGiver.QuestAccepted** to join your new method to the Button’s click event:
+Klik op de cirkel voor het veld onder 'Runtime', klik op **Scène** en kies je **OpdrachtGever**. Selecteer in het Functie drop-down menu **OpdrachtGever.OpdrachtGeaccepteerd** om jouw nieuwe methode toe te voegen aan de klikgebeurtenis van de knop:
 
-![The 'OnClick()' function of the button with 'QuestGiver' populated to the left and 'QuestGiver.QuestAccepted' to the right.](images/button-click.png)
+![De functie 'OnClick()' van de knop met 'OpdrachtGever' naar links en 'OpdrachtGever.OpdrachtGeaccepteerd' naar rechts.](images/button-click.png)
 
 --- /collapse ---
 
-**Tip:** If you have a Canvas as a child object then you won't be able to focus on the parent GameObject in the Scene view. To fix this, you can disable the Canvas in the Inspector, by unchecking the box next to the name. If you need to see the Canvas again to edit it, you can check the box.
+**Tip:** Als je een Canvas als onderliggend object hebt, dan kan je je niet focussen op het bovenliggende GameObject in de scèneweergave. Om dit te verhelpen, kun je het Canvas in de Inspector uitzetten door het vinkje naast de naam uit te schakelen. Als je het Canvas opnieuw wilt zien om het te bewerken, vink dan het vakje aan.
 
-![The Inspector window for the Canvas, showing that the Canvas is unselected with an empty check box to the left of the name.](images/canvas-unchecked.png)
+![Het Inspector-venster voor het Canvas, toont dat het Canvas niet is geselecteerd met een leeg selectievakje aan de linkerkant van de naam.](images/canvas-unchecked.png)
 
 --- /task ---
 
 --- task ---
 
-**Test:** Play your scene:
-+ Check that your item does not appear at the start
-+ Go and talk to the Quest Giver and accept the quest
-+ Make sure that the item appears when the quest is accepted
-+ Also check that the 'Accept' button disappears and isn't shown again if you return to the Quest Giver
+**Test:** Speel je scène af:
++ Controleer of je item niet wordt weergegeven aan het begin
++ Ga naar en communiceer met de Opdrachtgever en accepteer de quest
++ Zorg ervoor dat het item verschijnt wanneer de quest wordt geaccepteerd
++ Controleer ook of de 'Accepteren' knop verdwijnt en niet opnieuw wordt weergegeven als je terugkeert naar de Opdrachtgever
 
-**Debug:**
+**Fouten oplossen:**
 
 --- collapse ---
 
 ---
-title: Nothing happens when I click the Accept button
+title: Er gebeurt niets als ik op de knop Accepteren klik
 ---
 
-Select your **Quest Giver NPC** and make sure they have a script that has an `QuestAccepted` method.
+Selecteer je **Opdrachtgever NPC** en zorg ervoor dat deze een script heeft dat een `OpdrachtGeaccepteerd` methode heeft.
 
-Check that all the variables are set on the script in the Inspector.
+Controleer of alle variabelen zijn ingesteld op het script in de Inspector.
 
-Click on the **Button** object and check that you have attached the correct method such as `QuestAccepted` to an `OnClick` event.
+Klik op het **Knop** object en controleer of je de juiste methode, zoals `OpdrachtGeaccepteerd` aan een `OnClick` -evenement hebt gekoppeld.
 
-Add a `Debug.Log("Quest accepted");` line to the method and check the console to see that the method is being called.
+Voeg een `Debug.Log("Opdracht geaccepteerd");` regel toe aan de methode en controleer de console om te zien dat de methode wordt aangeroepen.
 
-If you are sure the method is being called, check that the code in the method is correct.
+Als je zeker weet dat de methode wordt aangeroepen, controleer dan of de code in de methode juist is.
 
-If the method is not being called (no Debug output), then make sure you have an `EventSystem` GameObject in your project. If you accidentally delete this, then button-clicks won't be handled. If it's missing, right-click in the Hierarch window and choose **UI** then **Event System**.
+Als de methode niet wordt aangeroepn (geen Debug output), zorg er dan voor dat je een `EventSystem` GameObject in je project hebt. Als je dit per ongeluk verwijdert, worden klikken op de knop niet behandeld. Als het ontbreekt, klik dan met de rechtermuisknop in het Hierarchy venster en kies **UI** dan **Event System**.
 
 --- /collapse ---
 
 --- /task ---
 
-When the Player collects the item, the item needs to disappear and optionally play a sound effect. The Quest Giver will also need to know when the quest has been completed.
+Wanneer de speler het item verzamelt, moet het item verdwijnen en eventueel een geluidseffect afspelen. De Opdrachtgever zal ook moeten weten wanneer de quest is voltooid.
 
 --- task ---
 
-Add a UI **TextMeshPro** to the scene to display the reward. Add a **QuestSeeker** script to the Player to store and update the reward.
+Voeg een UI **TextMeshPro** toe aan de scène om de beloning te tonen. Voeg een **QuestZoeker** script toe aan de speler om de beloning op te slaan en bij te werken.
 
 --- collapse ---
 
 ---
-title: Add a QuestSeeker script to the Player to manage the reward
+title: Voeg een QuestZoeker script toe aan de speler om de beloning op te slaan en bij te werken
 ---
 
-Right-click in the Hierarchy window and add a UI **TextMeshPro** to your scene to show the reward. Name the new object `Coin Text`, or a suitable name for your reward.
+Rechtsklik in het Hierarchy venster en voeg een UI **TextMeshPro** toe aan je scène om de beloning te tonen. Noem het nieuwe object `Munt Tekst`, of een geschikte naam voor je beloning.
 
-Add a new **QuestSeeker** script component to the Player to store and display the reward.
+Voeg een nieuwe **QuestZoeker** script component toe aan de Player om de beloning te tonen.
 
-The `coins` variable needs to be `public` so that a script on the Quest Item can update it.
+De `munten` variabele moet `public` zijn, zodat een script op het Quest Item het kan bijwerken.
 
 --- code ---
 ---
@@ -338,19 +338,19 @@ public class QuestSeeker : MonoBehaviour
 
 --- /collapse ---
 
-With the Player object selected, drag the **Coin Text TextMeshPro** object to the Coin Text property in the Inspector.
+Met het Player object geselecteerd, sleep het **Munt Tekst TextMeshPro** object naar de MuntTekst eigenschap in de Inspector.
 
 --- /task ---
 
 --- task ---
 
-Add a `public bool hasQuestItem = false;` variable to the **QuestSeeker** script. The variable needs to be `public` so that a script on the item sets it to `true` when the item is collected.
+Voeg een `public bool heeftQuestItem = false;` variabele toe aan het **QuestZoeker** script. De variabele moet `public` zijn zodat een script op het item op `waar` zet wanneer het item wordt verzameld.
 
 
 --- collapse ---
 
 ---
-title: Add a hasQuestItem variable to the QuestSeeker script
+title: Voeg een heeftQuestItem variabele toe aan de QuestZoeker script
 ---
 
 --- code ---
@@ -376,21 +376,21 @@ public class QuestSeeker : MonoBehaviour
 
 --- task ---
 
-Add a **Box Collider** with a **Trigger** and **QuestItemController** script to your Quest Item. Add code to hide the Quest Item and set `hasQuestItem` to true on the Player's QuestSeeker script when the Player collides with the Quest Item.
+Voeg een **Box Collider** toe met een **Trigger** en **QuestItemController** script aan je Quest Item. Voeg code toe om het Quest Item te verbergen en zet `heeftQuestItem` op waar op het QuestZoeker script van de speler als de Speler botst met het Quest Item.
 
-![An animated gif showing a Raccoon Player colliding with a Star item and the item disappears.](images/collect-star.gif){:width="400px"}
+![Een geanimeerde gif met een Raccoon Player die botst met een Ster item en het item verdwijnt.](images/collect-star.gif){:width="400px"}
 
 --- collapse ---
 
 ---
-title: Make the item disappear and set hasQuestItem to true
+title: Laat het item verdwijnen en stel heeftQuestItem in op waar
 ---
 
-Select the **Quest Item** and add a **Box Collider** with a **Trigger**.
+Selecteer het **Quest Item** en voeg een **Box Collider** toe met een **Trigger**.
 
-Add a **script** to the **Quest Item** and name it `QuestItemController`.
+Voeg een **-script** toe aan het **Quest Item** en noem het `QuesteItemController`.
 
-Add code to make the item hide and update the `hasQuestItem` status on the Player.
+Voeg code toe om het item te verbergen en werk de `heeftQuestItem` status bij op de Player.
 
 --- code ---
 ---
@@ -410,13 +410,13 @@ public class QuestItemController : MonoBehaviour
     }
 --- /code ---
 
-Drag the **Player GameObject** to the Player property of the QuestItemController script in the Inspector for the Quest Item.
+Sleep het **Player GameObject** naar de Player eigenschap van het QuestItemController script in de Inspector voor het Quest Item.
 
-![The QuestItemController script component with Player variable populated with 'layer (Quest Seeker)'.](images/player-property.png)
+![De QuestItemController-scriptcomponent met een Spelervariabele die is gevuld met 'Laag (Speurneuzen)'.](images/player-property.png)
 
 --- /collapse ---
 
-Optionally, also play a sound when the item is collected.
+Speel optioneel ook een geluid af als het item wordt verzameld.
 
 [[[unity-play-sound]]]
 
@@ -424,24 +424,24 @@ Optionally, also play a sound when the item is collected.
 
 --- task ---
 
-**Test:** Play your scene:
-+ Talk to the Quest Giver NPC and accept the quest
-+ Check that you can collect the Quest Item
-+ While you are still in Play mode, click on the Player and check that the `hasQuestItem` property in the Inspector window is checked to show that the quest item has been collected
+**Test:** Speel je scène af:
++ Ga naar en communiceer met de Opdrachtgever en accepteer de quest
++ Controleer of je het Quest Item kunt verzamelen
++ Terwijl je nog steeds in de Play mode bent, klik op de Player en controleer of de `heeftQuestItem` eigenschap in het Inspector venster is aangevinkt om te laten zien dat het quest item is verzameld
 
-![The Inspector window in run time with the Quest Seeker script component and 'Has Quest Item' selected.](images/playmode-item-collect.png)
+![Het Inspector-venster in run time met de QuesstZoeker-scriptcomponent en 'Heeft Quest Item' geselecteerd.](images/playmode-item-collect.png)
 
 --- collapse ---
 
 ---
-title: My Quest Item doesn't disappear
+title: Mijn Quest Item verdwijnt niet
 ---
 
-Check that the Quest Item has a script with an `OnTriggerEnter` method that deactivates the Quest Item when the Player collides with it.
+Controleer of het Quest Item een script heeft met een `OnTriggerEnter` methode die het Quest Item deactiveert als de Player ermee botst.
 
-Make sure you have added a Box Collider with a Trigger and that the collider is bigger than any non-trigger colliders so that the Player is able to trigger it.
+Zorg ervoor dat je een Box Collider met een Trigger hebt toegevoegd en dat de collider groter is dan een niet-trigger collider, zodat de speler het kan activeren.
 
-Check that the Player GameObject has the Player tag.
+Zorg ervoor dat het Player GameObject de Player-tag heeft.
 
 --- /collapse ---
 
@@ -449,14 +449,14 @@ Check that the Player GameObject has the Player tag.
 
 --- task ---
 
-Have the Quest Giver NPC display a different message if the quest is complete and give the player a reward for completing the quest.
+Laat de Opdrachtgever NPC een ander bericht weergeven als de opdracht voltooid is en geef de speler een beloning voor het voltooien van de opdracht.
 
-![An animated gif showing the Player approaching an NPC to complete the quest. When the player gets near the NPC, a canvas with completion message is enabled on the scene and the coins variable increases.](images/snow-coins.gif){:width="400px"}
+![Een gif laat zien dat de speler een NPC nadert om de quest te voltooien. Wanneer de speler in de buurt van de NPC komt, is een canvas met voltooiingsbericht ingeschakeld op de scène en neemt de munten variabele toe.](images/snow-coins.gif){:width="400px"}
 
 --- collapse ---
 
 ---
-title: Update the QuestGiver script to thank and reward the player
+title: Update het OpdrachtGever script om de speler te bedanken en te belonen
 ---
 --- code ---
 ---
@@ -474,16 +474,16 @@ public class QuestGiver : MonoBehaviour
         {
             if (player.hasQuestItem)
             {
-                message.SetText("Thank you for finding my fishbone. Here's 10 coins for your efforts!");
-                player.coins += 10;
-                player.hasQuestItem = false;
+                message.SetText("Thank you for finding my fishbone. Hier zijn 10 munten voor je inspanningen!");
+                player.munten += 10;
+                player.heeftQuestItem = false;
             }    
             canvas.SetActive(true);
         }
     }
 --- /code ---
 
-In the Inspector, drag the **Player** to the Player property and the **TextMeshPro** object with the message to the Message property.
+In de Inspector sleep de **Speler** naar de spelereigenschap en het object **TextMeshPro** met het bericht naar de eigenschap van het bericht.
 
 --- /collapse ---
 
@@ -491,16 +491,16 @@ In the Inspector, drag the **Player** to the Player property and the **TextMeshP
 
 --- task ---
 
-**Test:** Play your scene:
-+ Make sure you get a different message after collecting the Quest Item
-+ Check that the number of coins also increases
-+ Make sure the player can't get the reward more than once
+**Test:** Speel je scène af:
++ Zorg ervoor dat je een ander bericht ontvangt na het verzamelen van het Quest Item
++ Controleer of het aantal munten ook toeneemt
++ Zorg ervoor dat de speler de beloning niet meer dan één keer kan ontvangen
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Fouten oplossen:** Mogelijk vind je enkele fouten in jouw project die je moet oplossen. Hier zijn enkele veelvoorkomende fouten.
 
 [[[unity-console-error]]]
 
@@ -513,12 +513,12 @@ In the Inspector, drag the **Player** to the Player property and the **TextMeshP
 --- collapse ---
 
 ---
-title: I can't drag a GameObject into my variable in the Inspector
+title: Ik kan een GameObject niet in mijn variabele slepen in de Inspector
 ---
 
-Look through the steps above and make sure that you have added all the scripts to the correct GameObjects.
+Bekijk de bovenstaande stappen en zorg ervoor dat je alle scripts hebt toegevoegd aan de juiste GameObjects.
 
-Check that the variable is `public`.
+Controleer of de variabele `public` is.
 
 --- /collapse ---
 
