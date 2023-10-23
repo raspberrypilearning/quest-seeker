@@ -1,46 +1,46 @@
-## Quick quiz
+## Snelle quiz
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Beantwoord de drie vragen. Er zijn tips om je naar het juiste antwoord te leiden.
 
-When you have answered each question, click on **Check my answer**.
+Klik na het beantwoorden van elke vraag op **Controleer mijn antwoord**.
 
-Have fun!
+Veel plezier!
 
 --- question ---
 
 ---
-legend: Question 1 of 3
+legend: Vraag 1 van 3
 ---
 
-A button's OnClick event needs a GameObject with a script that has a public method.
+Het OnClick event van een knop heeft een GameObject nodig met een script met een public methode.
 
-What is the name of the **method** called when this button is clicked?
+Wat is de naam van de **methode** die wordt opgeroepen wanneer op deze knop wordt geklikt?
 
-![An OnClick event in the Inspector window with one item in this list. It has 'QuestGiver' in the box underneath the 'Runtime Only' and 'CoinQuest.CoinsAccepted' in the box to the right.](images/quiz-question.png)
+![Een OnClick event in het Inspector venster met één item in deze lijst. Er staat 'QueesteGever' in het vak onder de 'Runtime Only' en 'MuntQueeste.MuntenGeaccepteerd' in het vak aan de rechterkant.](images/quiz-question.png)
 
 --- choices ---
 
-- ( ) QuestGiver
+- ( ) QueesteGever
 
   --- feedback ---
 
-  No, `QuestGiver` is the name of the GameObject.
+  Nee, `QueesteGever` is de naam van het GameObject.
 
   --- /feedback ---
 
-- ( ) CoinQuest
+- ( ) MuntQueeste
 
   --- feedback ---
 
-  No, `CoinQuest` is the name of the Script.
+  Nee, `MuntQueeste` is de naam van het script.
 
   --- /feedback ---
 
-- (x) CoinsAccepted
+- (x) MuntenGeaccepteerd
 
   --- feedback ---
 
-  Yes, that's correct. The `QuestGiver` GameObject has a `CoinQuest` script attached that has a public `CoinsAccepted` method.
+  Ja dat is goed. Het `QueesteGever` GameObject heeft een `MuntQueeste` script dat is gekoppeld met een publieke `MuntenGeaccepteerd` methode.
 
   --- /feedback ---
 
@@ -48,7 +48,7 @@ What is the name of the **method** called when this button is clicked?
 
   --- feedback ---
 
-  No, `OnClick` is the event that is triggered when the button is clicked.
+  Nee, `OnClick` is het event dat wordt geactiveerd wanneer op de knop wordt geklikt.
 
   --- /feedback ---
 
