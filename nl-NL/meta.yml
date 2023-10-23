@@ -1,25 +1,25 @@
 ---
-title: Quest seeker
+title: Speurneuzen
 hero_image: images/banner.png
-description: Add NPCs and quests to the world that you created in the World builder project
-meta_title: Learn Unity | Game development | Quest seeker
-meta_description: Learn Unity game development with the Raspberry Pi Foundation. Add NPCs and quests to a world that you create using Unity.
+description: Voeg NPC's en quests toe aan de wereld die je in het project "Bouw je eigen wereld" hebt gemaakt
+meta_title: Leer Unity | Games ontwikkelen | Speurneuzen
+meta_description: Leer Unity-gameontwikkeling met de Raspberry Pi Foundation. Voeg NPC's en quests toe aan een wereld die je creëert met Unity.
 version: 4
 listed: true
 copyedit: true
 last_tested: '2021-03-26'
 steps:
   - 
-    title: You will make
+    title: Wat ga je maken
   - 
-    title: First quest
+    title: Eerste quest
   - 
-    title: Second quest
+    title: Tweede quest
     completion:
       - engaged
       - internal
   - 
-    title: Quick quiz
+    title: Snelle quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -28,8 +28,8 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: Verbeter je project
   - 
-    title: Share
+    title: Delen
   - 
-    title: What next?
+    title: Wat kun je verder nog doen?
