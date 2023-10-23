@@ -2,14 +2,14 @@
 --- question ---
 
 ---
-legend: Question 2 of 3
+legend: Vraag 2 van 3
 ---
 
-A script on a Quest Giver NPC has the following method:
+Een script van een Queestegever NPC heeft de volgende methode:
 
 --- code ---
 ---
-language: cs filename: QuestGiver.cs
+taal: cs bestandsnaam: QueesteGever.cs
 line_highlights: 9
 ---
 
@@ -29,7 +29,7 @@ line_highlights: 9
     }
 --- /code ---
 
-The game has a bug that allows the player to keep collecting more coins by repeatedly colliding with the NPC after completing the quest. Which line of code could you add after giving the reward to fix this?
+Het spel heeft een bug waarbij de speler meer munten kan blijven verzamelen door herhaaldelijk met de NPC te botsen nadat hij de zoektocht heeft voltooid. Welke regel code kun je toevoegen nadat je de beloning hebt gegeven om dit op te lossen?
 
 --- choices ---
 
@@ -40,7 +40,7 @@ player.coins -= 15;
 
   --- feedback ---
 
-  No, that would remove the reward every time it was given, including the first time. The player would never get the reward.
+  Nee, dat zou de beloning iedere keer verwijderen, inclusief de eerste keer. De speler zou de beloning nooit krijgen.
 
   --- /feedback ---
 
@@ -51,7 +51,7 @@ player.hasQuestItem = false;
 
   --- feedback ---
 
-Yes that's correct. The Quest Giver NPC checks whether the Player has the quest item before giving the reward. Setting the `player.hasQuestItem` variable to false will mean that the reward code doesn't run next time the Player collides with the Quest Giver NPC.
+Ja dat is goed. De Queestegever NPC controleert of de speler het gezochte item heeft voordat je de beloning geeft. De `speler.heeftQueesteItem` variabele op onwaar zetten betekent dat de volgende keer dat de speler botst met de Queestegever NPC de beloningscode niet wordt uitgevoerd.
 
   --- /feedback ---
 
@@ -62,7 +62,7 @@ message.SetText("Hey, I already gave you a reward");
 
   --- feedback ---
 
-No. This would just change the message the player sees. It wouldn't change the reward they are given.
+Nee. Dit zou alleen het bericht dat de speler ziet veranderen. Het zou de beloning die wordt gegeven niet veranderen.
 
   --- /feedback ---
 
