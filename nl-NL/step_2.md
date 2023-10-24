@@ -159,7 +159,7 @@ public class QuestGiver : MonoBehaviour
     }
 } --- /code ---
 
-Selecteer het **Opdrachtgever GameObject**. In de Inspector, zoek de **Opdrachtgever** script component en sleep het **Canvas** voor de NPC naar de Canvas eigenschap van het script.
+Selecteer het **OpdrachtGever GameObject**. In de Inspector, zoek de **OpdrachtGever** script component en sleep het **Canvas** voor de NPC naar de Canvas eigenschap van het script.
 
 ![De scriptcomponent toont het Canvas GameObject in de Canvas variabele.](images/quest-script.png)
 
@@ -429,15 +429,15 @@ Speel optioneel ook een geluid af als het item wordt verzameld.
 + Controleer of je het Quest Item kunt verzamelen
 + Terwijl je nog steeds in de Play mode bent, klik op de Player en controleer of de `heeftOpdrachtItem` eigenschap in het Inspector venster is aangevinkt om te laten zien dat het quest item is verzameld
 
-![Het Inspector-venster in run time met de QuesstZoeker-scriptcomponent en 'Heeft Quest Item' geselecteerd.](images/playmode-item-collect.png)
+![Het Inspector-venster in run time met de OpdrachtZoeker-scriptcomponent en 'Heeft Opdracht Item' geselecteerd.](images/playmode-item-collect.png)
 
 --- collapse ---
 
 ---
-title: Mijn Quest Item verdwijnt niet
+title: Mijn Opdracht Item verdwijnt niet
 ---
 
-Controleer of het Quest Item een script heeft met een `OnTriggerEnter` methode die het Quest Item deactiveert als de Player ermee botst.
+Controleer of het Opdracht Item een script heeft met een `OnTriggerEnter` methode die het Opdracht Item deactiveert als de Player ermee botst.
 
 Zorg ervoor dat je een Box Collider met een Trigger hebt toegevoegd en dat de collider groter is dan een niet-trigger collider, zodat de speler het kan activeren.
 
