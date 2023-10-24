@@ -5,7 +5,7 @@
 legend: Vraag 2 van 3
 ---
 
-Een script van een Queestegever NPC heeft de volgende methode:
+Een script van een Opdrachtgever NPC heeft de volgende methode:
 
 --- code ---
 ---
@@ -51,7 +51,7 @@ player.hasQuestItem = false;
 
   --- feedback ---
 
-Ja dat is goed. De Queestegever NPC controleert of de speler het gezochte item heeft voordat je de beloning geeft. De `speler.heeftQueesteItem` variabele op onwaar zetten betekent dat de volgende keer dat de speler botst met de Queestegever NPC de beloningscode niet wordt uitgevoerd.
+Ja dat is goed. De Opdrachtgever NPC controleert of de speler het gezochte item heeft voordat je de beloning geeft. De `speler.heeftOpdrachtItem` variabele op onwaar zetten betekent dat de volgende keer dat de speler botst met de Opdrachtgever NPC de beloningscode niet wordt uitgevoerd.
 
   --- /feedback ---
 
