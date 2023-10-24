@@ -185,7 +185,7 @@ Voor deze quest mag het te verzamelen item pas verschijnen als de quest is geacc
 
 --- task ---
 
-Voeg een **Accepteer knop** toe aan het Canvas op je Oprachtgever NPC en verbind deze met een `QuestGeaccepteerd` methode op je **OpdrachtGever** script. Update het script **OpdrachtGever** zodat het item alleen wordt weergegeven wanneer de quest is geaccepteerd.
+Voeg een **Accepteer knop** toe aan het Canvas op je Opdrachtgever NPC en verbind deze met een `OpdrachtGeaccepteerd` methode op je **OpdrachtGever** script. Update het script **OpdrachtGever** zodat het item alleen wordt weergegeven wanneer de quest is geaccepteerd.
 
 ![Een geanimeerde gif laat zien dat de speler een NPC nadert. Wanneer de speler in de buurt van de NPC komt, wordt een canvas met tekstbericht en knop ingeschakeld op de scène. Als je op de knop klikt, verschijnt een item.](images/quest-button.gif){:width="400px"}
 
@@ -247,7 +247,7 @@ public class QuestGiver : MonoBehaviour
 
 Selecteer de **OpdrachtGever**, sleep dan in de **OpdrachtGever** script component in het Inspector venster, je **Knop** en **Item GameObjects** naar de knop en voorwerp eigenschappen:
 
-![Het OpdrachtGever script component met 'Knop' in de knop variabele en 'QuestItem' in de Item variabele.](images/item-script.png)
+![Het OpdrachtGever script component met 'Knop' in de knop variabele en 'OpdrachtItem' in de Item variabele.](images/item-script.png)
 
 Selecteer in het Hierarchy venster de **knop GameObject** ga vervolgens in het Inspector venster naar de `On Click ()` eigenschap en klik op de **+**.
 
@@ -299,17 +299,17 @@ Wanneer de speler het item verzamelt, moet het item verdwijnen en eventueel een 
 
 --- task ---
 
-Voeg een UI **TextMeshPro** toe aan de scène om de beloning te tonen. Voeg een **QuestZoeker** script toe aan de speler om de beloning op te slaan en bij te werken.
+Voeg een UI **TextMeshPro** toe aan de scène om de beloning te tonen. Voeg een **OpdrachtZoeker** script toe aan de speler om de beloning op te slaan en bij te werken.
 
 --- collapse ---
 
 ---
-title: Voeg een QuestZoeker script toe aan de speler om de beloning op te slaan en bij te werken
+title: Voeg een OpdrachtZoeker script toe aan de speler om de beloning op te slaan en bij te werken
 ---
 
 Rechtsklik in het Hierarchy venster en voeg een UI **TextMeshPro** toe aan je scène om de beloning te tonen. Noem het nieuwe object `Munt Tekst`, of een geschikte naam voor je beloning.
 
-Voeg een nieuwe **QuestZoeker** script component toe aan de Player om de beloning te tonen.
+Voeg een nieuwe **OpdrachtZoeker** script component toe aan de Player om de beloning te tonen.
 
 De `munten` variabele moet `public` zijn, zodat een script op het Quest Item het kan bijwerken.
 
@@ -344,13 +344,13 @@ Met het Player object geselecteerd, sleep het **Munt Tekst TextMeshPro** object 
 
 --- task ---
 
-Voeg een `public bool heeftQuestItem = false;` variabele toe aan het **QuestZoeker** script. De variabele moet `public` zijn zodat een script op het item op `waar` zet wanneer het item wordt verzameld.
+Voeg een `public bool heeftOpdrachtItem = false;` variabele toe aan het **OpdrachtZoeker** script. De variabele moet `public` zijn zodat een script op het item op `waar` zet wanneer het item wordt verzameld.
 
 
 --- collapse ---
 
 ---
-title: Voeg een heeftQuestItem variabele toe aan de QuestZoeker script
+title: Voeg een heeftOpdrachtItem variabele toe aan de OpdrachtZoeker script
 ---
 
 --- code ---
@@ -376,21 +376,21 @@ public class QuestSeeker : MonoBehaviour
 
 --- task ---
 
-Voeg een **Box Collider** toe met een **Trigger** en **QuestItemController** script aan je Quest Item. Voeg code toe om het Quest Item te verbergen en zet `heeftQuestItem` op waar op het QuestZoeker script van de speler als de Speler botst met het Quest Item.
+Voeg een **Box Collider** toe met een **Trigger** en **QuestItemController** script aan je Quest Item. Voeg code toe om het Quest Item te verbergen en zet `heeftOpdrachtItem` op waar op het OpdrachtZoeker script van de speler als de Speler botst met het Quest Item.
 
 ![Een geanimeerde gif met een Raccoon Player die botst met een Ster item en het item verdwijnt.](images/collect-star.gif){:width="400px"}
 
 --- collapse ---
 
 ---
-title: Laat het item verdwijnen en stel heeftQuestItem in op waar
+title: Laat het item verdwijnen en stel heeftOpdrachtItem in op waar
 ---
 
 Selecteer het **Quest Item** en voeg een **Box Collider** toe met een **Trigger**.
 
-Voeg een **-script** toe aan het **Quest Item** en noem het `QuesteItemController`.
+Voeg een **-script** toe aan het **Quest Item** en noem het `OpdrachtItemController`.
 
-Voeg code toe om het item te verbergen en werk de `heeftQuestItem` status bij op de Player.
+Voeg code toe om het item te verbergen en werk de `heeftOpdrachtItem` status bij op de Player.
 
 --- code ---
 ---
@@ -410,9 +410,9 @@ public class QuestItemController : MonoBehaviour
     }
 --- /code ---
 
-Sleep het **Player GameObject** naar de Player eigenschap van het QuestItemController script in de Inspector voor het Quest Item.
+Sleep het **Player GameObject** naar de Player eigenschap van het OpdrachtItemController script in de Inspector voor het Quest Item.
 
-![De QuestItemController-scriptcomponent met een Spelervariabele die is gevuld met 'Laag (Speurneuzen)'.](images/player-property.png)
+![De OpdrachtItemController-scriptcomponent met een Spelervariabele die is gevuld met 'Laag (Speurneuzen)'.](images/player-property.png)
 
 --- /collapse ---
 
@@ -427,7 +427,7 @@ Speel optioneel ook een geluid af als het item wordt verzameld.
 **Test:** Speel je scène af:
 + Ga naar en communiceer met de Opdrachtgever en accepteer de quest
 + Controleer of je het Quest Item kunt verzamelen
-+ Terwijl je nog steeds in de Play mode bent, klik op de Player en controleer of de `heeftQuestItem` eigenschap in het Inspector venster is aangevinkt om te laten zien dat het quest item is verzameld
++ Terwijl je nog steeds in de Play mode bent, klik op de Player en controleer of de `heeftOpdrachtItem` eigenschap in het Inspector venster is aangevinkt om te laten zien dat het quest item is verzameld
 
 ![Het Inspector-venster in run time met de QuesstZoeker-scriptcomponent en 'Heeft Quest Item' geselecteerd.](images/playmode-item-collect.png)
 
