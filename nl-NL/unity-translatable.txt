@@ -10,7 +10,7 @@ canvas
 
 knop
 
-QuestZoeker
+OpdrachtZoeker
 
 munten
 
@@ -50,7 +50,7 @@ volgSnelheid
 
 volgAfstand
 
-begeleidQuestGeaccepteerd
+begeleidOpdrachtGeaccepteerd
 
 edelstenen
 
