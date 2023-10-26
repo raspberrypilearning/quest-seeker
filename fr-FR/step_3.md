@@ -766,7 +766,7 @@ line_highlights:
 ---
 hat.SetActive(true) --- /code ---
 
-![La vue Game avec un raton laveur et un chat. Le chat porte un chapeau et le message dit « Bien joué ». Prends un chapeau ! »](images/player-gift.png)
+![The Game view with a Raccoon and a Cat. Le chat porte un chapeau et le message dit « Bien joué ». Prends un chapeau ! »](images/player-gift.png)
 
 Tu peux aussi faire en sorte qu'un personnage PNJ devienne un suiveur ou un animal de compagnie en changeant la variable qu'il vérifie pour décider s'il doit suivre le joueur.
 
