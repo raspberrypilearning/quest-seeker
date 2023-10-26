@@ -45,10 +45,10 @@ Tu vas prendre des décisions de conception pour créer tes quêtes.
 
 Explore ces exemples de projets pour obtenir plus d'idées :
 
-Maze quest :[Essaie-le](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'} 
+Maze quest : [Essaie-le](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'} 
 ![Scène de labyrinthe avec un personnage de capsule à partir de formes 3D. Le joueur s'est approché et la quête consistant à rassembler un objet pour obtenir une pièce de monnaie est affichée. Un bouton permet au joueur d'accepter.](images/quest-canvas.png){:width="400px"}
 
-Hill Quest :[Essaie-le](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'}
+Hill Quest : [Essaie-le](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'}
 ![Une scène de colline et d'arbre avec un chat que le joueur a approché et la quête de trouver et d'escorter un ami est montrée. Un bouton permet au joueur d'accepter.](images/new-quest-accept.png){:width="400px"}
 
 Pour découvrir comment ces projets ont été réalisés, télécharge et décompresse les [packages Unity](https://rpf.io/p/fr-FR/quest-seeker-get){:target='_blank'} puis importe chacun d'entre eux dans un nouveau projet 3D Unity.
@@ -69,11 +69,14 @@ Tu vas prendre des décisions de conception pour créer tes quêtes.
 
 Utilise ces images d'exemple pour avoir plus d'idées :
 
-Snow quest : https://raspberrypilearning.github.io/unity-webgl/SnowQuest ![](images/snow-raccoon.png){:width="400px"}
+Snow quest : https://raspberrypilearning.github.io/unity-webgl/SnowQuest 
+![](images/snow-raccoon.png){:width="400px"}
 
-Maze quest : https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker ![](images/quest-canvas.png){:width="400px"}
+Maze quest : https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker 
+![](images/quest-canvas.png){:width="400px"}
 
-Hill quest : https://raspberrypilearning.github.io/unity-webgl/HillQuest ![](images/new-quest-accept.png){:width="400px"}
+Hill quest : https://raspberrypilearning.github.io/unity-webgl/HillQuest 
+![](images/new-quest-accept.png){:width="400px"}
 
 --- /print-only ---
 

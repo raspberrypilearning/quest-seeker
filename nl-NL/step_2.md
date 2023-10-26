@@ -65,7 +65,7 @@ Voeg een NPC toe als opdrachtgever en positioneer deze zo dat de speler deze gem
 
 --- /task ---
 
---- taak ---
+--- task ---
 Als je de Cat, Rat of Raccoon kiest, dan kun je **Animator Controller** instellen op de **IdleWalk** animatie.
 
 --- /task ---

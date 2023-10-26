@@ -45,10 +45,10 @@ Je gaat een aantal ontwerpbeslissingen nemen om je spelletje te creëren.
 
 Bekijk deze voorbeeldprojecten om meer ideeën op te doen:
 
-Maze quest:[Probeer het](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'} 
-![A maze scene with a capsule character from 3D shapes. The Player has approached and the quest to gather an item for coin reward is shown. There is a button for the player to accept.](images/quest-canvas.png){:width="400px"}e
+Maze quest: [Probeer het](https://raspberrypilearning.github.io/unity-webgl/maze-quest-seeker){:target='_blank'} 
+![A maze scene with a capsule character from 3D shapes. The Player has approached and the quest to gather an item for coin reward is shown. There is a button for the player to accept.](images/quest-canvas.png){:width="400px"}
 
-Hill quest:[Probeer het](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'} 
+Hill quest: [Probeer het](https://raspberrypilearning.github.io/unity-webgl/HillQuest){:target='_blank'} 
 ![A hill and tree scene with a cat that the Player has approached and the quest to find and escort a friend is shown. There is a button for the player to accept.](images/new-quest-accept.png){:width="400px"}
 
 Om te ontdekken hoe deze projecten tot stand zijn gekomen, download en unzip de [Unity packages](https://rpf.io/p/nl-NL/quest-seeker-get){:target='_blank'} en importeer ze dan één voor één in een nieuw 3D Unity project.
