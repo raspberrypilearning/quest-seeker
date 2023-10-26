@@ -1,0 +1,105 @@
+DONNEUR DE QUÊTE
+
+J'AI UNE QUÊTE POUR TOI.
+
+TROUVE MON CASQUE SPATIAL ET JE TE DONNERAI 5 PIÈCES.
+
+Raton laveur des neiges
+
+Pour fabriquer mon dôme de glace, j'ai besoin d'un bloc de glace supplémentaire et d'un piolet. 
+
+Peux-tu les trouver pour moi ?
+
+Chat
+
+Peux-tu trouver mon ami dans le chapeau de fête et l'amener ici ?
+
+Aide-moi à nettoyer cette bouche.
+
+Apporte-moi le morceau de nourriture et je te donnerai 10 pièces.
+
+Accepter
+
+ACCEPTER
+
+Start est appelé avant l'update de la première image
+
+S'il te plaît, aide-moi à retrouver mon étoile pour rentrer chez moi. Est-ce que tu acceptes ?
+
+Faire apparaître l'objet de quête
+
+Masquer le message lorsque la quête a été acceptée
+
+Ne pas afficher le bouton une fois que la quête a été acceptée
+
+Quête acceptée
+
+Ou la récompense de ta quête
+
+Pièces : 
+
+Update est appelée une fois par image
+
+Vérifier le tag de l'objet de collision
+
+Merci d'avoir trouvé mon arête de poisson. Voici 10 pièces pour tes efforts !
+
+Chat avec un chapeau
+
+Merci beaucoup d'avoir récupéré mon télescope !
+
+Rassemble le reste des voitures et apporte-les au mécanicien avant qu'il ne ferme.
+
+J'ai une quête pour toi.
+
+J'ai caché 3 pièces, trouve-les et garde-les.
+
+Début Quest giver 2
+
+Update avec le nom de ta quête
+
+Quest 2 acceptée
+
+Update avec le nom de ta quête
+
+Ne pas afficher le message de quête au début
+
+Objet sur le PNJ
+
+Objet sur le joueur
+
+Transférer l'objet au joueur pour livraison
+
+Le suiveur ne doit suivre que si la quête a été acceptée
+
+Ajouter un variable pour stocker la quantité collectée
+
+Ajouter une variable pour chaque objet à collecter
+
+Contrôler quand le suiveur suit le joueur
+
+Suivre le joueur
+
+Si toutes les pièces ont été collectées
+
+Bravo, tu as collecté les pièces !
+
+Passer à un message d'achèvement réussi
+
+Merci de m'avoir aidé à terminer mon dôme de glace. Tu peux y grimper si tu le souhaites.
+
+Garder une trace des gemmes
+
+Donner une récompense au joueur
+
+Bien joué. Prends le chapeau !
+
+Merci d'avoir retrouvé mon ami.
+
+S'assurer que la récompense ne peut pas être donnée à nouveau
+
+Merci beaucoup !
+
+Donner la récompense
+
+Hé, je t'ai déjà donné une récompense.
