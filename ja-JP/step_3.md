@@ -766,7 +766,7 @@ line_highlights:
 ---
 hat.SetActive(true) --- /code ---
 
-![The Game view with a Raccon and a Cat. The Cat is wearing a hat and the message says 'Well done. Have a hat!'](images/player-gift.png)
+![The Game view with a Raccoon and a Cat. The Cat is wearing a hat and the message says 'Well done. Have a hat!'](images/player-gift.png)
 
 You could also make an NPC character become a follower or a pet by changing the variable that they check to decide whether to follow the player.
 
