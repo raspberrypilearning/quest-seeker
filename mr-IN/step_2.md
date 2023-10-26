@@ -96,7 +96,7 @@ title: Add and position TextMeshPro text
 
 Change the message text, settings, and position of the text object until you are happy:
 
-![The TextMeshPro component in the Inspector window with quest text added to the Text Input and Auto Size ticked.](images/text-object-settings.png) ![The Rect Transform component of the Text Mesh Pro with Anchor to the bottom left and Pos x, Pos y, Poz z, width, and height tailored for the scene.](images/text-object-position.png)
+![The TextMeshPro component in the Inspector window with quest text added to the Text Input and Auto Size ticked.](images/text-object-settings.png) ![The Rect Transform component of the Text Mesh Pro with Anchor to the bottom left and Pos x, Pos y, Pos z, width, and height tailored for the scene.](images/text-object-position.png)
 
 You can add another UI **TextMeshPro** to the same canvas with the name of the Quest Giver NPC if you like.
 
