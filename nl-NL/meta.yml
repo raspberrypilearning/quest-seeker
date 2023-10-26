@@ -1,0 +1,28 @@
+---
+title: Speurneuzen
+hero_image: images/banner.png
+description: Voeg NPC's en quests toe aan de wereld die je in het project "Bouw je eigen wereld" hebt gemaakt
+meta_title: Leer Unity | Games ontwikkelen | Speurneuzen
+meta_description: Leer Unity-gameontwikkeling met de Raspberry Pi Foundation. Voeg NPC's en quests toe aan een wereld die je creëert met Unity.
+version: 4
+listed: true
+copyedit: true
+last_tested: '2021-03-26'
+steps:
+  - title: Wat ga je maken
+  - title: Eerste quest
+  - title: Tweede quest
+    completion:
+      - engaged
+      - internal
+  - title: Snelle quiz
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Verbeter je project
+  - title: Delen
+  - title: Wat kun je verder nog doen?

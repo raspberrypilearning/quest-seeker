@@ -1,0 +1,105 @@
+OPDRACHTGEVER
+
+IK HEB EEN OPDRACHT VOOR JOU.
+
+VIND MIJN RUIMTEHELM EN IK GEEF JE 5 MUNTEN.
+
+Sneeuw Wasbeer
+
+Om mijn iglo te maken heb ik nog een ijsblok en een ijsgereedschap nodig. 
+
+Vind je ze voor mij?
+
+Kat
+
+Vind jij mijn vriend met de feestmuts op en breng je hem hierheen?
+
+Help me om je mond schoon te maken.
+
+Breng me het eten en ik geef je 10 munten.
+
+Accepteren
+
+ACCEPTEREN
+
+Start wordt aangeroepen vóór de eerste frame-update
+
+Help me alsjeblieft mijn ster te vinden om terug naar huis te gaan. Accepteer je?
+
+Laat het quest tem verschijnen
+
+Verberg het bericht wanneer de quest is geaccepteerd
+
+Laat de knop niet zien nadat de quest is geaccepteerd
+
+Quest geaccepteerd
+
+Of de beloning voor je zoektocht
+
+Munten: 
+
+Update wordt één keer per frame aangeroepen
+
+Controleer de tag van het botsende object
+
+Bedankt voor het vinden van mijn visgraat. Hier zijn 10 munten voor je inspanningen!
+
+Kat met een Hoed
+
+Hartelijk dank voor het ophalen van mijn telescoop!
+
+Verzamel de rest van de auto's en breng ze naar de garage voordat deze sluit.
+
+Ik heb een quest voor je.
+
+Ik heb 3 munten verstopt, vind en bewaar ze.
+
+Opdrachtgever 2 start
+
+Update met de naam van je quest
+
+Opdracht 2 geaccepteerd
+
+Update met de naam van je quest
+
+Laat het quest bericht niet aan het begin zien
+
+Item op NPC
+
+Item op speler
+
+Verplaats item naar de speler voor levering
+
+De volger mag alleen volgen als de quest is geaccepteerd
+
+Voeg een variabele toe om het verzamelde bedrag op te slaan
+
+Voeg een variabele toe voor elk item dat moet worden verzameld
+
+Om te bepalen wanneer de volger de speler volgt
+
+Volg Speler
+
+Als alle munten zijn verzameld
+
+Goed gedaan, je hebt de munten verzameld!
+
+Verander in een succesvol voltooiingsbericht
+
+Bedankt dat je me hebt geholpen mijn iglo af te maken. Je kunt hem beklimmen als je wilt.
+
+Houd de edelstenen bij
+
+Geef een beloning aan de speler
+
+Goed gedaan. Draag een hoed!
+
+Bedankt voor het vinden van mijn vriend.
+
+Zorg ervoor dat de beloning niet vaker dan één keer kan worden gegeven
+
+Heel erg bedankt!
+
+Geef de beloning
+
+Hé, ik heb je al een beloning gegeven.
