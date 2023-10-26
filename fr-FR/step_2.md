@@ -96,7 +96,7 @@ title: Ajouter et positionner le texte TextMeshPro
 
 Modifie le texte du message, les paramètres et la position de l'objet texte jusqu'à ce que tu sois satisfait :
 
-![Le composant TextMeshPro dans la fenêtre Inspector avec le texte de la quête ajouté à l'entrée de texte et Auto Size cochée.](images/text-object-settings.png) ![Le composant Rect Transform du Text Mesh Pro avec Anchor en bas à gauche et Pos x, Pos y, Pos z, largeur et hauteur adaptés à la scène.](images/text-object-position.png)
+![Le composant TextMeshPro dans la fenêtre Inspector avec le texte de la quête ajouté à l'entrée de texte et Auto Size cochée.](images/text-object-settings.png) ![The Rect Transform component of the Text Mesh Pro with Anchor to the bottom left and Pos x, Pos y, Pos z, width, and height tailored for the scene.](images/text-object-position.png)
 
 Tu peux ajouter un autre UI **TextMeshPro** sur le même canvas avec le nom du PNJ Donneur de quête si tu le souhaites.
 
