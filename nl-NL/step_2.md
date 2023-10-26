@@ -96,7 +96,7 @@ title: TextMeshPro-tekst toevoegen en positioneren
 
 Wijzig de tekst van het bericht, instellingen en de positie van het tekstobject totdat je tevreden bent:
 
-![Het TextMeshPro-onderdeel in het venster Inspector met tekst van de quest toegevoegd aan de tekstinvoer en de automatische grootte geselecteerd.](images/text-object-settings.png) ![De Rect-Transform component van de Text Mesh Pro met Anchor linksonder en Pos X, Pos Y, Pos Z, width (breedte) en height (hoogte) afgestemd op de scène.](images/text-object-position.png)
+![Het TextMeshPro-onderdeel in het venster Inspector met tekst van de quest toegevoegd aan de tekstinvoer en de automatische grootte geselecteerd.](images/text-object-settings.png) ![The Rect Transform component of the Text Mesh Pro with Anchor to the bottom left and Pos x, Pos y, Pos z, width, and height tailored for the scene.](images/text-object-position.png)
 
 Je kunt nog een UI **TextMeshPro** toevoegen aan hetzelfde canvas met de naam van de opdrachtgever NPC als je wilt.
 
