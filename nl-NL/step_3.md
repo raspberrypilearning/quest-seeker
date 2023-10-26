@@ -766,7 +766,7 @@ line_highlights:
 ---
 hat.SetActive(true) --- /code ---
 
-![De spelweergave toont een Raccoon en een Cat. De Cat draagt een hoed en de boodschap 'Goed gedaan' wordt getoond. Draag een hoed!'](images/player-gift.png)
+![The Game view with a Raccoon and a Cat. De Cat draagt een hoed en de boodschap 'Goed gedaan' wordt getoond. Draag een hoed!'](images/player-gift.png)
 
 Je kunt een NPC-personage ook een volger of een huisdier laten worden door de variabele te wijzigen die ze controleren om te beslissen of ze de speler willen volgen.
 
