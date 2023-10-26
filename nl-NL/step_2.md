@@ -80,7 +80,8 @@ Voeg een **Box Collider** toe aan de **Opdrachtgever** zodat de speler er niet d
 
 De Opdrachtgever zal de speler een quest aanbieden als hij dichtbij genoeg komt.
 
---- Zorg ervoor dat het Player GameObject de Player-tag heeft.
+--- task ---
+Zorg ervoor dat het Player GameObject de Player-tag heeft.
 --- /task ---
 
 --- task ---
