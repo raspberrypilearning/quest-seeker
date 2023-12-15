@@ -9,9 +9,9 @@ Here are some ideas you could try:
 + Allow some quests to reset so they can be completed multiple times to earn more XP or coins
 + Allow the player to choose between different questions by using multiple buttons
 
-<iframe allowtransparency="true" width="710" height="450" src="https://quest-seeker.rpfilt.repl.co" frameborder="0"></iframe>
-<iframe allowtransparency="true" width="710" height="450" src="https://weatherquest.rpfilt.repl.co/" frameborder="0"></iframe>
-<iframe allowtransparency="true" width="710" height="450" src="https://castlequestseeker.rpfilt.repl.co" frameborder="0"></iframe>
+<iframe allowtransparency="true" width="710" height="450" src="https://raspberrypilearning.github.io/unity-webgl/quest-seeker" frameborder="0"></iframe>
+<iframe allowtransparency="true" width="710" height="450" src="https://raspberrypilearning.github.io/unity-webgl/weatherquest" frameborder="0"></iframe>
+<iframe allowtransparency="true" width="710" height="450" src="https://raspberrypilearning.github.io/unity-webgl/castlequestseeker" frameborder="0"></iframe>
 
 Take a look at some Quest seeker projects created by community members in the Raspberry Pi Foundation’s gallery of [Quest seeker Community Projects](https://wke.lt/w/s/3n5xmU){:target='_blank'}.
 
