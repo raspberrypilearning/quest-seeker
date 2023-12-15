@@ -1042,7 +1042,7 @@ Controleer of je het volgende hebt gewijzigd:
 + De opdracht tekst in het MessageTextMeshPro GameObject
 + De tekst voor het voltooien van de quest in de `OnTriggerEnter` -methode die wordt ingesteld wanneer de quest is voltooid
 
-Als de Opdrachtgever het quest voltooid bericht niet laat zien wanneer je denkt dat de quewst is voltooid, controleer dan je code zorgvuldig. Heb je QuestZoeker status in het QuestZoeker script correct bijgewerkt en correct gecontroleerd in het Opdrachtgever script van deze Opdrachtgever?
+Als de Opdrachtgever het quest voltooid bericht niet laat zien wanneer je denkt dat de quest is voltooid, controleer dan je code zorgvuldig. Heb je QuestZoeker status in het QuestZoeker script correct bijgewerkt en correct gecontroleerd in het Opdrachtgever script van deze Opdrachtgever?
 
 Voeg `Debug.Log()` opdrachten toe en controleer of de waarden veranderen in de Inspector tijdens de Speelmodus wanneer je dat verwacht.
 
