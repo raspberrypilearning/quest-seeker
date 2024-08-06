@@ -16,9 +16,7 @@ In the location where you chose to save your project you should see an `index.ht
 
 ![two directories and an index file shown](images/8a_webgl_files.png)
 
-Save these files to your preferred storage service (Google Drive, Dropbox, USB Drive)
-
-You could also take a screenshot or make a video of your project. 
+Save these files to your preferred storage service (Google Drive, Dropbox, USB Drive) and share with your friends!
 
 You could also take a screenshot or make a video of your project. 
 
