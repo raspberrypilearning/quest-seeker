@@ -10,7 +10,15 @@ You can build your project as a 'WebGL' project and upload it to a website so ot
 
 [[[webgl-build]]]
 
-[[[unity-sharing]]]
+### Sharing your WebGL project
+
+In the location where you chose to save your project you should see an `index.html` file, a `Build` directory and a `Template` directory.
+
+![two directories and an index file shown](images/8a_webgl_files.png)
+
+Save these files to your preferred storage service (Google Drive, Dropbox, USB Drive)
+
+You could also take a screenshot or make a video of your project. 
 
 You could also take a screenshot or make a video of your project. 
 
